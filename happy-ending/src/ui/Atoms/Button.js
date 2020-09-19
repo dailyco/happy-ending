@@ -1,20 +1,20 @@
 import React from "react";
 
-function P(text, /*width, font_size, color,*/ { children }) {
+function Button(text, /*width, height, textColor, backgoundColor, transparency,*/ { children }) {
   // TODO: create style code
   // const style = ;
   return (
-    <p
+    <button
     // style = {style}
     >
       ${text}
       {children}
-    </p>
+    </button>
   );
 }
 
-P.defaultProps = {
+Button.defaultProps = {
   text = "",
 };
 
-export default P;
+export default Button;
