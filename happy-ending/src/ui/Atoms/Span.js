@@ -1,6 +1,6 @@
 import React from "react";
 
-function Span(text, { children }) {
+function Span({ text, children }) {
   // TODO: create style code
   // const style = ;
   return (
