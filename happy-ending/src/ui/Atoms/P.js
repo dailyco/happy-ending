@@ -1,6 +1,6 @@
 import React from "react";
 
-function P(text, /*width, font_size, color,*/ { children }) {
+function P({ text, /*width, font_size, color,*/ children }) {
   // TODO: create style code
   // const style = ;
   return (
