@@ -1,12 +1,8 @@
 import React from "react";
-import "../../scss/Atoms/TextField.scss";
+// import "../../scss/Atoms/TextField.scss";
 
-function TextField({ text, placeHolder, size, color }) {
-  return (
-    <input type="text" placeholder={placeHolder} className={`TextField ${size} ${color}`}>
-      {text}
-    </input>
-  );
+function TextField({ placeHolder, size, color }) {
+  return <input type="text" placeholder={placeHolder} className={`TextField ${size} ${color}`}></input>;
 }
 
 TextField.defaultProps = {
