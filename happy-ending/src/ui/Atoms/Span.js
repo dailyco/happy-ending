@@ -4,17 +4,17 @@ function Span({ text, children }) {
   // TODO: create style code
   // const style = ;
   return (
-    <p
+    <span
     // style = {style}
     >
-      ${text}
+      {text}
       {children}
-    </p>
+    </span>
   );
 }
 
 Span.defaultProps = {
-  text = "",
+  text: "",
 };
 
 export default Span;
