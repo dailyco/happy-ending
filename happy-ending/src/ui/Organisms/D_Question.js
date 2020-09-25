@@ -6,7 +6,7 @@ import "../../scss/Organisms/D_Question.scss";
 function D_Question({ day, question, color }) {
   return (
     <>
-      <H3 className={color} text={day}></H3>
+      <H3 className={color} text={`D-${day}`}></H3>
       <P className={color} text={question}></P>
     </>
   );
