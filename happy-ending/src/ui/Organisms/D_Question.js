@@ -1,6 +1,6 @@
 import React from "react";
-import H3 from "../Atoms/H3";
 import P from "../Atoms/P";
+import H3 from "../Atoms/H3";
 import "../../scss/Organisms/D_Question.scss";
 
 function D_Question({ day, question, color }) {

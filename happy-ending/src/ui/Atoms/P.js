@@ -14,7 +14,7 @@ function P({ text, /*width, font_size, color,*/ children }) {
 }
 
 P.defaultProps = {
-  text = "",
+  text: "",
 };
 
 export default P;
