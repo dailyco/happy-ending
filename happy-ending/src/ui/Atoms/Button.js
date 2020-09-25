@@ -1,16 +1,8 @@
 import React from "react";
+import "../../scss/Atoms/Button.scss";
 
-function Button({ text, /*width, height, textColor, backgoundColor, transparency,*/ children }) {
-  // TODO: create style code
-  // const style = ;
-  return (
-    <button
-    // style = {style}
-    >
-      {text}
-      {children}
-    </button>
-  );
+function Button({ text, size, color }) {
+  return <button className={`Button ${size} ${color}`}>{text}</button>;
 }
 
 Button.defaultProps = {
