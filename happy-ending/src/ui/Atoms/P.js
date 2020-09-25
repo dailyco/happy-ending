@@ -7,7 +7,7 @@ function P({ text, /*width, font_size, color,*/ children }) {
     <p
     // style = {style}
     >
-      ${text}
+      {text}
       {children}
     </p>
   );
