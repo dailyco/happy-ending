@@ -4,10 +4,10 @@ import Button from "../Atoms/Button";
 
 function InfoResponse() {
   return (
-    <div>
+    <>
       <Info></Info>
       <Button text="확인" size="small" color="white"></Button>
-    </div>
+    </>
   );
 }
 
