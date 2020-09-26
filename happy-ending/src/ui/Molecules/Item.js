@@ -7,7 +7,7 @@ function Item() {
     <>
       <TextField placeHolder="누구"></TextField>
       <Span text="에게"></Span>
-      <TextField placeHolder="그동안 하지 못했던 말들을 적어보세요.(300자 제한)"></TextField>
+      <TextArea placeHolder="그동안 하지 못했던 말들을 적어보세요.(300자 제한)"></TextArea>
     </>
   );
 }
