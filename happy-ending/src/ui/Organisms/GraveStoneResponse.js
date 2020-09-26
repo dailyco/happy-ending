@@ -4,10 +4,10 @@ import GraveStone from "../Molecules/GraveStone";
 
 function GraveStoneResponse() {
   return (
-    <div>
+    <>
       <GraveStone></GraveStone>
       <Button text="확인" size="small" color="white"></Button>
-    </div>
+    </>
   );
 }
 
