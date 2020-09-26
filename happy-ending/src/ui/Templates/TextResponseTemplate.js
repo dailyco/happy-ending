@@ -1,11 +1,11 @@
 import React from "react";
-import D_Question from "../Organisms/D_Question";
+import Dquestion from "../Organisms/Dquestion";
 import FullTextFieldResponse from "../Organisms/FullTextFieldResponse";
 
 function TextResponseTemplate({ day, question, color, alignment }) {
   return (
     <div>
-      <D_Question className={alignment} day={day} question={question} color={color}></D_Question>
+      <Dquestion className={alignment} day={day} question={question} color={color}></Dquestion>
       <FullTextFieldResponse></FullTextFieldResponse>
     </div>
   );

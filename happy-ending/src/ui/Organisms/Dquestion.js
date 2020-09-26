@@ -3,7 +3,7 @@ import P from "../Atoms/P";
 import H3 from "../Atoms/H3";
 import "../../scss/Organisms/D_Question.scss";
 
-function D_Question({ day, question, color }) {
+function Dquestion({ day, question, color }) {
   return (
     <>
       <H3 className={color} text={`D-${day}`}></H3>
