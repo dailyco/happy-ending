@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "../Atoms/Button";
 
-function SelectionBox({ objects }) {
+function SelectionBox({ texts }) {
   return (
     <>
-      {objects.map((object) => (
-        <Button text={object.text}></Button>
+      {texts.map((text) => (
+        <Button text={text}></Button>
       ))}
     </>
   );
