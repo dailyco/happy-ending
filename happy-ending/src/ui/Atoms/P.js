@@ -1,20 +1,14 @@
 import React from "react";
+import classNames from "classnames";
+import "../../scss/Atoms/P.scss";
 
-function P({ text, /*width, font_size, color,*/ children }) {
-  // TODO: create style code
-  // const style = ;
-  return (
-    <p
-    // style = {style}
-    >
-      {text}
-      {children}
-    </p>
-  );
+function P({ text, className, styleName }) {
+  return <p className={classNames("P", className, styleName)}>{text}</p>;
 }
 
 P.defaultProps = {
   text: "",
+  styleName: ["black", "left"],
 };
 
 export default P;

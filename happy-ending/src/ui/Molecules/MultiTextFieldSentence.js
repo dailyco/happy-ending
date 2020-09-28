@@ -2,7 +2,7 @@ import React from "react";
 import Span from "../Atoms/Span";
 import TextField from "../Atoms/TextField";
 
-function MutiTextFieldSentence({ size, opacity, color, text1, text2, text3, placeHolder1, placeHolder2 }) {
+function MultiTextFieldSentence({ size, opacity, color, text1, text2, text3, placeHolder1, placeHolder2 }) {
   return (
     <div className={`MultiTextFieldSentence ${size} ${opacity} ${color}`}>
       <Span text={text1}></Span>
@@ -14,4 +14,4 @@ function MutiTextFieldSentence({ size, opacity, color, text1, text2, text3, plac
   );
 }
 
-export default MutiTextFieldSentence;
+export default MultiTextFieldSentence;

@@ -1,1 +1,14 @@
-// TODO : CODE HERE
+@import "../colors.scss";
+
+.H3 {
+  // font-size
+  font-size: 30px;
+
+  // alignment
+  &.left {
+    text-align: left;
+  }
+  &.center {
+    text-align: center;
+  }
+}
