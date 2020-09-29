@@ -1,1 +1,34 @@
-// TODO : CODE HERE
+@import "../colors.scss";
+
+.SingleTextFieldSentence {
+  border-radius: 24.2px;
+
+  // size
+  &.s {
+    width: 557px;
+    height: 78px;
+  }
+
+  &.m {
+    width: 637px;
+    height: 78px;
+  }
+
+  // opacity
+  &.strong {
+    opacity: 0.32;
+  }
+
+  &.weak {
+    opacity: 0.75;
+  }
+
+  // color
+  &.dark-greenish-blue {
+    background-color: $dark-greenish-blue;
+  }
+
+  &.charcoal-gray {
+    background-color: $charcoal-gray;
+  }
+}
