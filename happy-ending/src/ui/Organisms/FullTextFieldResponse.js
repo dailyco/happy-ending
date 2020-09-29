@@ -1,12 +1,14 @@
 import React from "react";
 import Button from "../Atoms/Button";
-import TextField from "../Atoms/TextField";
+import FullTextField from "../Molecules/FullTextField";
 
-function FullTextFieldResponse() {
+function FullTextFieldResponse({ data, styleName }) {
+  const { ftf_style, button_style } = styleName;
+  const { ftf_data, button_data } = data;
   return (
     <>
-      <TextField></TextField>
-      <Button text="확인" size="small" color="white"></Button>
+      <FullTextField data={ftf_data} styleName={ftf_style}></FullTextField>
+      <Button styleName={button_style}>{button_data.text}</Button>
     </>
   );
 }

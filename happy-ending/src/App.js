@@ -1,8 +1,8 @@
 import React from "react";
-import D_Question from "./ui/Organisms/D_Question";
+import P7_1 from "./ui/Pages/P7_1";
 
 function App() {
-  return <D_Question day={3} question="TEST"></D_Question>;
+  return <P7_1></P7_1>;
 }
 
 export default App;
