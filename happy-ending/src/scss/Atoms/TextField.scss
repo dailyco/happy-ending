@@ -1,6 +1,24 @@
 @import "../colors.scss";
 
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &::-ms-placeholder {
+    color: $color;
+  }
+  &::placeholder {
+    color: $color;
+  }
+}
+
 .TextField {
+  font-stretch: normal;
+  font-style: normal;
+
   // size
   &.xs {
     width: 46px;
@@ -21,5 +39,30 @@
   &.xl {
     width: 576px;
     height: 24px;
+  }
+
+  // font-weight
+  &.normal {
+    font-weight: 400;
+  }
+  &.extra-bold {
+    font-weight: 800;
+  }
+
+  // placeholder-color
+  &.dark-white {
+    @include placeholder-color($dark-white);
+  }
+  &.davy-gray {
+    @include placeholder-color($davy-gray);
+  }
+  &.eclipse {
+    @include placeholder-color($eclipse);
+  }
+  &.white {
+    @include placeholder-color($white);
+  }
+  &.dark-gray {
+    @include placeholder-color($dark-gray);
   }
 }

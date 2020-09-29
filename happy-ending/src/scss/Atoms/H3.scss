@@ -1,8 +1,22 @@
 @import "../colors.scss";
 
 .H3 {
+  font-size: 30px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.22;
+  letter-spacing: normal;
+
   // font-size
   font-size: 30px;
+
+  // font-weight
+  &.normal {
+    font-weight: 400;
+  }
+  &.heavy {
+    font-weight: 900;
+  }
 
   // alignment
   &.left {
@@ -10,5 +24,25 @@
   }
   &.center {
     text-align: center;
+  }
+
+  // color
+  &.black {
+    color: $black;
+  }
+  &.white {
+    color: $white;
+  }
+  &.eclipse {
+    color: $eclipse;
+  }
+  &.davy-gray {
+    color: $davy-gray;
+  }
+  &.neon-green {
+    color: $neon-green;
+  }
+  &.white-smoke {
+    color: $white-smoke;
   }
 }
