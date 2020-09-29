@@ -1,54 +1,56 @@
 @import "../colors.scss";
 
 .FullTextField {
-    width: 637px;
-    height: 78px;
+  width: 637px;
+  height: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    // opacity
-    &.strong {
-        opacity: 0.3;
-    }
+  // opacity
+  &.strong {
+    opacity: 0.3;
+  }
 
-    &.normal {
-        opacity: 0.32;
-    }
+  &.normal {
+    opacity: 0.32;
+  }
 
-    &.weak {
-        opacity: 0.35;
-    }
+  &.weak {
+    opacity: 0.35;
+  }
 
-    // roundness
-    &.little-round {
-        border-radius: 20px;
-    }
+  // roundness
+  &.little-round {
+    border-radius: 20px;
+  }
 
-    &.round {
-        border-radius: 24.2px;
-    }
+  &.round {
+    border-radius: 24.2px;
+  }
 
-    // color
-    &.gray {
-        background-color: $gray;
-    }
+  // color
+  &.gray {
+    background-color: $gray;
+  }
 
-    &.charcoal-gray {
-        background-color: $charcoal-gray;
-    }
+  &.charcoal-gray {
+    background-color: $charcoal-gray;
+  }
 
-    &.cocoa {
-        background-color: $cocoa;
-    }
+  &.cocoa {
+    background-color: $cocoa;
+  }
 
-    &.khaki-brown {
-        background-color: $khaki-brown;
-    }
+  &.khaki-brown {
+    background-color: $khaki-brown;
+  }
 
-    &.charcoal-black {
-        background-color: $charcoal-black;
-    }
+  &.charcoal-black {
+    background-color: $charcoal-black;
+  }
 
-    &.white {
-        background-color: $white;
-    }
-
+  &.white {
+    background-color: $white;
+  }
 }

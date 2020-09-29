@@ -16,8 +16,17 @@
 }
 
 .TextField {
+  font-size: 22px;
+  line-height: 1.95;
+  letter-spacing: -0.22px;
+  outline: none;
+  border: none;
+  background: transparent;
+  font-family: "NotoSansKR"; // TODO edit name
+  text-align: center;
   font-stretch: normal;
   font-style: normal;
+  font-weight: normal;
 
   // size
   &.xs {

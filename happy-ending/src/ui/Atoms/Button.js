@@ -2,8 +2,8 @@ import React from "react";
 import classNames from "classnames";
 import "../../scss/Atoms/Button.scss";
 
-function Button({ children, className, styleName }) {
-  return <button className={classNames("Button", className, styleName)}>{children}</button>;
+function Button({ children, styleName }) {
+  return <button className={classNames("Button", styleName)}>{children}</button>;
 }
 
 Button.defaultProps = {
