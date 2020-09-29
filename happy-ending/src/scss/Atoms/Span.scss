@@ -1,6 +1,25 @@
 @import "../colors.scss";
 
 .Span {
+  font-stretch: normal;
+  font-style: normal;
+
+  // alignment
+  &.left {
+    text-align: left;
+  }
+  &.center {
+    text-align: center;
+  }
+
+  // font-family
+  &.noto {
+    font-family: "NotoSansKR"; // TODO: edit font name
+  }
+  &.nanum {
+    font-family: "NaNumMyeongjo"; // TODO: edit font name
+  }
+
   // font-size
   &.xs {
     font-size: 20px;
@@ -15,6 +34,40 @@
     font-size: 74px;
   }
   &.xl {
-    font-size: 120px;
+    font-size: 110px;
+  }
+
+  // font-weight
+  &.light {
+    font-weight: 300;
+  }
+  &.normal {
+    font-weight: 400;
+  }
+  &.medium {
+    font-weight: 500;
+  }
+  &.extra-bold {
+    font-weight: 800;
+  }
+
+  // color
+  &.white {
+    color: $white;
+  }
+  &.charcoal {
+    color: $charcoal;
+  }
+  &.eclipse {
+    color: $eclipse;
+  }
+  &.davy-gray {
+    color: $davy-gray;
+  }
+  &.dark-gray {
+    color: $dark-gray;
+  }
+  &.neon-green {
+    color: $neon-green;
   }
 }

@@ -1,8 +1,16 @@
 @import "../colors.scss";
 
 .P {
-  // font-size
+  font-family: "NotoSansKR"; // TODO: edit font name
   font-size: 22px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+
+  // translucent
+  &.translucent {
+    opacity: 0.87;
+  }
 
   // alignment
   &.left {
@@ -10,5 +18,16 @@
   }
   &.center {
     text-align: center;
+  }
+
+  // color
+  &.white {
+    color: $white;
+  }
+  &.eclipse {
+    color: $eclipse;
+  }
+  &.davy-gray {
+    color: $davy-gray;
   }
 }

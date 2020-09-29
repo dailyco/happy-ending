@@ -1,35 +1,117 @@
 @import "../colors.scss";
 
-// @mixin button-color($bg_color, $txt_color) {
-//   background: $bg_color;
-//   color: $txt_color;
-//   &:hover {
-//     background: lighten($bg_color, 10%);
-//   }
-//   &:active {
-//     background: darken($bg_color, 10%);
-//   }
-//   &.translucent {
-//     opacity: 0.3;
-//   }
-// }
+@mixin button-color($bg_color, $txt_color) {
+  background: $bg_color;
+  color: $txt_color;
+  // &:hover {
+  //   background: lighten($bg_color, 10%);
+  // }
+  // &:active {
+  //   background: darken($bg_color, 10%);
+  // }
+}
 
 .Button {
+  font-family: "NotoSansKR"; // TODO: edit font name
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.09);
+  letter-spacing: -0.22px;
+  line-height: 1.95;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  // translucent
+  &.translucent {
+    opacity: 0.3;
+  }
+
+  // alignment
+  &.left {
+    text-align: left;
+  }
+  &.center {
+    text-align: center;
+  }
+
   // size
-  &.xs {
+  &.xxs {
     width: 115px;
     height: 47.3px;
+    border-radius: 12px;
   }
-  &.s {
+  &.xs {
     width: 141px;
     height: 61.3px;
+    border-radius: 15px;
+  }
+  &.s {
+    width: 162.6px;
+    height: 67.3px;
+    border-radius: 16.3px;
   }
   &.m {
-    width: 397.8px;
+    width: 341.5px;
     height: 67.3px;
+    border-radius: 15px;
   }
   &.l {
+    width: 376.6px;
+    height: 67.3px;
+    border-radius: 16.3px;
+  }
+  &.xl {
+    width: 397.8px;
+    height: 67.3px;
+    border-radius: 16.3px;
+  }
+  &.xxl {
     width: 507.1px;
     height: 85.2px;
+    border-radius: 16.3px;
+  }
+
+  // color
+  &.white {
+    @include button-color($white, $eclipse);
+  }
+  &.grayish-navy {
+    @include button-color($grayish-navy, $white);
+  }
+  &.beige {
+    @include button-color($beige, $brown);
+  }
+  &.light-brown {
+    @include button-color($light-brown, $ivory);
+  }
+  &.nero {
+    @include button-color($nero, $white);
+  }
+  &.light-gray {
+    @include button-color($light-gray, $eclipse);
+  }
+  &.orange {
+    @include button-color($orange, $black);
+  }
+  &.greenish-blue {
+    @include button-color($greenish-blue, $white);
+  }
+  &.wood {
+    @include button-color($wood, $white);
+  }
+  &.cocoa {
+    @include button-color($cocoa, $white);
+  }
+  &.blue {
+    @include button-color($blue, $white);
+  }
+  &.dark-brown {
+    @include button-color($dark-brown, $white);
+  }
+  &.lynx-white {
+    @include button-color($lynx-white, $dark-gray);
   }
 }

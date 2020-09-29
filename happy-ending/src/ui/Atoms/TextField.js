@@ -9,7 +9,7 @@ function TextField({ placeHolder, className, styleName }) {
 TextField.defaultProps = {
   text: "",
   placeHolder: "내용을 입력해주세요",
-  styleName: ["m", "gray"],
+  styleName: ["m", "dark-gray"],
 };
 
 export default TextField;
