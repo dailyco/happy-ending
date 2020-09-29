@@ -33,6 +33,7 @@
   &.left {
     text-align: left;
   }
+
   &.center {
     text-align: center;
   }
@@ -43,31 +44,37 @@
     height: 47.3px;
     border-radius: 12px;
   }
+
   &.xs {
     width: 141px;
     height: 61.3px;
     border-radius: 15px;
   }
+
   &.s {
     width: 162.6px;
     height: 67.3px;
     border-radius: 16.3px;
   }
+
   &.m {
     width: 341.5px;
     height: 67.3px;
     border-radius: 15px;
   }
+
   &.l {
     width: 376.6px;
     height: 67.3px;
     border-radius: 16.3px;
   }
+
   &.xl {
     width: 397.8px;
     height: 67.3px;
     border-radius: 16.3px;
   }
+
   &.xxl {
     width: 507.1px;
     height: 85.2px;
@@ -78,40 +85,59 @@
   &.white {
     @include button-color($white, $eclipse);
   }
+
   &.grayish-navy {
     @include button-color($grayish-navy, $white);
   }
+
   &.beige {
     @include button-color($beige, $brown);
   }
+
   &.light-brown {
     @include button-color($light-brown, $ivory);
   }
+
   &.nero {
     @include button-color($nero, $white);
   }
+
   &.light-gray {
     @include button-color($light-gray, $eclipse);
   }
+
   &.orange {
     @include button-color($orange, $black);
   }
+
   &.greenish-blue {
     @include button-color($greenish-blue, $white);
   }
+
   &.wood {
     @include button-color($wood, $white);
   }
+
   &.cocoa {
     @include button-color($cocoa, $white);
   }
+
   &.blue {
     @include button-color($blue, $white);
   }
+
   &.dark-brown {
     @include button-color($dark-brown, $white);
   }
+
   &.lynx-white {
     @include button-color($lynx-white, $dark-gray);
+  }
+
+  &.item {
+    width: 142px;
+    height: 35.3px;
+    border-radius: 10px;
+    @include button-color($lynx-white, $dark-gray)
   }
 }
