@@ -2,8 +2,8 @@ import React from "react";
 import classNames from "classnames";
 import "../../scss/Atoms/P.scss";
 
-function P({ text, className, styleName }) {
-  return <p className={classNames("P", className, styleName)}>{text}</p>;
+function P({ children, className, styleName }) {
+  return <p className={classNames("P", className, styleName)}>{children}</p>;
 }
 
 P.defaultProps = {
