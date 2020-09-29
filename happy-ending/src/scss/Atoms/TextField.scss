@@ -1,1 +1,25 @@
-// TODO : CODE HERE
+@import "../colors.scss";
+
+.TextField {
+  // size
+  &.xs {
+    width: 46px;
+    height: 18px;
+  }
+  &.s {
+    width: 104px;
+    height: 24px;
+  }
+  &.m {
+    width: 186px;
+    height: 18px;
+  }
+  &.l {
+    width: 194px;
+    height: 24px;
+  }
+  &.xl {
+    width: 576px;
+    height: 24px;
+  }
+}

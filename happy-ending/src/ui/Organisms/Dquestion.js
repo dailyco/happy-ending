@@ -12,4 +12,4 @@ function Dquestion({ day, question, color }) {
   );
 }
 
-export default D_Question;
+export default Dquestion;

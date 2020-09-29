@@ -1,1 +1,20 @@
-// TODO : CODE HERE
+@import "../colors.scss";
+
+.Span {
+  // font-size
+  &.xs {
+    font-size: 20px;
+  }
+  &.s {
+    font-size: 22px;
+  }
+  &.m {
+    font-size: 24px;
+  }
+  &.l {
+    font-size: 74px;
+  }
+  &.xl {
+    font-size: 120px;
+  }
+}

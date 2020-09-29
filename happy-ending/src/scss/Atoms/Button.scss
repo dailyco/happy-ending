@@ -1,1 +1,35 @@
-// TODO : CODE HERE
+@import "../colors.scss";
+
+// @mixin button-color($bg_color, $txt_color) {
+//   background: $bg_color;
+//   color: $txt_color;
+//   &:hover {
+//     background: lighten($bg_color, 10%);
+//   }
+//   &:active {
+//     background: darken($bg_color, 10%);
+//   }
+//   &.translucent {
+//     opacity: 0.3;
+//   }
+// }
+
+.Button {
+  // size
+  &.xs {
+    width: 115px;
+    height: 47.3px;
+  }
+  &.s {
+    width: 141px;
+    height: 61.3px;
+  }
+  &.m {
+    width: 397.8px;
+    height: 67.3px;
+  }
+  &.l {
+    width: 507.1px;
+    height: 85.2px;
+  }
+}

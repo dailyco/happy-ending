@@ -1,1 +1,14 @@
-// TODO : CODE HERE
+@import "../colors.scss";
+
+.P {
+  // font-size
+  font-size: 22px;
+
+  // alignment
+  &.left {
+    text-align: left;
+  }
+  &.center {
+    text-align: center;
+  }
+}
