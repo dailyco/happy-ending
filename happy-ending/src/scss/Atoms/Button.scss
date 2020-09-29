@@ -3,12 +3,14 @@
 @mixin button-color($bg_color, $txt_color) {
   background: $bg_color;
   color: $txt_color;
-  // &:hover {
-  //   background: lighten($bg_color, 10%);
-  // }
-  // &:active {
-  //   background: darken($bg_color, 10%);
-  // }
+
+  &:hover {
+    background: lighten($bg_color, 10%);
+  }
+
+  &:active {
+    background: darken($bg_color, 10%);
+  }
 }
 
 .Button {
