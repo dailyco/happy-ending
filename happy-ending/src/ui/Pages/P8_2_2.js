@@ -33,9 +33,9 @@ function P8_2_2() {
       mtfs_style: {
         bg_style: ["m", "strong", "charcoal-gray"],
         l_text_style: ["noto", "s", "normal", "eclipse"],
-        tf1_style: ["s", "dark-white"],
+        tf1_style: ["s", "davy-gray"],
         m_text_style: ["noto", "s", "normal", "eclipse"],
-        tf2_style: ["s", "dark-white"],
+        tf2_style: ["s", "davy-gray"],
         r_text_style: ["noto", "s", "normal", "eclipse"],
       },
       btn_style: ["xs", "white"],
