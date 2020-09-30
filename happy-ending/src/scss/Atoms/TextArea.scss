@@ -36,7 +36,30 @@
 
     &.grave {
         background-color: transparent;
+        line-height: 36px;
+        font-size: 22px;
+        letter-spacing: -0.22px;
+        text-align: center;
 
+        &::-webkit-input-placeholder {
+            color: $dark-gray;
+            text-align: center;
+        }
+
+        &::-moz-placeholder {
+            color: $dark-gray;
+            text-align: center;
+        }
+
+        &::-ms-placeholder {
+            color: $dark-gray;
+            text-align: center;
+        }
+
+        &::placeholder {
+            color: $dark-gray;
+            text-align: center;
+        }
     }
 
 }
