@@ -1,9 +1,8 @@
 import React from "react";
-import ItemCreate from "./ui/Molecules/ItemCreate";
-import ItemBox from "./ui/Organisms/ItemBox";
+import GraveStoneResponse from "./ui/Organisms/GraveStoneResponse";
 
 function App() {
-  return <ItemBox></ItemBox>;
+  return <GraveStoneResponse></GraveStoneResponse>;
 }
 
 export default App;

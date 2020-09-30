@@ -1,13 +1,16 @@
 import React from "react";
 import Button from "../Atoms/Button";
 import GraveStone from "../Molecules/GraveStone";
+import "../../scss/Organisms/GraveStoneResponse.scss";
 
 function GraveStoneResponse() {
   return (
-    <>
+    <div className={"GraveStoneResponse"}>
       <GraveStone></GraveStone>
-      <Button text="확인" size="small" color="white"></Button>
-    </>
+      <section className={"btn-container"}>
+        <Button styleName={["xs", "light-gray"]}>확인</Button>
+      </section>
+    </div>
   );
 }
 
