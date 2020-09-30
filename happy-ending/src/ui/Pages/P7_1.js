@@ -28,15 +28,15 @@ function P7_1() {
   const styleName = {
     template_style: ["center"],
     dq_style: {
-      h3_style: ["normal", "center", "eclipse"],
-      p_style: ["center", "eclipse"],
+      h3_style: ["normal", "eclipse"],
+      p_style: ["eclipse"],
     },
     ftfr_style: {
       ftf_style: {
         ftf_style: ["charcoal-gray", "normal", "little-round"],
         tf_style: ["xl", "normal", "eclipse"],
       },
-      button_style: ["xs", "white", "center"],
+      button_style: ["xs", "white"],
     },
   };
   return (

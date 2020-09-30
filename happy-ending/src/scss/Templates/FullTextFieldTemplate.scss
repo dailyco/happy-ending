@@ -1,7 +1,14 @@
 .FullTextFieldTemplate {
-  // alignment
-  &.left {
-  }
   &.center {
+    text-align: center;
+    & .FullTextField {
+      margin: 0 auto;
+    }
+  }
+  &.left {
+    text-align: left;
+    & .FullTextField {
+      margin: 0;
+    }
   }
 }

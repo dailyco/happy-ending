@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
+import P13Vedio from "../../assets/video/13-erase.mp4";
 
 import "../../scss/Pages/P13.scss";
 
@@ -28,22 +29,22 @@ function P13() {
   const styleName = {
     template_style: ["center"],
     dq_style: {
-      h3_style: ["normal", "center", "white"],
-      p_style: ["center", "white"],
+      h3_style: ["normal", "white"],
+      p_style: ["white"],
     },
     ftfr_style: {
       ftf_style: {
         ftf_style: ["charcoal-black", "weak", "round"],
         tf_style: ["xl", "normal", "white"],
       },
-      button_style: ["xs", "grayish-navy", "center"],
+      button_style: ["xs", "grayish-navy"],
     },
   };
 
   return (
     <div className={classNames("P13")}>
       <video autoPlay muted loop>
-        <source src="../../assets/video/13-erase.mp4" type="video/mp4" />
+        <source src={P13Vedio} type="video/mp4" />
       </video>
       <FullTextFieldTemplate data={data} styleName={styleName}></FullTextFieldTemplate>
     </div>
