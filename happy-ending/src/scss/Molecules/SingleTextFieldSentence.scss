@@ -1,5 +1,15 @@
 @import "../colors.scss";
 
+@mixin background-color($bg_color) {
+  &.weak {
+    background-color: rgba($bg_color, 75%);
+  }
+
+  &.strong {
+    background-color: rgba($bg_color, 32%);
+  }
+}
+
 .SingleTextFieldSentence {
   border-radius: 24.2px;
 
@@ -14,21 +24,12 @@
     height: 78px;
   }
 
-  // opacity
-  &.strong {
-    opacity: 0.32;
-  }
-
-  &.weak {
-    opacity: 0.75;
-  }
-
   // color
   &.dark-greenish-blue {
-    background-color: $dark-greenish-blue;
+    @include background-color($dark-greenish-blue);
   }
 
   &.charcoal-gray {
-    background-color: $charcoal-gray;
+    @include background-color($charcoal-gray);
   }
 }
