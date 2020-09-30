@@ -7,7 +7,7 @@ function Span({ children, className, styleName }) {
 }
 
 Span.defaultProps = {
-  text: "",
+  text: "탭하여 다음 페이지로 넘어가기",
   styleName: ["m", "black"],
 };
 

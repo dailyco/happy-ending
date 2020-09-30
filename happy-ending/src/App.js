@@ -1,10 +1,10 @@
 import React from "react";
-import P21 from "./ui/Pages/P21";
+import P26 from "./ui/Pages/P26";
 
 import "./App.css";
 
 function App() {
-  return <P21></P21>;
+  return <P26></P26>;
 }
 
 export default App;
