@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import InsertyPaperTemplate from "../Templates/InsertyPaperTemplate";
-import P10Vedio from "../../assets/video/10-after travel.mp4";
+import P10Video from "../../assets/video/10-after travel.mp4";
 
 import "../../scss/Pages/P10.scss";
 
@@ -32,7 +32,7 @@ function P10() {
   return (
     <div className={classNames("P10")}>
       <video autoPlay muted loop>
-        <source src={P10Vedio} type="video/mp4" />
+        <source src={P10Video} type="video/mp4" />
       </video>
       <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
     </div>
