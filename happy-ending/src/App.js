@@ -1,9 +1,10 @@
 import React from "react";
-import ItemCreate from "./ui/Molecules/ItemCreate";
-import ItemBox from "./ui/Organisms/ItemBox";
+import P21 from "./ui/Pages/P21";
+
+import "./App.css";
 
 function App() {
-  return <ItemBox></ItemBox>;
+  return <P21></P21>;
 }
 
 export default App;
