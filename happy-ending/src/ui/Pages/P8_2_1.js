@@ -1,0 +1,46 @@
+import React from "react";
+import SingleTextFieldTemplate from "../Templates/SingleTextFieldTemplate";
+import P8_2_1_Video from "../../assets/video/8-2-1-stay home alone.mp4";
+
+import "../../scss/Pages/P8_2_1.scss";
+
+function P8_2_1() {
+  const data = {
+    dq_data: {
+      h3_data: {
+        day: 7,
+      },
+      p_data: {
+        question: "집에서 혼자 시간을 보내기로 하셨군요. 무엇을 하면서 보내시겠습니까?",
+      },
+    },
+    stfr_data: {
+      stfs_data: {
+        l_text: "집에서 (",
+        placeHolder: "무엇을 한",
+        r_text: ")다.",
+      },
+    },
+  };
+  const styleName = {
+    dq_style: {
+      h3_style: ["normal", "eclipse"],
+      p_style: ["eclipse"],
+    },
+    stfr_style: {
+      stfs_style: ["m", "strong", "charcoal-gray"],
+      btn_style: ["xs", "white"],
+    },
+  };
+
+  return (
+    <div className={"P8_2_1"}>
+      <video autoPlay muted loop>
+        <source src={P8_2_1_Video} type="video/mp4" />
+      </video>
+      <SingleTextFieldTemplate data={data} styleName={styleName}></SingleTextFieldTemplate>
+    </div>
+  );
+}
+
+export default P8_2_1;
