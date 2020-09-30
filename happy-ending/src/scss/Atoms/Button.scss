@@ -11,10 +11,14 @@
   &:active {
     background: darken($bg_color, 10%);
   }
+
+  &.translucent {
+    background: rgba($bg_color, 35%);
+  }
 }
 
 .Button {
-  font-family: "NotoSansKR"; // TODO: edit font name
+  font-family: "Noto Sans KR";
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.09);
   letter-spacing: -0.22px;
   line-height: 1.95;
@@ -25,11 +29,6 @@
   border: none;
   outline: none;
   cursor: pointer;
-
-  // translucent
-  &.translucent {
-    opacity: 0.3;
-  }
 
   // alignment
   &.left {
@@ -140,6 +139,6 @@
     width: 142px;
     height: 35.3px;
     border-radius: 10px;
-    @include button-color($lynx-white, $dark-gray)
+    @include button-color($lynx-white, $dark-gray);
   }
 }

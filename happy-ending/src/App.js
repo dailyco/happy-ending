@@ -1,8 +1,10 @@
 import React from "react";
-import GraveStoneResponse from "./ui/Organisms/GraveStoneResponse";
+import P21 from "./ui/Pages/P21";
+
+import "./App.css";
 
 function App() {
-  return <GraveStoneResponse></GraveStoneResponse>;
+  return <P21></P21>;
 }
 
 export default App;
