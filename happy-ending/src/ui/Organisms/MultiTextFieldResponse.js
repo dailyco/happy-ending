@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Atoms/Button";
-import MutiTextFieldSentence from "../Molecules/MutiTextFieldSentence";
+import MultiTextFieldSentence from "../Molecules/MultiTextFieldSentence";
 
 function MultiTextFieldResponse({ data, styleName }) {
   const { mtfs_data } = data;
@@ -8,7 +8,7 @@ function MultiTextFieldResponse({ data, styleName }) {
 
   return (
     <div classsName={"MultiTextFieldResponse"}>
-      <MutiTextFieldSentence data={mtfs_data} styleName={mtfs_style}></MutiTextFieldSentence>
+      <MultiTextFieldSentence data={mtfs_data} styleName={mtfs_style}></MultiTextFieldSentence>
       <Button styleName={btn_style}>확인</Button>
     </div>
   );
