@@ -11,6 +11,10 @@
   &:active {
     background: darken($bg_color, 10%);
   }
+
+  &.translucent {
+    background: rgba($bg_color, 35%);
+  }
 }
 
 .Button {
@@ -25,11 +29,6 @@
   border: none;
   outline: none;
   cursor: pointer;
-
-  // translucent
-  &.translucent {
-    opacity: 0.3;
-  }
 
   // alignment
   &.left {
@@ -140,6 +139,6 @@
     width: 142px;
     height: 35.3px;
     border-radius: 10px;
-    @include button-color($lynx-white, $dark-gray)
+    @include button-color($lynx-white, $dark-gray);
   }
 }
