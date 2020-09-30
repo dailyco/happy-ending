@@ -21,10 +21,10 @@ function P26() {
   const styleName = {
     template_style: ["center"],
     dq_style: {
-      h3_style: ["normal", "center", "white"],
-      p_style: ["center", "white"],
+      h3_style: ["normal", "white"],
+      p_style: ["white"],
     },
-    span_style: ["noto", "xs", "dark-gray", "light", "center"],
+    span_style: ["noto", "xs", "dark-gray", "light"],
   };
 
   return (

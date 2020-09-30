@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import InsertyPaperTemplate from "../Templates/InsertyPaperTemplate";
+import P11Vedio from "../../assets/video/11-after home.mp4";
 
 import "../../scss/Pages/P11.scss";
 
@@ -21,16 +22,16 @@ function P11() {
   const styleName = {
     template_style: ["left"],
     dq_style: {
-      h3_style: ["normal", "left", "white"],
-      p_style: ["left", "white"],
+      h3_style: ["normal", "white"],
+      p_style: ["white"],
     },
-    span_style: ["noto", "xs", "white", "light", "left"],
+    span_style: ["noto", "xs", "white", "light"],
   };
 
   return (
     <div className={classNames("P11")}>
       <video autoPlay muted loop>
-        <source src="../../assets/video/11-after home.mp4" type="video/mp4" />
+        <source src={P11Vedio} type="video/mp4" />
       </video>
       <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
     </div>

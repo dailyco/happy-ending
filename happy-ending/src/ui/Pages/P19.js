@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
+import P19Vedio from "../../assets/video/19-music.mp4";
 
 import "../../scss/Pages/P19.scss";
 
@@ -28,22 +29,22 @@ function P19() {
   const styleName = {
     template_style: ["center"],
     dq_style: {
-      h3_style: ["normal", "center", "eclipse"],
-      p_style: ["center", "eclipse"],
+      h3_style: ["normal", "eclipse"],
+      p_style: ["eclipse"],
     },
     ftfr_style: {
       ftf_style: {
         ftf_style: ["gray", "strong", "round"],
         tf_style: ["xl", "normal", "eclipse"],
       },
-      button_style: ["xs", "orange", "center"],
+      button_style: ["xs", "orange"],
     },
   };
 
   return (
     <div className={classNames("P19")}>
       <video autoPlay muted loop>
-        <source src="../../assets/video/19-music.mp4" type="video/mp4" />
+        <source src={P19Vedio} type="video/mp4" />
       </video>
       <FullTextFieldTemplate data={data} styleName={styleName}></FullTextFieldTemplate>
     </div>

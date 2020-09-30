@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import InsertyPaperTemplate from "../Templates/InsertyPaperTemplate";
+import P23Vedio from "../../assets/video/23-after D-1.mp4";
 
 import "../../scss/Pages/P23.scss";
 
@@ -21,16 +22,16 @@ function P23() {
   const styleName = {
     template_style: ["center"],
     dq_style: {
-      h3_style: ["normal", "center", "white"],
-      p_style: ["center", "white"],
+      h3_style: ["normal", "white"],
+      p_style: ["white"],
     },
-    span_style: ["noto", "xs", "davy-gray", "light", "center"],
+    span_style: ["noto", "xs", "davy-gray", "light"],
   };
 
   return (
     <div className={classNames("P23")}>
       <video autoPlay muted loop>
-        <source src="../../assets/video/23-after D-1.mp4" type="video/mp4" />
+        <source src={P23Vedio} type="video/mp4" />
       </video>
       <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
     </div>
