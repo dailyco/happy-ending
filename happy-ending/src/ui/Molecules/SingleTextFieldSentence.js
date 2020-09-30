@@ -17,11 +17,4 @@ function SingleTextFieldSentence({ data, styleName }) {
   );
 }
 
-SingleTextFieldSentence.defaultProps = {
-  styleName: ["s", "weak", "dark-greenish-blue"],
-  l_text: "3일간 여행을 혼자 (",
-  r_text: ") (으)로 떠난다.",
-  placeHolder: "어디",
-};
-
 export default SingleTextFieldSentence;
