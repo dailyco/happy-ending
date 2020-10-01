@@ -1,6 +1,8 @@
 @import "../colors.scss";
 
 @mixin background-color($bg_color) {
+    background-color: $bg_color;
+
     &.weak {
         background-color: rgba($bg_color, 75%);
     }
