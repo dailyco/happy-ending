@@ -18,11 +18,8 @@ function P13() {
     ftfr_data: {
       ftf_data: {
         tf_data: {
-          placeHolder: "내용을 입력해주세요.",
+          placeHolder: "내용을 입력하세요.",
         },
-      },
-      button_data: {
-        text: "확인",
       },
     },
   };
@@ -30,7 +27,7 @@ function P13() {
     template_style: ["center"],
     dq_style: {
       h3_style: ["normal", "white"],
-      p_style: ["white"],
+      p_style: ["white", "one-line"],
     },
     ftfr_style: {
       ftf_style: {

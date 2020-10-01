@@ -11,7 +11,7 @@ function P7_2() {
         day: 7,
       },
       p_data: {
-        question: "돼지저금통을 그대로 두기로 했습니다.\n왜 그대로 두었나요?",
+        question: ["돼지저금통을 그대로 두기로 했습니다.", <br />, "왜 그대로 두었나요?"],
       },
     },
     ftfr_data: {
@@ -20,16 +20,12 @@ function P7_2() {
           placeHolder: "내용을 입력해주세요.",
         },
       },
-      button_data: {
-        text: "확인",
-      },
     },
   };
   const styleName = {
-    template_style: ["center"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
-      p_style: ["eclipse"],
+      p_style: ["eclipse", "two-line"],
     },
     ftfr_style: {
       ftf_style: {

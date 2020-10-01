@@ -11,17 +11,14 @@ function P21() {
         day: 2,
       },
       p_data: {
-        question: "장례식장에 올 사람들 중, 당신의 죽음에 가장 슬피 울어줄 것 같은 사람이 누구인지 생각해봅니다.\n그 사람은 누구인가요?",
+        question: ["장례식장에 올 사람들 중, 당신의 죽음에 가장 슬피 울어줄 것 같은 사람이 누구인지 생각해봅니다.", <br />, "그 사람은 누구인가요?"],
       },
     },
     ftfr_data: {
       ftf_data: {
         tf_data: {
-          placeHolder: "내용을 입력해주세요.",
+          placeHolder: "내용을 입력해주세요",
         },
-      },
-      button_data: {
-        text: "확인",
       },
     },
   };
@@ -29,7 +26,7 @@ function P21() {
     template_style: ["center"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
-      p_style: ["eclipse"],
+      p_style: ["eclipse", "two-line"],
     },
     ftfr_style: {
       ftf_style: {
