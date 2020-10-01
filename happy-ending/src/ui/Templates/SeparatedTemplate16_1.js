@@ -1,7 +1,6 @@
 import React from "react";
 import P from "../Atoms/P";
 import Webcam from "react-webcam";
-import { MdPhotoCamera } from "react-icons/md";
 import Button from "../Atoms/Button";
 import "../../scss/Templates/SeparatedTemplate16_1.scss";
 
@@ -27,9 +26,7 @@ function SeparatedTemplate16_1({ data, styleName }) {
     <div className={SeparatedTemplate16_1}>
       <P styleName={p_style}>{p_data.text}</P>
       <Webcam audio={false} videoConstraints={videoConstraints}></Webcam>
-      <Button styleName={btn_style} onClick={capture}>
-        <MdPhotoCamera size={48}></MdPhotoCamera>
-      </Button>
+      <Button styleName={btn_style} onClick={capture}></Button>
     </div>
   );
 }
