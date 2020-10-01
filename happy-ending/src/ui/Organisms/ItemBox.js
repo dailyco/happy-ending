@@ -5,13 +5,10 @@ import "../../scss/Organisms/ItemBox.scss";
 
 function ItemBox() {
   return (
-    <>
+    <div className={"item-create-container"}>
       <Item></Item>
-
-      <div className={"item-create-container"}>
-        <ItemCreate></ItemCreate>
-      </div>
-    </>
+      <ItemCreate></ItemCreate>
+    </div>
   );
 }
 
