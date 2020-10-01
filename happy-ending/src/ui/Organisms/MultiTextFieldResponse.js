@@ -2,12 +2,15 @@ import React from "react";
 import Button from "../Atoms/Button";
 import MutiTextFieldSentence from "../Molecules/MutiTextFieldSentence";
 
-function MultiTextFieldResponse({ text1, text2, text3, placeHolder1, placeHolder2 }) {
+function MultiTextFieldResponse({ data, styleName }) {
+  const { mtfs_data } = data;
+  const { mtfs_style, btn_style } = styleName;
+
   return (
-    <>
-      <MutiTextFieldSentence text1={text1} text2={text2} text3={text3} placeHolder1={placeHolder1} placeHolder2={placeHolder2}></MutiTextFieldSentence>
-      <Button text="확인" size="small" color="white"></Button>
-    </>
+    <div classsName={"MultiTextFieldResponse"}>
+      <MutiTextFieldSentence data={mtfs_data} styleName={mtfs_style}></MutiTextFieldSentence>
+      <Button styleName={btn_style}>확인</Button>
+    </div>
   );
 }
 
