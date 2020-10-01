@@ -28,7 +28,12 @@ function P8_2_1() {
       p_style: ["eclipse"],
     },
     stfr_style: {
-      stfs_style: ["m", "strong", "charcoal-gray"],
+      stfs_style: {
+        bg_style: ["m", "strong", "charcoal-gray"],
+        l_text_style: ["noto", "s", "normal", "eclipse"],
+        tf_style: ["s", "davy-gray"],
+        r_text_style: ["noto", "s", "normal", "eclipse"],
+      },
       btn_style: ["xs", "white"],
     },
   };
