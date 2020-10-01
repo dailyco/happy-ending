@@ -28,7 +28,12 @@ function P8_1_1() {
       p_style: ["white"],
     },
     stfr_style: {
-      stfs_style: ["s", "weak", "dark-greenish-blue"],
+      stfs_style: {
+        bg_style: ["s", "weak", "dark-greenish-blue"],
+        l_text_style: ["noto", "s", "normal", "white"],
+        tf_style: ["s", "gain-gray"],
+        r_text_style: ["noto", "s", "normal", "white"],
+      },
       btn_style: ["xs", "greenish-blue"],
     },
   };
