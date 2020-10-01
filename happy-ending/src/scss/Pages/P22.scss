@@ -1,0 +1,13 @@
+.P22 {
+  width: 1920px;
+  height: 1080px;
+
+  & video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+}
