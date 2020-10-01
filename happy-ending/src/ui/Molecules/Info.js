@@ -4,10 +4,10 @@ import TextField from "../Atoms/TextField";
 function Info() {
   return (
     <>
-      <TextField placeHolder="이름"></TextField>
-      <TextField placeHolder="YY"></TextField>
-      <TextField placeHolder="MM"></TextField>
-      <TextField placeHolder="DD"></TextField>
+      <TextField placeHolder="이름" styleName={["m", "davy-gray"]}></TextField>
+      <TextField placeHolder="YY" styleName={["xs", "davy-gray"]}></TextField>
+      <TextField placeHolder="MM" styleName={["xs", "davy-gray"]}></TextField>
+      <TextField placeHolder="DD" styleName={["xs", "davy-gray"]}></TextField>
     </>
   );
 }
