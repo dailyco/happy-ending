@@ -3,13 +3,14 @@ import Button from "../Atoms/Button";
 import GraveStone from "../Molecules/GraveStone";
 import "../../scss/Organisms/GraveStoneResponse.scss";
 
-function GraveStoneResponse() {
+function GraveStoneResponse({ data, styleName }) {
+  const { gs_data, btn_data } = data;
+  const { gs_style, btn_style } = styleName;
+
   return (
     <div className={"GraveStoneResponse"}>
-      <GraveStone></GraveStone>
-      <section className={"btn-container"}>
-        <Button styleName={["xs", "light-gray"]}>확인</Button>
-      </section>
+      <GraveStone data={gs_data} styleName={gs_style}></GraveStone>
+      <Button styleName={btn_style}>{btn_data.text}</Button>
     </div>
   );
 }
