@@ -11,7 +11,7 @@ function SeparateTemplate17({ data, styleName }) {
     <div className={SeparateTemplate17}>
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
       {imgs.map((img) => (
-        <Img src={img.src} alt={img.alt}></Img>
+        <Img image={img.image} alt={img.alt}></Img>
       ))}
     </div>
   );
