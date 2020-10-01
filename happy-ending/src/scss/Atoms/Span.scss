@@ -8,6 +8,7 @@
   &.noto {
     font-family: "Noto Sans KR", sans-serif;
   }
+
   &.nanum {
     font-family: "NaNum Myeongjo", serif;
   }
@@ -16,15 +17,19 @@
   &.xs {
     font-size: 20px;
   }
+
   &.s {
     font-size: 22px;
   }
+
   &.m {
     font-size: 24px;
   }
+
   &.l {
     font-size: 74px;
   }
+
   &.xl {
     font-size: 110px;
   }
@@ -33,12 +38,19 @@
   &.light {
     font-weight: 300;
   }
+
   &.normal {
     font-weight: 400;
   }
+
   &.medium {
     font-weight: 500;
   }
+
+  &.bold {
+    font-weight: 700;
+  }
+
   &.extra-bold {
     font-weight: 800;
   }
@@ -47,18 +59,23 @@
   &.white {
     color: $white;
   }
+
   &.charcoal {
     color: $charcoal;
   }
+
   &.eclipse {
     color: $eclipse;
   }
+
   &.davy-gray {
     color: $davy-gray;
   }
+
   &.dark-gray {
     color: $dark-gray;
   }
+
   &.neon-green {
     color: $neon-green;
   }
