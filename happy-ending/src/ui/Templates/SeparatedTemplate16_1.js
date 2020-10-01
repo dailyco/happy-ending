@@ -1,12 +1,13 @@
 import React from "react";
 import P from "../Atoms/P";
+import Img from "../Atoms/Img";
 import Webcam from "react-webcam";
 import Button from "../Atoms/Button";
 import "../../scss/Templates/SeparatedTemplate16_1.scss";
 
 function SeparatedTemplate16_1({ data, styleName }) {
-  const { p_data } = data;
-  const { p_style, btn_style } = styleName;
+  const { p_data, retry_btn_data, check_btn_data } = data;
+  const { p_style, btn_style, retry_btn_style, check_btn_style } = styleName;
 
   const videoConstraints = {
     width: { min: 496 },
@@ -24,9 +25,20 @@ function SeparatedTemplate16_1({ data, styleName }) {
 
   return (
     <div className={SeparatedTemplate16_1}>
-      <P styleName={p_style}>{p_data.text}</P>
-      <Webcam audio={false} videoConstraints={videoConstraints}></Webcam>
-      <Button styleName={btn_style} onClick={capture}></Button>
+      {!imgSrc && (
+        <>
+          <P styleName={p_style}>{p_data.text}</P>
+          <Webcam audio={false} ref={webcamRef} screenshotFormat="image/jpeg" videoConstraints={videoConstraints}></Webcam>
+          <Button styleName={btn_style} onClick={capture}></Button>
+        </>
+      )}
+      {imgSrc && (
+        <>
+          <Img image={imgSrc} alt="영정 사진" />
+          <Button styleName={retry_btn_style}>{retry_btn_data}</Button>
+          <Button styleName={check_btn_style}>{check_btn_data}</Button>
+        </>
+      )}
     </div>
   );
 }
