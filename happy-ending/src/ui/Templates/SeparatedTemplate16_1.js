@@ -10,9 +10,9 @@ function SeparatedTemplate16_1({ data, styleName }) {
   const { p_style, btn_style } = styleName;
 
   const videoConstraints = {
-    width: { min: 480 },
-    height: { min: 720 },
-    aspectRatio: 0.6666666667,
+    width: { min: 496 },
+    height: { min: 716 },
+    aspectRatio: 0.41340782122,
   };
 
   const webcamRef = React.useRef(null);
@@ -28,7 +28,7 @@ function SeparatedTemplate16_1({ data, styleName }) {
       <P styleName={p_style}>{p_data.text}</P>
       <Webcam audio={false} videoConstraints={videoConstraints}></Webcam>
       <Button styleName={btn_style} onClick={capture}>
-        <MdPhotoCamera size={32}></MdPhotoCamera>
+        <MdPhotoCamera size={48}></MdPhotoCamera>
       </Button>
     </div>
   );
