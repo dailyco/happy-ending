@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import SeperatedTemplate1 from "../Templates/SeperatedTemplate1";
+import SeparatedTemplate1 from "../Templates/SeparatedTemplate1";
 import HappyendingLogo from "../../assets/img/Happy Ending Logo_new.png";
 
 import "../../scss/Pages/P1.scss";
@@ -22,7 +22,7 @@ function P1() {
   };
   return (
     <div className={classNames("P1")}>
-      <SeperatedTemplate1 data={data} styleName={styleName}></SeperatedTemplate1>
+      <SeparatedTemplate1 data={data} styleName={styleName}></SeparatedTemplate1>
     </div>
   );
 }

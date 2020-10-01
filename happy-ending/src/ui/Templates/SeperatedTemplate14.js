@@ -4,13 +4,13 @@ import ItemBox from "../Organisms/ItemBox";
 import Dquestion from "../Organisms/Dquestion";
 import classNames from "classnames";
 
-import "../../scss/Templates/SeperatedTemplate14.scss";
+import "../../scss/Templates/SeparatedTemplate14.scss";
 
-function SeperatedTemplate14({ data, styleName }) {
+function SeparatedTemplate14({ data, styleName }) {
   const { dq_data, button_data } = data;
   const { template_style, dq_style, button_style } = styleName;
   return (
-    <div className={classNames("SeperatedTemplate14", template_style)}>
+    <div className={classNames("SeparatedTemplate14", template_style)}>
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
       <div className={classNames("ItemBoxContainer")}>
         <ItemBox></ItemBox>
@@ -20,4 +20,4 @@ function SeperatedTemplate14({ data, styleName }) {
   );
 }
 
-export default SeperatedTemplate14;
+export default SeparatedTemplate14;
