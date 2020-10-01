@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import SeperatedTemplate2 from "../Templates/SeperatedTemplate2";
+import SeparatedTemplate2 from "../Templates/SeparatedTemplate2";
 
 import "../../scss/Pages/P2.scss";
 
@@ -34,7 +34,7 @@ function P2() {
   };
   return (
     <div className={classNames("P2")}>
-      <SeperatedTemplate2 data={data} styleName={styleName}></SeperatedTemplate2>
+      <SeparatedTemplate2 data={data} styleName={styleName}></SeparatedTemplate2>
     </div>
   );
 }
