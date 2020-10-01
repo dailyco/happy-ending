@@ -6,13 +6,4 @@
     opacity: 0.6;
     border-radius: 10px;
     background-color: $stone-gray;
-
-    box-sizing: border-box;
-    padding: 40px 0;
-
-    & section.btn-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 }
