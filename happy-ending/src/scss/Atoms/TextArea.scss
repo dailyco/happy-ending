@@ -1,65 +1,64 @@
 @import "../colors.scss";
 
 .TextArea {
-    display: block;
-    resize: none;
-    border: none;
-    width: 100%;
-    box-sizing: border-box;
+  display: block;
+  resize: none;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
 
-    &:focus {
-        outline: none;
-    }
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $dark-gray;
+  }
+
+  &::-moz-placeholder {
+    color: $dark-gray;
+  }
+
+  &::-ms-placeholder {
+    color: $dark-gray;
+  }
+
+  &::placeholder {
+    color: $dark-gray;
+  }
+
+  &.item {
+    background-color: $gain-gray;
+    border-radius: 10px;
+    padding: 11px 13px;
+    margin: 10px 0;
+  }
+
+  &.grave {
+    background-color: transparent;
+    line-height: 36px;
+    font-size: 22px;
+    letter-spacing: -0.22px;
+    text-align: center;
 
     &::-webkit-input-placeholder {
-        color: $dark-gray;
+      color: $dark-gray;
+      text-align: center;
     }
 
     &::-moz-placeholder {
-        color: $dark-gray;
+      color: $dark-gray;
+      text-align: center;
     }
 
     &::-ms-placeholder {
-        color: $dark-gray;
+      color: $dark-gray;
+      text-align: center;
     }
 
     &::placeholder {
-        color: $dark-gray;
+      color: $dark-gray;
+      text-align: center;
     }
-
-    &.item {
-        background-color: $gain-gray;
-        border-radius: 10px;
-        padding: 11px 13px;
-        margin: 10px 0;
-    }
-
-    &.grave {
-        background-color: transparent;
-        line-height: 36px;
-        font-size: 22px;
-        letter-spacing: -0.22px;
-        text-align: center;
-
-        &::-webkit-input-placeholder {
-            color: $dark-gray;
-            text-align: center;
-        }
-
-        &::-moz-placeholder {
-            color: $dark-gray;
-            text-align: center;
-        }
-
-        &::-ms-placeholder {
-            color: $dark-gray;
-            text-align: center;
-        }
-
-        &::placeholder {
-            color: $dark-gray;
-            text-align: center;
-        }
-    }
-
+  }
 }
