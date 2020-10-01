@@ -2,7 +2,7 @@ import React from "react";
 import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
 import "../../scss/Pages/P8.scss";
 
-function P6() {
+function P8() {
   const data = {
     dq_data: {
       h3_data: {
@@ -41,4 +41,4 @@ function P6() {
   );
 }
 
-export default P6;
+export default P8;
