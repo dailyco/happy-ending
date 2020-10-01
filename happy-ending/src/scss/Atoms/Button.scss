@@ -126,6 +126,13 @@
     @include button-color($lynx-white, $dark-gray);
   }
 
+  // circle
+  &.circle {
+    width: 72.7px;
+    height: 72.7px;
+    border-radius: 50%;
+  }
+
   &.item {
     width: 142px;
     height: 35.3px;
