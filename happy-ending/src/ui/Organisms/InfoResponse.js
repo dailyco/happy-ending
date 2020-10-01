@@ -6,7 +6,7 @@ function InfoResponse() {
   return (
     <>
       <Info></Info>
-      <Button text="확인" size="small" color="white"></Button>
+      <Button styleName={["xxs", "white"]}>확인</Button>
     </>
   );
 }

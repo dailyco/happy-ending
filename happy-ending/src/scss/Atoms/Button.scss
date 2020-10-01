@@ -4,14 +4,6 @@
   background: $bg_color;
   color: $txt_color;
 
-  &:hover {
-    background: lighten($bg_color, 10%);
-  }
-
-  &:active {
-    background: darken($bg_color, 10%);
-  }
-
   &.translucent {
     background: rgba($bg_color, 35%);
   }
@@ -132,11 +124,12 @@
     height: 72.7px;
     border-radius: 50%;
   }
-
+  
   &.item {
     width: 142px;
     height: 35.3px;
+    font-size: 20px;
+    line-height: 2.15;
     border-radius: 10px;
-    @include button-color($lynx-white, $dark-gray);
   }
 }
