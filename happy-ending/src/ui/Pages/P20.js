@@ -31,6 +31,7 @@ function P20() {
   };
 
   const styleName = {
+    tp_style: ["center", "four-btn"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse"],

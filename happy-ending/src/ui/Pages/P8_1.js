@@ -26,6 +26,7 @@ function P8_1() {
   };
 
   const styleName = {
+    tp_style: ["center", "two-btn"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse"],
