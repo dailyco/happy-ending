@@ -21,7 +21,7 @@ function P25() {
 
   return (
     <div className={"P25"}>
-      <video autoPlay muted loop>
+      <video autoPlay muted>
         <source src={P25_Video} type="video/mp4" />
       </video>
       <SeparatedTemplate25 data={data} styleName={styleName}></SeparatedTemplate25>
