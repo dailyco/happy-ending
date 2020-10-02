@@ -11,17 +11,14 @@ function P12_1() {
         day: 4,
       },
       p_data: {
-        question: "책장을 정리하며 당신의 사진이 담긴 앨범을 발견했습니다.\n살아온 날들을 되돌아보며 가장 행복했던 순간을 떠올립니다. 그 순간은 언제인가요?",
+        question: ["책장을 정리하며 당신의 사진이 담긴 앨범을 발견했습니다.", <br />, "살아온 날들을 되돌아보며 가장 행복했던 순간을 떠올립니다. 그 순간은 언제인가요?"],
       },
     },
     ftfr_data: {
       ftf_data: {
         tf_data: {
-          placeHolder: "내용을 입력해주세요.",
+          placeHolder: "내용을 입력하세요.",
         },
-      },
-      button_data: {
-        text: "확인",
       },
     },
   };
@@ -29,7 +26,7 @@ function P12_1() {
     template_style: ["center"],
     dq_style: {
       h3_style: ["normal", "white"],
-      p_style: ["white"],
+      p_style: ["white", "two-line"],
     },
     ftfr_style: {
       ftf_style: {

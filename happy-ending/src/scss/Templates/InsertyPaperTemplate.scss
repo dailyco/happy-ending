@@ -1,9 +1,75 @@
 .InsertyPaperTemplate {
+  box-sizing: border-box;
+
+  &.P10 {
+    padding-top: 112.6px;
+    padding-left: 241px;
+    & .H3 {
+      margin-left: 5.4px;
+    }
+  }
+
+  &.P11 {
+    padding-top: 112.6px;
+    padding-left: 222.6px;
+    & .H3 {
+      margin-left: 5.5px;
+    }
+  }
+
+  &.P23 {
+    padding-top: 100px;
+    & .P {
+      margin-bottom: 357.1px;
+    }
+  }
+
+  &.P26 {
+    padding-top: 223px;
+    & .H3 {
+      margin-left: 4.8px;
+    }
+    & .P {
+      margin-left: 11.7px;
+      margin-bottom: 250.1px;
+    }
+  }
+
   &.center {
     text-align: center;
+
+    & .H3 {
+      margin-bottom: 107px;
+    }
   }
 
   &.left {
     text-align: left;
+
+    & .H3 {
+      margin-bottom: 84.8px;
+    }
+
+    & .P {
+      margin-bottom: 347.8px;
+    }
+  }
+
+  & .H3 {
+    height: 33px;
+  }
+
+  & .P {
+    &.line-3 {
+      height: 193px;
+    }
+    &.line-4 {
+      height: 233px;
+    }
+    &.line-5 {
+      height: 177px;
+      line-height: 1.64;
+      letter-spacing: -0.26px;
+    }
   }
 }

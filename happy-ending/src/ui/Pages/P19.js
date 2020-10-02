@@ -18,11 +18,8 @@ function P19() {
     ftfr_data: {
       ftf_data: {
         tf_data: {
-          placeHolder: "내용을 입력해주세요.",
+          placeHolder: "내용을 입력하세요.",
         },
-      },
-      button_data: {
-        text: "확인",
       },
     },
   };
@@ -30,14 +27,14 @@ function P19() {
     template_style: ["center"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
-      p_style: ["eclipse"],
+      p_style: ["eclipse", "one-line"],
     },
     ftfr_style: {
       ftf_style: {
         ftf_style: ["gray", "strong", "round"],
         tf_style: ["xl", "normal", "eclipse"],
       },
-      button_style: ["xs", "orange"],
+      button_style: ["xs", "orange", "music"],
     },
   };
 

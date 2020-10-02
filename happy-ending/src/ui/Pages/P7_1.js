@@ -11,7 +11,7 @@ function P7_1() {
         day: 7,
       },
       p_data: {
-        question: "돼지저금통을 깨기로 했습니다.\n무엇을 위해 사용할 것인가요?",
+        question: ["돼지저금통을 깨기로 했습니다.", <br />, "무엇을 위해 사용할 것인가요?"],
       },
     },
     ftfr_data: {
@@ -20,16 +20,12 @@ function P7_1() {
           placeHolder: "내용을 입력해주세요.",
         },
       },
-      button_data: {
-        text: "확인",
-      },
     },
   };
   const styleName = {
-    template_style: ["center"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
-      p_style: ["eclipse"],
+      p_style: ["eclipse", "two-line"],
     },
     ftfr_style: {
       ftf_style: {

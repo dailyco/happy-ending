@@ -1,14 +1,32 @@
 .FullTextFieldTemplate {
-  &.center {
-    text-align: center;
-    & .FullTextField {
-      margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 100px;
+
+  & .H3 {
+    margin-bottom: 107px;
+    height: 33px;
+  }
+
+  & .P {
+    &.two-line {
+      height: 73px;
+      margin-bottom: 48px;
+    }
+    &.one-line {
+      height: 33px;
+      margin-bottom: 88px;
     }
   }
-  &.left {
-    text-align: left;
-    & .FullTextField {
-      margin: 0;
+
+  & .FullTextField {
+    margin: 0 auto;
+  }
+
+  & .Button {
+    margin-top: 116px;
+    &.music {
+      margin-top: 453px;
     }
   }
 }
