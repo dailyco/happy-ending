@@ -1,3 +1,15 @@
 .SeparatedTemplate3 {
+  box-sizing: border-box;
   text-align: center;
+  padding: 100px;
+
+  & .H3 {
+    height: 33px;
+    margin-bottom: 234.4px;
+  }
+
+  & .P {
+    height: 193px;
+    margin-bottom: 308.6px;
+  }
 }

@@ -1,1 +1,12 @@
-// TODO : CODE HERE
+@import "../colors.scss";
+
+.ItemBox {
+  padding: 10px;
+  width: 550px;
+  height: 650px;
+  background-color: rgba($white-smoke, 30%);
+
+  & .Button {
+    margin: 0 auto;
+  }
+}

@@ -28,7 +28,6 @@ function P5() {
     },
   };
   const styleName = {
-    template_style: ["left"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse"],

@@ -3,16 +3,22 @@ import Span from "../Atoms/Span";
 import Dquestion from "../Organisms/Dquestion";
 import classNames from "classnames";
 
-// import "../../scss/Templates/SeparatedTemplate7.scss";
+import "../../scss/Templates/SeparatedTemplate7.scss";
 
 function SeparatedTemplate7({ data, styleName }) {
   const { dq_data, s1_data, s2_data } = data;
-  const { template_style, dq_style, s1_style, s2_style } = styleName;
+  const { dq_style, s1_style, s2_style } = styleName;
   return (
-    <div className={classNames("SeparatedTemplate7", template_style)}>
+    <div className={classNames("SeparatedTemplate7")}>
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
-      <Span styleName={s1_style}>{s1_data.text}</Span>
-      <Span styleName={s2_style}>{s2_data.text}</Span>
+      <div className={classNames("SpanPair")}>
+        <Span styleName={s1_style} className={classNames("Span1")}>
+          {s1_data.text}
+        </Span>
+        <Span styleName={s2_style} className={classNames("Span2")}>
+          {s2_data.text}
+        </Span>
+      </div>
     </div>
   );
 }

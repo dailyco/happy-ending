@@ -5,7 +5,7 @@ import "../../scss/Organisms/ItemBox.scss";
 
 function ItemBox() {
   return (
-    <div className={"item-create-container"}>
+    <div className={"ItemBox"}>
       <Item></Item>
       <Button styleName={["item", "lynx-white"]}>+ 추가하기</Button>
     </div>

@@ -14,12 +14,8 @@ function P14() {
         question: ["당신은 유서를 작성하기 위해 책상에 앉았습니다.", <br />, "앞에 있는 노트에 마지막 말을 남겨주세요."],
       },
     },
-    button_data: {
-      text: "확인",
-    },
   };
   const styleName = {
-    template_style: ["left"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse"],

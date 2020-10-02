@@ -16,7 +16,6 @@ function P1() {
     },
   };
   const styleName = {
-    template_style: ["center"],
     img_style: ["logo"],
     span_style: ["noto", "xs", "davy-gray", "light"],
   };

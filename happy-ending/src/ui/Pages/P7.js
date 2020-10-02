@@ -23,7 +23,6 @@ function P7() {
     },
   };
   const styleName = {
-    template_style: ["center"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse"],

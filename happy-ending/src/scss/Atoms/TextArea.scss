@@ -1,15 +1,11 @@
 @import "../colors.scss";
 
 .TextArea {
-  display: block;
   resize: none;
   border: none;
-  width: 100%;
-  box-sizing: border-box;
-
-  &:focus {
-    outline: none;
-  }
+  font-stretch: normal;
+  font-style: normal;
+  outline: none;
 
   &::-webkit-input-placeholder {
     color: $dark-gray;
@@ -28,36 +24,46 @@
   }
 
   &.item {
+    font-family: "Noto Sans KR";
+    font-weight: normal;
     background-color: $gain-gray;
+    width: 509px;
+    height: 119px;
+    font-size: 20px;
+    color: #808080;
+    line-height: 2.15;
+    letter-spacing: -0.2px;
+    margin: 14.5px 0 20.6px;
+    padding: 11.4px 15px 18.6px 13px;
     border-radius: 10px;
-    padding: 11px 13px;
-    margin: 10px 0;
+    letter-spacing: -0.2px;
   }
 
   &.grave {
+    font-family: "Nanum Myeongjo";
     background-color: transparent;
-    line-height: 36px;
-    font-size: 22px;
-    letter-spacing: -0.22px;
     text-align: center;
+    width: 368px;
+    height: 94.1px;
+    font-size: 22px;
+    color: $dark-gray;
+    font-weight: 800;
+    line-height: 1.64;
+    letter-spacing: -0.22px;
 
     &::-webkit-input-placeholder {
-      color: $dark-gray;
       text-align: center;
     }
 
     &::-moz-placeholder {
-      color: $dark-gray;
       text-align: center;
     }
 
     &::-ms-placeholder {
-      color: $dark-gray;
       text-align: center;
     }
 
     &::placeholder {
-      color: $dark-gray;
       text-align: center;
     }
   }
