@@ -7,13 +7,13 @@ function P16_1() {
     p_data: {
       text: ["정면에 있는 카메라를 보세요.", <br />, "버튼을 누르면 3초 뒤에 사진이 찍힙니다."],
     },
-    retry_btn_data: "다시찍기",
+    retake_btn_data: "다시찍기",
     check_btn_data: "확인",
   };
   const styleName = {
     p_style: ["white"],
     btn_style: ["circle", "light-brown"],
-    retry_btn_style: ["xs", "beige"],
+    retake_btn_style: ["xs", "beige"],
     check_btn_style: ["xs", "light-brown"],
   };
 

@@ -1,1 +1,39 @@
-.SeparatedTemplate16_1 {}
+.SeparatedTemplate16_1 {
+    position: relative;
+
+    & .P {
+        height: 73px;
+        position: absolute;
+        text-align: center;
+        top: 435px;
+        left: 770px;
+        z-index: 1;
+    }
+
+    & video,
+    Img {
+        position: absolute;
+        top: 140px;
+        left: 700px;
+    }
+
+    & .Button {
+        margin-top: 964px;
+
+        &.capture {
+            margin-left: 923.3px;
+        }
+
+        &.retake {
+            margin-left: 788px;
+        }
+    }
+
+    & .Button+.Button {
+        margin-left: 62px;
+    }
+
+
+
+
+}
