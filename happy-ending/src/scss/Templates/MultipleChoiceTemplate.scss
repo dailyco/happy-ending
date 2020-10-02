@@ -1,26 +1,64 @@
 .MultipleChoiceTemplate {
     box-sizing: border-box;
-    text-align: left;
     padding: 100px;
 
-    & .H3 {
-        margin-bottom: 107px;
-        height: 33px;
+    &.center {
+        text-align: center;
+
+        &.two-btn {
+            & .H3 {
+                margin-bottom: 107px;
+                height: 33px;
+            }
+
+            & .P {
+                margin-bottom: 88px;
+                height: 33px;
+            }
+
+            & .SelectionBox {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            & .Button {
+                display: block;
+                text-align: center;
+            }
+
+            & .Button+.Button {
+                margin-top: 21.7px;
+            }
+        }
+
+        &.four-btn {}
     }
 
-    & .P {
-        margin-bottom: 72px;
-        height: 73px;
-    }
-
-    & .Button {
-        display: block;
+    &.left.two-btn {
         text-align: left;
-        box-sizing: border-box;
-        padding-left: 25px;
-    }
 
-    & .Button+.Button {
-        margin-top: 26.1px;
+        & .H3 {
+            margin-bottom: 107px;
+            height: 33px;
+        }
+
+        & .P {
+            margin-bottom: 72px;
+            height: 73px;
+        }
+
+        & .Button {
+            display: block;
+            text-align: left;
+            box-sizing: border-box;
+            padding-left: 25px;
+        }
+
+        & .Button+.Button {
+            margin-top: 26.1px;
+        }
+
     }
 }

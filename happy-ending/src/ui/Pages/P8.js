@@ -25,6 +25,7 @@ function P8() {
   };
 
   const styleName = {
+    tp_style: ["left", "two-btn"],
     dq_style: {
       h3_style: ["normal", "white"],
       p_style: ["white"],
