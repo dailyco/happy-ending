@@ -8,7 +8,7 @@ function P({ children, className, styleName }) {
 
 P.defaultProps = {
   text: "",
-  styleName: ["black", "left"],
+  styleName: ["black"],
 };
 
 export default P;

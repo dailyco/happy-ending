@@ -7,7 +7,7 @@ function SingleTextFieldResponse({ data, styleName }) {
   const { stfs_style, btn_style } = styleName;
 
   return (
-    <div className={SingleTextFieldResponse}>
+    <div className={"SingleTextFieldResponse"}>
       <SingleTextFieldSentence data={stfs_data} styleName={stfs_style}></SingleTextFieldSentence>
       <Button styleName={btn_style}>확인</Button>
     </div>

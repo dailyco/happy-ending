@@ -35,6 +35,7 @@ function SeparatedTemplate16_1({ data, styleName }) {
       {imgSrc && (
         <>
           <Img image={imgSrc} alt="영정 사진" />
+          {/* 다시누르기 버튼 누르면 imgSrc 다시 null로 */}
           <Button styleName={retry_btn_style}>{retry_btn_data}</Button>
           <Button styleName={check_btn_style}>{check_btn_data}</Button>
         </>
