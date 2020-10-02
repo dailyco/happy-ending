@@ -1,9 +1,10 @@
 .P5 {
+  position: relative;
   width: 1920px;
   height: 1080px;
 
   & video {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: auto;
