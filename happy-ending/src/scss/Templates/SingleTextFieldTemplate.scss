@@ -1,0 +1,27 @@
+.SingleTextFieldTemplate {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 100px;
+
+    & .H3 {
+        margin-bottom: 107px;
+        height: 33px;
+    }
+
+    & .P {
+        margin-bottom: 88px;
+        height: 33px;
+    }
+
+    & .SingleTextFieldSentence {
+        margin: 0 auto;
+        height: 78px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .Button {
+        margin-top: 116px;
+    }
+}
