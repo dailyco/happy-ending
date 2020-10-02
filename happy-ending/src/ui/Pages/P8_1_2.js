@@ -31,7 +31,7 @@ function P8_1_2() {
     },
     mtfr_style: {
       mtfs_style: {
-        bg_style: ["m", "weak", "dark-greenish-blue"],
+        bg_style: ["l", "weak", "dark-greenish-blue"],
         l_text_style: ["noto", "s", "normal", "white"],
         tf1_style: ["s", "dark-white"],
         m_text_style: ["noto", "s", "normal", "white"],

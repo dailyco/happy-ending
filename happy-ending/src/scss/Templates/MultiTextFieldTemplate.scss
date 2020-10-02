@@ -1,4 +1,4 @@
-.SingleTextFieldTemplate {
+.MultiTextFieldTemplate {
     box-sizing: border-box;
     text-align: center;
     padding: 100px;
@@ -13,7 +13,7 @@
         height: 33px;
     }
 
-    & .SingleTextFieldSentence {
+    & .MultiTextFieldSentence {
         margin: 0 auto;
         display: flex;
         justify-content: center;

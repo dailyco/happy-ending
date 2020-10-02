@@ -26,6 +26,11 @@
         height: 78px;
     }
 
+    &.l {
+        width: 698.2px;
+        height: 78px;
+    }
+
     // color
     &.dark-greenish-blue {
         @include background-color($dark-greenish-blue);
