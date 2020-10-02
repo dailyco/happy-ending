@@ -14,7 +14,7 @@ function P24() {
     },
     gsr_data: {
       gs_data: {
-        tf_data: "(어떤)",
+        tf_data: "( 어떤 )",
         sp1_data: "사람,",
         sp2_data: {
           name: "홍길동",
@@ -32,7 +32,7 @@ function P24() {
     },
     gsr_style: {
       gs_style: {
-        tf_style: ["s", "extra-bold", "dark-gray"],
+        tf_style: ["nanum", "s", "extra-bold", "dark-gray"],
         sp1_style: ["nanum", "s", "extra-bold", "eclipse"],
         sp2_style: ["nanum", "s", "extra-bold", "eclipse"],
         ta_style: ["grave"],

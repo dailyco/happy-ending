@@ -3,7 +3,6 @@
 .GraveStoneResponse {
     width: 436.9px;
     height: 693.5px;
-    opacity: 0.6;
     border-radius: 10px;
-    background-color: $stone-gray;
+    background-color: rgba($stone-gray, 60%);
 }
