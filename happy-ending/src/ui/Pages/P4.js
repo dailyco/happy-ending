@@ -27,7 +27,6 @@ function P4() {
     },
   };
   const styleName = {
-    template_style: ["center"],
     p_style: ["eclipse"],
   };
   return (

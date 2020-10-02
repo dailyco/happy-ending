@@ -20,6 +20,7 @@ function P2() {
         <br />,
         "앞으로의 시간을 더욱 의미있게 살아가는데 도움을 주도록 제작된 스토리텔링 게임입니다.",
         <br />,
+        <br />,
         "이제 게임을 시작합니다.",
       ],
     },
@@ -28,7 +29,6 @@ function P2() {
     },
   };
   const styleName = {
-    template_style: ["center"],
     p_style: ["white"],
     span_style: ["noto", "xs", "white", "light"],
   };

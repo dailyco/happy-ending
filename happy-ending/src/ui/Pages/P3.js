@@ -26,7 +26,6 @@ function P3() {
     },
   };
   const styleName = {
-    template_style: ["center"],
     h3_style: ["normal", "eclipse"],
     p_style: ["eclipse"],
     span_style: ["noto", "xs", "davy-gray", "light"],

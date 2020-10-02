@@ -1,0 +1,26 @@
+.SeparatedTemplate7 {
+  box-sizing: border-box;
+  padding: 100px;
+  text-align: center;
+
+  & .SpanPair {
+    display: flex;
+    justify-content: space-between;
+    & .Span1 {
+      margin-left: 110px;
+    }
+    & .Span2 {
+      margin-right: 118.5px;
+    }
+  }
+
+  & .H3 {
+    height: 33px;
+    margin-bottom: 107px;
+  }
+
+  & .P {
+    height: 113px;
+    margin-bottom: 121.4px;
+  }
+}

@@ -88,6 +88,12 @@
   }
 
   &.item {
+    padding: 9.1px 8.5px;
+    text-align: left;
     border-bottom: 1.5px solid $dim-gray;
+  }
+
+  &.info {
+    font-size: 18px;
   }
 }

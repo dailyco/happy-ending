@@ -126,6 +126,9 @@
   }
   
   &.item {
+    justify-content: center;
+    align-items: center;
+    display: flex;
     width: 142px;
     height: 35.3px;
     font-size: 20px;

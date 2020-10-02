@@ -1,0 +1,27 @@
+.SeparatedTemplate5 {
+  box-sizing: border-box;
+  padding: 100px;
+  margin-left: 820px;
+
+  & .H3 {
+    height: 33px;
+    margin-bottom: 107px;
+  }
+
+  & .P {
+    height: 73px;
+    margin-bottom: 72px;
+  }
+
+  & .Span {
+    display: block;
+    &.Span1 {
+      height: 29px;
+      margin-bottom: 5.4px;
+    }
+    &.Span2 {
+      height: 126px;
+      margin-bottom: 387.6px;
+    }
+  }
+}
