@@ -1,1 +1,53 @@
-.SeparateTemplate17 {}
+.SeparateTemplate17 {
+    position: relative;
+    padding: 100px;
+    box-sizing: border-box;
+    text-align: center;
+
+    & .H3 {
+        margin-bottom: 107px;
+        height: 33px;
+    }
+
+    & .P {
+        position: relative;
+        height: 73px;
+        z-index: 1;
+    }
+
+    & .Img[alt="window"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    & .Img[alt="장미"] {
+        position: absolute;
+        top: 501.9px;
+        left: 196px;
+    }
+
+    & .Img[alt="프리지아"] {
+        position: absolute;
+        top: 305.7px;
+        left: 410.9px;
+    }
+
+    & .Img[alt="안개꽃"] {
+        position: absolute;
+        top: 446.4px;
+        left: 776.1px;
+    }
+
+    & .Img[alt="튤립"] {
+        position: absolute;
+        top: 346.3px;
+        left: 1184.6px;
+    }
+
+    & .Img[alt="국화"] {
+        position: absolute;
+        top: 500.7px;
+        left: 1525.3px;
+    }
+}
