@@ -1,5 +1,6 @@
 import React from "react";
 import SeparateTemplate17 from "../Templates/SeparateTemplate17";
+import Window from "../../assets/img/17-Window.png";
 import F1 from "../../assets/img/1F.png";
 import F2 from "../../assets/img/2F.png";
 import F3 from "../../assets/img/3F.png";
@@ -10,6 +11,10 @@ import "../../scss/Pages/P17.scss";
 
 function P17() {
   const data = {
+    bg_data: {
+      image: Window,
+      alt: "window",
+    },
     dq_data: {
       h3_data: {
         day: 3,
