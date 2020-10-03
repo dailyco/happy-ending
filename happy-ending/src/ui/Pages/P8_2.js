@@ -15,9 +15,11 @@ function P8_2() {
     sr_data: {
       buttons: [
         {
+          to: "/p8_2_1",
           text: "A. 집에서 혼자 보낸다",
         },
         {
+          to: "/p8_2_2",
           text: "B. 집에서 사람들과 함께 보낸다",
         },
       ],

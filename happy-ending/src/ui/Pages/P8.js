@@ -15,9 +15,11 @@ function P8() {
     sr_data: {
       buttons: [
         {
+          to: "/p8_1",
           text: "A. 3일간 여행을 떠난다.",
         },
         {
+          to: "/p8_2",
           text: "B. 3일간 집에 남는다.",
         },
       ],

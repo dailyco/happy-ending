@@ -93,7 +93,7 @@ function App() {
         <Route path="/p8_2_2">
           <P8_2_2 />
         </Route>
-        <Route path="/9">
+        <Route path="/p9">
           <P9 />
         </Route>
         <Route path="/p10">
