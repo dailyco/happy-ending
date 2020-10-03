@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classNames from "classnames";
 import SeparatedTemplate5 from "../Templates/SeparatedTemplate5";
 import P5Vedio from "../../assets/video/5-calender.mp4";
@@ -38,10 +39,12 @@ function P5() {
   };
   return (
     <div className={classNames("P5")}>
-      <video autoPlay muted loop>
-        <source src={P5Vedio} type="video/mp4" />
-      </video>
-      <SeparatedTemplate5 data={data} styleName={styleName}></SeparatedTemplate5>
+      <Link to={`/p6`}>
+        <video autoPlay muted loop>
+          <source src={P5Vedio} type="video/mp4" />
+        </video>
+        <SeparatedTemplate5 data={data} styleName={styleName}></SeparatedTemplate5>
+      </Link>
     </div>
   );
 }

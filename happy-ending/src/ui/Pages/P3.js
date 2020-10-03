@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classNames from "classnames";
 import SeparatedTemplate3 from "../Templates/SeparatedTemplate3";
 
@@ -32,7 +33,9 @@ function P3() {
   };
   return (
     <div className={classNames("P3")}>
-      <SeparatedTemplate3 data={data} styleName={styleName}></SeparatedTemplate3>
+      <Link to={`/p4`}>
+        <SeparatedTemplate3 data={data} styleName={styleName}></SeparatedTemplate3>
+      </Link>
     </div>
   );
 }
