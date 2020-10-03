@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../Atoms/Button";
 import "../../scss/Molecules/SelectionBox.scss";
 
@@ -9,7 +10,9 @@ function SelectionBox({ data, styleName }) {
   return (
     <div className={"SelectionBox"}>
       {buttons.map((button) => (
-        <Button styleName={btn_style}>{button.text}</Button>
+        <Link to={button.to}>
+          <Button styleName={btn_style}>{button.text}</Button>
+        </Link>
       ))}
     </div>
   );
