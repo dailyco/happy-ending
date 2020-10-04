@@ -1,5 +1,6 @@
 import React from "react";
 import SeparatedTemplate24 from "../Templates/SeparatedTemplate24";
+
 import "../../scss/Pages/P24.scss";
 
 function P24() {

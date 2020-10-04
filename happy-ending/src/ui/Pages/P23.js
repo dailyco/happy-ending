@@ -1,10 +1,10 @@
 import React from "react";
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 import InsertyPaperTemplate from "../Templates/InsertyPaperTemplate";
 import P23Vedio from "../../assets/videos/23-after D-1.mp4";
 
 import "../../scss/Pages/P23.scss";
-import { Link } from "react-router-dom";
 
 function P23() {
   const data = {

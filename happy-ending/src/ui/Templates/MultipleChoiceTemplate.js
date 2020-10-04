@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import Dquestion from "../Organisms/Dquestion";
 import SelectionResponse from "../Organisms/SelectionResponse";
+
 import "../../scss/Templates/MultipleChoiceTemplate.scss";
 
 function MultipleChoiceTemplate({ data, styleName }) {

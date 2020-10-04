@@ -1,5 +1,6 @@
 import React from "react";
 import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
+
 import "../../scss/Pages/P8.scss";
 
 function P8() {

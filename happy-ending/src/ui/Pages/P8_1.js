@@ -1,6 +1,7 @@
 import React from "react";
 import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
 import P8_1_Video from "../../assets/videos/8-1-travel alone_together.mp4";
+
 import "../../scss/Pages/P8_1.scss";
 
 function P8_1() {

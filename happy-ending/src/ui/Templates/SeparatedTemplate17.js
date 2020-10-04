@@ -1,8 +1,9 @@
 import React from "react";
-import Dquestion from "../Organisms/Dquestion";
 import Img from "../Atoms/Img";
-import "../../scss/Templates/SeparatedTemplate17.scss";
 import { Link } from "react-router-dom";
+import Dquestion from "../Organisms/Dquestion";
+
+import "../../scss/Templates/SeparatedTemplate17.scss";
 
 function SeparatedTemplate17({ data, styleName }) {
   const { bg_data, dq_data, imgs } = data;

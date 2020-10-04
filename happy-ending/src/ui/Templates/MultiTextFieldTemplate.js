@@ -1,6 +1,7 @@
 import React from "react";
-import MultiTextFieldResponse from "../Organisms/MultiTextFieldResponse";
 import Dquestion from "../Organisms/Dquestion";
+import MultiTextFieldResponse from "../Organisms/MultiTextFieldResponse";
+
 import "../../scss/Templates/MultiTextFieldTemplate.scss";
 
 function MultiTextFieldTemplate({ data, styleName }) {

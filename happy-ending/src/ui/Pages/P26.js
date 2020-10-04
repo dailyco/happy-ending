@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 import InsertyPaperTemplate from "../Templates/InsertyPaperTemplate";
+
 import "../../scss/Pages/P26.scss";
 
 function P26() {

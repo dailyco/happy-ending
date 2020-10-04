@@ -3,8 +3,9 @@ import P from "../Atoms/P";
 import Img from "../Atoms/Img";
 import Webcam from "react-webcam";
 import Button from "../Atoms/Button";
-import "../../scss/Templates/SeparatedTemplate16_1.scss";
 import { Link } from "react-router-dom";
+
+import "../../scss/Templates/SeparatedTemplate16_1.scss";
 
 function SeparatedTemplate16_1({ data, styleName }) {
   const { p_data } = data;

@@ -2,6 +2,7 @@ import React from "react";
 import Img from "../Atoms/Img";
 import Span from "../Atoms/Span";
 import classNames from "classnames";
+
 import "../../scss/Templates/SeparatedTemplate1.scss";
 
 function SeparatedTemplate1({ data, styleName }) {

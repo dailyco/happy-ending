@@ -1,6 +1,7 @@
 import React from "react";
-import SingleTextFieldResponse from "../Organisms/SingleTextFieldResponse";
 import Dquestion from "../Organisms/Dquestion";
+import SingleTextFieldResponse from "../Organisms/SingleTextFieldResponse";
+
 import "../../scss/Templates/SingleTextFieldTemplate.scss";
 
 function SingleTextFieldTemplate({ data, styleName }) {

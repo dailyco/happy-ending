@@ -1,8 +1,8 @@
 import React from "react";
 import Span from "../Atoms/Span";
-import Dquestion from "../Organisms/Dquestion";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
+import Dquestion from "../Organisms/Dquestion";
 
 import "../../scss/Templates/SeparatedTemplate7.scss";
 

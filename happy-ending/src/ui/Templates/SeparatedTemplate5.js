@@ -1,7 +1,7 @@
 import React from "react";
 import Span from "../Atoms/Span";
-import Dquestion from "../Organisms/Dquestion";
 import classNames from "classnames";
+import Dquestion from "../Organisms/Dquestion";
 
 import "../../scss/Templates/SeparatedTemplate5.scss";
 

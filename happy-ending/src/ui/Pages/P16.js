@@ -1,5 +1,6 @@
 import React from "react";
 import SeparatedTemplate16 from "../Templates/SeparatedTemplate16";
+
 import "../../scss/Pages/P16.scss";
 
 function P16() {

@@ -1,11 +1,11 @@
 import React from "react";
+import classNames from "classnames";
 import Button from "../Atoms/Button";
+import { Link } from "react-router-dom";
 import ItemBox from "../Organisms/ItemBox";
 import Dquestion from "../Organisms/Dquestion";
-import classNames from "classnames";
 
 import "../../scss/Templates/SeparatedTemplate14.scss";
-import { Link } from "react-router-dom";
 
 function SeparatedTemplate14({ data, styleName }) {
   const { dq_data } = data;

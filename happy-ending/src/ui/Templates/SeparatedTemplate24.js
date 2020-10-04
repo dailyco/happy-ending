@@ -1,6 +1,7 @@
 import React from "react";
 import Dquestion from "../Organisms/Dquestion";
 import GraveStoneResponse from "../Organisms/GraveStoneResponse";
+
 import "../../scss/Templates/SeparatedTemplate24.scss";
 
 function SeparatedTemplate24({ data, styleName }) {

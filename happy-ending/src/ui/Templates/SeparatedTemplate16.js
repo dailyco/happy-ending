@@ -1,8 +1,9 @@
 import React from "react";
-import Dquestion from "../Organisms/Dquestion";
 import Button from "../Atoms/Button";
-import "../../scss/Templates/SeparatedTemplate16.scss";
 import { Link } from "react-router-dom";
+import Dquestion from "../Organisms/Dquestion";
+
+import "../../scss/Templates/SeparatedTemplate16.scss";
 
 function SeparatedTemplate16({ data, styleName }) {
   const { dq_data } = data;

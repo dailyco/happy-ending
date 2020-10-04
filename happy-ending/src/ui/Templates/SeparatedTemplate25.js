@@ -1,6 +1,7 @@
 import React from "react";
 import H3 from "../Atoms/H3";
 import Span from "../Atoms/Span";
+
 import "../../scss/Templates/SeparatedTemplate25.scss";
 
 function SeparatedTemplate25({ data, styleName }) {

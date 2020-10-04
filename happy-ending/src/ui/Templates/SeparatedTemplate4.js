@@ -1,7 +1,7 @@
 import React from "react";
 import P from "../Atoms/P";
-import InfoResponse from "../Organisms/InfoResponse";
 import classNames from "classnames";
+import InfoResponse from "../Organisms/InfoResponse";
 
 import "../../scss/Templates/SeparatedTemplate4.scss";
 
