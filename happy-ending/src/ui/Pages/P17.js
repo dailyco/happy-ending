@@ -1,11 +1,11 @@
 import React from "react";
-import SeparateTemplate17 from "../Templates/SeparateTemplate17";
-import Window from "../../assets/img/17-Window.png";
-import F1 from "../../assets/img/1F.png";
-import F2 from "../../assets/img/2F.png";
-import F3 from "../../assets/img/3F.png";
-import F4 from "../../assets/img/4F.png";
-import F5 from "../../assets/img/5F.png";
+import SeparatedTemplate17 from "../Templates/SeparatedTemplate17";
+import Window from "../../assets/images/bg_images/17-Window.png";
+import F1 from "../../assets/images/17p_images/1F.png";
+import F2 from "../../assets/images/17p_images/2F.png";
+import F3 from "../../assets/images/17p_images/3F.png";
+import F4 from "../../assets/images/17p_images/4F.png";
+import F5 from "../../assets/images/17p_images/5F.png";
 
 import "../../scss/Pages/P17.scss";
 
@@ -55,7 +55,7 @@ function P17() {
 
   return (
     <div className={"P17"}>
-      <SeparateTemplate17 data={data} styleName={styleName}></SeparateTemplate17>
+      <SeparatedTemplate17 data={data} styleName={styleName}></SeparatedTemplate17>
     </div>
   );
 }

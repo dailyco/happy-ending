@@ -1,8 +1,8 @@
 import React from "react";
-import SeparatedTemplate25 from "../Templates/SeparatedTemplate25";
-import P25_Video from "../../assets/video/25-death.mp4";
-import "../../scss/Pages/P25.scss";
 import { Link } from "react-router-dom";
+import SeparatedTemplate25 from "../Templates/SeparatedTemplate25";
+import P25_Video from "../../assets/videos/25-death.mp4";
+import "../../scss/Pages/P25.scss";
 
 function P25() {
   const data = {

@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
-import P19Vedio from "../../assets/video/19-music.mp4";
+import P19Vedio from "../../assets/videos/19-music.mp4";
 
 import "../../scss/Pages/P19.scss";
 
