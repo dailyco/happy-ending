@@ -1,6 +1,6 @@
 import React from "react";
 import MultiTextFieldTemplate from "../Templates/MultiTextFieldTemplate";
-import P8_1_2_Video from "../../assets/video/8-1-1-travel.mp4";
+import P8_1_2_Video from "../../assets/videos/8-1-1-travel.mp4";
 
 import "../../scss/Pages/P8_1_2.scss";
 

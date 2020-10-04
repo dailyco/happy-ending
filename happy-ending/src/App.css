@@ -148,11 +148,11 @@ a {
 @font-face {
   font-family: "Subway Black";
   font-weight: 800;
-  src: url("assets/font/Subway-Black.ttf") format("truetype");
+  src: url("assets/fonts/Subway-Black.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Subway Shadow";
   font-weight: 800;
-  src: url("assets/font/Subway-Shadow.ttf") format("truetype");
+  src: url("assets/fonts/Subway-Shadow.ttf") format("truetype");
 }
