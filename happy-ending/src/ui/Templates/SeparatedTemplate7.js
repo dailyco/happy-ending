@@ -2,6 +2,7 @@ import React from "react";
 import Span from "../Atoms/Span";
 import Dquestion from "../Organisms/Dquestion";
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 
 import "../../scss/Templates/SeparatedTemplate7.scss";
 
@@ -12,8 +13,12 @@ function SeparatedTemplate7({ data, styleName }) {
     <div className={classNames("SeparatedTemplate7")}>
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
       <div className={classNames("SpanPair")}>
-        <Span styleName={s1_style}>{s1_data.text}</Span>
-        <Span styleName={s2_style}>{s2_data.text}</Span>
+        <Link to={s1_data.to}>
+          <Span styleName={s1_style}>{s1_data.text}</Span>
+        </Link>
+        <Link to={s2_data.to}>
+          <Span styleName={s2_style}>{s2_data.text}</Span>
+        </Link>
       </div>
     </div>
   );

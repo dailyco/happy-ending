@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import SeparatedTemplate7 from "../Templates/SeparatedTemplate7";
-import P7Vedio from "../../assets/video/7-break or not.mp4";
+import P7Vedio from "../../assets/videos/7-break or not.mp4";
 
 import "../../scss/Pages/P7.scss";
 
@@ -16,9 +16,11 @@ function P7() {
       },
     },
     s1_data: {
+      to: "/p7_1",
       text: "깨고싶으면 망치를 탭해주세요",
     },
     s2_data: {
+      to: "/p7_2",
       text: "그대로 두려면 돼지저금통을 탭해주세요",
     },
   };
