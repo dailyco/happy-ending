@@ -1,7 +1,7 @@
 import React from "react";
 import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
 
-import "../../scss/Pages/P20.scss";
+import "../../scss/pages.scss";
 
 function P20() {
   const data = {
@@ -47,7 +47,7 @@ function P20() {
   };
 
   return (
-    <div className={"P20"}>
+    <div className={("Page", "P20")}>
       <MultipleChoiceTemplate data={data} styleName={styleName}></MultipleChoiceTemplate>
     </div>
   );

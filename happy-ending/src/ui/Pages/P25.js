@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import SeparatedTemplate25 from "../Templates/SeparatedTemplate25";
 import P25_Video from "../../assets/videos/25-death.mp4";
 
-import "../../scss/Pages/P25.scss";
+import "../../scss/pages.scss";
 
 function P25() {
   const data = {
@@ -22,7 +22,7 @@ function P25() {
   };
 
   return (
-    <div className={"P25"}>
+    <div className={("Page", "P25", "bg-video")}>
       <Link to={"/p26"}>
         <video autoPlay muted>
           <source src={P25_Video} type="video/mp4" />

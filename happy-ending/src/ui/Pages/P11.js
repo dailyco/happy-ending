@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import InsertyPaperTemplate from "../Templates/InsertyPaperTemplate";
 import P11Video from "../../assets/videos/11-after home.mp4";
 
-import "../../scss/Pages/P11.scss";
+import "../../scss/pages.scss";
 
 function P11() {
   const data = {
@@ -37,7 +37,7 @@ function P11() {
   };
 
   return (
-    <div className={classNames("P11")}>
+    <div className={classNames("Page", "P11", "bg-video")}>
       <Link to="/p12_1">
         <video autoPlay muted loop>
           <source src={P11Video} type="video/mp4" />

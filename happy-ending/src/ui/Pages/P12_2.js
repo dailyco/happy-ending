@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 
-import "../../scss/Pages/P12_2.scss";
+import "../../scss/pages.scss";
 
 function P12_2() {
   const data = {
@@ -39,7 +39,7 @@ function P12_2() {
   };
 
   return (
-    <div className={classNames("P12-2")}>
+    <div className={classNames("Page", "P12-2")}>
       <FullTextFieldTemplate data={data} styleName={styleName}></FullTextFieldTemplate>
     </div>
   );

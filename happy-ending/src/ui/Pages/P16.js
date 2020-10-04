@@ -1,7 +1,7 @@
 import React from "react";
 import SeparatedTemplate16 from "../Templates/SeparatedTemplate16";
 
-import "../../scss/Pages/P16.scss";
+import "../../scss/pages.scss";
 
 function P16() {
   const data = {
@@ -23,7 +23,7 @@ function P16() {
   };
 
   return (
-    <div className={"P16"}>
+    <div className={("Page", "P16")}>
       <SeparatedTemplate16 data={data} styleName={styleName}></SeparatedTemplate16>
     </div>
   );

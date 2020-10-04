@@ -4,7 +4,7 @@ import classNames from "classnames";
 import SeparatedTemplate1 from "../Templates/SeparatedTemplate1";
 import HappyendingLogo from "../../assets/images/Happy Ending Logo_new.png";
 
-import "../../scss/Pages/P1.scss";
+import "../../scss/pages.scss";
 
 function P1() {
   const data = {
@@ -21,7 +21,7 @@ function P1() {
     span_style: ["noto", "xs", "davy-gray", "light"],
   };
   return (
-    <div className={classNames("P1")}>
+    <div className={classNames("Page", "P1")}>
       <Link to={"/p2"}>
         <SeparatedTemplate1 data={data} styleName={styleName}></SeparatedTemplate1>
       </Link>

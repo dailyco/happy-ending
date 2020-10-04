@@ -2,7 +2,7 @@ import React from "react";
 import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
 import P6_Video from "../../assets/videos/6-tell or not.mp4";
 
-import "../../scss/Pages/P6.scss";
+import "../../scss/pages.scss";
 
 function P6() {
   const data = {
@@ -40,7 +40,7 @@ function P6() {
   };
 
   return (
-    <div className={"P6"}>
+    <div className={("Page", "P6", "bg-video")}>
       <video autoPlay muted>
         <source src={P6_Video} type="video/mp4" />
       </video>
