@@ -4,7 +4,7 @@ import classNames from "classnames";
 import SeparatedTemplate5 from "../Templates/SeparatedTemplate5";
 import P5Vedio from "../../assets/videos/5-calender.mp4";
 
-import "../../scss/Pages/P5.scss";
+import "../../scss/pages.scss";
 
 function P5() {
   const { year = 2020, month = 11, day = 7 } = {};
@@ -38,7 +38,7 @@ function P5() {
     s3_style: ["noto", "xs", "davy-gray", "light"],
   };
   return (
-    <div className={classNames("P5")}>
+    <div className={classNames("Page", "P5", "bg-video")}>
       <Link to={"/p6"}>
         <video autoPlay muted loop>
           <source src={P5Vedio} type="video/mp4" />

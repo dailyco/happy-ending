@@ -3,7 +3,7 @@ import classNames from "classnames";
 import SeparatedTemplate7 from "../Templates/SeparatedTemplate7";
 import P7Vedio from "../../assets/videos/7-break or not.mp4";
 
-import "../../scss/Pages/P7.scss";
+import "../../scss/pages.scss";
 
 function P7() {
   const data = {
@@ -33,7 +33,7 @@ function P7() {
     s2_style: ["noto", "xs", "davy-gray", "normal"],
   };
   return (
-    <div className={classNames("P7")}>
+    <div className={classNames("Page", "P7", "bg-video")}>
       <video autoPlay muted loop>
         <source src={P7Vedio} type="video/mp4" />
       </video>

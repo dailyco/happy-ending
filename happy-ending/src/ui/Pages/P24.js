@@ -1,7 +1,7 @@
 import React from "react";
 import SeparatedTemplate24 from "../Templates/SeparatedTemplate24";
 
-import "../../scss/Pages/P24.scss";
+import "../../scss/pages.scss";
 
 function P24() {
   const data = {
@@ -43,7 +43,7 @@ function P24() {
   };
 
   return (
-    <div className={"P24"}>
+    <div className={("Page", "P24")}>
       <SeparatedTemplate24 data={data} styleName={styleName}></SeparatedTemplate24>
     </div>
   );

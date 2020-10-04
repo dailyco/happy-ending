@@ -3,11 +3,11 @@ import classNames from "classnames";
 import VideoTemplate from "../Templates/VideoTemplate";
 import P9Video from "../../assets/videos/9-D-4.mp4";
 
-import "../../scss/Pages/P9.scss";
+import "../../scss/pages.scss";
 
 function P9() {
   return (
-    <div className={classNames("P9")}>
+    <div className={classNames("Page", "P9", "bg-video")}>
       <VideoTemplate video={P9Video}></VideoTemplate>
     </div>
   );

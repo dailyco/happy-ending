@@ -2,7 +2,7 @@ import React from "react";
 import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
 import P8_1_Video from "../../assets/videos/8-1-travel alone_together.mp4";
 
-import "../../scss/Pages/P8_1.scss";
+import "../../scss/pages.scss";
 
 function P8_1() {
   const data = {
@@ -40,7 +40,7 @@ function P8_1() {
   };
 
   return (
-    <div className={"P8_1"}>
+    <div className={("Page", "P8_1", "bg-video")}>
       <video autoPlay muted>
         <source src={P8_1_Video} type="video/mp4" />
       </video>

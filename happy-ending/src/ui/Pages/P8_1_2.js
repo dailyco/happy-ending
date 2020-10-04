@@ -2,7 +2,7 @@ import React from "react";
 import MultiTextFieldTemplate from "../Templates/MultiTextFieldTemplate";
 import P8_1_2_Video from "../../assets/videos/8-1-1-travel.mp4";
 
-import "../../scss/Pages/P8_1_2.scss";
+import "../../scss/pages.scss";
 
 function P8_1_2() {
   const data = {
@@ -44,7 +44,7 @@ function P8_1_2() {
   };
 
   return (
-    <div className={"P8_1_2"}>
+    <div className={("Page", "P8_1_2", "bg-video")}>
       <video autoPlay muted loop>
         <source src={P8_1_2_Video} type="video/mp4" />
       </video>

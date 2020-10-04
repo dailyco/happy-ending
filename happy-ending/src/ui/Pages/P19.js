@@ -3,7 +3,7 @@ import classNames from "classnames";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 import P19Vedio from "../../assets/videos/19-music.mp4";
 
-import "../../scss/Pages/P19.scss";
+import "../../scss/pages.scss";
 
 function P19() {
   const data = {
@@ -40,7 +40,7 @@ function P19() {
   };
 
   return (
-    <div className={classNames("P19")}>
+    <div className={classNames("Page", "P19", "bg-video")}>
       <video autoPlay muted loop>
         <source src={P19Vedio} type="video/mp4" />
       </video>

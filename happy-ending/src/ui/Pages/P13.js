@@ -3,7 +3,7 @@ import classNames from "classnames";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 import P13Vedio from "../../assets/videos/13-erase.mp4";
 
-import "../../scss/Pages/P13.scss";
+import "../../scss/pages.scss";
 
 function P13() {
   const data = {
@@ -40,7 +40,7 @@ function P13() {
   };
 
   return (
-    <div className={classNames("P13")}>
+    <div className={classNames("Page", "P13", "bg-video")}>
       <video autoPlay muted loop>
         <source src={P13Vedio} type="video/mp4" />
       </video>

@@ -7,7 +7,7 @@ import F3 from "../../assets/images/17p_images/3F.png";
 import F4 from "../../assets/images/17p_images/4F.png";
 import F5 from "../../assets/images/17p_images/5F.png";
 
-import "../../scss/Pages/P17.scss";
+import "../../scss/pages.scss";
 
 function P17() {
   const data = {
@@ -54,7 +54,7 @@ function P17() {
   };
 
   return (
-    <div className={"P17"}>
+    <div className={("Page", "P17")}>
       <SeparatedTemplate17 data={data} styleName={styleName}></SeparatedTemplate17>
     </div>
   );
