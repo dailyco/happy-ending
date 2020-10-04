@@ -3,6 +3,7 @@ import classNames from "classnames";
 import InsertyPaperTemplate from "../Templates/InsertyPaperTemplate";
 
 import "../../scss/Pages/P26.scss";
+import { Link } from "react-router-dom";
 
 function P26() {
   const data = {
@@ -36,7 +37,9 @@ function P26() {
 
   return (
     <div className={classNames("P26")}>
-      <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
+      <Link to={"/p27"}>
+        <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
+      </Link>
     </div>
   );
 }

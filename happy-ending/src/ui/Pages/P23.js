@@ -4,6 +4,7 @@ import InsertyPaperTemplate from "../Templates/InsertyPaperTemplate";
 import P23Vedio from "../../assets/video/23-after D-1.mp4";
 
 import "../../scss/Pages/P23.scss";
+import { Link } from "react-router-dom";
 
 function P23() {
   const data = {
@@ -27,10 +28,12 @@ function P23() {
 
   return (
     <div className={classNames("P23")}>
-      <video autoPlay muted loop>
-        <source src={P23Vedio} type="video/mp4" />
-      </video>
-      <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
+      <Link to={"/p24"}>
+        <video autoPlay muted loop>
+          <source src={P23Vedio} type="video/mp4" />
+        </video>
+        <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
+      </Link>
     </div>
   );
 }

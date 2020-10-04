@@ -4,9 +4,10 @@ import Img from "../Atoms/Img";
 import Webcam from "react-webcam";
 import Button from "../Atoms/Button";
 import "../../scss/Templates/SeparatedTemplate16_1.scss";
+import { Link } from "react-router-dom";
 
 function SeparatedTemplate16_1({ data, styleName }) {
-  const { p_data, retake_btn_data, check_btn_data } = data;
+  const { p_data } = data;
   const { p_style, btn_style, retake_btn_style, check_btn_style } = styleName;
 
   const videoConstraints = {
@@ -44,9 +45,11 @@ function SeparatedTemplate16_1({ data, styleName }) {
         <>
           <Img image={imgSrc} alt="영정 사진" />
           <Button className={"retake"} styleName={retake_btn_style} onClick={retake}>
-            {retake_btn_data}
+            다시찍기
           </Button>
-          <Button styleName={check_btn_style}>{check_btn_data}</Button>
+          <Link to={"/p17"}>
+            <Button styleName={check_btn_style}>확인</Button>
+          </Link>
         </>
       )}
     </div>

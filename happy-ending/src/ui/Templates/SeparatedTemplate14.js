@@ -5,6 +5,7 @@ import Dquestion from "../Organisms/Dquestion";
 import classNames from "classnames";
 
 import "../../scss/Templates/SeparatedTemplate14.scss";
+import { Link } from "react-router-dom";
 
 function SeparatedTemplate14({ data, styleName }) {
   const { dq_data } = data;
@@ -16,7 +17,9 @@ function SeparatedTemplate14({ data, styleName }) {
       </div>
       <div className={classNames("ItemBoxContainer", "float--right")}>
         <ItemBox></ItemBox>
-        <Button styleName={button_style}>확인</Button>
+        <Link to={"/p15"}>
+          <Button styleName={button_style}>확인</Button>
+        </Link>
       </div>
     </div>
   );

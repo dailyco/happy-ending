@@ -15,6 +15,7 @@ function P21() {
       },
     },
     ftfr_data: {
+      to: "/p22",
       ftf_data: {
         tf_data: {
           placeHolder: "내용을 입력해주세요",
