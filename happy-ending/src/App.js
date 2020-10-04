@@ -43,7 +43,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div>
+    <>
       <Switch>
         <Route exact path="/">
           <P1 />
@@ -157,7 +157,7 @@ function App() {
           <P27 />
         </Route>
       </Switch>
-    </div>
+    </>
   );
 }
 

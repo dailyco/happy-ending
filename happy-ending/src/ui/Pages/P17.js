@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 import SeparatedTemplate17 from "../Templates/SeparatedTemplate17";
 import Window from "../../assets/images/bg_images/17-Window.png";
 import F1 from "../../assets/images/17p_images/1F.png";
@@ -54,7 +55,7 @@ function P17() {
   };
 
   return (
-    <div className={("Page", "P17")}>
+    <div className={classNames("Page", "P17")}>
       <SeparatedTemplate17 data={data} styleName={styleName}></SeparatedTemplate17>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
 import P6_Video from "../../assets/videos/6-tell or not.mp4";
 
@@ -40,7 +41,7 @@ function P6() {
   };
 
   return (
-    <div className={("Page", "P6", "bg-video")}>
+    <div className={classNames("Page", "P6", "bg-video")}>
       <video autoPlay muted>
         <source src={P6_Video} type="video/mp4" />
       </video>

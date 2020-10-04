@@ -3,7 +3,7 @@ import classNames from "classnames";
 import SeparatedTemplate4 from "../Templates/SeparatedTemplate4";
 import P4Vedio from "../../assets/videos/4-book.mp4";
 
-import "../../scss/Pages/pages.scss";
+import "../../scss/pages.scss";
 
 function P4() {
   const data = {

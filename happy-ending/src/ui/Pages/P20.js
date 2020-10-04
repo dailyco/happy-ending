@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
 
 import "../../scss/pages.scss";
@@ -47,7 +48,7 @@ function P20() {
   };
 
   return (
-    <div className={("Page", "P20")}>
+    <div className={classNames("Page", "P20")}>
       <MultipleChoiceTemplate data={data} styleName={styleName}></MultipleChoiceTemplate>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 import MultiTextFieldTemplate from "../Templates/MultiTextFieldTemplate";
 import P8_1_2_Video from "../../assets/videos/8-1-1-travel.mp4";
 
@@ -44,7 +45,7 @@ function P8_1_2() {
   };
 
   return (
-    <div className={("Page", "P8_1_2", "bg-video")}>
+    <div className={classNames("Page", "P8-1-2", "bg-video")}>
       <video autoPlay muted loop>
         <source src={P8_1_2_Video} type="video/mp4" />
       </video>

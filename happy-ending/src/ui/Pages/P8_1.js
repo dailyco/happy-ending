@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
 import P8_1_Video from "../../assets/videos/8-1-travel alone_together.mp4";
 
@@ -40,7 +41,7 @@ function P8_1() {
   };
 
   return (
-    <div className={("Page", "P8_1", "bg-video")}>
+    <div className={classNames("Page", "P8_1", "bg-video")}>
       <video autoPlay muted>
         <source src={P8_1_Video} type="video/mp4" />
       </video>

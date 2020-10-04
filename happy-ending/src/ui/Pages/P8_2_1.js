@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 import SingleTextFieldTemplate from "../Templates/SingleTextFieldTemplate";
 import P8_2_1_Video from "../../assets/videos/8-2-1-stay home alone.mp4";
 
@@ -40,7 +41,7 @@ function P8_2_1() {
   };
 
   return (
-    <div className={("Page", "P8_2_1", "bg-video")}>
+    <div className={classNames("Page", "P8-2-1", "bg-video")}>
       <video autoPlay muted loop>
         <source src={P8_2_1_Video} type="video/mp4" />
       </video>
