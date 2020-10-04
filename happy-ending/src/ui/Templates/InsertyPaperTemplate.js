@@ -16,8 +16,4 @@ function InsertyPaperTemplate({ data, styleName }) {
   );
 }
 
-InsertyPaperTemplate.defaultProps = {
-  styleName: [],
-};
-
 export default InsertyPaperTemplate;

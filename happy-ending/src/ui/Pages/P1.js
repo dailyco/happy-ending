@@ -22,7 +22,7 @@ function P1() {
   };
   return (
     <div className={classNames("P1")}>
-      <Link to={`/p2`}>
+      <Link to={"/p2"}>
         <SeparatedTemplate1 data={data} styleName={styleName}></SeparatedTemplate1>
       </Link>
     </div>

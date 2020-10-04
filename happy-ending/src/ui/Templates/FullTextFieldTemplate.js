@@ -16,8 +16,4 @@ function FullTextFieldTemplate({ data, styleName }) {
   );
 }
 
-FullTextFieldTemplate.defaultProps = {
-  styleName: ["left"],
-};
-
 export default FullTextFieldTemplate;

@@ -10,12 +10,12 @@ function SeparatedTemplate4({ data, styleName }) {
   const { p_style } = styleName;
   return (
     <div className={classNames("SeparatedTemplate4")}>
-      <div className={classNames("script")}>
+      <section className={classNames("script")}>
         <P styleName={p_style}>{p_data.text}</P>
-      </div>
-      <div className={classNames("InfoResponse")}>
+      </section>
+      <section className={classNames("InfoResponse")}>
         <InfoResponse></InfoResponse>
-      </div>
+      </section>
     </div>
   );
 }

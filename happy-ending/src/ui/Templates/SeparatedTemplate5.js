@@ -11,15 +11,9 @@ function SeparatedTemplate5({ data, styleName }) {
   return (
     <div className={classNames("SeparatedTemplate5")}>
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
-      <Span styleName={s1_style} className={classNames("Span1")}>
-        {s1_data.text}
-      </Span>
-      <Span styleName={s2_style} className={classNames("Span2")}>
-        {s2_data.text}
-      </Span>
-      <Span styleName={s3_style} className={classNames("Span3")}>
-        {s3_data.text}
-      </Span>
+      <Span styleName={s1_style}>{s1_data.text}</Span>
+      <Span styleName={s2_style}>{s2_data.text}</Span>
+      <Span styleName={s3_style}>{s3_data.text}</Span>
     </div>
   );
 }

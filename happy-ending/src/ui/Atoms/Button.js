@@ -10,9 +10,4 @@ function Button({ children, className, styleName, ...rest }) {
   );
 }
 
-Button.defaultProps = {
-  text: "",
-  styleName: ["m", "white"],
-};
-
 export default Button;

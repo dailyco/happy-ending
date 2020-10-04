@@ -2,13 +2,8 @@ import React from "react";
 import classNames from "classnames";
 import "../../scss/Atoms/P.scss";
 
-function P({ children, className, styleName }) {
-  return <p className={classNames("P", className, styleName)}>{children}</p>;
+function P({ children, styleName }) {
+  return <p className={classNames("P", styleName)}>{children}</p>;
 }
-
-P.defaultProps = {
-  text: "",
-  styleName: ["black"],
-};
 
 export default P;

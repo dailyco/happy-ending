@@ -12,12 +12,8 @@ function SeparatedTemplate7({ data, styleName }) {
     <div className={classNames("SeparatedTemplate7")}>
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
       <div className={classNames("SpanPair")}>
-        <Span styleName={s1_style} className={classNames("Span1")}>
-          {s1_data.text}
-        </Span>
-        <Span styleName={s2_style} className={classNames("Span2")}>
-          {s2_data.text}
-        </Span>
+        <Span styleName={s1_style}>{s1_data.text}</Span>
+        <Span styleName={s2_style}>{s2_data.text}</Span>
       </div>
     </div>
   );

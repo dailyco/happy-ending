@@ -5,6 +5,7 @@
   width: 550px;
   height: 650px;
   background-color: rgba($white-smoke, 30%);
+  overflow: scroll;
 
   & .Button {
     margin: 0 auto;

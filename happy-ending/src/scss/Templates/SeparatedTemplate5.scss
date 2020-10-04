@@ -15,11 +15,11 @@
 
   & .Span {
     display: block;
-    &.Span1 {
+    &:nth-of-type(1) {
       height: 29px;
       margin-bottom: 5.4px;
     }
-    &.Span2 {
+    &:nth-of-type(2) {
       height: 126px;
       margin-bottom: 387.6px;
     }
