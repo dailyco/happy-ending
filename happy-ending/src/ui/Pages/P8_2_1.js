@@ -15,6 +15,7 @@ function P8_2_1() {
       },
     },
     stfr_data: {
+      to: "/p9",
       stfs_data: {
         l_text: "집에서 (",
         placeHolder: "무엇을 한",

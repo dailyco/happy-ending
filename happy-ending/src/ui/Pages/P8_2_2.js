@@ -15,6 +15,7 @@ function P8_2_2() {
       },
     },
     mtfr_data: {
+      to: "/p9",
       mtfs_data: {
         l_text: "집에서 (",
         ph1: "누구",

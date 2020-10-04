@@ -28,7 +28,7 @@
                 text-align: center;
             }
 
-            & .Button+.Button {
+            & .Button:last-child {
                 margin-top: 21.7px;
             }
         }
@@ -75,9 +75,8 @@
             padding-left: 25px;
         }
 
-        & .Button+.Button {
+        & .Button:last-child {
             margin-top: 26.1px;
         }
-
     }
 }

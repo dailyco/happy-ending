@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 import InsertyPaperTemplate from "../Templates/InsertyPaperTemplate";
 import P11Video from "../../assets/video/11-after home.mp4";
 
@@ -37,10 +38,12 @@ function P11() {
 
   return (
     <div className={classNames("P11")}>
-      <video autoPlay muted loop>
-        <source src={P11Video} type="video/mp4" />
-      </video>
-      <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
+      <Link to="/p12_1">
+        <video autoPlay muted loop>
+          <source src={P11Video} type="video/mp4" />
+        </video>
+        <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
+      </Link>
     </div>
   );
 }

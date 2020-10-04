@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../Atoms/Button";
 import Info from "../Molecules/Info";
 
@@ -6,7 +7,9 @@ function InfoResponse() {
   return (
     <>
       <Info></Info>
-      <Button styleName={["xxs", "white"]}>확인</Button>
+      <Link to={`/p5`}>
+        <Button styleName={["xxs", "white"]}>확인</Button>
+      </Link>
     </>
   );
 }
