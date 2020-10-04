@@ -7,7 +7,7 @@ function InfoResponse() {
   return (
     <>
       <Info></Info>
-      <Link to={`/p5`}>
+      <Link to={"/p5"}>
         <Button styleName={["xxs", "white"]}>확인</Button>
       </Link>
     </>

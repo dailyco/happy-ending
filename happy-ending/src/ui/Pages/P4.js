@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import SeparatedTemplate4 from "../Templates/SeparatedTemplate4";
-import P4Vedio from "../../assets/video/4-book.mp4";
+import P4Vedio from "../../assets/videos/4-book.mp4";
 
 import "../../scss/Pages/P4.scss";
 

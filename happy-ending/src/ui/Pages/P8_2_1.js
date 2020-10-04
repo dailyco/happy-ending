@@ -1,6 +1,6 @@
 import React from "react";
 import SingleTextFieldTemplate from "../Templates/SingleTextFieldTemplate";
-import P8_2_1_Video from "../../assets/video/8-2-1-stay home alone.mp4";
+import P8_2_1_Video from "../../assets/videos/8-2-1-stay home alone.mp4";
 
 import "../../scss/Pages/P8_2_1.scss";
 

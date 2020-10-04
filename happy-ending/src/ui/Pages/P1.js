@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 import SeparatedTemplate1 from "../Templates/SeparatedTemplate1";
-import HappyendingLogo from "../../assets/img/Happy Ending Logo_new.png";
+import HappyendingLogo from "../../assets/images/Happy Ending Logo_new.png";
 
 import "../../scss/Pages/P1.scss";
 

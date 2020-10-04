@@ -1,6 +1,6 @@
 import React from "react";
 import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
-import P6_Video from "../../assets/video/6-tell or not.mp4";
+import P6_Video from "../../assets/videos/6-tell or not.mp4";
 import "../../scss/Pages/P6.scss";
 
 function P6() {
