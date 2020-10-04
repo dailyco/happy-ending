@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../Atoms/Button";
 import GraveStone from "../Molecules/GraveStone";
 import "../../scss/Organisms/GraveStoneResponse.scss";
+import { Link } from "react-router-dom";
 
 function GraveStoneResponse({ data, styleName }) {
   const { gs_data, btn_data } = data;
@@ -10,7 +11,9 @@ function GraveStoneResponse({ data, styleName }) {
   return (
     <div className={"GraveStoneResponse"}>
       <GraveStone data={gs_data} styleName={gs_style}></GraveStone>
-      <Button styleName={btn_style}>{btn_data.text}</Button>
+      <Link to={"/p25"}>
+        <Button styleName={btn_style}>{btn_data.text}</Button>
+      </Link>
     </div>
   );
 }
