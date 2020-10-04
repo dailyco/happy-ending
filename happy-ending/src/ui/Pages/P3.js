@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import classNames from "classnames";
 import SeparatedTemplate3 from "../Templates/SeparatedTemplate3";
 
-import "../../scss/Pages/P3.scss";
+import "../../scss/pages.scss";
 
 function P3() {
   const data = {
@@ -32,7 +32,7 @@ function P3() {
     span_style: ["noto", "xs", "davy-gray", "light"],
   };
   return (
-    <div className={classNames("P3")}>
+    <div className={classNames("Page", "P3")}>
       <Link to={"/p4"}>
         <SeparatedTemplate3 data={data} styleName={styleName}></SeparatedTemplate3>
       </Link>

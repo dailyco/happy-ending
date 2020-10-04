@@ -3,7 +3,7 @@ import classNames from "classnames";
 import SeparatedTemplate4 from "../Templates/SeparatedTemplate4";
 import P4Vedio from "../../assets/videos/4-book.mp4";
 
-import "../../scss/Pages/P4.scss";
+import "../../scss/Pages/pages.scss";
 
 function P4() {
   const data = {
@@ -30,7 +30,7 @@ function P4() {
     p_style: ["eclipse"],
   };
   return (
-    <div className={classNames("P4")}>
+    <div className={classNames("Page", "P4", "bg-video")}>
       <video autoPlay muted loop>
         <source src={P4Vedio} type="video/mp4" />
       </video>

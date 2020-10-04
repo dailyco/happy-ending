@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import SeparatedTemplate14 from "../Templates/SeparatedTemplate14";
 
-import "../../scss/Pages/P14.scss";
+import "../../scss/pages.scss";
 
 function P14() {
   const data = {
@@ -24,7 +24,7 @@ function P14() {
     button_style: ["noto", "xs", "blue", "light"],
   };
   return (
-    <div className={classNames("P14")}>
+    <div className={classNames("Page", "P14")}>
       <SeparatedTemplate14 data={data} styleName={styleName}></SeparatedTemplate14>
     </div>
   );
