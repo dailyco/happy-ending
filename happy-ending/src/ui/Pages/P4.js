@@ -5,7 +5,11 @@ import P4Vedio from "../../assets/videos/4-book.mp4";
 
 import "../../scss/pages.scss";
 
-function P4() {
+function P4({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
+
   const data = {
     p_data: {
       text: [
@@ -34,7 +38,9 @@ function P4() {
       <video autoPlay muted loop>
         <source src={P4Vedio} type="video/mp4" />
       </video>
+      <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <SeparatedTemplate4 data={data} styleName={styleName}></SeparatedTemplate4>
+      {console.log(history)}
     </div>
   );
 }

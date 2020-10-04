@@ -3,12 +3,11 @@
 }
 
 .Page {
+  position: relative;
   width: 1920px;
   height: 1080px;
 
   &.bg-video {
-    position: relative;
-
     & video {
       position: absolute;
       top: 0;
@@ -88,8 +87,6 @@
   }
 
   &.P21 {
-    position: relative;
-
     &:after {
       position: absolute;
       content: "";
@@ -109,5 +106,21 @@
 
   &.P26 {
     @include bg-image("26-last\ words.png");
+  }
+
+  & .back {
+    position: absolute;
+    border: none;
+    outline: none;
+    width: 62px;
+    height: 32px;
+    top: 49px;
+    left: 42px;
+    &.back-white {
+      background: url("../assets/images/Back-white.png") no-repeat center;
+    }
+    &.back-gray {
+      background: url("../assets/images/Back-gray.png") no-repeat center;
+    }
   }
 }
