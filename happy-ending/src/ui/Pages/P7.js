@@ -5,7 +5,10 @@ import P7Vedio from "../../assets/videos/7-break or not.mp4";
 
 import "../../scss/pages.scss";
 
-function P7() {
+function P7({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
   const data = {
     dq_data: {
       h3_data: {
@@ -37,6 +40,7 @@ function P7() {
       <video autoPlay muted loop>
         <source src={P7Vedio} type="video/mp4" />
       </video>
+      <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <SeparatedTemplate7 data={data} styleName={styleName}></SeparatedTemplate7>
     </div>
   );

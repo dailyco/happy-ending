@@ -4,7 +4,10 @@ import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 
 import "../../scss/pages.scss";
 
-function P7_1() {
+function P7_1({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
   const data = {
     dq_data: {
       h3_data: {
@@ -38,6 +41,7 @@ function P7_1() {
   };
   return (
     <div className={classNames("Page", "P7-1")}>
+      <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <FullTextFieldTemplate data={data} styleName={styleName}></FullTextFieldTemplate>
     </div>
   );

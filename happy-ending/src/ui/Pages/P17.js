@@ -10,7 +10,10 @@ import F5 from "../../assets/images/17p_images/5F.png";
 
 import "../../scss/pages.scss";
 
-function P17() {
+function P17({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
   const data = {
     bg_data: {
       image: Window,
@@ -56,6 +59,7 @@ function P17() {
 
   return (
     <div className={classNames("Page", "P17")}>
+      <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <SeparatedTemplate17 data={data} styleName={styleName}></SeparatedTemplate17>
     </div>
   );

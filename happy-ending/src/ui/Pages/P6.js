@@ -5,7 +5,10 @@ import P6_Video from "../../assets/videos/6-tell or not.mp4";
 
 import "../../scss/pages.scss";
 
-function P6() {
+function P6({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
   const data = {
     dq_data: {
       h3_data: {
@@ -45,6 +48,7 @@ function P6() {
       <video autoPlay muted>
         <source src={P6_Video} type="video/mp4" />
       </video>
+      <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <MultipleChoiceTemplate data={data} styleName={styleName}></MultipleChoiceTemplate>
     </div>
   );
