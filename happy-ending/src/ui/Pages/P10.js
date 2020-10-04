@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import InsertyPaperTemplate from "../Templates/InsertyPaperTemplate";
-import P10Video from "../../assets/video/10-after travel.mp4";
+import P10Video from "../../assets/videos/10-after travel.mp4";
 
 import "../../scss/Pages/P10.scss";
 

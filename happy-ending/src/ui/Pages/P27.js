@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import VideoTemplate from "../Templates/VideoTemplate";
-import P27Video from "../../assets/video/27-last page.mp4";
+import P27Video from "../../assets/videos/27-last page.mp4";
 
 import "../../scss/Pages/P27.scss";
 

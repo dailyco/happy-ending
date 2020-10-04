@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import VideoTemplate from "../Templates/VideoTemplate";
-import P22Video from "../../assets/video/22-D-1.mp4";
+import P22Video from "../../assets/videos/22-D-1.mp4";
 
 import "../../scss/Pages/P22.scss";
 

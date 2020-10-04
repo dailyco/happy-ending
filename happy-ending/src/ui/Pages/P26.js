@@ -1,9 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classNames from "classnames";
 import InsertyPaperTemplate from "../Templates/InsertyPaperTemplate";
-
 import "../../scss/Pages/P26.scss";
-import { Link } from "react-router-dom";
 
 function P26() {
   const data = {
