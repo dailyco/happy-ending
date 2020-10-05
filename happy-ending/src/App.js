@@ -43,121 +43,47 @@ import "./App.css";
 
 function App() {
   return (
-    <>
+    <div>
       <Switch>
-        <Route exact path="/">
-          <P1 />
-        </Route>
-        <Route path="/p2">
-          <P2 />
-        </Route>
-        <Route path="/p3">
-          <P3 />
-        </Route>
-        <Route path="/p4">
-          <P4 />
-        </Route>
-        <Route path="/p5">
-          <P5 />
-        </Route>
-        <Route path="/p6">
-          <P6 />
-        </Route>
-        <Route exact path="/p7">
-          <P7 />
-        </Route>
-        <Route path="/p7_1">
-          <P7_1 />
-        </Route>
-        <Route path="/p7_2">
-          <P7_2 />
-        </Route>
-        <Route exact path="/p8">
-          <P8 />
-        </Route>
-        <Route exact path="/p8_1">
-          <P8_1 />
-        </Route>
-        <Route path="/p8_1_1">
-          <P8_1_1 />
-        </Route>
-        <Route path="/p8_1_2">
-          <P8_1_2 />
-        </Route>
-        <Route exact path="/p8_2">
-          <P8_2 />
-        </Route>
-        <Route path="/p8_2_1">
-          <P8_2_1 />
-        </Route>
-        <Route path="/p8_2_2">
-          <P8_2_2 />
-        </Route>
-        <Route path="/p9">
-          <P9 />
-        </Route>
-        <Route path="/p10">
-          <P10 />
-        </Route>
-        <Route path="/p11">
-          <P11 />
-        </Route>
-        <Route path="/p12_1">
-          <P12_1 />
-        </Route>
-        <Route path="/p12_2">
-          <P12_2 />
-        </Route>
-        <Route path="/p13">
-          <P13 />
-        </Route>
-        <Route path="/p14">
-          <P14 />
-        </Route>
-        <Route path="/p15">
-          <P15 />
-        </Route>
-        <Route exact path="/p16">
-          <P16 />
-        </Route>
-        <Route path="/p16_1">
-          <P16_1 />
-        </Route>
-        <Route path="/p17">
-          <P17 />
-        </Route>
-        <Route path="/p18">
-          <P18 />
-        </Route>
-        <Route path="/p19">
-          <P19 />
-        </Route>
-        <Route path="/p20">
-          <P20 />
-        </Route>
-        <Route path="/p21">
-          <P21 />
-        </Route>
-        <Route path="/p22">
-          <P22 />
-        </Route>
-        <Route path="/p23">
-          <P23 />
-        </Route>
-        <Route path="/p24">
-          <P24 />
-        </Route>
-        <Route path="/p25">
-          <P25 />
-        </Route>
-        <Route path="/p26">
-          <P26 />
-        </Route>
-        <Route path="/p27">
-          <P27 />
-        </Route>
+        <Route path="/" component={P1} exact />
+        <Route path="/p2" component={P2} />
+        <Route path="/p3" component={P3} />
+        <Route path="/p4" component={P4} />
+        <Route path="/p5" component={P5} />
+        <Route path="/p6" component={P6} />
+        <Route path="/p7" component={P7} exact />
+        <Route path="/p7_1" component={P7_1} />
+        <Route path="/p7_2" component={P7_2} />
+        <Route path="/p8" component={P8} exact />
+        <Route path="/p8_1" component={P8_1} exact />
+        <Route path="/p8_1_1" component={P8_1_1} />
+        <Route path="/p8_1_2" component={P8_1_2} />
+        <Route path="/p8_2" component={P8_2} exact />
+        <Route path="/p8_2_1" component={P8_2_1} />
+        <Route path="/p8_2_2" component={P8_2_2} />
+        <Route path="/p9" component={P9} />
+        <Route path="/p10" component={P10} />
+        <Route path="/p11" component={P11} />
+        <Route path="/p12_1" component={P12_1} />
+        <Route path="/p12_2" component={P12_2} />
+        <Route path="/p13" component={P13} />
+        <Route path="/p14" component={P14} />
+        <Route path="/p15" component={P15} />
+        <Route path="/p16" component={P16} exact />
+        <Route path="/p16_1" component={P16_1} />
+        <Route path="/p17" component={P17} />
+        <Route path="/p18" component={P18} />
+        <Route path="/p19" component={P19} />
+        <Route path="/p20" component={P20} />
+        <Route path="/p21" component={P21} />
+        <Route path="/p22" component={P22} />
+        <Route path="/p23" component={P23} />
+        <Route path="/p24" component={P24} />
+        <Route path="/p25" component={P25} />
+        <Route path="/p26" component={P26} />
+        <Route path="/p27" component={P27} />
       </Switch>
-    </>
+    </div>
   );
 }
 

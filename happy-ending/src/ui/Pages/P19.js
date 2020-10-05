@@ -5,7 +5,10 @@ import P19Vedio from "../../assets/videos/19-music.mp4";
 
 import "../../scss/pages.scss";
 
-function P19() {
+function P19({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
   const data = {
     dq_data: {
       h3_data: {
@@ -44,6 +47,7 @@ function P19() {
       <video autoPlay muted loop>
         <source src={P19Vedio} type="video/mp4" />
       </video>
+      <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <FullTextFieldTemplate data={data} styleName={styleName}></FullTextFieldTemplate>
     </div>
   );

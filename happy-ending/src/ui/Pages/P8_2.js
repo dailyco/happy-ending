@@ -4,7 +4,10 @@ import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
 
 import "../../scss/pages.scss";
 
-function P8_2() {
+function P8_2({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
   const data = {
     dq_data: {
       h3_data: {
@@ -41,6 +44,7 @@ function P8_2() {
 
   return (
     <div className={classNames("Page", "P8-2")}>
+      <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <MultipleChoiceTemplate data={data} styleName={styleName}></MultipleChoiceTemplate>
     </div>
   );

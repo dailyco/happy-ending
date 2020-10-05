@@ -5,7 +5,10 @@ import P8_2_1_Video from "../../assets/videos/8-2-1-stay home alone.mp4";
 
 import "../../scss/pages.scss";
 
-function P8_2_2() {
+function P8_2_2({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
   const data = {
     dq_data: {
       h3_data: {
@@ -49,6 +52,7 @@ function P8_2_2() {
       <video autoPlay muted loop>
         <source src={P8_2_1_Video} type="video/mp4" />
       </video>
+      <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <MultiTextFieldTemplate data={data} styleName={styleName}></MultiTextFieldTemplate>
     </div>
   );

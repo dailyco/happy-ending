@@ -6,8 +6,12 @@ import P5Vedio from "../../assets/videos/5-calender.mp4";
 
 import "../../scss/pages.scss";
 
-function P5() {
+function P5({ history }) {
   const { year = 2020, month = 11, day = 7 } = {};
+
+  const goBack = () => {
+    history.goBack();
+  };
 
   const data = {
     dq_data: {
@@ -43,6 +47,7 @@ function P5() {
         <video autoPlay muted loop>
           <source src={P5Vedio} type="video/mp4" />
         </video>
+        <button className={classNames("back", "back-gray")} onClick={goBack}></button>
         <SeparatedTemplate5 data={data} styleName={styleName}></SeparatedTemplate5>
       </Link>
     </div>

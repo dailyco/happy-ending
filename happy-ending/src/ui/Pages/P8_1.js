@@ -5,7 +5,10 @@ import P8_1_Video from "../../assets/videos/8-1-travel alone_together.mp4";
 
 import "../../scss/pages.scss";
 
-function P8_1() {
+function P8_1({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
   const data = {
     dq_data: {
       h3_data: {
@@ -45,6 +48,7 @@ function P8_1() {
       <video autoPlay muted>
         <source src={P8_1_Video} type="video/mp4" />
       </video>
+      <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <MultipleChoiceTemplate data={data} styleName={styleName}></MultipleChoiceTemplate>
     </div>
   );
