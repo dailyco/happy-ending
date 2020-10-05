@@ -50,11 +50,11 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            & .Button:nth-child(2n) {
+            & a:nth-child(2n) {
                 justify-self: end;
             }
 
-            & .Button:nth-child(n+3) {
+            & a:nth-child(n+3) {
                 margin-top: 44.8px;
             }
         }

@@ -21,7 +21,7 @@ function P20({ history }) {
       buttons: [
         {
           to: "/p21",
-          text: "장례식의 분위기는 어떨까요?",
+          text: "사람들이 함께 나를 기억하고 추억하고 있다",
         },
         {
           to: "/p21",
