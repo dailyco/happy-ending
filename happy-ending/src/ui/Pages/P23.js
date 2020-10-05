@@ -6,7 +6,11 @@ import P23Vedio from "../../assets/videos/23-after D-1.mp4";
 
 import "../../scss/pages.scss";
 
-function P23() {
+function P23({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
+
   const data = {
     dq_data: {
       h3_data: {
@@ -32,6 +36,7 @@ function P23() {
         <video autoPlay muted loop>
           <source src={P23Vedio} type="video/mp4" />
         </video>
+        <button className={classNames("back", "back-white")} onClick={goBack}></button>
         <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
       </Link>
     </div>

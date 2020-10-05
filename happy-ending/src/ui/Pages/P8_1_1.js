@@ -5,7 +5,11 @@ import P8_1_1_Video from "../../assets/videos/8-1-1-travel.mp4";
 
 import "../../scss/pages.scss";
 
-function P8_1_1() {
+function P8_1_1({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
+
   const data = {
     dq_data: {
       h3_data: {
@@ -45,6 +49,7 @@ function P8_1_1() {
       <video autoPlay muted loop>
         <source src={P8_1_1_Video} type="video/mp4" />
       </video>
+      <button className={classNames("back", "back-white")} onClick={goBack}></button>
       <SingleTextFieldTemplate data={data} styleName={styleName}></SingleTextFieldTemplate>
     </div>
   );

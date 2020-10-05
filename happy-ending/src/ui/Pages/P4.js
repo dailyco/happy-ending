@@ -40,7 +40,6 @@ function P4({ history }) {
       </video>
       <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <SeparatedTemplate4 data={data} styleName={styleName}></SeparatedTemplate4>
-      {console.log(history)}
     </div>
   );
 }

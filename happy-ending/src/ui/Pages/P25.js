@@ -6,7 +6,11 @@ import P25_Video from "../../assets/videos/25-death.mp4";
 
 import "../../scss/pages.scss";
 
-function P25() {
+function P25({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
+
   const data = {
     h3_data: "D-DAY",
     span1_data: "홍길동 님은",
@@ -28,6 +32,7 @@ function P25() {
         <video autoPlay muted>
           <source src={P25_Video} type="video/mp4" />
         </video>
+        <button className={classNames("back", "back-white")} onClick={goBack}></button>
         <SeparatedTemplate25 data={data} styleName={styleName}></SeparatedTemplate25>
       </Link>
     </div>

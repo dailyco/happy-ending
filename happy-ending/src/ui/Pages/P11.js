@@ -6,7 +6,11 @@ import P11Video from "../../assets/videos/11-after home.mp4";
 
 import "../../scss/pages.scss";
 
-function P11() {
+function P11({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
+
   const data = {
     dq_data: {
       h3_data: {
@@ -42,6 +46,7 @@ function P11() {
         <video autoPlay muted loop>
           <source src={P11Video} type="video/mp4" />
         </video>
+        <button className={classNames("back", "back-white")} onClick={goBack}></button>
         <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
       </Link>
     </div>

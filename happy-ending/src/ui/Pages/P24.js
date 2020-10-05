@@ -4,7 +4,11 @@ import SeparatedTemplate24 from "../Templates/SeparatedTemplate24";
 
 import "../../scss/pages.scss";
 
-function P24() {
+function P24({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
+
   const data = {
     dq_data: {
       h3_data: {
@@ -45,6 +49,7 @@ function P24() {
 
   return (
     <div className={classNames("Page", "P24")}>
+      <button className={classNames("back", "back-white")} onClick={goBack}></button>
       <SeparatedTemplate24 data={data} styleName={styleName}></SeparatedTemplate24>
     </div>
   );

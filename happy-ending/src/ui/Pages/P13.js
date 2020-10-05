@@ -5,7 +5,11 @@ import P13Vedio from "../../assets/videos/13-erase.mp4";
 
 import "../../scss/pages.scss";
 
-function P13() {
+function P13({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
+
   const data = {
     dq_data: {
       h3_data: {
@@ -44,6 +48,7 @@ function P13() {
       <video autoPlay muted loop>
         <source src={P13Vedio} type="video/mp4" />
       </video>
+      <button className={classNames("back", "back-white")} onClick={goBack}></button>
       <FullTextFieldTemplate data={data} styleName={styleName}></FullTextFieldTemplate>
     </div>
   );

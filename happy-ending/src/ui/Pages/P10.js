@@ -6,7 +6,11 @@ import P10Video from "../../assets/videos/10-after travel.mp4";
 
 import "../../scss/pages.scss";
 
-function P10() {
+function P10({ history }) {
+  const goBack = () => {
+    history.goBack();
+  };
+
   const data = {
     dq_data: {
       h3_data: {
@@ -42,6 +46,7 @@ function P10() {
         <video autoPlay muted loop>
           <source src={P10Video} type="video/mp4" />
         </video>
+        <button className={classNames("back", "back-white")} onClick={goBack}></button>
         <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
       </Link>
     </div>
