@@ -1,11 +1,12 @@
 import React from "react";
 import Span from "../Atoms/Span";
+import classNames from "classnames";
 import TextField from "../Atoms/TextField";
 import TextArea from "../Atoms/TextArea";
 
 function Item() {
   return (
-    <div>
+    <div className={classNames("Item")}>
       <div>
         <TextField placeHolder="누구" styleName={["s", "dark-gray", "item"]}></TextField>
         <Span styleName={["s", "eclipse", "center"]}>에게</Span>
