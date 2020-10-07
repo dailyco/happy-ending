@@ -28,10 +28,9 @@
 
   & .ItemBoxContainer {
     margin-top: 45px;
-    & .Button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    text-align: center;
+    & .Item {
+      text-align: left;
     }
   }
 
