@@ -19,7 +19,7 @@ function P8_2_2({ history }) {
       },
     },
     mtfr_data: {
-      to: "/p9",
+      to: "/p9_2",
       mtfs_data: {
         l_text: "집에서 (",
         ph1: "누구",

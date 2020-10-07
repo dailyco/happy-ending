@@ -20,7 +20,7 @@ function P8_1_1({ history }) {
       },
     },
     stfr_data: {
-      to: "/p9",
+      to: "/p9_1",
       stfs_data: {
         l_text: "3일간의 여행을 혼자 (",
         placeHolder: "어디",

@@ -17,7 +17,8 @@ import P8_1_2 from "./ui/Pages/P8_1_2";
 import P8_2 from "./ui/Pages/P8_2";
 import P8_2_1 from "./ui/Pages/P8_2_1";
 import P8_2_2 from "./ui/Pages/P8_2_2";
-import P9 from "./ui/Pages/P9";
+import P9_1 from "./ui/Pages/P9_1";
+import P9_2 from "./ui/Pages/P9_2";
 import P10 from "./ui/Pages/P10";
 import P11 from "./ui/Pages/P11";
 import P12_1 from "./ui/Pages/P12_1";
@@ -61,7 +62,8 @@ function App() {
         <Route path="/p8_2" component={P8_2} exact />
         <Route path="/p8_2_1" component={P8_2_1} />
         <Route path="/p8_2_2" component={P8_2_2} />
-        <Route path="/p9" component={P9} />
+        <Route path="/p9_1" component={P9_1} />
+        <Route path="/p9_2" component={P9_2} />
         <Route path="/p10" component={P10} />
         <Route path="/p11" component={P11} />
         <Route path="/p12_1" component={P12_1} />
