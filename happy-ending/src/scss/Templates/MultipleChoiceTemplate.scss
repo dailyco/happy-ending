@@ -21,15 +21,15 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-            }
 
-            & .Button {
-                display: block;
-                text-align: center;
-            }
+                & a:last-child {
+                    margin-top: 21.7px;
+                }
 
-            & .Button:last-child {
-                margin-top: 21.7px;
+                & .Button {
+                    display: block;
+                    text-align: center;
+                }
             }
         }
 
@@ -48,6 +48,10 @@
                 display: grid;
                 width: 1240px;
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            & a:nth-child(2n-1) {
+                justify-self: start;
             }
 
             & a:nth-child(2n) {
@@ -69,15 +73,36 @@
             height: 73px;
         }
 
-        & .Button {
-            display: block;
-            text-align: left;
-            box-sizing: border-box;
-            padding-left: 25px;
+        & .SelectionBox {
+            & a {
+                display: block;
+                width: 397.8px;
+            }
+
+            & .Button {
+                display: block;
+                text-align: left;
+                box-sizing: border-box;
+                padding-left: 25px;
+
+                &:last-child {
+                    margin-top: 26.1px;
+                }
+            }
+
         }
 
-        & .Button:last-child {
-            margin-top: 26.1px;
-        }
     }
+
+    // & .Button {
+    //     display: block;
+    //     text-align: left;
+    //     box-sizing: border-box;
+    //     padding-left: 25px;
+    // }
+
+    // & .Button:last-child {
+    //     margin-top: 26.1px;
+    // }
+    // }
 }
