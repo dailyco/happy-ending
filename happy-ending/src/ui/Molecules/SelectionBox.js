@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../Atoms/Button";
-import "../../scss/Molecules/SelectionBox.scss";
 
 function SelectionBox({ data, styleName }) {
   const { buttons } = data;
