@@ -82,10 +82,6 @@
     @include bg-image("20-funeral\ mood.png");
   }
 
-  &.P17 {
-    @include bg-image("17-BG.png");
-  }
-
   &.P21 {
     &:after {
       position: absolute;
@@ -109,6 +105,7 @@
   }
 
   & .back {
+    cursor: pointer;
     position: absolute;
     border: none;
     outline: none;
@@ -116,6 +113,7 @@
     height: 32px;
     top: 49px;
     left: 42px;
+
     &.back-white {
       background: url("../assets/images/Back-white.png") no-repeat center;
     }

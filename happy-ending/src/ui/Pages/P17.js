@@ -59,8 +59,8 @@ function P17({ history }) {
 
   return (
     <div className={classNames("Page", "P17")}>
-      <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <SeparatedTemplate17 data={data} styleName={styleName}></SeparatedTemplate17>
+      <button className={classNames("back", "back-gray")} onClick={goBack}></button>
     </div>
   );
 }

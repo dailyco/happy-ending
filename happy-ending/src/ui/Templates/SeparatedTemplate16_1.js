@@ -37,8 +37,8 @@ function SeparatedTemplate16_1({ data, styleName }) {
     <div className={"SeparatedTemplate16_1"}>
       {!imgSrc && (
         <>
-          <P styleName={p_style}>{p_data.text}</P>
           <Webcam audio={false} ref={webcamRef} screenshotFormat="image/jpeg" videoConstraints={videoConstraints}></Webcam>
+          <P styleName={p_style}>{p_data.text}</P>
           <Button className={"capture"} styleName={btn_style} onClick={captureAfter3Sec}></Button>
         </>
       )}
