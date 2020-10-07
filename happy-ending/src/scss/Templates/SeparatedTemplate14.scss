@@ -13,6 +13,7 @@
   & .float--left {
     float: left;
   }
+
   & .float--right {
     float: right;
   }
@@ -28,6 +29,7 @@
 
   & .ItemBoxContainer {
     margin-top: 45px;
+
     & .Button {
       display: flex;
       align-items: center;

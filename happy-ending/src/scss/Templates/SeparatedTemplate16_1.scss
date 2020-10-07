@@ -1,5 +1,6 @@
 .SeparatedTemplate16_1 {
     position: relative;
+    box-sizing: border-box;
 
     & .P {
         height: 73px;
@@ -26,14 +27,11 @@
 
         &.retake {
             margin-left: 788px;
+
+        }
+
+        &+a {
+            margin-left: 62px;
         }
     }
-
-    & .Button+.Button {
-        margin-left: 62px;
-    }
-
-
-
-
 }

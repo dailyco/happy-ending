@@ -49,7 +49,9 @@ function SeparatedTemplate16_1({ data, styleName }) {
             다시찍기
           </Button>
           <Link to={"/p17"}>
-            <Button styleName={check_btn_style}>확인</Button>
+            <Button className={"check"} styleName={check_btn_style}>
+              확인
+            </Button>
           </Link>
         </>
       )}
