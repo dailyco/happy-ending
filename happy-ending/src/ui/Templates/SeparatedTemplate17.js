@@ -13,8 +13,8 @@ function SeparatedTemplate17({ data, styleName }) {
     <div className={"SeparatedTemplate17"}>
       <Img image={bg_data.image} alt={bg_data.alt}></Img>
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
-      {imgs.map((img) => (
-        <Link to={"/p18"}>
+      {imgs.map((img, index) => (
+        <Link to={"/p18"} key={index}>
           <Img image={img.image} alt={img.alt}></Img>
         </Link>
       ))}

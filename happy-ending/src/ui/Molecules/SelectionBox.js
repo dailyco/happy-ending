@@ -8,8 +8,8 @@ function SelectionBox({ data, styleName }) {
 
   return (
     <div className={"SelectionBox"}>
-      {buttons.map((button) => (
-        <Link to={button.to}>
+      {buttons.map((button, index) => (
+        <Link to={button.to} key={index}>
           <Button styleName={btn_style}>{button.text}</Button>
         </Link>
       ))}
