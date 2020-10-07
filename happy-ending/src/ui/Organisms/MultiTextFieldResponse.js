@@ -8,7 +8,7 @@ function MultiTextFieldResponse({ data, styleName }) {
   const { mtfs_style, btn_style } = styleName;
 
   return (
-    <div classsName={"MultiTextFieldResponse"}>
+    <div className={"MultiTextFieldResponse"}>
       <MultiTextFieldSentence data={mtfs_data} styleName={mtfs_style}></MultiTextFieldSentence>
       <Link to={to}>
         <Button styleName={btn_style}>확인</Button>

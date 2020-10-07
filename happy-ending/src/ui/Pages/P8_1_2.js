@@ -20,7 +20,7 @@ function P8_1_2({ history }) {
       },
     },
     mtfr_data: {
-      to: "/p9",
+      to: "/p9_1",
       mtfs_data: {
         l_text: "3일간의 여행을 (",
         ph1: "누구",
