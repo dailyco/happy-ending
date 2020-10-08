@@ -21,11 +21,11 @@ function P1() {
     span_style: ["noto", "xs", "davy-gray", "light"],
   };
   return (
-    <div className={classNames("Page", "P1")}>
-      <Link to={"/p2"}>
+    <Link to={"/p2"}>
+      <div className={classNames("Page", "P1")}>
         <SeparatedTemplate1 data={data} styleName={styleName}></SeparatedTemplate1>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
 

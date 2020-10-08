@@ -27,15 +27,15 @@ function P25({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P25", "bg-video")}>
-      <Link to={"/p26"}>
+    <Link to={"/p26"}>
+      <div className={classNames("Page", "P25", "bg-video")}>
         <video autoPlay muted>
           <source src={P25_Video} type="video/mp4" />
         </video>
         <button className={classNames("back", "back-white")} onClick={goBack}></button>
         <SeparatedTemplate25 data={data} styleName={styleName}></SeparatedTemplate25>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
 

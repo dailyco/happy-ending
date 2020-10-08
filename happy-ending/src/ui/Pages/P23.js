@@ -39,15 +39,15 @@ function P23({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P23", "bg-video")}>
-      <Link to={"/p24"}>
+    <Link to={"/p24"}>
+      <div className={classNames("Page", "P23", "bg-video")}>
         <video autoPlay muted loop>
           <source src={P23Vedio} type="video/mp4" />
         </video>
         <button className={classNames("back", "back-white")} onClick={goBack}></button>
         <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
 

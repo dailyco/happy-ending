@@ -36,11 +36,11 @@ function P2() {
     span_style: ["noto", "xs", "white", "light"],
   };
   return (
-    <div className={classNames("Page", "P2")}>
-      <Link to={"/p3"}>
+    <Link to={"/p3"}>
+      <div className={classNames("Page", "P2")}>
         <SeparatedTemplate2 data={data} styleName={styleName}></SeparatedTemplate2>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
 
