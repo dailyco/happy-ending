@@ -48,15 +48,15 @@ function P5({ history }) {
     s3_style: ["noto", "xs", "davy-gray", "light"],
   };
   return (
-    <div className={classNames("Page", "P5", "bg-video")}>
-      <Link to={"/p6"}>
+    <Link to={"/p6"}>
+      <div className={classNames("Page", "P5", "bg-video")}>
         <video autoPlay muted loop>
           <source src={P5Vedio} type="video/mp4" />
         </video>
         <button className={classNames("back", "back-gray")} onClick={goBack}></button>
         <SeparatedTemplate5 data={data} styleName={styleName}></SeparatedTemplate5>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
 

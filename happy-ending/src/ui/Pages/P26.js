@@ -38,11 +38,11 @@ function P26() {
   };
 
   return (
-    <div className={classNames("Page", "P26")}>
-      <Link to={"/p27"}>
+    <Link to={"/p27"}>
+      <div className={classNames("Page", "P26")}>
         <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
 
