@@ -144,7 +144,7 @@ table {
 }
 
 a {
-  display: block;
+  /* display: block; */
   text-decoration: none;
   width: min-content;
 }

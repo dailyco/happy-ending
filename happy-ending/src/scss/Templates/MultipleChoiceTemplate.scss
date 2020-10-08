@@ -31,15 +31,6 @@
                     text-align: center;
                 }
             }
-
-            // & .Button {
-            //     display: block;
-            //     text-align: center;
-            // }
-
-            // & .Button:last-child {
-            //     margin-top: 21.7px;
-            // }
         }
 
         &.four-btn {
@@ -76,6 +67,10 @@
         & .P {
             margin-bottom: 72px;
             height: 73px;
+        }
+
+        & a {
+            display: block;
         }
 
         & .Button {
