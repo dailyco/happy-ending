@@ -21,15 +21,15 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-            }
 
-            & .Button {
-                display: block;
-                text-align: center;
-            }
+                & a:last-child {
+                    margin-top: 21.7px;
+                }
 
-            & .Button:last-child {
-                margin-top: 21.7px;
+                & .Button {
+                    display: block;
+                    text-align: center;
+                }
             }
         }
 
@@ -50,11 +50,11 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            & .Button:nth-child(2n) {
+            & a:nth-child(2n) {
                 justify-self: end;
             }
 
-            & .Button:nth-child(n+3) {
+            & a:nth-child(n+3) {
                 margin-top: 44.8px;
             }
         }
@@ -69,15 +69,19 @@
             height: 73px;
         }
 
+        & a {
+            display: block;
+        }
+
         & .Button {
             display: block;
             text-align: left;
             box-sizing: border-box;
             padding-left: 25px;
-        }
 
-        & .Button:last-child {
-            margin-top: 26.1px;
+            &:last-child {
+                margin-top: 26.1px;
+            }
         }
     }
 }

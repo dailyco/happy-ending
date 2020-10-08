@@ -95,6 +95,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 article,
 aside,
 details,
@@ -109,21 +110,26 @@ nav,
 section {
   display: block;
 }
+
 [hidden] {
   display: none;
 }
+
 body {
   line-height: 1;
 }
+
 menu,
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:after,
 blockquote:before,
 q:after,
@@ -131,14 +137,18 @@ q:before {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 a {
+  /* display: block; */
   text-decoration: none;
   width: min-content;
 }
+
 /*# sourceMappingURL=/sm/04f4d35563f7cf9516264fcbb6e11a85def2ae5616df66563711867fe05befec.map */
 
 .App {
