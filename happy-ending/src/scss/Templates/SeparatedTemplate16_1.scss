@@ -24,9 +24,9 @@
     &.retake {
       margin-left: 788px;
     }
-  }
 
-  & .Button + .Button {
-    margin-left: 62px;
+    &+a {
+      margin-left: 62px;
+    }
   }
 }
