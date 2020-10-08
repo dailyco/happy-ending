@@ -11,13 +11,13 @@ function SeparatedTemplate17({ data, styleName }) {
 
   return (
     <div className={"SeparatedTemplate17"}>
-      <Img image={bg_data.image} alt={bg_data.alt}></Img>
-      <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
-      {imgs.map((img, index) => (
-        <Link to={"/p18"} key={index}>
+      {imgs.map((img) => (
+        <Link to={"/p18"}>
           <Img image={img.image} alt={img.alt}></Img>
         </Link>
       ))}
+      <Img image={bg_data.image} alt={bg_data.alt}></Img>
+      <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
     </div>
   );
 }
