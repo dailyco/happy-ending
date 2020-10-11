@@ -9,6 +9,7 @@ import "../../scss/pages.scss";
 function P23({ history }) {
   const goBack = () => {
     history.goBack();
+    history.goBack();
   };
 
   const data = {

@@ -8,6 +8,7 @@ import "../../scss/pages.scss";
 function P19({ history }) {
   const goBack = () => {
     history.goBack();
+    history.goBack();
   };
   const data = {
     dq_data: {

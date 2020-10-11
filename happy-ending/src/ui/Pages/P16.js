@@ -7,6 +7,7 @@ import "../../scss/pages.scss";
 function P16({ history }) {
   const goBack = () => {
     history.goBack();
+    history.goBack();
   };
 
   const data = {
