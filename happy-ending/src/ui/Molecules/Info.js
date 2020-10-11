@@ -9,9 +9,9 @@ function Info() {
         <TextField placeHolder="이름" styleName={["m", "davy-gray, info"]}></TextField>
       </div>
       <div className={classNames("birthday")}>
-        <TextField placeHolder="YY" styleName={["xs", "davy-gray, info"]}></TextField>
-        <TextField placeHolder="MM" styleName={["xs", "davy-gray, info"]}></TextField>
-        <TextField placeHolder="DD" styleName={["xs", "davy-gray, info"]}></TextField>
+        <TextField placeHolder="YY" maxLength="2" styleName={["xs", "davy-gray, info"]}></TextField>
+        <TextField placeHolder="MM" maxLength="2" styleName={["xs", "davy-gray, info"]}></TextField>
+        <TextField placeHolder="DD" maxLength="2" styleName={["xs", "davy-gray, info"]}></TextField>
       </div>
     </div>
   );
