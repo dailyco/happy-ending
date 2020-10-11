@@ -8,9 +8,9 @@ import "../../scss/pages.scss";
 
 function P5({ history }) {
   const { year = 2020, month = 11, day = 7 } = {};
-  localStorage.setItem("deathYear", year);
-  localStorage.setItem("deathMonth", month);
-  localStorage.setItem("deathday", day);
+  // localStorage.setItem("deathYear", year);
+  // localStorage.setItem("deathMonth", month);
+  // localStorage.setItem("deathday", day);
 
   const goBack = () => {
     history.goBack();
