@@ -7,7 +7,12 @@ import P5Vedio from "../../assets/videos/5-calender.mp4";
 import "../../scss/pages.scss";
 
 function P5({ history }) {
-  const { year = 2020, month = 11, day = 7 } = {};
+  const date = new Date();
+  const { year = 2020, month = 11, day = 3 } = {
+    year: date.getFullYear(),
+    month: date.getMonth()+1<10? "0"+date.getMonth()+1 : date.getMonth()+1,
+    day: date.getDate()+7<10? "0"+ date.getDate()+7 : date.getDate()+7,
+  };
 
   const goBack = () => {
     history.goBack();
