@@ -2,6 +2,7 @@ import React from "react";
 import Img from "../Atoms/Img";
 import { Link } from "react-router-dom";
 import Dquestion from "../Organisms/Dquestion";
+import P17Video from "../../assets/videos/17_front.mp4"
 
 import "../../scss/Templates/SeparatedTemplate17.scss";
 
@@ -11,9 +12,13 @@ function SeparatedTemplate17({ data, styleName }) {
 
   return (
     <div className={"SeparatedTemplate17"}>
-      <Img image={bg_data.image} alt={bg_data.alt}></Img>
+      <video autoPlay muted>
+        <source src={P17Video} type="video/mp4" />
+      </video>
+      {/* <Img image={bg_data.image} alt={bg_data.alt}></Img> */}
       {imgs.map((img) => (
         <Link to={"/p18"}>
+          <Img image={img.shadow} alt={img.alt}></Img>
           <Img image={img.image} alt={img.alt}></Img>
         </Link>
       ))}

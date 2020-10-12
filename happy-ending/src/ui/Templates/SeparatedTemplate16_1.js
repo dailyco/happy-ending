@@ -4,6 +4,7 @@ import Img from "../Atoms/Img";
 import Webcam from "react-webcam";
 import Button from "../Atoms/Button";
 import { Link } from "react-router-dom";
+import CamIcon from "../../assets/icons/Camera icon.svg";
 
 import "../../scss/Templates/SeparatedTemplate16_1.scss";
 
@@ -46,7 +47,9 @@ function SeparatedTemplate16_1({ data, styleName }) {
           <Webcam audio={false} ref={webcamRef} screenshotFormat="image/jpeg" videoConstraints={videoConstraints}></Webcam>
           <P styleName={p_style}>{p_data.text}</P>
           {/* <P styleName={p_style}>{counter}</P> */}
-          <Button className={"capture"} styleName={btn_style} onClick={captureAfter3Sec}></Button>
+          <Button className={"capture"} styleName={btn_style} onClick={captureAfter3Sec}>
+            <iframe title="cam-icon" src={CamIcon}></iframe>
+          </Button>
         </>
       )}
       {imgSrc && (

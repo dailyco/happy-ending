@@ -1,7 +1,6 @@
 import React from "react";
 import classNames from "classnames";
 import MultiTextFieldTemplate from "../Templates/MultiTextFieldTemplate";
-import P8_2_1_Video from "../../assets/videos/8-2-1-stay home alone.mp4";
 
 import "../../scss/pages.scss";
 
@@ -31,8 +30,8 @@ function P8_2_2({ history }) {
   };
   const styleName = {
     dq_style: {
-      h3_style: ["normal", "eclipse"],
-      p_style: ["eclipse"],
+      h3_style: ["normal", "eclipse", "close"],
+      p_style: ["eclipse", "close"],
     },
     mtfr_style: {
       mtfs_style: {
@@ -43,15 +42,12 @@ function P8_2_2({ history }) {
         tf2_style: ["s", "davy-gray"],
         r_text_style: ["noto", "s", "normal", "eclipse"],
       },
-      btn_style: ["xs", "white"],
+      btn_style: ["xs", "white", "close"],
     },
   };
 
   return (
-    <div className={classNames("Page", "P8-2-2", "bg-video")}>
-      <video autoPlay muted loop>
-        <source src={P8_2_1_Video} type="video/mp4" />
-      </video>
+    <div className={classNames("Page", "P8-2-2")}>
       <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <MultiTextFieldTemplate data={data} styleName={styleName}></MultiTextFieldTemplate>
     </div>

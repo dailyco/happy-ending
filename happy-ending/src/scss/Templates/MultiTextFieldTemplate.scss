@@ -6,11 +6,19 @@
     & .H3 {
         margin-bottom: 107px;
         height: 33px;
+
+        &.close {
+            margin-bottom : 81px;
+        }
     }
 
     & .P {
         margin-bottom: 88px;
         height: 33px;
+
+        &.close {
+            margin-bottom : 70px;
+        }
     }
 
     & .MultiTextFieldSentence {
@@ -22,5 +30,9 @@
 
     & .Button {
         margin-top: 116px;
+
+        &.close {
+            margin-top  : 100px;
+        }
     }
 }

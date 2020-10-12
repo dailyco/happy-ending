@@ -43,6 +43,10 @@
     @include bg-image("8-2-stay\ home\ choose.png");
   }
 
+  &.P8-2-2 {
+    @include bg-image("8-2-2_stay with at home.png")
+  }
+
   &.P8 {
     @include bg-image("8_travel\ or\ not.jpg");
   }
