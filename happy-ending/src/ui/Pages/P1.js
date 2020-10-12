@@ -7,8 +7,8 @@ import HappyendingLogo from "../../assets/images/Happy Ending Logo_new.png";
 import "../../scss/pages.scss";
 
 function P1() {
-  // localStorage.clear();
-  // console.log(localStorage);
+  localStorage.clear();
+  console.log(localStorage);
 
   const data = {
     img_data: {
