@@ -17,6 +17,11 @@
   & .Button {
     margin-top: 964px;
 
+    & iframe[title="cam-icon"] {
+      width : 80%;
+      height : 100%;
+    }
+
     &.capture {
       margin-left: 923.3px;
     }
