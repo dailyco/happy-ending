@@ -15,6 +15,13 @@
     height: 73px;
   }
 
+  & video {
+    position : absolute;
+    top : 0;
+    left : 0;
+    filter : opacity(50%);
+  }
+
   & .Img[alt="window"] {
     position: absolute;
     top: 0;
