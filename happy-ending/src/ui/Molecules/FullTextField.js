@@ -8,7 +8,7 @@ function FullTextField({ data, styleName }) {
   const { ftf_style, tf_style } = styleName;
   return (
     <div className={classNames("FullTextField", ftf_style)}>
-      <TextField placeHolder={tf_data.placeHolder} styleName={tf_style}></TextField>
+      <TextField placeHolder={tf_data.placeHolder} styleName={tf_style} value={tf_data.input.value} onChange={tf_data.onChange} name={tf_data.name}></TextField>
     </div>
   );
 }

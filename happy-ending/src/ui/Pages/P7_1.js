@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import useInputs from "../useInputs";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 
 import "../../scss/pages.scss";
@@ -8,6 +9,11 @@ function P7_1({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
+  const [input, onChange] = useInputs({
+    value: localStorage.getItem("breakBank"),
+  });
+
   const data = {
     dq_data: {
       h3_data: {
@@ -28,6 +34,9 @@ function P7_1({ history }) {
       ftf_data: {
         tf_data: {
           placeHolder: "내용을 입력해주세요.",
+          input: input,
+          name: "breakBank",
+          onChange: onChange,
         },
       },
     },

@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import useInputs from "../useInputs";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 import P13Vedio from "../../assets/videos/13-erase.mp4";
 
@@ -9,6 +10,10 @@ function P13({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
+  const [input, onChange] = useInputs({
+    value: localStorage.getItem("eraseMoment"),
+  });
 
   const data = {
     dq_data: {
@@ -24,6 +29,9 @@ function P13({ history }) {
       ftf_data: {
         tf_data: {
           placeHolder: "내용을 입력하세요.",
+          input: input,
+          name: "eraseMoment",
+          onChange: onChange,
         },
       },
     },
