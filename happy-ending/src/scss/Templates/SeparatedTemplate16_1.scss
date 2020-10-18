@@ -1,11 +1,5 @@
 .SeparatedTemplate16_1 {
-  & .P {
-    position: absolute;
-    text-align: center;
-    height: 73px;
-    top: 435px;
-    left: 770px;
-  }
+  text-align: center;
 
   & video,
   .Img {
@@ -14,19 +8,25 @@
     left: 700px;
   }
 
+  & .P {
+    &.description {
+      position: relative;
+      top: 354px;
+    }
+    &.counter {
+      position: relative;
+      top: 435px;
+    }
+  }
+
   & .Button {
     position: relative;
     top: 964px;
 
     &.capture {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 923.3px;
-    }
-
-    &.retake {
-      margin-left: 788px;
+      & .Icon {
+        margin-top: 12.3px;
+      }
     }
 
     & + a {
