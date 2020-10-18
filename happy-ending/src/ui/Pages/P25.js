@@ -7,6 +7,10 @@ import P25_Video from "../../assets/videos/25-death.mp4";
 import "../../scss/pages.scss";
 
 function P25({ history }) {
+  const year = localStorage.getItem("deathYear");
+  const month = localStorage.getItem("deathMonth");
+  const day = localStorage.getItem("deathday");
+  
   const goBack = () => {
     history.goBack();
   };
@@ -14,7 +18,7 @@ function P25({ history }) {
   const data = {
     h3_data: "D-DAY",
     span1_data: "홍길동 님은",
-    span2_data: "2020.00.00",
+    span2_data: `${year}.${month}.${day}`,
     span3_data: "사망했습니다.",
     span4_data: "탭하여 다음 페이지로 넘어가기",
   };
