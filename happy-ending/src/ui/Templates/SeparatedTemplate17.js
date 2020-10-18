@@ -16,8 +16,8 @@ function SeparatedTemplate17({ data, styleName }) {
         <source src={P17Video} type="video/mp4" />
       </video>
       {/* <Img image={bg_data.image} alt={bg_data.alt}></Img> */}
-      {imgs.map((img) => (
-        <Link to={"/p18"}>
+      {imgs.map((img, index) => (
+        <Link to={"/p18"} key={index}>
           <Img image={img.shadow} alt={img.alt}></Img>
           <Img image={img.image} alt={img.alt}></Img>
         </Link>
