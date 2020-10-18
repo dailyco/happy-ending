@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import useInputs from "../useInputs";
 import SeparatedTemplate4 from "../Templates/SeparatedTemplate4";
 import P4Vedio from "../../assets/videos/4-book.mp4";
 
@@ -9,6 +10,13 @@ function P4({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
+  const [inputs, onChange] = useInputs({
+    name: localStorage.getItem("name") ?? "",
+    year: localStorage.getItem("year") ?? "",
+    month: localStorage.getItem("month") ?? "",
+    day: localStorage.getItem("day") ?? "",
+  });
 
   const data = {
     p_data: {
@@ -31,6 +39,13 @@ function P4({ history }) {
         </>
       ),
     },
+    irpns_data: {
+      info_data: {
+        inputs: inputs,
+        names: ["name", "year", "month", "day"],
+        onChange: onChange,
+      }
+    }
   };
   const styleName = {
     p_style: ["eclipse"],

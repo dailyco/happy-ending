@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import useInputs from "../useInputs";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 import P19Vedio from "../../assets/videos/19-music.mp4";
 
@@ -10,6 +11,11 @@ function P19({ history }) {
     history.goBack();
     history.goBack();
   };
+
+  const [input, onChange] = useInputs({
+    song: localStorage.getItem("song") ?? "",
+  });
+
   const data = {
     dq_data: {
       h3_data: {
@@ -21,6 +27,13 @@ function P19({ history }) {
     },
     ftfr_data: {
       to: "/p20",
+      ftf_data: {
+        tf_data: {
+          input: input.song,
+          name: "song",
+          onChange: onChange,
+        },
+      },
     },
   };
   const styleName = {

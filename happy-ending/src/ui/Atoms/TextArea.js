@@ -2,8 +2,8 @@ import React from "react";
 import classNames from "classnames";
 import "../../scss/Atoms/TextArea.scss";
 
-function TextArea({ placeHolder, styleName }) {
-  return <textarea placeholder={placeHolder} className={classNames("TextArea", styleName)}></textarea>;
+function TextArea({ placeHolder, styleName, ...rest }) {
+  return <textarea placeholder={placeHolder} className={classNames("TextArea", styleName)} {...rest}></textarea>;
 }
 
 export default TextArea;

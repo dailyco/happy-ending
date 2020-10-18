@@ -7,7 +7,7 @@ function FullTextField({ styleName }) {
   const { ftf_style, tf_style } = styleName;
   return (
     <div className={classNames("FullTextField", ftf_style)}>
-      <TextField placeHolder="내용을 입력하세요" styleName={tf_style}></TextField>
+      <TextField placeHolder="내용을 입력하세요" styleName={tf_style} value={tf_data.input} onChange={tf_data.onChange} name={tf_data.name}></TextField>
     </div>
   );
 }

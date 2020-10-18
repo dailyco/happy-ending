@@ -6,7 +6,7 @@ import InfoResponse from "../Organisms/InfoResponse";
 import "../../scss/Templates/SeparatedTemplate4.scss";
 
 function SeparatedTemplate4({ data, styleName }) {
-  const { p_data } = data;
+  const { p_data, irpns_data } = data;
   const { p_style } = styleName;
   return (
     <div className={classNames("SeparatedTemplate4")}>
@@ -14,7 +14,7 @@ function SeparatedTemplate4({ data, styleName }) {
         <P styleName={p_style}>{p_data.text}</P>
       </section>
       <section className={classNames("InfoResponse")}>
-        <InfoResponse></InfoResponse>
+        <InfoResponse data={irpns_data}></InfoResponse>
       </section>
     </div>
   );
