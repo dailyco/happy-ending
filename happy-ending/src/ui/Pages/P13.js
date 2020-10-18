@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import useInputs from "../useInputs";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 import P13Vedio from "../../assets/videos/13-erase.mp4";
 
@@ -9,6 +10,10 @@ function P13({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
+  const [input, onChange] = useInputs({
+    eraseMoment: localStorage.getItem("eraseMoment") ?? "",
+  });
 
   const data = {
     dq_data: {
@@ -21,6 +26,13 @@ function P13({ history }) {
     },
     ftfr_data: {
       to: "/p14",
+      ftf_data: {
+        tf_data: {
+          input: input.eraseMoment,
+          name: "eraseMoment",
+          onChange: onChange,
+        },
+      },
     },
   };
   const styleName = {

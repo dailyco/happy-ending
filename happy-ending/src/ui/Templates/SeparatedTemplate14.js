@@ -8,7 +8,7 @@ import Dquestion from "../Organisms/Dquestion";
 import "../../scss/Templates/SeparatedTemplate14.scss";
 
 function SeparatedTemplate14({ data, styleName }) {
-  const { dq_data } = data;
+  const { dq_data, ib_data } = data;
   const { dq_style, button_style } = styleName;
   return (
     <div className={classNames("SeparatedTemplate14", "clearfix")}>
@@ -16,7 +16,7 @@ function SeparatedTemplate14({ data, styleName }) {
         <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
       </div>
       <div className={classNames("ItemBoxContainer", "float--right")}>
-        <ItemBox></ItemBox>
+        <ItemBox data={ib_data}></ItemBox>
         <Link to={"/p15"}>
           <Button styleName={button_style}>확인</Button>
         </Link>

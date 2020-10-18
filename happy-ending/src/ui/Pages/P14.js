@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import useInputs from "../reducerInputs";
 import SeparatedTemplate14 from "../Templates/SeparatedTemplate14";
 
 import "../../scss/pages.scss";
@@ -9,6 +10,12 @@ function P14({ history }) {
     history.goBack();
   };
 
+  const [ state, onCreate, onChange ] = useInputs({
+    messages: JSON.parse(localStorage.getItem("messages"))
+    ? JSON.parse(localStorage.getItem("messages"))
+    : [{ id: 1 }],
+  });
+  
   const data = {
     dq_data: {
       h3_data: {
@@ -24,7 +31,16 @@ function P14({ history }) {
         ),
       },
     },
+    ib_data: {
+      state: state,
+      item_data: {
+        names: ["to", "message"],
+        onCreate: onCreate,
+        onChange: onChange,
+      }
+    }
   };
+
   const styleName = {
     dq_style: {
       h3_style: ["normal", "eclipse"],

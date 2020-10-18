@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import useInputs from "../useInputs";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 
 import "../../scss/pages.scss";
@@ -8,6 +9,10 @@ function P12_2({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
+  const [input, onChange] = useInputs({
+    happyMoment: localStorage.getItem("happyMoment") ?? "",
+  });
 
   const data = {
     dq_data: {
@@ -26,6 +31,13 @@ function P12_2({ history }) {
     },
     ftfr_data: {
       to: "/p13",
+      ftf_data: {
+        tf_data: {
+          input: input.happyMoment,
+          name: "happyMoment",
+          onChange: onChange,
+        },
+      },
     },
   };
   const styleName = {

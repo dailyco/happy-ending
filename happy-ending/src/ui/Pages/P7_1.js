@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import useInputs from "../useInputs";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 
 import "../../scss/pages.scss";
@@ -8,6 +9,11 @@ function P7_1({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
+  const [input, onChange] = useInputs({
+    breakBank: localStorage.getItem("breakBank") ?? "",
+  });
+
   const data = {
     dq_data: {
       h3_data: {
@@ -25,6 +31,13 @@ function P7_1({ history }) {
     },
     ftfr_data: {
       to: "/p8",
+      ftf_data: {
+        tf_data: {
+          input: input.breakBank,
+          name: "breakBank",
+          onChange: onChange,
+        },
+      },
     },
   };
   const styleName = {

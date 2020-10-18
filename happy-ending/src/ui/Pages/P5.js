@@ -12,7 +12,10 @@ function P5({ history }) {
     year: date.getFullYear(),
     month: date.getMonth()+1<10? "0"+date.getMonth()+1 : date.getMonth()+1,
     day: date.getDate()+7<10? "0"+ date.getDate()+7 : date.getDate()+7,
-  };
+  }; 
+  localStorage.setItem("deathYear", year);
+  localStorage.setItem("deathMonth", month);
+  localStorage.setItem("deathday", day);
 
   const goBack = () => {
     history.goBack();
