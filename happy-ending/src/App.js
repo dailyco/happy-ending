@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
+import P0 from "./ui/Pages/P0";
 import P1 from "./ui/Pages/P1";
 import P2 from "./ui/Pages/P2";
 import P3 from "./ui/Pages/P3";
@@ -47,6 +48,7 @@ function App() {
     <div>
       <Switch>
         <Route path="/" component={P1} exact />
+        <Route path="/p0" component={P0} />
         <Route path="/p2" component={P2} />
         <Route path="/p3" component={P3} />
         <Route path="/p4" component={P4} />
