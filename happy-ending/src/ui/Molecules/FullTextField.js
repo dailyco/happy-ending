@@ -3,7 +3,8 @@ import TextField from "../Atoms/TextField";
 import classNames from "classnames";
 import "../../scss/Molecules/FullTextField.scss";
 
-function FullTextField({ styleName }) {
+function FullTextField({ data, styleName }) {
+  const { tf_data } = data;
   const { ftf_style, tf_style } = styleName;
   return (
     <div className={classNames("FullTextField", ftf_style)}>
