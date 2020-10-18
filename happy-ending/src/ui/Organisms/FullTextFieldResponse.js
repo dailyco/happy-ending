@@ -5,10 +5,10 @@ import FullTextField from "../Molecules/FullTextField";
 
 function FullTextFieldResponse({ data, styleName }) {
   const { ftf_style, button_style } = styleName;
-  const { to } = data;
+  const { to, ftf_data } = data;
   return (
     <>
-      <FullTextField styleName={ftf_style}></FullTextField>
+      <FullTextField data={ftf_data} styleName={ftf_style}></FullTextField>
       <Link to={to}>
         <Button styleName={button_style}>확인</Button>
       </Link>

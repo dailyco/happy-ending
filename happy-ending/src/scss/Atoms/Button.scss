@@ -9,6 +9,24 @@
   }
 }
 
+@keyframes button-selected {
+  0% {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.09);
+  }
+  100% {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.09), 0 0 15px 4px rgb(240, 240, 240);
+  }
+}
+
+@keyframes button-unselected {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 40%;
+  }
+}
+
 .Button {
   font-family: "Noto Sans KR";
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.09);
@@ -125,6 +143,7 @@
     border-radius: 50%;
   }
 
+  // item
   &.item {
     justify-content: center;
     align-items: center;
@@ -134,5 +153,13 @@
     font-size: 20px;
     line-height: 2.15;
     border-radius: 10px;
+  }
+
+  //animation
+  &.selected {
+    animation: button-selected 1s linear;
+  }
+  &.unselected {
+    animation: button-unselected 1s linear;
   }
 }
