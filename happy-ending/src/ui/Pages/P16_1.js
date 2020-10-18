@@ -22,7 +22,8 @@ function P16_1({ history }) {
   };
   const styleName = {
     p_style: ["white"],
-    btn_style: ["circle", "light-brown"],
+    icon_style: ["camera"],
+    capture_btn_style: ["circle", "light-brown"],
     retake_btn_style: ["xs", "beige"],
     check_btn_style: ["xs", "light-brown"],
   };
