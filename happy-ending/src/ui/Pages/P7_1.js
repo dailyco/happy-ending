@@ -11,7 +11,7 @@ function P7_1({ history }) {
   };
 
   const [input, onChange] = useInputs({
-    value: localStorage.getItem("breakBank"),
+    breakBank: localStorage.getItem("breakBank") ?? "",
   });
 
   const data = {
@@ -34,7 +34,7 @@ function P7_1({ history }) {
       ftf_data: {
         tf_data: {
           placeHolder: "내용을 입력해주세요.",
-          input: input,
+          input: input.breakBank,
           name: "breakBank",
           onChange: onChange,
         },

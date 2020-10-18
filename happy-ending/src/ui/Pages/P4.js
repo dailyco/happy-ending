@@ -12,10 +12,10 @@ function P4({ history }) {
   };
 
   const [inputs, onChange] = useInputs({
-    n: localStorage.getItem("name"),
-    y: localStorage.getItem("year"),
-    m: localStorage.getItem("month"),
-    d: localStorage.getItem("day"),
+    name: localStorage.getItem("name") ?? "",
+    year: localStorage.getItem("year") ?? "",
+    month: localStorage.getItem("month") ?? "",
+    day: localStorage.getItem("day") ?? "",
   });
 
   const data = {

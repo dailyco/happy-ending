@@ -11,7 +11,7 @@ function P12_1({ history }) {
   };
 
   const [input, onChange] = useInputs({
-    value: localStorage.getItem("happyMoment"),
+    happyMoment: localStorage.getItem("happyMoment") ?? "",
   });
 
   const data = {
@@ -34,7 +34,7 @@ function P12_1({ history }) {
       ftf_data: {
         tf_data: {
           placeHolder: "내용을 입력하세요.",
-          input: input,
+          input: input.happyMoment,
           name: "happyMoment",
           onChange: onChange,
         },

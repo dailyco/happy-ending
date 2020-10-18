@@ -11,13 +11,9 @@ function P14({ history }) {
   };
 
   const [ state, onCreate, onChange ] = useInputs({
-    messages: JSON.parse(localStorage.getItem("messages"))? 
-      JSON.parse(localStorage.getItem("messages"))
-      : [{
-        id: 1,
-        to: undefined,
-        message: undefined,
-      }],
+    messages: JSON.parse(localStorage.getItem("messages"))
+    ? JSON.parse(localStorage.getItem("messages"))
+    : [{ id: 1 }],
   });
   
   const data = {

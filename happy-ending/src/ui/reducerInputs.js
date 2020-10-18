@@ -3,15 +3,18 @@ import { useCallback, useReducer, useRef } from 'react';
 function reducer (state, action) {
   switch (action.type) {
     case 'CREATE_MESSAGE':
-      console.log(action.message)
       return {
         messages: state.messages.concat(action.message)
       };
     case 'CHANGE_MESSAGE':
       return {
         messages: state.messages.map(message => 
-          message.id === action.id? { ...message, [action.name]: action.value} : message
+          message.id === +action.id ? { ...message, [action.name]: action.value} : message
         )
+      };
+    case 'REMOVE_MESSAGE':
+      return {
+        messages: state.messages.filter(message => message.id !== action.id)
       };
     default:
       return state;

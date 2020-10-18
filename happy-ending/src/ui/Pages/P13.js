@@ -12,7 +12,7 @@ function P13({ history }) {
   };
 
   const [input, onChange] = useInputs({
-    value: localStorage.getItem("eraseMoment"),
+    eraseMoment: localStorage.getItem("eraseMoment") ?? "",
   });
 
   const data = {
@@ -29,7 +29,7 @@ function P13({ history }) {
       ftf_data: {
         tf_data: {
           placeHolder: "내용을 입력하세요.",
-          input: input,
+          input: input.eraseMoment,
           name: "eraseMoment",
           onChange: onChange,
         },

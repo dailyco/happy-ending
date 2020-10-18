@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import useInputs from "../useInputs";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 
 import "../../scss/pages.scss";
@@ -8,6 +9,11 @@ function P21({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
+  const [input, onChange] = useInputs({
+    sadMan: localStorage.getItem("sadMan") ?? "",
+  });
+
   const data = {
     dq_data: {
       h3_data: {
@@ -27,6 +33,9 @@ function P21({ history }) {
       ftf_data: {
         tf_data: {
           placeHolder: "내용을 입력해주세요",
+          input: input.sadMan,
+          name: "sadMan",
+          onChange: onChange,
         },
       },
     },
