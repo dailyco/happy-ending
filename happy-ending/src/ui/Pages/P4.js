@@ -52,7 +52,7 @@ function P4({ history }) {
   };
   return (
     <div className={classNames("Page", "P4", "bg-video")}>
-      <video autoPlay muted loop>
+      <video autoPlay muted>
         <source src={P4Vedio} type="video/mp4" />
       </video>
       <button className={classNames("back", "back-gray")} onClick={goBack}></button>
