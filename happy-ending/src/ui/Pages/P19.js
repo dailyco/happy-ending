@@ -8,6 +8,7 @@ import "../../scss/pages.scss";
 function P19({ history }) {
   const goBack = () => {
     history.goBack();
+    history.goBack();
   };
   const data = {
     dq_data: {
@@ -20,11 +21,6 @@ function P19({ history }) {
     },
     ftfr_data: {
       to: "/p20",
-      ftf_data: {
-        tf_data: {
-          placeHolder: "내용을 입력하세요.",
-        },
-      },
     },
   };
   const styleName = {

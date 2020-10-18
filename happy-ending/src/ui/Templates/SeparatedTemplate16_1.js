@@ -1,15 +1,17 @@
 import React from "react";
 import P from "../Atoms/P";
 import Img from "../Atoms/Img";
+import Icon from "../Atoms/Icon";
 import Webcam from "react-webcam";
 import Button from "../Atoms/Button";
 import { Link } from "react-router-dom";
+import CamIcon from "../../assets/icons/Camera icon.svg";
 
 import "../../scss/Templates/SeparatedTemplate16_1.scss";
 
 function SeparatedTemplate16_1({ data, styleName }) {
   const { p_data } = data;
-  const { p_style, btn_style, retake_btn_style, check_btn_style } = styleName;
+  const { p_style, icon_style, capture_btn_style, retake_btn_style, check_btn_style } = styleName;
 
   const videoConstraints = {
     width: { min: 496 },
@@ -19,12 +21,12 @@ function SeparatedTemplate16_1({ data, styleName }) {
 
   const webcamRef = React.useRef(null);
   const [imgSrc, setImgSrc] = React.useState(null);
-  const [counter, setCounter] = React.useState(3);
+  // const [counter, setCounter] = React.useState(3);
 
-  const countDown = React.useEffect(() => {
-    const timer = counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
-    return () => clearInterval(timer);
-  }, [counter]);
+  // const countDown = React.useEffect(() => {
+  //   const timer = counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
+  //   return () => clearInterval(timer);
+  // }, [counter]);
 
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
@@ -46,7 +48,9 @@ function SeparatedTemplate16_1({ data, styleName }) {
           <Webcam audio={false} ref={webcamRef} screenshotFormat="image/jpeg" videoConstraints={videoConstraints}></Webcam>
           <P styleName={p_style}>{p_data.text}</P>
           {/* <P styleName={p_style}>{counter}</P> */}
-          <Button className={"capture"} styleName={btn_style} onClick={captureAfter3Sec}></Button>
+          <Button className={"capture"} styleName={capture_btn_style} onClick={captureAfter3Sec}>
+            <Icon alt="cam-icon" icon={CamIcon} styleName={icon_style}/>
+          </Button>
         </>
       )}
       {imgSrc && (

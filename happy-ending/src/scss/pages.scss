@@ -1,5 +1,6 @@
 @mixin bg-image($f_name) {
   background: url("../assets/images/bg_images/" + $f_name) no-repeat center;
+  background-size: cover;
 }
 
 .Page {
@@ -19,7 +20,7 @@
   }
 
   &.P1 {
-    @include bg-image("first page.png");
+    @include bg-image("first\ page.png");
   }
 
   &.P2 {
@@ -42,20 +43,20 @@
     @include bg-image("8-2-stay\ home\ choose.png");
   }
 
+  &.P8-2-2 {
+    @include bg-image("8-2-2_stay with at home.png")
+  }
+
   &.P8 {
     @include bg-image("8_travel\ or\ not.jpg");
   }
 
   &.P12-1 {
-    @include bg-image("12-happiest\ moment_home.jpg");
+    @include bg-image("12-happiest\ moment_home.png");
   }
 
   &.P12-2 {
     @include bg-image("12-happiest\ moment_travel.png");
-  }
-
-  &.P12-1 {
-    @include bg-image("12-happiest\ moment_home.jpg");
   }
 
   &.P14 {

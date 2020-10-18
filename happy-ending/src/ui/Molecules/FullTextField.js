@@ -3,12 +3,11 @@ import TextField from "../Atoms/TextField";
 import classNames from "classnames";
 import "../../scss/Molecules/FullTextField.scss";
 
-function FullTextField({ data, styleName }) {
-  const { tf_data } = data;
+function FullTextField({ styleName }) {
   const { ftf_style, tf_style } = styleName;
   return (
     <div className={classNames("FullTextField", ftf_style)}>
-      <TextField placeHolder={tf_data.placeHolder} styleName={tf_style}></TextField>
+      <TextField placeHolder="내용을 입력하세요" styleName={tf_style}></TextField>
     </div>
   );
 }

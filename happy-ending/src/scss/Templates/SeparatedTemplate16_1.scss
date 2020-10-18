@@ -8,16 +8,20 @@
   }
 
   & video,
-  Img {
+  .Img {
     position: absolute;
     top: 140px;
     left: 700px;
   }
 
   & .Button {
-    margin-top: 964px;
+    position: relative;
+    top: 964px;
 
     &.capture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin-left: 923.3px;
     }
 
@@ -25,7 +29,7 @@
       margin-left: 788px;
     }
 
-    &+a {
+    & + a {
       margin-left: 62px;
     }
   }

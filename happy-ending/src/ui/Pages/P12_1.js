@@ -26,11 +26,6 @@ function P12_1({ history }) {
     },
     ftfr_data: {
       to: "/p13",
-      ftf_data: {
-        tf_data: {
-          placeHolder: "내용을 입력하세요.",
-        },
-      },
     },
   };
   const styleName = {

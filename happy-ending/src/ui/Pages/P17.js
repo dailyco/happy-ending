@@ -1,12 +1,17 @@
 import React from "react";
 import classNames from "classnames";
 import SeparatedTemplate17 from "../Templates/SeparatedTemplate17";
-import Window from "../../assets/images/bg_images/17-Window.png";
+// import Window from "../../assets/images/bg_images/17-Window.png";
 import F1 from "../../assets/images/17p_images/1F.png";
+import SD1 from "../../assets/images/17p_images/1SD.png";
 import F2 from "../../assets/images/17p_images/2F.png";
+import SD2 from "../../assets/images/17p_images/2SD.png";
 import F3 from "../../assets/images/17p_images/3F.png";
+import SD3 from "../../assets/images/17p_images/3SD.png";
 import F4 from "../../assets/images/17p_images/4F.png";
+import SD4 from "../../assets/images/17p_images/4SD.png";
 import F5 from "../../assets/images/17p_images/5F.png";
+import SD5 from "../../assets/images/17p_images/5SD.png";
 
 import "../../scss/pages.scss";
 
@@ -15,10 +20,10 @@ function P17({ history }) {
     history.goBack();
   };
   const data = {
-    bg_data: {
-      image: Window,
-      alt: "window",
-    },
+    // bg_data: {
+    //   image: Window,
+    //   alt: "window",
+    // },
     dq_data: {
       h3_data: {
         day: 3,
@@ -36,22 +41,27 @@ function P17({ history }) {
     imgs: [
       {
         image: F1,
+        shadow : SD1,
         alt: "장미",
       },
       {
         image: F2,
+        shadow : SD2,
         alt: "프리지아",
       },
       {
         image: F3,
+        shadow : SD3,
         alt: "안개꽃",
       },
       {
         image: F4,
+        shadow : SD4,
         alt: "튤립",
       },
       {
         image: F5,
+        shadow : SD5,
         alt: "국화",
       },
     ],

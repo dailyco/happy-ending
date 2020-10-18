@@ -8,6 +8,8 @@ import "../../scss/pages.scss";
 
 function P10({ history }) {
   const goBack = () => {
+    console.log(history);
+    history.goBack();
     history.goBack();
   };
 
