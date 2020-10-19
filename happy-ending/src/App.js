@@ -40,6 +40,7 @@ import P24 from "./ui/Pages/P24";
 import P25 from "./ui/Pages/P25";
 import P26 from "./ui/Pages/P26";
 import P27 from "./ui/Pages/P27";
+import P404 from "./ui/Pages/P404";
 
 import "./App.css";
 
@@ -86,6 +87,7 @@ function App() {
         <Route path="/p25" component={P25} />
         <Route path="/p26" component={P26} />
         <Route path="/p27" component={P27} />
+        <Route component={P404}/>
       </Switch>
     </div>
   );
