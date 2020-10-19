@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState, useCallback, useEffect } from "react";
 import P from "../Atoms/P";
 import Img from "../Atoms/Img";
 import Icon from "../Atoms/Icon";
@@ -11,7 +11,7 @@ import "../../scss/Templates/SeparatedTemplate16_1.scss";
 
 function SeparatedTemplate16_1({ data, styleName }) {
   const { p_data } = data;
-  const { p_style, icon_style, capture_btn_style, retake_btn_style, check_btn_style } = styleName;
+  const { description_p_style, counter_p_style, icon_style, capture_btn_style, retake_btn_style, check_btn_style } = styleName;
 
   const videoConstraints = {
     width: { min: 496 },
@@ -19,38 +19,58 @@ function SeparatedTemplate16_1({ data, styleName }) {
     aspectRatio: 0.41340782122,
   };
 
-  const webcamRef = React.useRef(null);
-  const [imgSrc, setImgSrc] = React.useState(null);
-  // const [counter, setCounter] = React.useState(3);
+  const webcamRef = useRef(null);
+  const [imgSrc, setImgSrc] = useState(null);
+  const [counter, setCounter] = useState(null);
+  const [taken, setTaken] = useState(false);
 
-  // const countDown = React.useEffect(() => {
-  //   const timer = counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
-  //   return () => clearInterval(timer);
-  // }, [counter]);
+  useEffect(() => {
+    setImgSrc(JSON.parse(localStorage.getItem("photo")) ?? null);
+  }, []);
 
-  const capture = React.useCallback(() => {
+  useEffect(() => {
+    if (counter <= 0) return;
+    const timeout = setTimeout(() => setCounter(counter - 1), 1000);
+    return () => clearTimeout(timeout);
+  }, [counter]);
+
+  const capture = useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
     setImgSrc(imageSrc);
   }, [webcamRef, setImgSrc]);
 
-  const captureAfter3Sec = React.useCallback(() => {
+  const captureAfter3Sec = useCallback(() => {
+    setTaken(true);
+    setCounter(3);
     setTimeout(capture, 3000);
   }, [capture]);
 
-  const retake = React.useCallback(() => {
+  const retake = useCallback(() => {
+    setTaken(false);
     setImgSrc(null);
-  }, [setImgSrc]);
+    setCounter(null);
+    localStorage.removeItem("photo");
+  }, [setTaken, setImgSrc, localStorage, imgSrc]);
+
+  const savePhoto = useCallback(() => {
+    localStorage.setItem("photo", JSON.stringify(imgSrc));
+    console.log(localStorage);
+  }, [localStorage, imgSrc])
 
   return (
     <div className={"SeparatedTemplate16_1"}>
       {!imgSrc && (
         <>
           <Webcam audio={false} ref={webcamRef} screenshotFormat="image/jpeg" videoConstraints={videoConstraints}></Webcam>
-          <P styleName={p_style}>{p_data.text}</P>
-          {/* <P styleName={p_style}>{counter}</P> */}
-          <Button className={"capture"} styleName={capture_btn_style} onClick={captureAfter3Sec}>
-            <Icon alt="cam-icon" icon={CamIcon} styleName={icon_style}/>
-          </Button>
+          {!taken && 
+            <>
+              <Button className={"capture"} styleName={capture_btn_style} onClick={captureAfter3Sec}>
+                <Icon alt="cam-icon" icon={CamIcon} styleName={icon_style}/>
+              </Button>
+              <P styleName={description_p_style}>{p_data.text}</P>
+            </>
+          }
+          {taken && <P styleName={counter_p_style}>{counter}</P>}
         </>
       )}
       {imgSrc && (
@@ -60,7 +80,7 @@ function SeparatedTemplate16_1({ data, styleName }) {
             다시찍기
           </Button>
           <Link to={"/p17"}>
-            <Button styleName={check_btn_style}>확인</Button>
+            <Button styleName={check_btn_style} onClick={savePhoto}>확인</Button>
           </Link>
         </>
       )}
