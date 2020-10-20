@@ -7,11 +7,12 @@ import P5Vedio from "../../assets/videos/5-calender.mp4";
 import "../../scss/pages.scss";
 
 function P5({ history }) {
-  const date = new Date();
-  const { year = 2020, month = 11, day = 3 } = {
+  let date = new Date();
+  date.setDate(date.getDate() + 7);
+  const { year = 2020, month = 11,day = 10 } = {
     year: date.getFullYear(),
-    month: date.getMonth()+1<10? "0"+date.getMonth()+1 : date.getMonth()+1,
-    day: date.getDate()+7<10? "0"+ date.getDate()+7 : date.getDate()+7,
+    month: (date.getMonth()+1).toString().padStart(2, '0'),
+    day: (date.getDate()).toString().padStart(2, '0'),
   }; 
   localStorage.setItem("deathYear", year);
   localStorage.setItem("deathMonth", month);
