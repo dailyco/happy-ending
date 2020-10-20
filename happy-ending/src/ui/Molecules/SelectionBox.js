@@ -15,13 +15,15 @@ function SelectionBox({ data, styleName }) {
   
   function clickHandler(e) {
     e.preventDefault();
-    e.target.classList.add('selected');
-    Array.from(e.currentTarget.querySelectorAll('.Button')).filter(
-      (b) => !b.classList.contains('selected')).forEach(b => b.classList.add('unselected'));
-
-    e.target.addEventListener('animationend', () => {
-      history.push(e.target.attributes.to.value);
-    })
+    if (e.target.classList.contains('Button')) {
+      e.target.classList.add('selected');
+      Array.from(e.currentTarget.querySelectorAll('.Button')).filter(
+        (b) => !b.classList.contains('selected')).forEach(b => b.classList.add('unselected'));
+      
+      e.target.addEventListener('animationend', () => {
+        history.push(e.target.attributes.to.value);
+      })
+    }
   }
 
   return (
