@@ -19,6 +19,7 @@ function P17({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
   const data = {
     // bg_data: {
     //   image: Window,
@@ -41,28 +42,28 @@ function P17({ history }) {
     imgs: [
       {
         image: F1,
-        shadow : SD1,
-        alt: "장미",
+        shadow: SD1,
+        alt: "rose",
       },
       {
         image: F2,
-        shadow : SD2,
-        alt: "프리지아",
+        shadow: SD2,
+        alt: "freesia",
       },
       {
         image: F3,
-        shadow : SD3,
-        alt: "안개꽃",
+        shadow: SD3,
+        alt: "babyBreath",
       },
       {
         image: F4,
-        shadow : SD4,
-        alt: "튤립",
+        shadow: SD4,
+        alt: "tulip",
       },
       {
         image: F5,
-        shadow : SD5,
-        alt: "국화",
+        shadow: SD5,
+        alt: "mum",
       },
     ],
   };
