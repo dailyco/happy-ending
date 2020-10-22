@@ -29,6 +29,7 @@ function P8_2_2({ history }) {
     },
   };
   const styleName = {
+    tp_style: ["fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "eclipse", "close"],
       p_style: ["eclipse", "close"],
@@ -47,7 +48,7 @@ function P8_2_2({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P8-2-2")}>
+    <div className={classNames("Page", "P8-2-2", "fade-in")}>
       <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <MultiTextFieldTemplate data={data} styleName={styleName}></MultiTextFieldTemplate>
     </div>

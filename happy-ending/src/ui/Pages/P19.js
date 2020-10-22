@@ -37,7 +37,7 @@ function P19({ history }) {
     },
   };
   const styleName = {
-    template_style: ["center"],
+    tp_style: ["center"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse", "one-line"],
@@ -52,7 +52,7 @@ function P19({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P19", "bg-video")}>
+    <div className={classNames("Page", "P19", "bg-video", "fade-in")}>
       <video autoPlay muted loop>
         <source src={P19Vedio} type="video/mp4" />
       </video>

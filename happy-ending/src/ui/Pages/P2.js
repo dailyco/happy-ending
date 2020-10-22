@@ -32,12 +32,12 @@ function P2() {
     },
   };
   const styleName = {
-    p_style: ["white"],
-    span_style: ["noto", "xs", "white", "light"],
+    p_style: ["white", "fade-in-2s"],
+    span_style: ["noto", "xs", "white", "light", "fade-in-3s"],
   };
   return (
     <Link to={"/p3"}>
-      <div className={classNames("Page", "P2")}>
+      <div className={classNames("Page", "P2", "fade-in")}>
         <SeparatedTemplate2 data={data} styleName={styleName}></SeparatedTemplate2>
       </div>
     </Link>

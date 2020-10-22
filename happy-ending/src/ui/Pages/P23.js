@@ -31,7 +31,7 @@ function P23({ history }) {
     },
   };
   const styleName = {
-    template_style: ["center", "P23"],
+    tp_style: ["center", "P23", "fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "white"],
       p_style: ["white", "line-3"],
@@ -41,7 +41,7 @@ function P23({ history }) {
 
   return (
     <Link to={"/p24"}>
-      <div className={classNames("Page", "P23", "bg-video")}>
+      <div className={classNames("Page", "P23", "bg-video", "fade-in")}>
         <video autoPlay muted loop>
           <source src={P23Vedio} type="video/mp4" />
         </video>

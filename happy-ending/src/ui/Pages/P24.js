@@ -38,6 +38,7 @@ function P24({ history }) {
     },
   };
   const styleName = {
+    tp_style: ["fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse"],
@@ -54,7 +55,7 @@ function P24({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P24")}>
+    <div className={classNames("Page", "P24", "fade-in")}>
       <button className={classNames("back", "back-white")} onClick={goBack}></button>
       <SeparatedTemplate24 data={data} styleName={styleName}></SeparatedTemplate24>
     </div>

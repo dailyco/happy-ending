@@ -5,6 +5,7 @@ import SeparatedTemplate1 from "../Templates/SeparatedTemplate1";
 import HappyendingLogo from "../../assets/images/Happy Ending Logo_new.png";
 
 import "../../scss/pages.scss";
+import "../../scss/animations.scss";
 
 function P1() {
   localStorage.clear();
@@ -21,7 +22,7 @@ function P1() {
   };
   const styleName = {
     img_style: ["logo"],
-    span_style: ["noto", "xs", "davy-gray", "light"],
+    span_style: ["noto", "xs", "davy-gray", "light", "fade-in-out"],
   };
   return (
     <Link to={"/p2"}>

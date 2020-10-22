@@ -30,7 +30,7 @@ function P16_1({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P16-1")}>
+    <div className={classNames("Page", "P16-1", "fade-in")}>
       <button className={classNames("back", "back-white")} onClick={goBack}></button>
       <SeparatedTemplate16_1 data={data} styleName={styleName}></SeparatedTemplate16_1>
     </div>

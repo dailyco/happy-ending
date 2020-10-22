@@ -39,7 +39,7 @@ function P8({ history }) {
   };
 
   const styleName = {
-    tp_style: ["left", "two-btn"],
+    tp_style: ["left", "two-btn", "fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "white"],
       p_style: ["white"],
@@ -50,7 +50,7 @@ function P8({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P8")}>
+    <div className={classNames("Page", "P8", "fade-in")}>
       <button className={classNames("back", "back-white")} onClick={goBack}></button>
       <MultipleChoiceTemplate data={data} styleName={styleName}></MultipleChoiceTemplate>
     </div>

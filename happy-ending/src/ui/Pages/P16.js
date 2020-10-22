@@ -29,6 +29,7 @@ function P16({ history }) {
     },
   };
   const styleName = {
+    tp_style: ["fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse"],
@@ -37,7 +38,7 @@ function P16({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P16")}>
+    <div className={classNames("Page", "P16", "fade-in")}>
       <button className={classNames("back", "back-white")} onClick={goBack}></button>
       <SeparatedTemplate16 data={data} styleName={styleName}></SeparatedTemplate16>
     </div>

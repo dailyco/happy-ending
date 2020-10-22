@@ -8,7 +8,7 @@ import "../../scss/pages.scss";
 function P0() {
 
   return (
-    <div className={classNames("Page", "P0", "bg-video")}>
+    <div className={classNames("Page", "P0", "bg-video", "fade-in")}>
       <LoadingTemplate video={P0Video}></LoadingTemplate>
     </div>
   );

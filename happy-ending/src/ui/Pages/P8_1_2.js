@@ -31,6 +31,7 @@ function P8_1_2({ history }) {
     },
   };
   const styleName = {
+    tp_style: ["fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "white"],
       p_style: ["white"],
@@ -49,7 +50,7 @@ function P8_1_2({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P8-1-2", "bg-video")}>
+    <div className={classNames("Page", "P8-1-2", "bg-video", "fade-in")}>
       <video autoPlay muted loop>
         <source src={P8_1_2_Video} type="video/mp4" />
       </video>

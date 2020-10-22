@@ -29,7 +29,7 @@ function P26() {
     },
   };
   const styleName = {
-    template_style: ["center", "P26"],
+    tp_style: ["center", "P26", "fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "white"],
       p_style: ["white", "line-5"],
@@ -39,7 +39,7 @@ function P26() {
 
   return (
     <Link to={"/p27"}>
-      <div className={classNames("Page", "P26")}>
+      <div className={classNames("Page", "P26", "fade-in")}>
         <InsertyPaperTemplate data={data} styleName={styleName}></InsertyPaperTemplate>
       </div>
     </Link>

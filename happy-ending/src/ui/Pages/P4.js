@@ -51,7 +51,7 @@ function P4({ history }) {
     p_style: ["eclipse"],
   };
   return (
-    <div className={classNames("Page", "P4", "bg-video")}>
+    <div className={classNames("Page", "P4", "bg-video", "fade-in")}>
       <video autoPlay muted>
         <source src={P4Vedio} type="video/mp4" />
       </video>

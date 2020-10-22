@@ -36,7 +36,7 @@ function P10({ history }) {
     },
   };
   const styleName = {
-    template_style: ["left", "P10"],
+    tp_style: ["left", "P10", "fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "white"],
       p_style: ["white", "line-4"],
@@ -46,7 +46,7 @@ function P10({ history }) {
 
   return (
     <Link to="/p12_2">
-      <div className={classNames("Page", "P10", "bg-video")}>
+      <div className={classNames("Page", "P10", "bg-video", "fade-in")}>
         <video autoPlay muted loop>
           <source src={P10Video} type="video/mp4" />
         </video>

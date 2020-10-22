@@ -67,6 +67,7 @@ function P17({ history }) {
     ],
   };
   const styleName = {
+    tp_style: ["fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse"],
@@ -74,7 +75,7 @@ function P17({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P17")}>
+    <div className={classNames("Page", "P17", "fade-in")}>
       <SeparatedTemplate17 data={data} styleName={styleName}></SeparatedTemplate17>
       <button className={classNames("back", "back-gray")} onClick={goBack}></button>
     </div>

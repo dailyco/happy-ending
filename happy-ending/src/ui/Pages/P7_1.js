@@ -41,6 +41,7 @@ function P7_1({ history }) {
     },
   };
   const styleName = {
+    tp_style: ["fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse", "two-line"],
@@ -54,7 +55,7 @@ function P7_1({ history }) {
     },
   };
   return (
-    <div className={classNames("Page", "P7-1")}>
+    <div className={classNames("Page", "P7-1", "fade-in")}>
       <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <FullTextFieldTemplate data={data} styleName={styleName}></FullTextFieldTemplate>
     </div>
