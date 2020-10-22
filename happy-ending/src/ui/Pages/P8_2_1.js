@@ -1,6 +1,5 @@
 import React from "react";
 import classNames from "classnames";
-import useInputs from "../useInputs";
 import SingleTextFieldTemplate from "../Templates/SingleTextFieldTemplate";
 import P8_2_1_Video from "../../assets/videos/8-2-1-stay home alone.mp4";
 
@@ -10,11 +9,6 @@ function P8_2_1({ history }) {
   const goBack = () => {
     history.goBack();
   };
-
-  const [input, onChange] = useInputs({
-    homeDoWhat: localStorage.getItem("homeDoWhat") ?? "",
-  });
-
   const data = {
     dq_data: {
       h3_data: {
@@ -30,11 +24,6 @@ function P8_2_1({ history }) {
         l_text: "집에서 (",
         placeHolder: "무엇을 한",
         r_text: ")다.",
-        tf_data: {
-          input: input.homeDoWhat,
-          name: "homeDoWhat",
-          onChange,
-        },
       },
     },
   };
