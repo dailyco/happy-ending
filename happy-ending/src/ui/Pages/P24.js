@@ -1,5 +1,4 @@
 import React from "react";
-import useInputs from "../useInputs";
 import classNames from "classnames";
 import SeparatedTemplate24 from "../Templates/SeparatedTemplate24";
 
@@ -9,11 +8,6 @@ function P24({ history }) {
   const goBack = () => {
     history.goBack();
   };
-
-  const [inputs, onChange] = useInputs({
-    alias: localStorage.getItem("alias") ?? "",
-    lastWord: localStorage.getItem("lastWord") ?? "",
-  });
 
   const data = {
     dq_data: {
@@ -37,9 +31,6 @@ function P24({ history }) {
         sp2_data: {
           name: "홍길동",
         },
-        inputs: inputs,
-        names: ["alias", "lastWord"],
-        onChange: onChange,
       },
       btn_data: {
         text: "확인",
