@@ -50,26 +50,26 @@ function SeparatedTemplate16_1({ data, styleName }) {
     setImgSrc(null);
     setCounter(null);
     localStorage.removeItem("photo");
-  }, [setTaken, setImgSrc, localStorage, imgSrc]);
+  }, [setTaken, setImgSrc]);
 
   const savePhoto = useCallback(() => {
     localStorage.setItem("photo", JSON.stringify(imgSrc));
     console.log(localStorage);
-  }, [localStorage, imgSrc])
+  }, []);
 
   return (
     <div className={"SeparatedTemplate16_1"}>
       {!imgSrc && (
         <>
           <Webcam audio={false} ref={webcamRef} screenshotFormat="image/jpeg" videoConstraints={videoConstraints}></Webcam>
-          {!taken && 
+          {!taken && (
             <>
               <Button className={"capture"} styleName={capture_btn_style} onClick={captureAfter3Sec}>
-                <Icon alt="cam-icon" icon={CamIcon} styleName={icon_style}/>
+                <Icon alt="cam-icon" icon={CamIcon} styleName={icon_style} />
               </Button>
               <P styleName={description_p_style}>{p_data.text}</P>
             </>
-          }
+          )}
           {taken && <P styleName={counter_p_style}>{counter}</P>}
         </>
       )}
@@ -80,7 +80,9 @@ function SeparatedTemplate16_1({ data, styleName }) {
             다시찍기
           </Button>
           <Link to={"/p17"}>
-            <Button styleName={check_btn_style} onClick={savePhoto}>확인</Button>
+            <Button styleName={check_btn_style} onClick={savePhoto}>
+              확인
+            </Button>
           </Link>
         </>
       )}
