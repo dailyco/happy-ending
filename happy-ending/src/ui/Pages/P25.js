@@ -10,6 +10,7 @@ function P25({ history }) {
   const year = localStorage.getItem("deathYear");
   const month = localStorage.getItem("deathMonth");
   const day = localStorage.getItem("deathday");
+  const name = localStorage.getItem("name") ?? "홍길동";
   
   const goBack = () => {
     history.goBack();
@@ -17,7 +18,7 @@ function P25({ history }) {
 
   const data = {
     h3_data: "D-DAY",
-    span1_data: "홍길동 님은",
+    span1_data: `${name} 님은`,
     span2_data: `${year}.${month}.${day}`,
     span3_data: "사망했습니다.",
     span4_data: "탭하여 다음 페이지로 넘어가기",
