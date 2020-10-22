@@ -55,7 +55,7 @@ function SeparatedTemplate16_1({ data, styleName }) {
   const savePhoto = useCallback(() => {
     localStorage.setItem("photo", JSON.stringify(imgSrc));
     console.log(localStorage);
-  }, []);
+  }, [imgSrc]);
 
   return (
     <div className={"SeparatedTemplate16_1"}>
