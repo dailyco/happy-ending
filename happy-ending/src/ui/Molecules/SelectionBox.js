@@ -10,7 +10,9 @@ function SelectionBox({ data, styleName }) {
     <div className={"SelectionBox"}>
       {buttons.map((button, index) => (
         <Link to={button.to} key={index}>
-          <Button key={index} styleName={btn_style}>{button.text}</Button>
+          <Button key={index} styleName={btn_style} onClick={button.onClick}>
+            {button.text}
+          </Button>
         </Link>
       ))}
     </div>
