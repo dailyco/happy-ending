@@ -23,10 +23,18 @@ function P8_1({ history }) {
         {
           to: "/p8_1_1",
           text: "A. 3일간의 여행을 혼자 떠난다",
+          onClick: () => {
+            localStorage.setItem("choice_p8", "travel_alone");
+            console.log(localStorage);
+          },
         },
         {
           to: "/p8_1_2",
           text: "B. 3일간의 여행을 함께 떠난다",
+          onClick: () => {
+            localStorage.setItem("choice_p8", "travel_together");
+            console.log(localStorage);
+          },
         },
       ],
     },

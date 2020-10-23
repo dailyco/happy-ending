@@ -22,10 +22,18 @@ function P8_2({ history }) {
         {
           to: "/p8_2_1",
           text: "A. 집에서 혼자 보낸다",
+          onClick: () => {
+            localStorage.setItem("choice_p8", "home_alone");
+            console.log(localStorage);
+          },
         },
         {
           to: "/p8_2_2",
           text: "B. 집에서 사람들과 함께 보낸다",
+          onClick: () => {
+            localStorage.setItem("choice_p8", "home_together");
+            console.log(localStorage);
+          },
         },
       ],
     },
