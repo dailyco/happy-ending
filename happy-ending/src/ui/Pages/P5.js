@@ -48,6 +48,7 @@ function P5({ history }) {
     },
   };
   const styleName = {
+    tp_style: ["fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse"],
@@ -58,7 +59,7 @@ function P5({ history }) {
   };
   return (
     <Link to={"/p6"}>
-      <div className={classNames("Page", "P5", "bg-video")}>
+      <div className={classNames("Page", "P5", "bg-video", "fade-in")}>
         <video autoPlay muted loop>
           <source src={P5Vedio} type="video/mp4" />
         </video>

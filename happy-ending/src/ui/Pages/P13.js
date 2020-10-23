@@ -36,7 +36,7 @@ function P13({ history }) {
     },
   };
   const styleName = {
-    template_style: ["center"],
+    tp_style: ["center", "fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "white"],
       p_style: ["white", "one-line"],
@@ -51,7 +51,7 @@ function P13({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P13", "bg-video")}>
+    <div className={classNames("Page", "P13", "bg-video", "fade-in")}>
       <video autoPlay muted loop>
         <source src={P13Vedio} type="video/mp4" />
       </video>

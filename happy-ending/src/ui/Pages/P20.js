@@ -46,7 +46,7 @@ function P20({ history }) {
   };
 
   const styleName = {
-    tp_style: ["center", "four-btn"],
+    tp_style: ["center", "four-btn", "fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse"],
@@ -57,7 +57,7 @@ function P20({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P20")}>
+    <div className={classNames("Page", "P20", "fade-in")}>
       <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <MultipleChoiceTemplate data={data} styleName={styleName}></MultipleChoiceTemplate>
     </div>

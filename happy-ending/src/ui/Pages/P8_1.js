@@ -44,7 +44,7 @@ function P8_1({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P8_1", "bg-video")}>
+    <div className={classNames("Page", "P8_1", "bg-video", "fade-in")}>
       <video autoPlay muted>
         <source src={P8_1_Video} type="video/mp4" />
       </video>

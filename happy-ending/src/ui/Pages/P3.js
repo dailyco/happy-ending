@@ -29,13 +29,13 @@ function P3() {
     },
   };
   const styleName = {
-    h3_style: ["normal", "eclipse"],
-    p_style: ["eclipse"],
-    span_style: ["noto", "xs", "davy-gray", "light"],
+    h3_style: ["normal", "eclipse", "fade-in-2s"],
+    p_style: ["eclipse", "fade-in-3s"],
+    span_style: ["noto", "xs", "davy-gray", "light", "fade-in-4s"],
   };
   return (
     <Link to={"/p4"}>
-      <div className={classNames("Page", "P3")}>
+      <div className={classNames("Page", "P3", "fade-in")}>
         <SeparatedTemplate3 data={data} styleName={styleName}></SeparatedTemplate3>
       </div>
     </Link>

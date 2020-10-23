@@ -39,7 +39,7 @@ function P6({ history }) {
   };
 
   const styleName = {
-    tp_style: ["left", "two-btn"],
+    tp_style: ["left", "two-btn", "fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse"],
@@ -50,7 +50,7 @@ function P6({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P6", "bg-video")}>
+    <div className={classNames("Page", "P6", "bg-video", "fade-in")}>
       <video autoPlay muted>
         <source src={P6_Video} type="video/mp4" />
       </video>

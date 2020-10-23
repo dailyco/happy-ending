@@ -24,6 +24,7 @@ function P25({ history }) {
     span4_data: "탭하여 다음 페이지로 넘어가기",
   };
   const styleName = {
+    tp_style: ["fade-in-2s"],
     h3_style: ["heavy", "neon-green"],
     span1_style: ["noto", "s", "medium", "neon-green"],
     span2_style: ["nanum", "l", "bold", "neon-green"],
@@ -33,7 +34,7 @@ function P25({ history }) {
 
   return (
     <Link to={"/p26"}>
-      <div className={classNames("Page", "P25", "bg-video")}>
+      <div className={classNames("Page", "P25", "bg-video", "fade-in")}>
         <video autoPlay muted>
           <source src={P25_Video} type="video/mp4" />
         </video>

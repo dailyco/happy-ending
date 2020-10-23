@@ -9,9 +9,9 @@ import "../../scss/Templates/SeparatedTemplate14.scss";
 
 function SeparatedTemplate14({ data, styleName }) {
   const { dq_data, ib_data } = data;
-  const { dq_style, button_style } = styleName;
+  const { tp_style, dq_style, button_style } = styleName;
   return (
-    <div className={classNames("SeparatedTemplate14", "clearfix")}>
+    <div className={classNames("SeparatedTemplate14", "clearfix", tp_style)}>
       <div className={classNames("DquestionContainer", "float--left")}>
         <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
       </div>

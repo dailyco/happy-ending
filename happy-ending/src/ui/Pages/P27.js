@@ -11,7 +11,7 @@ function P27({ history }) {
   };
 
   return (
-    <div className={classNames("Page", "P27", "bg-video")}>
+    <div className={classNames("Page", "P27", "bg-video", "fade-in")}>
       <VideoTemplate video={P27Video} to={goTo}></VideoTemplate>
     </div>
   );
