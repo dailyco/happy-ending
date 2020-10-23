@@ -3,13 +3,17 @@ import Img from "../Atoms/Img";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import Dquestion from "../Organisms/Dquestion";
-import P17Video from "../../assets/videos/17_front.mp4"
+import P17Video from "../../assets/videos/17_front.mp4";
 
 import "../../scss/Templates/SeparatedTemplate17.scss";
 
 function SeparatedTemplate17({ data, styleName }) {
   const { bg_data, dq_data, imgs } = data;
   const { tp_style, dq_style } = styleName;
+
+  const onClick = () => {
+    localStorage.setItem("flower", img.alt);
+  }
 
   return (
     <div className={classNames("SeparatedTemplate17", tp_style)}>
@@ -20,7 +24,7 @@ function SeparatedTemplate17({ data, styleName }) {
       {imgs.map((img, index) => (
         <Link to={"/p18"} key={index}>
           <Img image={img.shadow} alt={img.alt}></Img>
-          <Img image={img.image} alt={img.alt}></Img>
+          <Img image={img.image} alt={img.alt} onClick={onClick}></Img>
         </Link>
       ))}
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>

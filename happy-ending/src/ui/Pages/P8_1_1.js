@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import useInputs from "../useInputs";
 import SingleTextFieldTemplate from "../Templates/SingleTextFieldTemplate";
 import P8_1_1_Video from "../../assets/videos/8-1-1-travel.mp4";
 
@@ -9,6 +10,10 @@ function P8_1_1({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
+  const [input, onChange] = useInputs({	
+    travelTo: localStorage.getItem("travelTo") ?? "",	
+  });
 
   const data = {
     dq_data: {
@@ -25,6 +30,11 @@ function P8_1_1({ history }) {
         l_text: "3일간의 여행을 혼자 (",
         placeHolder: "어디",
         r_text: ")(으)로 떠난다.",
+        tf_data: {	
+          input: input.travelTo,	
+          name: "travelTo",	
+          onChange: onChange,	
+        },
       },
     },
   };

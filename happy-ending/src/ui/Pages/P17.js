@@ -42,27 +42,27 @@ function P17({ history }) {
       {
         image: F1,
         shadow : SD1,
-        alt: "장미",
+        alt: "rose",
       },
       {
         image: F2,
         shadow : SD2,
-        alt: "프리지아",
+        alt: "freesia",
       },
       {
         image: F3,
         shadow : SD3,
-        alt: "안개꽃",
+        alt: "babyBreath",
       },
       {
         image: F4,
         shadow : SD4,
-        alt: "튤립",
+        alt: "tulip",
       },
       {
         image: F5,
         shadow : SD5,
-        alt: "국화",
+        alt: "mum",
       },
     ],
   };
