@@ -9,6 +9,7 @@ function P24({ history }) {
     history.goBack();
   };
 
+  const name = localStorage.getItem("name") ?? "홍길동";
   const data = {
     dq_data: {
       h3_data: {
@@ -29,7 +30,7 @@ function P24({ history }) {
         tf_data: "( 어떤 )",
         sp1_data: "사람,",
         sp2_data: {
-          name: "홍길동",
+          name: name,
         },
       },
       btn_data: {
