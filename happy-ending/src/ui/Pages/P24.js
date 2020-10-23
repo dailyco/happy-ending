@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import useInputs from "../useInputs";
 import SeparatedTemplate24 from "../Templates/SeparatedTemplate24";
 
 import "../../scss/pages.scss";

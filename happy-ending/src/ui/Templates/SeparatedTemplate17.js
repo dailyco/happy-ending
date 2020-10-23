@@ -11,8 +11,9 @@ function SeparatedTemplate17({ data, styleName }) {
   const { bg_data, dq_data, imgs } = data;
   const { tp_style, dq_style } = styleName;
 
-  const onClick = () => {
-    localStorage.setItem("flower", img.alt);
+  const onClick = (alt) => {
+    localStorage.setItem("flower", alt);
+    console.log(localStorage);
   }
 
   return (
@@ -24,7 +25,7 @@ function SeparatedTemplate17({ data, styleName }) {
       {imgs.map((img, index) => (
         <Link to={"/p18"} key={index}>
           <Img image={img.shadow} alt={img.alt}></Img>
-          <Img image={img.image} alt={img.alt} onClick={onClick}></Img>
+          <Img image={img.image} alt={img.alt} onClick={() => onClick(img.alt)}></Img>
         </Link>
       ))}
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>

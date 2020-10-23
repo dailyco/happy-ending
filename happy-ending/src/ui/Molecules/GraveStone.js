@@ -6,6 +6,7 @@ import "../../scss/Molecules/GraveStone.scss";
 
 function GraveStone({ data, styleName }) {
   const { tf_data, sp1_data, sp2_data, inputs, names, onChange } = data;
+  const { alias, lastWord } = inputs;
   const { tf_style, sp1_style, sp2_style, ta_style } = styleName;
 
   return (
