@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import useInputs from "../useInputs";
 import MultiTextFieldTemplate from "../Templates/MultiTextFieldTemplate";
 import P8_1_2_Video from "../../assets/videos/8-1-1-travel.mp4";
 
@@ -9,6 +10,11 @@ function P8_1_2({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
+  const [inputs, onChange] = useInputs({	
+    travelWith: localStorage.getItem("travelWith") ?? "",	
+    travelTo: localStorage.getItem("travelTo") ?? "",	
+  });
 
   const data = {
     dq_data: {
@@ -27,6 +33,16 @@ function P8_1_2({ history }) {
         m_text: ")와/과 함께 (",
         ph2: "어디",
         r_text: ")(으)로 떠난다.",
+        tf1_data: {	
+          input1: inputs.travelWith,	
+          name1: "travelWith",	
+          onChange1: onChange,	
+        },	
+        tf2_data: {	
+          input2: inputs.travelTo,	
+          name2: "travelTo",	
+          onChange2: onChange,	
+        },
       },
     },
   };

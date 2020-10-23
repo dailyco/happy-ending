@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import useInputs from "../useInputs";
 import SeparatedTemplate24 from "../Templates/SeparatedTemplate24";
 
 import "../../scss/pages.scss";
@@ -10,6 +11,11 @@ function P24({ history }) {
   };
 
   const name = localStorage.getItem("name") ?? "홍길동";
+  const [inputs, onChange] = useInputs({	
+    alias: localStorage.getItem("alias") ?? "",	
+    lastWord: localStorage.getItem("lastWord") ?? "",	
+  });
+
   const data = {
     dq_data: {
       h3_data: {
@@ -32,6 +38,9 @@ function P24({ history }) {
         sp2_data: {
           name: name,
         },
+        inputs: inputs,	
+        names: ["alias", "lastWord"],	
+        onChange: onChange,
       },
       btn_data: {
         text: "확인",

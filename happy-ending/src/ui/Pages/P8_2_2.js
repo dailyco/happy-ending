@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import useInputs from "../useInputs";
 import MultiTextFieldTemplate from "../Templates/MultiTextFieldTemplate";
 
 import "../../scss/pages.scss";
@@ -8,6 +9,12 @@ function P8_2_2({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
+  const [inputs, onChange] = useInputs({	
+    homeDoWith: localStorage.getItem("homeDoWith") ?? "",	
+    homeDoWhat: localStorage.getItem("homeDoWhat") ?? "",	
+  });
+
   const data = {
     dq_data: {
       h3_data: {
@@ -25,6 +32,16 @@ function P8_2_2({ history }) {
         m_text: ")와/과 함께 (",
         ph2: "무엇을 한",
         r_text: ")다.",
+        tf1_data: {	
+          input1: inputs.homeDoWith,	
+          name1: "homeDoWith",	
+          onChange1: onChange,	
+        },	
+        tf2_data: {	
+          input2: inputs.homeDoWhat,	
+          name2: "homeDoWhat",	
+          onChange2: onChange,	
+        },
       },
     },
   };
