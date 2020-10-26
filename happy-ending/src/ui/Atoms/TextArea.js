@@ -3,7 +3,7 @@ import classNames from "classnames";
 import "../../scss/Atoms/TextArea.scss";
 
 function TextArea({ placeHolder, styleName, ...rest }) {
-  return <textarea placeholder={placeHolder} className={classNames("TextArea", styleName)} {...rest}></textarea>;
+  return <textarea autoComplete="off" placeholder={placeHolder} className={classNames("TextArea", styleName)} {...rest}></textarea>;
 }
 
 export default TextArea;
