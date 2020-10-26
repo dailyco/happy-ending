@@ -7,6 +7,22 @@
   font-style: normal;
   outline: none;
 
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus::-ms-placeholder {
+    color: transparent;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+
   &::-webkit-input-placeholder {
     color: $dark-gray;
   }
