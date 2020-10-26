@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import useInputs from "../reducerInputs";
 import SeparatedTemplate14 from "../Templates/SeparatedTemplate14";
+import delIcon from "../../assets/icons/will-del.svg";
 
 import "../../scss/pages.scss";
 
@@ -10,7 +11,7 @@ function P14({ history }) {
     history.goBack();
   };
 
-  const [ state, onCreate, onChange ] = useInputs({
+  const [ state, onCreate, onChange, onRemove ] = useInputs({
     messages: JSON.parse(localStorage.getItem("messages"))
     ? JSON.parse(localStorage.getItem("messages"))
     : [{ id: 1 }],
@@ -33,10 +34,15 @@ function P14({ history }) {
     },
     ib_data: {
       state: state,
+      onCreate: onCreate,
       item_data: {
         names: ["to", "message"],
-        onCreate: onCreate,
         onChange: onChange,
+        onRemove: onRemove,
+        icon_data: {
+          icon_img: delIcon,
+          icon_alt: "delete_icon",
+        }
       }
     }
   };
@@ -47,7 +53,12 @@ function P14({ history }) {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse"],
     },
-    ib_style: [],
+    ib_style: {
+      item_style: {
+        icon_style: ["delete"],
+        ta_style: ["item"],
+      },
+    },
     button_style: ["noto", "xs", "blue", "light"],
   };
   return (

@@ -13,8 +13,10 @@ function reducer (state, action) {
         )
       };
     case 'REMOVE_MESSAGE':
+      const m = state.messages.filter(message => message.id !== +action.id);
+      console.log(m);
       return {
-        messages: state.messages.filter(message => message.id !== action.id)
+        messages: m,
       };
     default:
       return state;
@@ -51,14 +53,18 @@ function useInputs(initialState) {
     console.log(localStorage);
   }, [state.messages]);
 
-  // const onRemove = useCallback(id => {
-  //   dispatch({
-  //     type: 'REMOVE_MESSAGE',
-  //     id
-  //   });
-  // }, []);
+  const onRemove = useCallback(e => {
+    const { id } = e.target;
+    dispatch({
+      type: 'REMOVE_MESSAGE',
+      id,
+    });
+    console.log(state.messages);
+    localStorage.setItem("messages", JSON.stringify(state.messages));
+    console.log(localStorage);
+  }, [state.messages]);
 
-  return [ state, onCreate, onChange ];
+  return [ state, onCreate, onChange, onRemove ];
 }
 
 export default useInputs;

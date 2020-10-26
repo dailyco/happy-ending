@@ -24,6 +24,7 @@
   }
 
   &.item {
+    position: relative;
     font-family: "Noto Sans KR";
     font-weight: normal;
     background-color: $gain-gray;
@@ -31,7 +32,7 @@
     height: 119px;
     font-size: 20px;
     color: #808080;
-    line-height: 2.15;
+    line-height: 1.5;
     letter-spacing: -0.2px;
     margin: 14.5px 0 20.6px;
     padding: 11.4px 15px 18.6px 13px;

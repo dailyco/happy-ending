@@ -2,4 +2,11 @@
   &.camera {
     width: 47px;
   }
+
+  &.delete {
+    position: absolute;
+    top: 24.5px;
+    right: 10px;
+    width: 14px;
+  }
 }

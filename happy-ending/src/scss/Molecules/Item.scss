@@ -1,1 +1,5 @@
-// TODO : CODE HERE
+.Item {
+  & .ItemTextArea {
+    position: relative;
+  }
+}
