@@ -15,7 +15,13 @@
     }
     &.counter {
       position: relative;
-      top: 435px;
+      top: 141px;
+      left: 699px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // vertical-align: center;
+      // padding: auto 0;
     }
   }
 
