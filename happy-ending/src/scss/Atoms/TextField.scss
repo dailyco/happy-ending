@@ -1,6 +1,8 @@
 @import "../colors.scss";
 
-@mixin placeholder-color($color) {
+@mixin placeholder-color($ph-color, $txt-color) {
+  color: $txt-color;
+
   &:focus::-webkit-input-placeholder {
     color: transparent;
   }
@@ -18,19 +20,19 @@
   }
 
   &::-webkit-input-placeholder {
-    color: $color;
+    color: $ph-color;
   }
 
   &::-moz-placeholder {
-    color: $color;
+    color: $ph-color;
   }
 
   &::-ms-placeholder {
-    color: $color;
+    color: $ph-color;
   }
 
   &::placeholder {
-    color: $color;
+    color: $ph-color;
   }
 }
 
@@ -88,24 +90,31 @@
   }
 
   // placeholder-color
-  &.dark-white {
-    @include placeholder-color($dark-white);
+  &.book {
+    @include placeholder-color($davy-gray, $davy-gray);
   }
 
-  &.davy-gray {
-    @include placeholder-color($davy-gray);
+  &.piggy-bank,
+  &.music,
+  &.sad-man {
+    @include placeholder-color($eclipse, $eclipse);
   }
 
-  &.eclipse {
-    @include placeholder-color($eclipse);
+  &.travel {
+    @include placeholder-color($dark-white, $white);
   }
 
-  &.white {
-    @include placeholder-color($white);
+  &.house {
+    @include placeholder-color($davy-gray, $eclipse);
   }
 
-  &.dark-gray {
-    @include placeholder-color($dark-gray);
+  &.moment {
+    @include placeholder-color($white, $white);
+  }
+
+  &.message,
+  &.grave-stone {
+    @include placeholder-color($dark-gray, $eclipse);
   }
 
   &.item {

@@ -46,9 +46,8 @@ function P8_2_1({ history }) {
     stfr_style: {
       stfs_style: {
         bg_style: ["m", "strong", "charcoal-gray"],
-        l_text_style: ["noto", "s", "normal", "eclipse"],
-        tf_style: ["s", "davy-gray"],
-        r_text_style: ["noto", "s", "normal", "eclipse"],
+        text_style: ["noto", "s", "normal", "eclipse"],
+        tf_style: ["s", "house"],
       },
       btn_style: ["xs", "white"],
     },
