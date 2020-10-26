@@ -47,7 +47,7 @@ function P10({ history }) {
   return (
     <Link to="/p12_2">
       <div className={classNames("Page", "P10", "bg-video", "fade-in")}>
-        <video autoPlay muted loop>
+        <video autoPlay muted>
           <source src={P10Video} type="video/mp4" />
         </video>
         <button className={classNames("back", "back-white")} onClick={goBack}></button>

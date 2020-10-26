@@ -52,7 +52,7 @@ function P13({ history }) {
 
   return (
     <div className={classNames("Page", "P13", "bg-video", "fade-in")}>
-      <video autoPlay muted loop>
+      <video autoPlay muted>
         <source src={P13Vedio} type="video/mp4" />
       </video>
       <button className={classNames("back", "back-white")} onClick={goBack}></button>
