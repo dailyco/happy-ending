@@ -55,7 +55,7 @@ function P5({ history }) {
     },
     s1_style: ["noto", "xs", "eclipse", "medium"],
     s2_style: ["nanum", "xl", "eclipse", "extra-bold"],
-    s3_style: ["noto", "xs", "davy-gray", "light"],
+    s3_style: ["noto", "xs", "davy-gray", "light", "fade-in-out-2s"],
   };
   return (
     <Link to={"/p6"}>

@@ -34,7 +34,7 @@ function P26() {
       h3_style: ["normal", "white"],
       p_style: ["white", "line-5"],
     },
-    span_style: ["noto", "xs", "dark-gray", "light"],
+    span_style: ["noto", "xs", "dark-gray", "light", "fade-in-out-2s"],
   };
 
   return (

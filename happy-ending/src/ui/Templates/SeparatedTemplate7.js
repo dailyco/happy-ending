@@ -8,9 +8,9 @@ import "../../scss/Templates/SeparatedTemplate7.scss";
 
 function SeparatedTemplate7({ data, styleName }) {
   const { dq_data, s1_data, s2_data } = data;
-  const { dq_style, s1_style, s2_style } = styleName;
+  const { tp_style, dq_style, s1_style, s2_style } = styleName;
   return (
-    <div className={classNames("SeparatedTemplate7")}>
+    <div className={classNames("SeparatedTemplate7", tp_style)}>
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
       <div className={classNames("SpanPair")}>
         <Link to={s1_data.to}>

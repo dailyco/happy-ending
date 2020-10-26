@@ -34,6 +34,7 @@ function P7({ history }) {
     },
   };
   const styleName = {
+    tp_style: ["fade-in-2s"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse"],
@@ -42,7 +43,7 @@ function P7({ history }) {
     s2_style: ["noto", "xs", "davy-gray", "normal"],
   };
   return (
-    <div className={classNames("Page", "P7", "bg-video")}>
+    <div className={classNames("Page", "P7", "bg-video", "fade-in")}>
       <video autoPlay muted loop>
         <source src={P7Vedio} type="video/mp4" />
       </video>
