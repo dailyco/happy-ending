@@ -44,7 +44,7 @@ function P13({ history }) {
     ftfr_style: {
       ftf_style: {
         ftf_style: ["charcoal-black", "weak", "round"],
-        tf_style: ["xl", "normal", "white"],
+        tf_style: ["xxl", "normal", "white"],
       },
       button_style: ["xs", "grayish-navy"],
     },
