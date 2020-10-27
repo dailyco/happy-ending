@@ -33,7 +33,7 @@ function P24({ history }) {
     },
     gsr_data: {
       gs_data: {
-        tf_data: "( 어떤 )",
+        tf_data: "(              어떤              )",
         sp1_data: "사람,",
         sp2_data: {
           name: name,
@@ -55,7 +55,7 @@ function P24({ history }) {
     },
     gsr_style: {
       gs_style: {
-        tf_style: ["nanum", "s", "extra-bold", "dark-gray"],
+        tf_style: ["nanum", "xl", "extra-bold", "dark-gray"],
         sp1_style: ["nanum", "s", "extra-bold", "eclipse"],
         sp2_style: ["nanum", "s", "extra-bold", "eclipse"],
         ta_style: ["grave"],

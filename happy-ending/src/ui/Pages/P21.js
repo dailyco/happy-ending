@@ -48,7 +48,7 @@ function P21({ history }) {
     ftfr_style: {
       ftf_style: {
         ftf_style: ["white", "weak", "round"],
-        tf_style: ["xl", "normal", "eclipse"],
+        tf_style: ["xxl", "normal", "eclipse"],
       },
       button_style: ["xs", "white", "translucent"],
     },
