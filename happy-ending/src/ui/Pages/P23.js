@@ -36,7 +36,7 @@ function P23({ history }) {
       h3_style: ["normal", "white"],
       p_style: ["white", "line-3"],
     },
-    span_style: ["noto", "xs", "davy-gray", "light"],
+    span_style: ["noto", "xs", "davy-gray", "light", "fade-in-out-2s"],
   };
 
   return (

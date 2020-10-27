@@ -41,7 +41,7 @@ function P8_1({ history }) {
   };
 
   const styleName = {
-    tp_style: ["center", "two-btn"],
+    tp_style: ["center", "two-btn", "fade-in-4s"],
     dq_style: {
       h3_style: ["normal", "eclipse"],
       p_style: ["eclipse"],

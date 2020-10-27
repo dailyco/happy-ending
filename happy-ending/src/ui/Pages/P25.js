@@ -29,7 +29,7 @@ function P25({ history }) {
     span1_style: ["noto", "s", "medium", "neon-green"],
     span2_style: ["nanum", "l", "bold", "neon-green"],
     span3_style: ["noto", "s", "medium", "neon-green"],
-    span4_style: ["noto", "xs", "light", "neon-green"],
+    span4_style: ["noto", "xs", "light", "neon-green", "fade-in-out-2s"],
   };
 
   return (

@@ -40,7 +40,7 @@ function P11({ history }) {
       h3_style: ["normal", "white"],
       p_style: ["white", "line-4"],
     },
-    span_style: ["noto", "xs", "white", "light"],
+    span_style: ["noto", "xs", "white", "light", "fade-in-out-2s"],
   };
 
   return (
