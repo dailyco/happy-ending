@@ -7,13 +7,20 @@ import P17Video from "../../assets/videos/17_front.mp4";
 
 import "../../scss/Templates/SeparatedTemplate17.scss";
 
-function SeparatedTemplate17({ data, styleName }) {
+function SeparatedTemplate17({ data, styleName, history }) {
   const { dq_data, imgs } = data;
   const { tp_style, dq_style } = styleName;
 
-  const onClick = (alt) => {
-    localStorage.setItem("flower", alt);
+  const onClick = (e) => {
+    e.preventDefault();
+
+    const flowerName = e.target.className;
+    localStorage.setItem("flower", flowerName);
     console.log(localStorage);
+
+    setTimeout(() => {
+      history.push("/p18");
+    }, 2000);
   };
 
   return (
@@ -29,7 +36,7 @@ function SeparatedTemplate17({ data, styleName }) {
         </>
       ))}
       {imgs.map((img, index) => (
-        <Link to={"/p18"} key={index} className={img.alt} onClick={() => onClick(img.alt)}></Link>
+        <Link to={"/p18"} key={index} className={img.alt} onClick={onClick}></Link>
       ))}
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
     </div>

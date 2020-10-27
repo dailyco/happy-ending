@@ -23,6 +23,7 @@ function P17({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
   const data = {
     dq_data: {
       h3_data: {
@@ -81,7 +82,7 @@ function P17({ history }) {
 
   return (
     <div className={classNames("Page", "P17", "fade-in")}>
-      <SeparatedTemplate17 data={data} styleName={styleName}></SeparatedTemplate17>
+      <SeparatedTemplate17 data={data} styleName={styleName} history={history}></SeparatedTemplate17>
       <button className={classNames("back", "back-gray")} onClick={goBack}></button>
     </div>
   );
