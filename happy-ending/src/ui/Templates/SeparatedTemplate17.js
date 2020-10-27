@@ -25,8 +25,10 @@ function SeparatedTemplate17({ data, styleName }) {
         <>
           <Img image={img.shadow} alt={img.alt}></Img>
           <Img image={img.image} alt={img.alt} onClick={() => onClick(img.alt)}></Img>
-          <Link to={"/p18"} key={index}></Link>
         </>
+      ))}
+      {imgs.map((img, index) => (
+        <Link to={"/p18"} key={index} className={img.alt}></Link>
       ))}
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
     </div>
