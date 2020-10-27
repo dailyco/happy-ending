@@ -55,7 +55,7 @@ function P24({ history }) {
     },
     gsr_style: {
       gs_style: {
-        tf_style: ["nanum", "xl", "extra-bold", "dark-gray"],
+        tf_style: ["nanum", "s", "extra-bold", "grave-stone"],
         sp1_style: ["nanum", "s", "extra-bold", "eclipse"],
         sp2_style: ["nanum", "s", "extra-bold", "eclipse"],
         ta_style: ["grave"],

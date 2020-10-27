@@ -47,9 +47,8 @@ function P8_1_1({ history }) {
     stfr_style: {
       stfs_style: {
         bg_style: ["s", "weak", "dark-greenish-blue"],
-        l_text_style: ["noto", "s", "normal", "white"],
-        tf_style: ["s", "dark-white"],
-        r_text_style: ["noto", "s", "normal", "white"],
+        text_style: ["noto", "s", "normal", "white"],
+        tf_style: ["s", "travel"],
       },
       btn_style: ["xs", "greenish-blue"],
     },

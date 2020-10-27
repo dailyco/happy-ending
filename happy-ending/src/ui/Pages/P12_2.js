@@ -49,7 +49,7 @@ function P12_2({ history }) {
     ftfr_style: {
       ftf_style: {
         ftf_style: ["khaki-brown", "weak", "round"],
-        tf_style: ["xxl", "normal", "white"],
+        tf_style: ["xl", "normal", "moment"],
       },
       button_style: ["xs", "dark-brown"],
     },
