@@ -42,9 +42,20 @@ import P26 from "./ui/Pages/P26";
 import P27 from "./ui/Pages/P27";
 import P404 from "./ui/Pages/P404";
 
+import game from "./assets/audios/Game BGM.mp3";
+import hearbeat from "./assets/audios/heartbeat.mp3";
+import nature from "./assets/audios/Nature BGM.mp3";
+
 import "./App.css";
 
 function App() {
+  const gameBGM = Audio(game);
+  const hearbeatBGM = Audio(hearbeat);
+  const natureBGM = Audio(nature);
+  gameBGM.loop = true;
+  natureBGM.loop = true;
+  gameBGM.play();
+
   return (
     <div>
       <Switch>
