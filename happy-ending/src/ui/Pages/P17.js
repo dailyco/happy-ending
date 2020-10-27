@@ -3,14 +3,19 @@ import classNames from "classnames";
 import SeparatedTemplate17 from "../Templates/SeparatedTemplate17";
 import F1 from "../../assets/images/17p_images/1F.png";
 import SD1 from "../../assets/images/17p_images/1SD.png";
+import GW1 from "../../assets/images/17p_images/1GW.png";
 import F2 from "../../assets/images/17p_images/2F.png";
 import SD2 from "../../assets/images/17p_images/2SD.png";
+import GW2 from "../../assets/images/17p_images/2GW.png";
 import F3 from "../../assets/images/17p_images/3F.png";
 import SD3 from "../../assets/images/17p_images/3SD.png";
+import GW3 from "../../assets/images/17p_images/3GW.png";
 import F4 from "../../assets/images/17p_images/4F.png";
 import SD4 from "../../assets/images/17p_images/4SD.png";
+import GW4 from "../../assets/images/17p_images/4GW.png";
 import F5 from "../../assets/images/17p_images/5F.png";
 import SD5 from "../../assets/images/17p_images/5SD.png";
+import GW5 from "../../assets/images/17p_images/5GW.png";
 
 import "../../scss/pages.scss";
 
@@ -37,26 +42,31 @@ function P17({ history }) {
       {
         image: F1,
         shadow: SD1,
+        glow: GW1,
         alt: "rose",
       },
       {
         image: F2,
         shadow: SD2,
+        glow: GW2,
         alt: "freesia",
       },
       {
         image: F3,
         shadow: SD3,
+        glow: GW3,
         alt: "babyBreath",
       },
       {
         image: F4,
         shadow: SD4,
+        glow: GW4,
         alt: "tulip",
       },
       {
         image: F5,
         shadow: SD5,
+        glow: GW5,
         alt: "mum",
       },
     ],

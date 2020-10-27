@@ -23,12 +23,13 @@ function SeparatedTemplate17({ data, styleName }) {
       </video>
       {imgs.map((img, index) => (
         <>
+          {/* <Img image={img.glow} alt={img.alt}></Img> */}
           <Img image={img.shadow} alt={img.alt}></Img>
-          <Img image={img.image} alt={img.alt} onClick={() => onClick(img.alt)}></Img>
+          <Img image={img.image} alt={img.alt}></Img>
         </>
       ))}
       {imgs.map((img, index) => (
-        <Link to={"/p18"} key={index} className={img.alt}></Link>
+        <Link to={"/p18"} key={index} className={img.alt} onClick={() => onClick(img.alt)}></Link>
       ))}
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
     </div>
