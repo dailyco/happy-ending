@@ -1,7 +1,6 @@
 import React from "react";
 import classNames from "classnames";
 import SeparatedTemplate17 from "../Templates/SeparatedTemplate17";
-// import Window from "../../assets/images/bg_images/17-Window.png";
 import F1 from "../../assets/images/17p_images/1F.png";
 import SD1 from "../../assets/images/17p_images/1SD.png";
 import F2 from "../../assets/images/17p_images/2F.png";
@@ -20,10 +19,6 @@ function P17({ history }) {
     history.goBack();
   };
   const data = {
-    // bg_data: {
-    //   image: Window,
-    //   alt: "window",
-    // },
     dq_data: {
       h3_data: {
         day: 3,
@@ -41,27 +36,27 @@ function P17({ history }) {
     imgs: [
       {
         image: F1,
-        shadow : SD1,
+        shadow: SD1,
         alt: "rose",
       },
       {
         image: F2,
-        shadow : SD2,
+        shadow: SD2,
         alt: "freesia",
       },
       {
         image: F3,
-        shadow : SD3,
+        shadow: SD3,
         alt: "babyBreath",
       },
       {
         image: F4,
-        shadow : SD4,
+        shadow: SD4,
         alt: "tulip",
       },
       {
         image: F5,
-        shadow : SD5,
+        shadow: SD5,
         alt: "mum",
       },
     ],

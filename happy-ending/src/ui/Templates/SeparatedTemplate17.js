@@ -8,25 +8,25 @@ import P17Video from "../../assets/videos/17_front.mp4";
 import "../../scss/Templates/SeparatedTemplate17.scss";
 
 function SeparatedTemplate17({ data, styleName }) {
-  const { bg_data, dq_data, imgs } = data;
+  const { dq_data, imgs } = data;
   const { tp_style, dq_style } = styleName;
 
   const onClick = (alt) => {
     localStorage.setItem("flower", alt);
     console.log(localStorage);
-  }
+  };
 
   return (
     <div className={classNames("SeparatedTemplate17", tp_style)}>
       <video autoPlay muted>
         <source src={P17Video} type="video/mp4" />
       </video>
-      {/* <Img image={bg_data.image} alt={bg_data.alt}></Img> */}
       {imgs.map((img, index) => (
-        <Link to={"/p18"} key={index}>
+        <>
           <Img image={img.shadow} alt={img.alt}></Img>
           <Img image={img.image} alt={img.alt} onClick={() => onClick(img.alt)}></Img>
-        </Link>
+          <Link to={"/p18"} key={index}></Link>
+        </>
       ))}
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
     </div>
