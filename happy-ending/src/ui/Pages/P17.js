@@ -39,35 +39,67 @@ function P17({ history }) {
         ),
       },
     },
-    imgs: [
+    constrasts: [
       {
-        image: F1,
+        id: 1,
         shadow: SD1,
         glow: GW1,
         alt: "rose",
+        active: false,
       },
       {
-        image: F2,
+        id: 2,
         shadow: SD2,
         glow: GW2,
         alt: "freesia",
+        active: false,
       },
       {
-        image: F3,
+        id: 3,
         shadow: SD3,
         glow: GW3,
         alt: "babyBreath",
+        active: false,
       },
       {
-        image: F4,
+        id: 4,
         shadow: SD4,
         glow: GW4,
         alt: "tulip",
+        active: false,
       },
       {
-        image: F5,
+        id: 5,
         shadow: SD5,
         glow: GW5,
+        alt: "mum",
+        active: false,
+      },
+    ],
+    flowers: [
+      {
+        id: 1,
+        image: F1,
+        alt: "rose",
+      },
+      {
+        id: 2,
+        image: F2,
+        alt: "freesia",
+      },
+      {
+        id: 3,
+        image: F3,
+        alt: "babyBreath",
+      },
+      {
+        id: 4,
+        image: F4,
+        alt: "tulip",
+      },
+      {
+        id: 5,
+        image: F5,
         alt: "mum",
       },
     ],
