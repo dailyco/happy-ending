@@ -48,6 +48,7 @@ function P4({ history }) {
     }
   };
   const styleName = {
+    tp_style: ["fade-in-5s"],
     p_style: ["eclipse"],
   };
   return (

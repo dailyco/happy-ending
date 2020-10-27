@@ -41,13 +41,13 @@ function P10({ history }) {
       h3_style: ["normal", "white"],
       p_style: ["white", "line-4"],
     },
-    span_style: ["noto", "xs", "white", "light"],
+    span_style: ["noto", "xs", "white", "light", "fade-in-out-2s"],
   };
 
   return (
     <Link to="/p12_2">
       <div className={classNames("Page", "P10", "bg-video", "fade-in")}>
-        <video autoPlay muted loop>
+        <video autoPlay muted>
           <source src={P10Video} type="video/mp4" />
         </video>
         <button className={classNames("back", "back-white")} onClick={goBack}></button>

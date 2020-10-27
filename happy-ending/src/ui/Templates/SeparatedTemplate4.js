@@ -7,9 +7,9 @@ import "../../scss/Templates/SeparatedTemplate4.scss";
 
 function SeparatedTemplate4({ data, styleName }) {
   const { p_data, irpns_data } = data;
-  const { p_style } = styleName;
+  const { tp_style, p_style } = styleName;
   return (
-    <div className={classNames("SeparatedTemplate4")}>
+    <div className={classNames("SeparatedTemplate4", tp_style)}>
       <section className={classNames("script")}>
         <P styleName={p_style}>{p_data.text}</P>
       </section>

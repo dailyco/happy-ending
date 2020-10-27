@@ -33,7 +33,7 @@ function P24({ history }) {
     },
     gsr_data: {
       gs_data: {
-        tf_data: "( 어떤 )",
+        tf_data: "(              어떤              )",
         sp1_data: "사람,",
         sp2_data: {
           name: name,

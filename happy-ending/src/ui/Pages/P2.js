@@ -33,7 +33,7 @@ function P2() {
   };
   const styleName = {
     p_style: ["white", "fade-in-2s"],
-    span_style: ["noto", "xs", "white", "light", "fade-in-3s"],
+    span_style: ["noto", "xs", "white", "light", "fade-in-out-3s"],
   };
   return (
     <Link to={"/p3"}>

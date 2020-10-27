@@ -1,7 +1,7 @@
 @import "../colors.scss";
 
 .P {
-  font-family: "Noto Sans KR";
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 22px;
   font-weight: 500;
   line-height: 1.82;
@@ -29,7 +29,11 @@
 
   // counter
   &.counter {
-    font-size: 50px;
-    font-weight: 800;
+    font-family: "NaNum Myeongjo", serif;
+    font-weight: normal;
+    font-size: 120px;
+    width: 498px;
+    height: 717px;
+    background: rgba(black, 0.1);
   }
 }
