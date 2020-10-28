@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
 import useInputs from "../useInputs";
 import MultiTextFieldTemplate from "../Templates/MultiTextFieldTemplate";
 import P8_1_2_Video from "../../assets/videos/8-1-1-travel.mp4";
+import P8_1_2_Video_tran from "../../assets/videos/8-1-1-travel_tran.mp4";
 
 import "../../scss/pages.scss";
 
@@ -11,9 +12,21 @@ function P8_1_2({ history }) {
     history.goBack();
   };
 
-  const [inputs, onChange] = useInputs({	
-    travelWith: localStorage.getItem("travelWith") ?? "",	
-    travelTo: localStorage.getItem("travelTo") ?? "",	
+  const [video, setVideo] = useState(P8_1_2_Video);
+
+  const onClick = () => {
+    setVideo(P8_1_2_Video_tran);
+  };
+
+  const goNext = () => {
+    if (video !== P8_1_2_Video) {
+      history.push("/p9_1");
+    }
+  };
+
+  const [inputs, onChange] = useInputs({
+    travelWith: localStorage.getItem("travelWith") ?? "",
+    travelTo: localStorage.getItem("travelTo") ?? "",
   });
 
   const data = {
@@ -26,22 +39,23 @@ function P8_1_2({ history }) {
       },
     },
     mtfr_data: {
-      to: "/p9_1",
+      to: false,
+      onClick: onClick,
       mtfs_data: {
         l_text: "3일간의 여행을 (",
         ph1: "누구",
         m_text: ")와/과 함께 (",
         ph2: "어디",
         r_text: ")(으)로 떠난다.",
-        tf1_data: {	
-          input1: inputs.travelWith,	
-          name1: "travelWith",	
-          onChange1: onChange,	
-        },	
-        tf2_data: {	
-          input2: inputs.travelTo,	
-          name2: "travelTo",	
-          onChange2: onChange,	
+        tf1_data: {
+          input1: inputs.travelWith,
+          name1: "travelWith",
+          onChange1: onChange,
+        },
+        tf2_data: {
+          input2: inputs.travelTo,
+          name2: "travelTo",
+          onChange2: onChange,
         },
       },
     },
@@ -64,9 +78,17 @@ function P8_1_2({ history }) {
 
   return (
     <div className={classNames("Page", "P8-1-2", "bg-video", "fade-in")}>
-      <video autoPlay muted loop>
-        <source src={P8_1_2_Video} type="video/mp4" />
-      </video>
+      {video === P8_1_2_Video && (
+        <video autoPlay muted loop key={video}>
+          <source src={video} type="video/mp4" />
+        </video>
+      )}
+      {video !== P8_1_2_Video && (
+        <video autoPlay muted key={video} onEnded={goNext}>
+          <source src={video} type="video/mp4" />
+        </video>
+      )}
+
       <button className={classNames("back", "back-white")} onClick={goBack}></button>
       <MultiTextFieldTemplate data={data} styleName={styleName}></MultiTextFieldTemplate>
     </div>

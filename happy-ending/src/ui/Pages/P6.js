@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
 import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
 import P6_Video from "../../assets/videos/6-tell or not.mp4";
+import P6_Video_A from "../../assets/videos/6-tell or not-tran a.mp4";
+import P6_Video_B from "../../assets/videos/6-tell or not-tran b.mp4";
 
 import "../../scss/pages.scss";
 
@@ -9,6 +11,23 @@ function P6({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
+  const [video, setVideo] = useState(P6_Video);
+
+  const onClickA = () => {
+    setVideo(P6_Video_A);
+  };
+
+  const onClickB = () => {
+    setVideo(P6_Video_B);
+  };
+
+  const goNext = () => {
+    if (video !== P6_Video) {
+      history.push("/p7");
+    }
+  };
+
   const data = {
     dq_data: {
       h3_data: {
@@ -29,10 +48,12 @@ function P6({ history }) {
         {
           text: "A. 가족, 친구에게 이 사실을 말한다",
           to: "/p7",
+          onClick: onClickA,
         },
         {
           text: "B. 말하지 않는다",
           to: "/p7",
+          onClick: onClickB,
         },
       ],
     },
@@ -45,14 +66,14 @@ function P6({ history }) {
       p_style: ["eclipse"],
     },
     sr_style: {
-      btn_style: ["xl", "white"],
+      btn_style: ["xl", "white", "wait-until-video-end"],
     },
   };
 
   return (
     <div className={classNames("Page", "P6", "bg-video", "fade-in")}>
-      <video autoPlay muted>
-        <source src={P6_Video} type="video/mp4" />
+      <video autoPlay muted key={video} onEnded={goNext}>
+        <source src={video} type="video/mp4" />
       </video>
       <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <MultipleChoiceTemplate data={data} styleName={styleName}></MultipleChoiceTemplate>

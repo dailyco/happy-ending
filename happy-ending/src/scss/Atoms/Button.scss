@@ -157,9 +157,9 @@
 
   //animation
   &.selected {
-    animation: button-selected 1s linear;
+    animation: button-selected 1s linear forwards;
   }
   &.unselected {
-    animation: button-unselected 1s linear;
+    animation: button-unselected 1s linear forwards;
   }
 }
