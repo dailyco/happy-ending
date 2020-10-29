@@ -1,7 +1,7 @@
 import React from "react";
 import Decorations from "../Organisms/Decorations";
 import Title from "../Molecules/Title";
-import Page from "../Organisms/Page";
+import Page from "../Organisms/Paragraphs";
 import DetailedButtons from "../Organisms/DetailedButtons";
 import classNames from "classnames";
 
