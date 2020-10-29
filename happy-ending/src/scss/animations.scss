@@ -1,3 +1,5 @@
+@import "./colors.scss";
+
 @mixin fade-in-delay($delay) {
   animation: fade-in 2s linear $delay, non-visibility $delay;
 }
@@ -23,6 +25,19 @@
   100% {
     visibility: hidden;
   }
+}
+
+@keyframes validate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.validate-text {
+  animation: validate 1s linear, validate 2s linear alternate-reverse 5 1s forwards;
 }
 
 .fade-in-out {
