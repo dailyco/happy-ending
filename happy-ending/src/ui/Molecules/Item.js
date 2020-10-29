@@ -18,11 +18,9 @@ function Item({ item, data, styleName, ...rest }) {
       <div>
         <TextField placeHolder="누구" styleName={["s", "message", "item"]} value={to} onChange={onChange} name={name1} id={id} {...rest}></TextField>
         <Span styleName={["s", "eclipse", "center"]}>에게</Span>
-      </div>
-      <div className={classNames("ItemTextArea")}>
-        <TextArea placeHolder="그동안 하지 못했던 말들을 적어보세요.(300자 제한)" styleName={ta_style} value={message} onChange={onChange} name={name2} id={id} {...rest}></TextArea>
         <Icon icon={icon_data.icon_img} alt={icon_data.icon_alt} styleName={icon_style} onClick={onRemove} id={id}></Icon>
       </div>
+      <TextArea placeHolder="그동안 하지 못했던 말들을 적어보세요.(300자 제한)" styleName={ta_style} value={message} onChange={onChange} name={name2} id={id} {...rest}></TextArea>
     </div>
   );
 }
