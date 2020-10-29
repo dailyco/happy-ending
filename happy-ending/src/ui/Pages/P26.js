@@ -14,9 +14,9 @@ function P26() {
       p_data: {
         question: (
           <>
-            당신은 지금까지
+            당신은 지금까지 죽음을 마주하고
             <br />
-            죽음을 마주하고 삶을 되돌아보는 과정을 통해
+            삶을 되돌아보는 과정을 통해
             <br />
             당신만의 이야기를 완성했습니다.
             <br />
@@ -34,7 +34,7 @@ function P26() {
       h3_style: ["normal", "white"],
       p_style: ["white", "line-5"],
     },
-    span_style: ["noto", "xs", "dark-gray", "light"],
+    span_style: ["noto", "xs", "dark-gray", "light", "fade-in-out-2s"],
   };
 
   return (

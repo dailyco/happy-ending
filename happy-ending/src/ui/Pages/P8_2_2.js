@@ -54,11 +54,8 @@ function P8_2_2({ history }) {
     mtfr_style: {
       mtfs_style: {
         bg_style: ["m", "strong", "charcoal-gray"],
-        l_text_style: ["noto", "s", "normal", "eclipse"],
-        tf1_style: ["s", "davy-gray"],
-        m_text_style: ["noto", "s", "normal", "eclipse"],
-        tf2_style: ["s", "davy-gray"],
-        r_text_style: ["noto", "s", "normal", "eclipse"],
+        text_style: ["noto", "s", "normal", "eclipse"],
+        tf_style: ["s", "house"],
       },
       btn_style: ["xs", "white", "close"],
     },

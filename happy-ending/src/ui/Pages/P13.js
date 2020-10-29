@@ -44,7 +44,7 @@ function P13({ history }) {
     ftfr_style: {
       ftf_style: {
         ftf_style: ["charcoal-black", "weak", "round"],
-        tf_style: ["xl", "normal", "white"],
+        tf_style: ["xl", "normal", "moment"],
       },
       button_style: ["xs", "grayish-navy"],
     },
@@ -52,7 +52,7 @@ function P13({ history }) {
 
   return (
     <div className={classNames("Page", "P13", "bg-video", "fade-in")}>
-      <video autoPlay muted loop>
+      <video autoPlay muted>
         <source src={P13Vedio} type="video/mp4" />
       </video>
       <button className={classNames("back", "back-white")} onClick={goBack}></button>

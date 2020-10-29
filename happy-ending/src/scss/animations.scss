@@ -2,6 +2,10 @@
   animation: fade-in 2s linear $delay, non-visibility $delay;
 }
 
+@mixin fade-in-out-delay($delay) {
+  animation: fade-in 1s ease-in-out alternate infinite $delay, non-visibility $delay;
+}
+
 @keyframes fade-in {
   0% {
     visibility: visible;
@@ -25,6 +29,18 @@
   animation: fade-in 1s ease-in-out alternate infinite;
 }
 
+.fade-in-out-2s {
+  @include fade-in-out-delay(2s);
+}
+
+.fade-in-out-3s {
+  @include fade-in-out-delay(3s);
+}
+
+.fade-in-out-4s {
+  @include fade-in-out-delay(4s);
+}
+
 .fade-in {
   animation: fade-in 2s linear;
 }
@@ -39,4 +55,8 @@
 
 .fade-in-4s {
   @include fade-in-delay(4s);
+}
+
+.fade-in-5s {
+  @include fade-in-delay(5s);
 }

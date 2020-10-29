@@ -20,7 +20,7 @@ function P3() {
           그들은 단 한 번밖에 읽지 못하는 것을 알기 때문이다.
           <br />
           <br />
-          장파울
+          장 파울
         </>
       ),
     },
@@ -31,7 +31,7 @@ function P3() {
   const styleName = {
     h3_style: ["normal", "eclipse", "fade-in-2s"],
     p_style: ["eclipse", "fade-in-3s"],
-    span_style: ["noto", "xs", "davy-gray", "light", "fade-in-4s"],
+    span_style: ["noto", "xs", "davy-gray", "light", "fade-in-out-4s"],
   };
   return (
     <Link to={"/p4"}>

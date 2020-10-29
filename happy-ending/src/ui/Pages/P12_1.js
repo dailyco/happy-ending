@@ -49,7 +49,7 @@ function P12_1({ history }) {
     ftfr_style: {
       ftf_style: {
         ftf_style: ["cocoa", "weak", "round"],
-        tf_style: ["xl", "normal", "white"],
+        tf_style: ["xl", "normal", "moment"],
       },
       button_style: ["xs", "cocoa"],
     },

@@ -16,7 +16,7 @@ function Item({ item, data, styleName, ...rest }) {
   return (
     <div className={classNames("Item")}>
       <div>
-        <TextField placeHolder="누구" styleName={["s", "dark-gray", "item"]} value={to} onChange={onChange} name={name1} id={id} {...rest}></TextField>
+        <TextField placeHolder="누구" styleName={["s", "message", "item"]} value={to} onChange={onChange} name={name1} id={id} {...rest}></TextField>
         <Span styleName={["s", "eclipse", "center"]}>에게</Span>
       </div>
       <div className={classNames("ItemTextArea")}>
