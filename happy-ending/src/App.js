@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Route, Switch, useLocation } from "react-router-dom";
 
 import P0 from "./ui/Pages/P0";
 import P1 from "./ui/Pages/P1";
@@ -49,12 +49,42 @@ import nature from "./assets/audios/Nature BGM.mp3";
 import "./App.css";
 
 function App() {
-  const gameBGM = new Audio(game);
-  const hearbeatBGM = new Audio(hearbeat);
-  const natureBGM = new Audio(nature);
-  gameBGM.loop = true;
-  natureBGM.loop = true;
-  gameBGM.play();
+  const [currentBGM, setCurrentBGM] = useState(new Audio(game));
+  // const gameBGM = new Audio(game);
+  // const hearbeatBGM = new Audio(hearbeat);
+  // const natureBGM = new Audio(nature);
+  // gameBGM.loop = true;
+  // natureBGM.loop = true;
+
+  const location = useLocation();
+  useEffect(() => {
+    let bgm;
+    switch(location.pathname) {
+      case "/": case "/p2": case "/p3": case "/p4": case "/p5": 
+      case "/p6": case "/p7": case "/p7_1": case "/p7_2": case "/p8": 
+      case "/p8_1": case "/p8_1_1": case "/p8_1_2": case "/p8_2": 
+      case "/p8_2_1": case "/p8_2_2": case "/p9_1": case "/p9_2": case "/p10": 
+      case "/p12_1": case "/12_2": case "/p13": case "/p14": case "/p15": 
+      case "/p16": case "/p16_1": case "/p17": case "/p18": case "/p19": 
+      case "/p20": case "/p21": case "/p22": case "/p23": 
+        
+        break;
+      case "/p24": 
+        if (currentBGM.src !== game) {
+          bgm = {...currentBGM, src: game, currentTime: 0};
+          // currentBGM.src = game;
+        }
+        break;
+      case "/p25":
+        bgm = {...currentBGM, src: hearbeat, currentTime: 0};
+        break;
+      case "/p26": case "/p27": case "/p0": 
+        bgm = {...currentBGM, src: nature, currentTime: 0};
+        break;
+    }
+    setCurrentBGM(bgm);
+    currentBGM.play();
+  }, [location])
 
   return (
     <div>
