@@ -49,9 +49,9 @@ import nature from "./assets/audios/Nature BGM.mp3";
 import "./App.css";
 
 function App() {
-  const gameBGM = Audio(game);
-  const hearbeatBGM = Audio(hearbeat);
-  const natureBGM = Audio(nature);
+  const gameBGM = new Audio(game);
+  const hearbeatBGM = new Audio(hearbeat);
+  const natureBGM = new Audio(nature);
   gameBGM.loop = true;
   natureBGM.loop = true;
   gameBGM.play();
