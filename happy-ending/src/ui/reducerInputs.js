@@ -1,26 +1,22 @@
 import { useCallback, useReducer, useRef } from 'react';
 
 function reducer (state, action) {
+  let messages;
   switch (action.type) {
-    case 'CREATE_MESSAGE':
-      return {
-        messages: state.messages.concat(action.message)
-      };
-    case 'CHANGE_MESSAGE':
-      return {
-        messages: state.messages.map(message => 
-          message.id === +action.id ? { ...message, [action.name]: action.value} : message
-        )
-      };
-    case 'REMOVE_MESSAGE':
-      const m = state.messages.filter(message => message.id !== +action.id);
-      console.log(m);
-      return {
-        messages: m,
-      };
+    case "CREATE_MESSAGE":
+      messages = state.messages.concat(action.message);
+      break;
+    case "CHANGE_MESSAGE":
+      messages = state.messages.map(message => message.id === +action.id ? { ...message, [action.name]: action.value} : message);
+      break;
+    case "REMOVE_MESSAGE":
+      messages = state.messages.filter(message => message.id !== +action.id);
+      break;
     default:
-      return state;
+      messages = state.messages;
   }
+  localStorage.setItem("messages", JSON.stringify(messages));
+  return { messages };
 }
 
 function useInputs(initialState) {
@@ -32,37 +28,33 @@ function useInputs(initialState) {
   const onCreate = useCallback(() => {
     nextId.current += 1;
     dispatch({
-      type: 'CREATE_MESSAGE',
+      type: "CREATE_MESSAGE",
       message: {
         id: nextId.current,
+        to: "",
+        message: "",
       }
     });
-    localStorage.setItem("messages", JSON.stringify(state.messages));
-    console.log(localStorage);
-  }, [state.messages]);
+  }, []);
   
   const onChange = useCallback(e => {
     const { id, name, value } = e.target;
     dispatch({
-      type: 'CHANGE_MESSAGE',
+      type: "CHANGE_MESSAGE",
       id,
       name,
       value,
     });
-    localStorage.setItem("messages", JSON.stringify(state.messages));
-    console.log(localStorage);
-  }, [state.messages]);
+  }, []);
 
   const onRemove = useCallback(e => {
     const { id } = e.target;
+    nextId.current -= 1;
     dispatch({
-      type: 'REMOVE_MESSAGE',
+      type: "REMOVE_MESSAGE",
       id,
     });
-    console.log(state.messages);
-    localStorage.setItem("messages", JSON.stringify(state.messages));
-    console.log(localStorage);
-  }, [state.messages]);
+  }, []);
 
   return [ state, onCreate, onChange, onRemove ];
 }
