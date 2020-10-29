@@ -7,13 +7,14 @@ import P13Vedio from "../../assets/videos/13-erase.mp4";
 import "../../scss/pages.scss";
 
 function P13({ history }) {
+  const [input, onChange] = useInputs({
+    eraseMoment: localStorage.getItem("eraseMoment") ?? "",
+    isValidate: false,
+  });
+
   const goBack = () => {
     history.goBack();
   };
-
-  const [input, onChange] = useInputs({
-    eraseMoment: localStorage.getItem("eraseMoment") ?? "",
-  });
 
   const data = {
     dq_data: {
@@ -26,6 +27,7 @@ function P13({ history }) {
     },
     ftfr_data: {
       to: "/p14",
+      validate: input.isValidate,
       ftf_data: {
         tf_data: {
           input: input.eraseMoment,

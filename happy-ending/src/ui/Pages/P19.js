@@ -7,15 +7,16 @@ import P19Vedio from "../../assets/videos/19-music.mp4";
 import "../../scss/pages.scss";
 
 function P19({ history }) {
+  const [input, onChange] = useInputs({
+    song: localStorage.getItem("song") ?? "",
+    isValidate: false,
+  });
+
   const goBack = () => {
     history.goBack();
     history.goBack();
   };
-
-  const [input, onChange] = useInputs({
-    song: localStorage.getItem("song") ?? "",
-  });
-
+  
   const data = {
     dq_data: {
       h3_data: {
@@ -27,6 +28,7 @@ function P19({ history }) {
     },
     ftfr_data: {
       to: "/p20",
+      validate: input.isValidate,
       ftf_data: {
         tf_data: {
           input: input.song,

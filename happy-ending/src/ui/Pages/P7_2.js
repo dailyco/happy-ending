@@ -6,13 +6,14 @@ import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 import "../../scss/pages.scss";
 
 function P7_2({ history }) {
+  const [input, onChange] = useInputs({
+    keepBank: localStorage.getItem("keepBank") ?? "",
+    isValidate: false,
+  });
+  
   const goBack = () => {
     history.goBack();
   };
-
-  const [input, onChange] = useInputs({
-    keepBank: localStorage.getItem("keepBank") ?? "",
-  });
 
   const data = {
     dq_data: {
@@ -30,6 +31,7 @@ function P7_2({ history }) {
     },
     ftfr_data: {
       to: "/p8",
+      validate: input.isValidate,
       ftf_data: {
         tf_data: {
           input: input.keepBank,

@@ -7,13 +7,14 @@ import P8_2_1_Video from "../../assets/videos/8-2-1-stay home alone.mp4";
 import "../../scss/pages.scss";
 
 function P8_2_1({ history }) {
+  const [input, onChange] = useInputs({	
+    homeDoWhat: localStorage.getItem("homeDoWhat") ?? "",	
+    isValidate: false,
+  });
+
   const goBack = () => {
     history.goBack();
   };
-
-  const [input, onChange] = useInputs({	
-    homeDoWhat: localStorage.getItem("homeDoWhat") ?? "",	
-  });
 
   const data = {
     dq_data: {
@@ -26,6 +27,7 @@ function P8_2_1({ history }) {
     },
     stfr_data: {
       to: "/p9_2",
+      validate: input.isValidate,
       stfs_data: {
         l_text: "집에서 (",
         placeHolder: "무엇을 한",

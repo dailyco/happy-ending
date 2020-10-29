@@ -7,16 +7,17 @@ import P4Vedio from "../../assets/videos/4-book.mp4";
 import "../../scss/pages.scss";
 
 function P4({ history }) {
-  const goBack = () => {
-    history.goBack();
-  };
-
   const [inputs, onChange] = useInputs({
     name: localStorage.getItem("name") ?? "",
     year: localStorage.getItem("year") ?? "",
     month: localStorage.getItem("month") ?? "",
     day: localStorage.getItem("day") ?? "",
+    isValidate: false,
   });
+  
+  const goBack = () => {
+    history.goBack();
+  };
 
   const data = {
     p_data: {
@@ -40,6 +41,7 @@ function P4({ history }) {
       ),
     },
     irpns_data: {
+      validate: inputs.isValidate,
       info_data: {
         inputs: inputs,
         names: ["name", "year", "month", "day"],

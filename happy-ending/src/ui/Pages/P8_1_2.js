@@ -7,14 +7,15 @@ import P8_1_2_Video from "../../assets/videos/8-1-1-travel.mp4";
 import "../../scss/pages.scss";
 
 function P8_1_2({ history }) {
-  const goBack = () => {
-    history.goBack();
-  };
-
   const [inputs, onChange] = useInputs({	
     travelWith: localStorage.getItem("travelWith") ?? "",	
     travelTo: localStorage.getItem("travelTo") ?? "",	
+    isValidate: false,
   });
+  
+  const goBack = () => {
+    history.goBack();
+  };
 
   const data = {
     dq_data: {
@@ -27,6 +28,7 @@ function P8_1_2({ history }) {
     },
     mtfr_data: {
       to: "/p9_1",
+      validate: inputs.isValidate,
       mtfs_data: {
         l_text: "3일간의 여행을 (",
         ph1: "누구",

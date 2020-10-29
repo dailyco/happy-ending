@@ -4,12 +4,20 @@ import Button from "../Atoms/Button";
 import Info from "../Molecules/Info";
 
 function InfoResponse({data}) {
-  const { info_data } = data;
+  const { validate, info_data } = data;
+
+  const onClick = (e) => {
+    if (!validate) {
+      console.log("텍스트 입력하세요");
+      e.preventDefault();
+    }
+  }
+
   return (
     <>
       <Info data={info_data}></Info>
       <Link to={"/p5"}>
-        <Button styleName={["xxs", "white"]}>확인</Button>
+        <Button styleName={["xxs", "white"]} onClick={onClick}>확인</Button>
       </Link>
     </>
   );

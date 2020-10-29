@@ -6,15 +6,16 @@ import SeparatedTemplate24 from "../Templates/SeparatedTemplate24";
 import "../../scss/pages.scss";
 
 function P24({ history }) {
-  const goBack = () => {
-    history.goBack();
-  };
-
   const name = localStorage.getItem("name") ?? "홍길동";
   const [inputs, onChange] = useInputs({	
     alias: localStorage.getItem("alias") ?? "",	
     lastWord: localStorage.getItem("lastWord") ?? "",	
+    isValidate: false,
   });
+  
+  const goBack = () => {
+    history.goBack();
+  };
 
   const data = {
     dq_data: {
@@ -32,6 +33,7 @@ function P24({ history }) {
       },
     },
     gsr_data: {
+      validate: inputs.isValidate,
       gs_data: {
         tf_data: "(              어떤              )",
         sp1_data: "사람,",
