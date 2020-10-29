@@ -1,12 +1,6 @@
 @import "../colors.scss";
 
-.TextArea {
-  resize: none;
-  border: none;
-  font-stretch: normal;
-  font-style: normal;
-  outline: none;
-
+@mixin placeholder($color) {
   &:focus::-webkit-input-placeholder {
     color: transparent;
   }
@@ -24,19 +18,37 @@
   }
 
   &::-webkit-input-placeholder {
-    color: $dark-gray;
+    color: $color;
+    text-align: center;
   }
 
   &::-moz-placeholder {
-    color: $dark-gray;
+    color: $color;
+    text-align: center;
   }
 
   &::-ms-placeholder {
-    color: $dark-gray;
+    color: $color;
+    text-align: center;
   }
 
   &::placeholder {
-    color: $dark-gray;
+    color: $color;
+    text-align: center;
+  }
+}
+
+.TextArea {
+  @include placeholder($dark-gray);
+  resize: none;
+  border: none;
+  font-stretch: normal;
+  font-style: normal;
+  outline: none;
+
+  // validate-color
+  &.validate-text {
+    @include placeholder($red);
   }
 
   &.item {
@@ -66,21 +78,5 @@
     font-weight: 800;
     line-height: 1.64;
     letter-spacing: -0.22px;
-
-    &::-webkit-input-placeholder {
-      text-align: center;
-    }
-
-    &::-moz-placeholder {
-      text-align: center;
-    }
-
-    &::-ms-placeholder {
-      text-align: center;
-    }
-
-    &::placeholder {
-      text-align: center;
-    }
   }
 }
