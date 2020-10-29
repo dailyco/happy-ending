@@ -1,6 +1,8 @@
 import React from "react";
 import SeparatedTemplate29 from "../Templates/SeparatedTemplate29";
 import classNames from "classnames";
+import END from "../../assets/images/29p_images/29 The end.png";
+import AND from "../../assets/images/29p_images/29 And.png";
 
 import "../../scss/pages.scss";
 
@@ -75,9 +77,10 @@ function P29() {
       lastPage: "마지막페이지",
     },
     left_page_date: {
-      grage_paragraph: {
-        grave_header: name + "의 묘",
-        grave_body: (
+      img: END,
+      paragraph1: {
+        header: name + "의 묘",
+        body: (
           <>
             {name}은 {deathMonthNDay} 세상을 떠났습니다.
             <br />
@@ -85,13 +88,13 @@ function P29() {
           </>
         ),
       },
-      funeral_paragraph: {
-        funeral_header: name + "의 장례식",
-        funeral_body: name + "의 장례식에 온 사람들은 가장 아름다웠던 순간이 담긴 그의 영정사진을 보았습니다. 그리고 그를 추모하며 " + flowerInKorean + " 한 송이를 헌화했습니다.",
+      paragraph2: {
+        header: name + "의 장례식",
+        body: name + "의 장례식에 온 사람들은 가장 아름다웠던 순간이 담긴 그의 영정사진을 보았습니다. 그리고 그를 추모하며 " + flowerInKorean + " 한 송이를 헌화했습니다.",
       },
-      happy_moment_paragraph: {
-        happy_moment_header: name + "의 행복했던 순간",
-        happy_moment_body: (
+      paragraph3: {
+        header: name + "의 행복했던 순간",
+        body: (
           <>
             {name}은 {happyMoment}에 행복함을 만끽했습니다.
             <br />그 순간, {name}은 세상 누구보다도 행복한 사람이라고 느꼈습니다.
@@ -100,21 +103,22 @@ function P29() {
       },
     },
     right_page_data: {
-      important_man_paragraph: {
-        important_man_header: "가장 소중한 사람",
-        important_man_body:
+      img: AND,
+      paragraph1: {
+        header: "가장 소중한 사람",
+        body:
           sadMan +
           "은 당신의 죽음에 가장 슬퍼했습니다. 아마도 당신을 가장 소중하게 여기는 사람일 것입니다. 이런 사람이 당신에게 있다는 것은 정말 큰 행운입니다. 오늘 하루 " +
           sadMan +
           "에게 마음을 담은 따뜻한 한 마디를 전하는 건 어떤가요?",
       },
-      rest_paragraph: {
-        rest_header: "일상의 쉼표",
-        rest_body: restText,
+      paragraph2: {
+        header: "일상의 쉼표",
+        body: restText,
       },
-      will_paragraph: {
-        will_header: "전하고 싶은 말",
-        will_body:
+      paragraph3: {
+        header: "전하고 싶은 말",
+        body:
           "당신은 죽기전 " +
           to +
           "에게 유서를 남겼습니다. 그곳에 적힌 이야기는 당신이 정말로 전하고 싶은 말일 것입니다. 조금은 부끄러운 마음에 말하지 못했다면 이번엔 용기를 내어 직접 전달하거나 작은 행동으로 표현하세요. 계속 미루다보면 표현할 기회를 놓칠 수도 있습니다.",
@@ -126,9 +130,11 @@ function P29() {
     },
   };
 
+  const styleName = {};
+
   return (
     <div className={classNames("Page", "P29")}>
-      <SeparatedTemplate29></SeparatedTemplate29>
+      <SeparatedTemplate29 data={data} styleName={styleName}></SeparatedTemplate29>
     </div>
   );
 }
