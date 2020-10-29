@@ -36,6 +36,15 @@ function P14({ history }) {
       state: state,
       onCreate: onCreate,
       item_data: {
+        tf_data: {
+          placeHolder: "누구",
+        },
+        span_data: {
+          text: "에게",
+        },
+        ta_data: {
+          placeHolder: "그동안 하지 못했던 말들을 적어보세요.(300자 제한)",
+        },
         names: ["to", "message"],
         onChange: onChange,
         onRemove: onRemove,
@@ -55,6 +64,8 @@ function P14({ history }) {
     },
     ib_style: {
       item_style: {
+        tf_style: ["s", "message", "item"],
+        span_style: ["s", "eclipse", "center"],
         icon_style: ["delete"],
         ta_style: ["item"],
       },
