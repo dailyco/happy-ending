@@ -106,6 +106,10 @@
     @include bg-image("26-last\ words.png");
   }
 
+  &.P29 {
+    @include bg-image("29 ebook.png")
+  }
+
   &.P404 {
     @include bg-image("404notfound.png");
   }
