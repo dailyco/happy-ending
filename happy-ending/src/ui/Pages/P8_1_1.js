@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import classNames from "classnames";
 import useInputs from "../useInputs";
 import SingleTextFieldTemplate from "../Templates/SingleTextFieldTemplate";
@@ -7,13 +7,19 @@ import P8_1_1_Video from "../../assets/videos/8-1-1-travel.mp4";
 import "../../scss/pages.scss";
 
 function P8_1_1({ history }) {
+  const loopVideo = useRef(null);
+  const [input, onChange] = useInputs({	
+    travelTo: localStorage.getItem("travelTo") ?? "",	
+  });
+
   const goBack = () => {
     history.goBack();
   };
 
-  const [input, onChange] = useInputs({	
-    travelTo: localStorage.getItem("travelTo") ?? "",	
-  });
+  const onEnded = () => {
+    loopVideo.current.currentTime = 2;
+    loopVideo.current.play();
+  }
 
   const data = {
     dq_data: {
@@ -56,7 +62,7 @@ function P8_1_1({ history }) {
 
   return (
     <div className={classNames("Page", "P8-1-1", "bg-video", "fade-in")}>
-      <video autoPlay muted loop>
+      <video autoPlay muted onEnded={onEnded} ref={loopVideo}>
         <source src={P8_1_1_Video} type="video/mp4" />
       </video>
       <button className={classNames("back", "back-white")} onClick={goBack}></button>
