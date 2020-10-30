@@ -27,19 +27,6 @@
   }
 }
 
-@keyframes validate {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.validate-text {
-  animation: validate 1s linear, validate 2s linear alternate-reverse 5 1s forwards;
-}
-
 .fade-in-out {
   animation: fade-in 1s ease-in-out alternate infinite;
 }

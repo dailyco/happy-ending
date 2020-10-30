@@ -1,39 +1,25 @@
 @import "../colors.scss";
 
-@mixin placeholder-color($ph-color, $txt-color) {
-  color: $txt-color;
-
-  &:focus::-webkit-input-placeholder {
-    color: transparent;
-  }
-
-  &:focus::-moz-placeholder {
-    color: transparent;
-  }
-
-  &:focus::-ms-placeholder {
-    color: transparent;
-  }
-
-  &:focus::placeholder {
-    color: transparent;
-  }
-
-  &::-webkit-input-placeholder {
-    color: $ph-color;
-  }
-
-  &::-moz-placeholder {
-    color: $ph-color;
-  }
-
-  &::-ms-placeholder {
-    color: $ph-color;
-  }
-
-  &::placeholder {
-    color: $ph-color;
-  }
+@mixin validate-animation($color) {
+  // --animation-color: $color;
+  // @keyframes validate {
+  //   0% {
+  //     opacity: 1;
+  //     --animation-color: $color;
+  //   }
+  //   100% {
+  //     opacity: 0;
+  //     --animation-color: $red;
+  //   }
+  // }
+  //
+  // animation: validate 1s linear, validate 2s linear alternate-reverse 5 1s forwards;
+  //
+  // &::-webkit-input-placeholder {
+  // color: --animation-color;
+  // -webkit-animation: validate 1s linear, validate 2s linear alternate-reverse 5 1s forwards;
+  // animation: validate 1s linear, validate 2s linear alternate-reverse 5 1s forwards;
+  // }
 }
 
 @mixin placeholder($color) {
@@ -51,6 +37,27 @@
 
   &::placeholder {
     color: $color;
+  }
+}
+
+@mixin placeholder-color($ph-color, $txt-color) {
+  color: $txt-color;
+  @include placeholder($ph-color);
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus::-ms-placeholder {
+    color: transparent;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
   }
 }
 
@@ -115,12 +122,18 @@
   // placeholder-color
   &.book {
     @include placeholder-color($davy-gray, $davy-gray);
+    // &.validate-text {
+    //   @include validate-animation($davy-gray);
+    // }
   }
 
   &.piggy-bank,
   &.music,
   &.sad-man {
     @include placeholder-color($eclipse, $eclipse);
+    // &.validate-text {
+    //   @include validate-animation($eclipse);
+    // }
   }
 
   &.travel {
@@ -141,9 +154,9 @@
   }
 
   // validate-color
-  &.validate-text {
-    @include placeholder($red);
-  }
+  // &.validate-text {
+  //   @include validate-animation($red);
+  // }
 
   &.item {
     padding: 9.1px 8.5px;
