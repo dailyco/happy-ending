@@ -13,13 +13,11 @@ function SeparatedTemplate7({ data, styleName }) {
     <div className={classNames("SeparatedTemplate7", tp_style)}>
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
       <div className={classNames("SpanPair")}>
-        <Link to={s1_data.to}>
-          <Span styleName={s1_style}>{s1_data.text}</Span>
-        </Link>
-        <Link to={s2_data.to}>
-          <Span styleName={s2_style}>{s2_data.text}</Span>
-        </Link>
+        <Span styleName={s1_style}>{s1_data.text}</Span>
+        <Span styleName={s2_style}>{s2_data.text}</Span>
       </div>
+      <Link to={s1_data.to} onClick={s1_data.onClick}></Link>
+      <Link to={s2_data.to}></Link>
     </div>
   );
 }
