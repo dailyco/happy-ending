@@ -11,4 +11,8 @@
   & .Button {
     margin: 0 auto;
   }
+
+  & .Item:nth-child(1) .delete {
+    display: none;
+  }
 }
