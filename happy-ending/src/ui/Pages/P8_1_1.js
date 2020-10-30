@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import classNames from "classnames";
 import useInputs from "../useInputs";
 import SingleTextFieldTemplate from "../Templates/SingleTextFieldTemplate";
@@ -8,14 +8,14 @@ import P8_1_1_Video_tran from "../../assets/videos/8-1-1-travel_tran.mp4";
 import "../../scss/pages.scss";
 
 function P8_1_1({ history }) {
+  const loopVideo = useRef(null);
+  const [video, setVideo] = useState(P8_1_1_Video);
+  const [input, onChange] = useInputs({	
+    travelTo: localStorage.getItem("travelTo") ?? "",	
+  });
+
   const goBack = () => {
     history.goBack();
-  };
-
-  const [video, setVideo] = useState(P8_1_1_Video);
-
-  const onClick = () => {
-    setVideo(P8_1_1_Video_tran);
   };
 
   const goNext = () => {
@@ -24,9 +24,14 @@ function P8_1_1({ history }) {
     }
   };
 
-  const [input, onChange] = useInputs({
-    travelTo: localStorage.getItem("travelTo") ?? "",
-  });
+  const onEnded = () => {
+    loopVideo.current.currentTime = 2;
+    loopVideo.current.play();
+  }
+
+  const onClick = () => {
+    setVideo(P8_1_1_Video_tran);
+  };
 
   const data = {
     dq_data: {
@@ -71,7 +76,7 @@ function P8_1_1({ history }) {
   return (
     <div className={classNames("Page", "P8-1-1", "bg-video", "fade-in")}>
       {video === P8_1_1_Video && (
-        <video autoPlay muted loop key={video}>
+        <video autoPlay muted key={video} onEnded={onEnded} ref={loopVideo}>
           <source src={video} type="video/mp4" />
         </video>
       )}
