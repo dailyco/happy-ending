@@ -1,13 +1,15 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import classNames from "classnames";
 import useInputs from "../useInputs";
 import SingleTextFieldTemplate from "../Templates/SingleTextFieldTemplate";
 import P8_1_1_Video from "../../assets/videos/8-1-1-travel.mp4";
+import P8_1_1_Video_tran from "../../assets/videos/8-1-1-travel_tran.mp4";
 
 import "../../scss/pages.scss";
 
 function P8_1_1({ history }) {
   const loopVideo = useRef(null);
+  const [video, setVideo] = useState(P8_1_1_Video);
   const [input, onChange] = useInputs({	
     travelTo: localStorage.getItem("travelTo") ?? "",	
   });
@@ -16,10 +18,20 @@ function P8_1_1({ history }) {
     history.goBack();
   };
 
+  const goNext = () => {
+    if (video !== P8_1_1_Video) {
+      history.push("/p9_1");
+    }
+  };
+
   const onEnded = () => {
     loopVideo.current.currentTime = 2;
     loopVideo.current.play();
   }
+
+  const onClick = () => {
+    setVideo(P8_1_1_Video_tran);
+  };
 
   const data = {
     dq_data: {
@@ -31,15 +43,16 @@ function P8_1_1({ history }) {
       },
     },
     stfr_data: {
-      to: "/p9_1",
+      to: false,
+      onClick: onClick,
       stfs_data: {
         l_text: "3일간의 여행을 혼자 (",
         placeHolder: "어디",
         r_text: ")(으)로 떠난다.",
-        tf_data: {	
-          input: input.travelTo,	
-          name: "travelTo",	
-          onChange: onChange,	
+        tf_data: {
+          input: input.travelTo,
+          name: "travelTo",
+          onChange: onChange,
         },
       },
     },
@@ -62,9 +75,17 @@ function P8_1_1({ history }) {
 
   return (
     <div className={classNames("Page", "P8-1-1", "bg-video", "fade-in")}>
-      <video autoPlay muted onEnded={onEnded} ref={loopVideo}>
-        <source src={P8_1_1_Video} type="video/mp4" />
-      </video>
+      {video === P8_1_1_Video && (
+        <video autoPlay muted key={video} onEnded={onEnded} ref={loopVideo}>
+          <source src={video} type="video/mp4" />
+        </video>
+      )}
+      {video !== P8_1_1_Video && (
+        <video autoPlay muted key={video} onEnded={goNext}>
+          <source src={video} type="video/mp4" />
+        </video>
+      )}
+
       <button className={classNames("back", "back-white")} onClick={goBack}></button>
       <SingleTextFieldTemplate data={data} styleName={styleName}></SingleTextFieldTemplate>
     </div>

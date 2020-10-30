@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { useEffect, useRef } from "react";
+import { Route, Switch, useLocation } from "react-router-dom";
 
 import P0 from "./ui/Pages/P0";
 import P1 from "./ui/Pages/P1";
@@ -42,11 +42,65 @@ import P26 from "./ui/Pages/P26";
 import P27 from "./ui/Pages/P27";
 import P404 from "./ui/Pages/P404";
 
+import game from "./assets/audios/Game BGM.mp3";
+import hearbeat from "./assets/audios/heartbeat.mp3";
+import nature from "./assets/audios/Nature BGM.mp3";
+
 import "./App.css";
 
 function App() {
+  const bgm = useRef(null);
+  const location = useLocation();
+  useEffect(() => {
+    let addr1, addr2;
+
+    switch(location.pathname) {
+      case "/": 
+        bgm.current.src = game;
+        break;
+      case "/p2": case "/p3": case "/p4": case "/p5": 
+      case "/p6": case "/p7": case "/p7_1": case "/p7_2": case "/p8": 
+      case "/p8_1": case "/p8_1_1": case "/p8_1_2": case "/p8_2": 
+      case "/p8_2_1": case "/p8_2_2": case "/p9_1": case "/p9_2": case "/p10": 
+      case "/p12_1": case "/12_2": case "/p13": case "/p14": case "/p15": 
+      case "/p16": case "/p16_1": case "/p17": case "/p18": case "/p19": 
+      case "/p20": case "/p21": case "/p22": case "/p23": case "/p24": 
+        addr1 = bgm.current.src.split(".");
+        addr2 = game.split(".");
+        console.log(addr1, addr2);
+        if (addr1[1] !== addr2[1]) {
+          bgm.current.src = game;
+          bgm.current.loop = true;
+        }
+        break;
+      case "/p25":
+        addr1 = bgm.current.src.split(".");
+        addr2 = hearbeat.split(".");
+        console.log(addr1, addr2);
+        if (addr1[1] !== addr2[1]) {
+          bgm.current.src = hearbeat;
+          bgm.current.loop = false;
+        }
+        break;
+      case "/p26": case "/p27": case "/p0":
+        addr1 = bgm.current.src.split(".");
+        addr2 = nature.split(".");
+        console.log(addr1, addr2);
+        if (addr1[1] !== addr2[1]) {
+          bgm.current.src = nature;
+          bgm.current.loop = true;
+        }
+        break;
+      default:
+        bgm.current.pause();
+    }
+  }, [location])
+
   return (
     <div>
+      <audio autoPlay ref={bgm}>
+        <source src={game}></source>
+      </audio>
       <Switch>
         <Route path="/" component={P1} exact />
         <Route path="/p0" component={P0} />

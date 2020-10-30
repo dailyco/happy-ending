@@ -21,9 +21,11 @@ function SelectionBox({ data, styleName }) {
         .filter((b) => !b.classList.contains("selected"))
         .forEach((b) => b.classList.add("unselected"));
 
-      e.target.addEventListener("animationend", () => {
-        history.push(e.target.attributes.to.value);
-      });
+      if (!e.target.classList.contains("wait-until-video-end")) {
+        e.target.addEventListener("animationend", () => {
+          history.push(e.target.attributes.to.value);
+        });
+      }
     }
   }
 
