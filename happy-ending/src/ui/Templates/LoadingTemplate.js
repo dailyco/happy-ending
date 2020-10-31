@@ -1,9 +1,9 @@
 import React from "react";
 
-function LoadingTemplate({ video }) {
+function LoadingTemplate({ video, onEnded }) {
   return (
     <>
-      <video autoPlay muted loop>
+      <video autoPlay muted onEnded={onEnded}>
         <source src={video} type="video/mp4" />
       </video>
     </>

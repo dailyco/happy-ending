@@ -79,4 +79,11 @@
   &.neon-green {
     color: $neon-green;
   }
+
+  &.print,
+  &.home {
+    font-size: 13px;
+    letter-spacing: normal;
+    color: #7d7d7d;
+  }
 }

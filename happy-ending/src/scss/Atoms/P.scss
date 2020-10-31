@@ -36,4 +36,40 @@
     height: 717px;
     background: rgba(black, 0.1);
   }
+
+  // paragraph
+  &.para {
+    &.head {
+      width: 175px;
+      height: 24px;
+      font-family: "NaNum Myeongjo", serif;
+      font-size: 13px;
+      font-weight: 800;
+      // line-height: 4.54;
+      letter-spacing: normal;
+      color: #7d7d7d;
+    }
+
+    &.body {
+      width: 354px;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 12.8px;
+      font-weight: normal;
+      line-height: 1.64;
+      color: #3c3c3c;
+
+      // height
+      &.h1 {
+        height : 103px;
+      }
+
+      &.h2 {
+        height: 115px;
+      }
+
+      &.h3 {
+        height: 131px;
+      }
+    }
+  }
 }

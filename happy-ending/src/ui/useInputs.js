@@ -7,12 +7,11 @@ function useInputs(initialInput) {
     const { name, value } = e.target;
     setInput(input => ({ ...input, [name]: value }));
     localStorage.setItem(name, value);
-    console.log(localStorage);
+    // console.log(localStorage, localStorage.getItem(name));
 
     for (let key in input) {
       if (key !== "isValidate") {
-        console.log(input[key].length);
-        if (input[key] === "" || input[key].length < 1) {
+        if (localStorage.getItem(key) === "" || localStorage.getItem(name).length < 1) {
           setInput(input => ({...input, isValidate: false}));
           break;
         } else {
