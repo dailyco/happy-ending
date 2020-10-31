@@ -35,4 +35,24 @@
   &.white-smoke {
     color: $white-smoke;
   }
+
+  // title
+  &.title {
+    font-family: "NaNum Myeongjo", serif;
+    font-weight : 800;
+    color : #7d7d7d;
+    
+    &.writer {
+      width: 234px;
+      height: 53px;
+      font-size: 50px;
+      line-height: 1.18;
+    }
+    &.lastPage {
+      width: 297px;
+      height: 53px;
+      font-size: 42px;
+      line-height: 1.41;
+    }
+  }
 }

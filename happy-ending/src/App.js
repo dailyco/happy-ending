@@ -40,6 +40,7 @@ import P24 from "./ui/Pages/P24";
 import P25 from "./ui/Pages/P25";
 import P26 from "./ui/Pages/P26";
 import P27 from "./ui/Pages/P27";
+import P29 from "./ui/Pages/P29";
 import P404 from "./ui/Pages/P404";
 
 import game from "./assets/audios/Game BGM.mp3";
@@ -67,7 +68,6 @@ function App() {
       case "/p20": case "/p21": case "/p22": case "/p23": case "/p24": 
         addr1 = bgm.current.src.split(".");
         addr2 = game.split(".");
-        console.log(addr1, addr2);
         if (addr1[1] !== addr2[1]) {
           bgm.current.src = game;
           bgm.current.loop = true;
@@ -76,7 +76,6 @@ function App() {
       case "/p25":
         addr1 = bgm.current.src.split(".");
         addr2 = hearbeat.split(".");
-        console.log(addr1, addr2);
         if (addr1[1] !== addr2[1]) {
           bgm.current.src = hearbeat;
           bgm.current.loop = false;
@@ -85,7 +84,6 @@ function App() {
       case "/p26": case "/p27": case "/p0":
         addr1 = bgm.current.src.split(".");
         addr2 = nature.split(".");
-        console.log(addr1, addr2);
         if (addr1[1] !== addr2[1]) {
           bgm.current.src = nature;
           bgm.current.loop = true;
@@ -141,7 +139,8 @@ function App() {
         <Route path="/p25" component={P25} />
         <Route path="/p26" component={P26} />
         <Route path="/p27" component={P27} />
-        <Route component={P404}/>
+        <Route path="/p29" component={P29} />
+        <Route component={P404} />
       </Switch>
     </div>
   );
