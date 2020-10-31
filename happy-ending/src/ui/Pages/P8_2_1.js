@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import classNames from "classnames";
 import useInputs from "../useInputs";
 import SingleTextFieldTemplate from "../Templates/SingleTextFieldTemplate";
@@ -7,14 +7,20 @@ import P8_2_1_Video from "../../assets/videos/8-2-1-stay home alone.mp4";
 import "../../scss/pages.scss";
 
 function P8_2_1({ history }) {
+  const loopVideo = useRef(null);
   const [input, onChange] = useInputs({	
-    homeDoWhat: localStorage.getItem("homeDoWhat") ?? "",	
-    isValidate: false,
+    homeDoAlone: localStorage.getItem("homeDoAlone") ?? "",	
+    isValidate: localStorage.getItem("homeDoAlone")? true : false,
   });
-
+  
   const goBack = () => {
     history.goBack();
   };
+
+  const onEnded = () => {
+    loopVideo.current.currentTime = 2;
+    loopVideo.current.play();
+  }
 
   const data = {
     dq_data: {
@@ -33,8 +39,8 @@ function P8_2_1({ history }) {
         placeHolder: "무엇을 한",
         r_text: ")다.",
         tf_data: {	
-          input: input.homeDoWhat,	
-          name: "homeDoWhat",	
+          input: input.homeDoAlone,	
+          name: "homeDoAlone",	
           onChange,	
         },
       },
@@ -57,7 +63,7 @@ function P8_2_1({ history }) {
 
   return (
     <div className={classNames("Page", "P8-2-1", "bg-video")}>
-      <video autoPlay muted loop>
+      <video autoPlay muted onEnded={onEnded} ref={loopVideo}>
         <source src={P8_2_1_Video} type="video/mp4" />
       </video>
       <button className={classNames("back", "back-gray")} onClick={goBack}></button>

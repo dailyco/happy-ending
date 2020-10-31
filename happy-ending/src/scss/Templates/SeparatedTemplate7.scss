@@ -3,20 +3,6 @@
   padding: 100px;
   text-align: center;
 
-  & .SpanPair {
-    display: flex;
-    justify-content: space-between;
-    & a {
-      width: max-content;
-      & .Span:nth-of-type(1) {
-        margin-left: 110px;
-      }
-      & .Span:nth-of-type(2) {
-        margin-right: 118.5px;
-      }
-    }
-  }
-
   & .H3 {
     height: 33px;
     margin-bottom: 107px;
@@ -25,5 +11,32 @@
   & .P {
     height: 113px;
     margin-bottom: 121.4px;
+  }
+
+  & .SpanPair {
+    display: flex;
+    justify-content: space-between;
+    & .Span:nth-of-type(1) {
+      margin-left: 110px;
+    }
+    & .Span:nth-of-type(2) {
+      margin-right: 118.5px;
+    }
+  }
+
+  & a:nth-of-type(1) {
+    position: absolute;
+    width: 389.5px;
+    height: 418.5px;
+    top: 309px;
+    left: 340.6px;
+  }
+
+  & a:nth-of-type(2) {
+    position: absolute;
+    width: 441.9px;
+    height: 206.3px;
+    top: 439.8px;
+    left: 747.6px;
   }
 }

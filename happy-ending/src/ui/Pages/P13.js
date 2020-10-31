@@ -9,7 +9,7 @@ import "../../scss/pages.scss";
 function P13({ history }) {
   const [input, onChange] = useInputs({
     eraseMoment: localStorage.getItem("eraseMoment") ?? "",
-    isValidate: false,
+    isValidate: localStorage.getItem("eraseMoment")? true : false,
   });
 
   const goBack = () => {
@@ -46,7 +46,7 @@ function P13({ history }) {
     ftfr_style: {
       ftf_style: {
         ftf_style: ["charcoal-black", "weak", "round"],
-        tf_style: ["xl", "normal", "moment"],
+        tf_style: ["xxl", "normal", "moment"],
       },
       button_style: ["xs", "grayish-navy"],
     },

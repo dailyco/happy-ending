@@ -11,7 +11,8 @@ function useInputs(initialInput) {
 
     for (let key in input) {
       if (key !== "isValidate") {
-        if (input[key].length <= 1) {
+        console.log(input[key].length);
+        if (input[key] === "" || input[key].length < 1) {
           setInput(input => ({...input, isValidate: false}));
           break;
         } else {

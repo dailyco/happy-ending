@@ -12,7 +12,8 @@ function P4({ history }) {
     year: localStorage.getItem("year") ?? "",
     month: localStorage.getItem("month") ?? "",
     day: localStorage.getItem("day") ?? "",
-    isValidate: false,
+    isValidate: localStorage.getItem("name")&&localStorage.getItem("year")
+                &&localStorage.getItem("month")&&localStorage.getItem("day")? true : false,
   });
   
   const goBack = () => {

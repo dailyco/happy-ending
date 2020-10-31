@@ -8,7 +8,7 @@ import "../../scss/pages.scss";
 function P21({ history }) {
   const [input, onChange] = useInputs({
     sadMan: localStorage.getItem("sadMan") ?? "",
-    isValidate: false,
+    isValidate: localStorage.getItem("sadMan")? true : false,
   });
   
   const goBack = () => {
@@ -50,7 +50,7 @@ function P21({ history }) {
     ftfr_style: {
       ftf_style: {
         ftf_style: ["white", "weak", "round"],
-        tf_style: ["xl", "normal", "sad-man"],
+        tf_style: ["xxl", "normal", "sad-man"],
       },
       button_style: ["xs", "white", "translucent"],
     },

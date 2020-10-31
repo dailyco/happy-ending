@@ -10,7 +10,7 @@ function P24({ history }) {
   const [inputs, onChange] = useInputs({	
     alias: localStorage.getItem("alias") ?? "",	
     lastWord: localStorage.getItem("lastWord") ?? "",	
-    isValidate: false,
+    isValidate: localStorage.getItem("alias")&&localStorage.getItem("lastWord")? true : false,
   });
   
   const goBack = () => {
@@ -57,7 +57,7 @@ function P24({ history }) {
     },
     gsr_style: {
       gs_style: {
-        tf_style: ["nanum", "s", "extra-bold", "grave-stone"],
+        tf_style: ["nanum", "xl", "extra-bold", "grave-stone"],
         sp1_style: ["nanum", "s", "extra-bold", "eclipse"],
         sp2_style: ["nanum", "s", "extra-bold", "eclipse"],
         ta_style: ["grave"],

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
 import SeparatedTemplate7 from "../Templates/SeparatedTemplate7";
-import P7Vedio from "../../assets/videos/7-break or not.mp4";
+import P7Video from "../../assets/videos/7-break or not.mp4";
+import P7Video_break from "../../assets/videos/7-break.mp4";
 
 import "../../scss/pages.scss";
 
@@ -9,6 +10,18 @@ function P7({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
+  const [video, setVideo] = useState(P7Video);
+
+  const goNext = () => {
+    history.push("/p7_1");
+  };
+
+  const onClick = (e) => {
+    e.preventDefault();
+    setVideo(P7Video_break);
+  };
+
   const data = {
     dq_data: {
       h3_data: {
@@ -26,6 +39,7 @@ function P7({ history }) {
     },
     s1_data: {
       to: "/p7_1",
+      onClick: onClick,
       text: "깨고싶으면 망치를 탭해주세요",
     },
     s2_data: {
@@ -44,9 +58,16 @@ function P7({ history }) {
   };
   return (
     <div className={classNames("Page", "P7", "bg-video", "fade-in")}>
-      <video autoPlay muted loop>
-        <source src={P7Vedio} type="video/mp4" />
-      </video>
+      {video === P7Video && (
+        <video autoPlay muted loop key={video}>
+          <source src={video} type="video/mp4" />
+        </video>
+      )}
+      {video !== P7Video && (
+        <video autoPlay muted key={video} onEnded={goNext}>
+          <source src={video} type="video/mp4" />
+        </video>
+      )}
       <button className={classNames("back", "back-gray")} onClick={goBack}></button>
       <SeparatedTemplate7 data={data} styleName={styleName}></SeparatedTemplate7>
     </div>

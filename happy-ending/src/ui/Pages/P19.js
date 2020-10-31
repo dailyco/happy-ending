@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import classNames from "classnames";
 import useInputs from "../useInputs";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
@@ -7,16 +7,22 @@ import P19Vedio from "../../assets/videos/19-music.mp4";
 import "../../scss/pages.scss";
 
 function P19({ history }) {
+  const loopVideo = useRef(null);
   const [input, onChange] = useInputs({
     song: localStorage.getItem("song") ?? "",
-    isValidate: false,
+    isValidate: localStorage.getItem("song")? true : false,
   });
 
   const goBack = () => {
     history.goBack();
     history.goBack();
   };
-  
+
+  const onEnded = () => {
+    loopVideo.current.currentTime = 2;
+    loopVideo.current.play();
+  }
+
   const data = {
     dq_data: {
       h3_data: {
@@ -47,7 +53,7 @@ function P19({ history }) {
     ftfr_style: {
       ftf_style: {
         ftf_style: ["gray", "strong", "round"],
-        tf_style: ["xl", "normal", "music"],
+        tf_style: ["xxl", "normal", "music"],
       },
       button_style: ["xs", "orange", "music"],
     },
@@ -55,7 +61,7 @@ function P19({ history }) {
 
   return (
     <div className={classNames("Page", "P19", "bg-video", "fade-in")}>
-      <video autoPlay muted loop>
+      <video autoPlay muted onEnded={onEnded} ref={loopVideo}>
         <source src={P19Vedio} type="video/mp4" />
       </video>
       <button className={classNames("back", "back-gray")} onClick={goBack}></button>

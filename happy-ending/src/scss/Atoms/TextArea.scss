@@ -1,29 +1,43 @@
 @import "../colors.scss";
 
-@mixin placeholder($color) {
+@mixin placeholder-color($color) {
   &::-webkit-input-placeholder {
     color: $color;
-    text-align: center;
   }
 
   &::-moz-placeholder {
     color: $color;
-    text-align: center;
   }
 
   &::-ms-placeholder {
     color: $color;
-    text-align: center;
   }
 
   &::placeholder {
     color: $color;
-    text-align: center;
+  }
+}
+
+@mixin placeholder-align($alignment) {
+  &::-webkit-input-placeholder {
+    text-align: $alignment;
+  }
+
+  &::-moz-placeholder {
+    text-align: $alignment;
+  }
+
+  &::-ms-placeholder {
+    text-align: $alignment;
+  }
+
+  &::placeholder {
+    text-align: $alignment;
   }
 }
 
 @mixin init-placeholder($color) {
-  @include placeholder($color);
+  @include placeholder-color($color);
 
   &:focus::-webkit-input-placeholder {
     color: transparent;
@@ -58,7 +72,7 @@
     height: 119px;
     font-size: 20px;
     color: $eclipse;
-    line-height: 2.15;
+    line-height: 1.5;
     letter-spacing: -0.2px;
     margin: 14.5px 0 20.6px;
     padding: 11.4px 15px 18.6px 13px;
@@ -67,6 +81,7 @@
   }
 
   &.grave {
+    @include placeholder-align(center);
     font-family: "Nanum Myeongjo";
     background-color: transparent;
     text-align: center;

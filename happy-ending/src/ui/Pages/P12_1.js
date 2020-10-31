@@ -7,8 +7,8 @@ import "../../scss/pages.scss";
 
 function P12_1({ history }) {
   const [input, onChange] = useInputs({
-    happyMoment: localStorage.getItem("happyMoment") ?? "",
-    isValidate: false,
+    travelHappyMoment: localStorage.getItem("travelHappyMoment") ?? "",
+    isValidate: localStorage.getItem("travelHappyMoment")? true : false,
   });
   
   const goBack = () => {
@@ -35,8 +35,8 @@ function P12_1({ history }) {
       validate: input.isValidate,
       ftf_data: {
         tf_data: {
-          input: input.happyMoment,
-          name: "happyMoment",
+          input: input.travelHappyMoment,
+          name: "travelHappyMoment",
           onChange: onChange,
         },
       },
@@ -51,7 +51,7 @@ function P12_1({ history }) {
     ftfr_style: {
       ftf_style: {
         ftf_style: ["cocoa", "weak", "round"],
-        tf_style: ["xl", "normal", "moment"],
+        tf_style: ["xxl", "normal", "moment"],
       },
       button_style: ["xs", "cocoa"],
     },

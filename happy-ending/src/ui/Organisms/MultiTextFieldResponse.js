@@ -7,7 +7,7 @@ import MultiTextFieldSentence from "../Molecules/MultiTextFieldSentence";
 import "../../scss/validate.scss";
 
 function MultiTextFieldResponse({ data, styleName }) {
-  const { to, validate, mtfs_data } = data;
+  const { to, validate, setVideo, mtfs_data } = data;
   const { mtfs_style, btn_style } = styleName;
   const v_component = useRef(null);
 
@@ -15,8 +15,14 @@ function MultiTextFieldResponse({ data, styleName }) {
     if (!validate) {
       v_component.current.classList.add("validate");
       e.preventDefault();
+      e.stopPropagation();
     } else {
       v_component.current.classList.remove("validate");
+      if (!to) {
+        e.preventDefault();
+        e.stopPropagation();
+        setVideo();
+      }
     }
   }
 
@@ -25,9 +31,19 @@ function MultiTextFieldResponse({ data, styleName }) {
       <div className={classNames("check-validate")} ref={v_component}>
         <MultiTextFieldSentence data={mtfs_data} styleName={mtfs_style}></MultiTextFieldSentence>
       </div>
-      <Link to={to}>
+      <Link to={to? to : ""}>
         <Button styleName={btn_style} onClick={onClick}>확인</Button>
       </Link>
+      {/* {to && (
+        <Link to={to}>
+          <Button styleName={btn_style}>확인</Button>
+        </Link>
+      )}
+      {!to && (
+        <Button styleName={btn_style} onClick={onClick}>
+          확인
+        </Button>
+      )} */}
     </div>
   );
 }
