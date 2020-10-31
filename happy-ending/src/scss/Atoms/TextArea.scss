@@ -1,11 +1,43 @@
 @import "../colors.scss";
 
-.TextArea {
-  resize: none;
-  border: none;
-  font-stretch: normal;
-  font-style: normal;
-  outline: none;
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+  }
+
+  &::-ms-placeholder {
+    color: $color;
+  }
+
+  &::placeholder {
+    color: $color;
+  }
+}
+
+@mixin placeholder-align($alignment) {
+  &::-webkit-input-placeholder {
+    text-align: $alignment;
+  }
+
+  &::-moz-placeholder {
+    text-align: $alignment;
+  }
+
+  &::-ms-placeholder {
+    text-align: $alignment;
+  }
+
+  &::placeholder {
+    text-align: $alignment;
+  }
+}
+
+@mixin init-placeholder($color) {
+  @include placeholder-color($color);
 
   &:focus::-webkit-input-placeholder {
     color: transparent;
@@ -22,22 +54,15 @@
   &:focus::placeholder {
     color: transparent;
   }
+}
 
-  &::-webkit-input-placeholder {
-    color: $dark-gray;
-  }
-
-  &::-moz-placeholder {
-    color: $dark-gray;
-  }
-
-  &::-ms-placeholder {
-    color: $dark-gray;
-  }
-
-  &::placeholder {
-    color: $dark-gray;
-  }
+.TextArea {
+  @include init-placeholder($dark-gray);
+  resize: none;
+  border: none;
+  font-stretch: normal;
+  font-style: normal;
+  outline: none;
 
   &.item {
     font-family: "Noto Sans KR";
@@ -56,6 +81,7 @@
   }
 
   &.grave {
+    @include placeholder-align(center);
     font-family: "Nanum Myeongjo";
     background-color: transparent;
     text-align: center;
@@ -66,21 +92,5 @@
     font-weight: 800;
     line-height: 1.64;
     letter-spacing: -0.22px;
-
-    &::-webkit-input-placeholder {
-      text-align: center;
-    }
-
-    &::-moz-placeholder {
-      text-align: center;
-    }
-
-    &::-ms-placeholder {
-      text-align: center;
-    }
-
-    &::placeholder {
-      text-align: center;
-    }
   }
 }

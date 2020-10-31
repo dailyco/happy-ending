@@ -13,6 +13,7 @@ function P8_1_2({ history }) {
   const [inputs, onChange] = useInputs({	
     travelWithWho: localStorage.getItem("travelWithWho") ?? "",	
     travelToWith: localStorage.getItem("travelToWith") ?? "",	
+    isValidate: localStorage.getItem("travelWithWho")&&localStorage.getItem("travelToWith")? true : false,
   });
 
   const goBack = () => {
@@ -45,7 +46,8 @@ function P8_1_2({ history }) {
     },
     mtfr_data: {
       to: false,
-      onClick: onClick,
+      setVideo: onClick,
+      validate: inputs.isValidate,
       mtfs_data: {
         l_text: "3일간의 여행을 (",
         ph1: "누구",

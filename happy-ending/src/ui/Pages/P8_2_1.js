@@ -10,6 +10,7 @@ function P8_2_1({ history }) {
   const loopVideo = useRef(null);
   const [input, onChange] = useInputs({	
     homeDoAlone: localStorage.getItem("homeDoAlone") ?? "",	
+    isValidate: localStorage.getItem("homeDoAlone")? true : false,
   });
   
   const goBack = () => {
@@ -32,6 +33,7 @@ function P8_2_1({ history }) {
     },
     stfr_data: {
       to: "/p9_2",
+      validate: input.isValidate,
       stfs_data: {
         l_text: "집에서 (",
         placeHolder: "무엇을 한",

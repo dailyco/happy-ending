@@ -8,6 +8,18 @@ function useInputs(initialInput) {
     setInput(input => ({ ...input, [name]: value }));
     localStorage.setItem(name, value);
     console.log(localStorage);
+
+    for (let key in input) {
+      if (key !== "isValidate") {
+        console.log(input[key].length);
+        if (input[key] === "" || input[key].length < 1) {
+          setInput(input => ({...input, isValidate: false}));
+          break;
+        } else {
+          setInput(input => ({...input, isValidate: true}));
+        }
+      }
+    }
   };
 
   return [ input, onChange ];

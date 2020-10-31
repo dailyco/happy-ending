@@ -6,15 +6,16 @@ import MultiTextFieldTemplate from "../Templates/MultiTextFieldTemplate";
 import "../../scss/pages.scss";
 
 function P8_2_2({ history }) {
-  const goBack = () => {
-    history.goBack();
-  };
-
   const [inputs, onChange] = useInputs({	
     homeWithWho: localStorage.getItem("homeWithWho") ?? "",	
     homeDoWith: localStorage.getItem("homeDoWith") ?? "",	
+    isValidate: localStorage.getItem("homeWithWho")&&localStorage.getItem("homeDoWith")? true : false,
   });
-
+  
+  const goBack = () => {
+    history.goBack();
+  };
+  
   const data = {
     dq_data: {
       h3_data: {
@@ -26,6 +27,7 @@ function P8_2_2({ history }) {
     },
     mtfr_data: {
       to: "/p9_2",
+      validate: inputs.isValidate,
       mtfs_data: {
         l_text: "집에서 (",
         ph1: "누구",

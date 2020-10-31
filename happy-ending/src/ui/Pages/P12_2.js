@@ -6,13 +6,14 @@ import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 import "../../scss/pages.scss";
 
 function P12_2({ history }) {
+  const [input, onChange] = useInputs({
+    homeHappyMoment: localStorage.getItem("homeHappyMoment") ?? "",
+    isValidate: localStorage.getItem("homeHappyMoment")? true : false,
+  });
+  
   const goBack = () => {
     history.goBack();
   };
-
-  const [input, onChange] = useInputs({
-    homeHappyMoment: localStorage.getItem("homeHappyMoment") ?? "",
-  });
 
   const data = {
     dq_data: {
@@ -31,6 +32,7 @@ function P12_2({ history }) {
     },
     ftfr_data: {
       to: "/p13",
+      validate: input.isValidate,
       ftf_data: {
         tf_data: {
           input: input.homeHappyMoment,

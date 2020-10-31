@@ -10,6 +10,7 @@ function P19({ history }) {
   const loopVideo = useRef(null);
   const [input, onChange] = useInputs({
     song: localStorage.getItem("song") ?? "",
+    isValidate: localStorage.getItem("song")? true : false,
   });
 
   const goBack = () => {
@@ -33,6 +34,7 @@ function P19({ history }) {
     },
     ftfr_data: {
       to: "/p20",
+      validate: input.isValidate,
       ftf_data: {
         tf_data: {
           input: input.song,

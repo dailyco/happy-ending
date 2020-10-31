@@ -1,3 +1,5 @@
+@import "./colors.scss";
+
 @mixin fade-in-delay($delay) {
   animation: fade-in 2s linear $delay, non-visibility $delay;
 }

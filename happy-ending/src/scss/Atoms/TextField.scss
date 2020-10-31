@@ -1,38 +1,41 @@
 @import "../colors.scss";
 
-@mixin placeholder-color($ph-color, $txt-color) {
-  color: $txt-color;
-
-  &:focus::-webkit-input-placeholder {
-    color: transparent;
-  }
-
-  &:focus::-moz-placeholder {
-    color: transparent;
-  }
-
-  &:focus::-ms-placeholder {
-    color: transparent;
-  }
-
-  &:focus::placeholder {
-    color: transparent;
-  }
-
+@mixin placeholder($color) {
   &::-webkit-input-placeholder {
-    color: $ph-color;
+    color: $color;
   }
 
   &::-moz-placeholder {
-    color: $ph-color;
+    color: $color;
   }
 
   &::-ms-placeholder {
-    color: $ph-color;
+    color: $color;
   }
 
   &::placeholder {
-    color: $ph-color;
+    color: $color;
+  }
+}
+
+@mixin placeholder-color($ph-color, $txt-color) {
+  color: $txt-color;
+  @include placeholder($ph-color);
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent !important;
+  }
+
+  &:focus::-moz-placeholder {
+    color: transparent !important;
+  }
+
+  &:focus::-ms-placeholder {
+    color: transparent !important;
+  }
+
+  &:focus::placeholder {
+    color: transparent !important;
   }
 }
 

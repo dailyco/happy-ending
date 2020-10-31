@@ -6,13 +6,14 @@ import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 import "../../scss/pages.scss";
 
 function P21({ history }) {
+  const [input, onChange] = useInputs({
+    sadMan: localStorage.getItem("sadMan") ?? "",
+    isValidate: localStorage.getItem("sadMan")? true : false,
+  });
+  
   const goBack = () => {
     history.goBack();
   };
-
-  const [input, onChange] = useInputs({
-    sadMan: localStorage.getItem("sadMan") ?? "",
-  });
 
   const data = {
     dq_data: {
@@ -30,6 +31,7 @@ function P21({ history }) {
     },
     ftfr_data: {
       to: "/p22",
+      validate: input.isValidate,
       ftf_data: {
         tf_data: {
           input: input.sadMan,

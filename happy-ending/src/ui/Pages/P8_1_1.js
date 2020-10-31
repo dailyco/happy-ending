@@ -12,6 +12,7 @@ function P8_1_1({ history }) {
   const [video, setVideo] = useState(P8_1_1_Video);
   const [input, onChange] = useInputs({	
     travelToAlone: localStorage.getItem("travelToAlone") ?? "",	
+    isValidate: localStorage.getItem("travelToAlone")? true : false,
   });
 
   const goBack = () => {
@@ -32,7 +33,7 @@ function P8_1_1({ history }) {
   const onClick = () => {
     setVideo(P8_1_1_Video_tran);
   };
-
+  
   const data = {
     dq_data: {
       h3_data: {
@@ -44,7 +45,8 @@ function P8_1_1({ history }) {
     },
     stfr_data: {
       to: false,
-      onClick: onClick,
+      setVideo: onClick,
+      validate: input.isValidate,
       stfs_data: {
         l_text: "3일간의 여행을 혼자 (",
         placeHolder: "어디",
