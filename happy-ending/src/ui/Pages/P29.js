@@ -3,6 +3,8 @@ import SeparatedTemplate29 from "../Templates/SeparatedTemplate29";
 import classNames from "classnames";
 import END from "../../assets/images/29p_images/29 The end.png";
 import AND from "../../assets/images/29p_images/29 And.png";
+import PrintIcon from "../../assets/icons/29-printer-7575.svg";
+import HomeIcon from "../../assets/icons/29-home7575.svg";
 
 import "../../scss/pages.scss";
 
@@ -76,7 +78,7 @@ function P29() {
       writer: name + "의",
       lastPage: "마지막페이지",
     },
-    left_page_date: {
+    l_paras_data: {
       img: END,
       paragraph1: {
         header: name + "의 묘",
@@ -102,7 +104,7 @@ function P29() {
         ),
       },
     },
-    right_page_data: {
+    r_paras_data: {
       img: AND,
       paragraph1: {
         header: "가장 소중한 사람",
@@ -125,12 +127,70 @@ function P29() {
       },
     },
     detailed_buttons_data: {
-      print_button_data: "인쇄하기",
-      home_button_data: "홈으로",
+      print_button_data: {
+        icon: {
+          alt: "print-icon",
+          src: PrintIcon,
+        },
+        span_data: "인쇄하기",
+      },
+      home_button_data: {
+        icon: {
+          alt: "home-icon",
+          src: HomeIcon,
+        },
+        span_data: "홈으로",
+      },
     },
   };
 
-  const styleName = {};
+  const styleName = {
+    tp_style: [],
+    title_style: {
+      writer_style: ["title", "writer"],
+      lastPage_style: ["title", "lastPage"],
+    },
+    l_paras_style: {
+      para1_style: {
+        head_style: ["para", "head"],
+        body_style: ["para", "body", "h3"],
+      },
+      para2_style: {
+        head_style: ["para", "head"],
+        body_style: ["para", "body", "h1"],
+      },
+      para3_style: {
+        head_style: ["para", "head"],
+        body_style: ["para", "body", "h1"],
+      },
+    },
+    r_paras_style: {
+      para1_style: {
+        head_style: ["para", "head"],
+        body_style: ["para", "body", "h3"],
+      },
+      para2_style: {
+        head_style: ["para", "head"],
+        body_style: ["para", "body", "h2"],
+      },
+      para3_style: {
+        head_style: ["para", "head"],
+        body_style: ["para", "body", "h2"],
+      },
+    },
+    detailed_buttons_style: {
+      print_button_style: {
+        button_style: ["circle", "lastPage"],
+        icon_style: ["print"],
+        span_style: [],
+      },
+      home_button_style: {
+        button_style: ["circle", "lastPage"],
+        icon_style: ["home"],
+        span_style: [],
+      },
+    },
+  };
 
   return (
     <div className={classNames("Page", "P29")}>

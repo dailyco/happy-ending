@@ -6,15 +6,16 @@ import DetailedButtons from "../Organisms/DetailedButtons";
 import classNames from "classnames";
 
 function SeparatedTemplate29({ data, styleName }) {
-  const { deco_data, title_data, left_page_date, right_page_data, detailed_buttons_data } = data;
+  const { deco_data, title_data, l_paras_data, r_paras_data, detailed_buttons_data } = data;
+  const { tp_style, title_style, l_paras_style, r_paras_style, detailed_buttons_style } = styleName;
 
   return (
-    <div className={classNames("SeparatedTemplate29")}>
+    <div className={classNames("SeparatedTemplate29", tp_style)}>
       <Decorations data={deco_data}></Decorations>
-      <Title data={title_data}></Title>
-      <Paragraphs data={left_page_date}></Paragraphs>
-      <Paragraphs data={right_page_data}></Paragraphs>
-      <DetailedButtons data={detailed_buttons_data}></DetailedButtons>
+      <Title data={title_data} styleName={title_style}></Title>
+      <Paragraphs data={l_paras_data} styleName={l_paras_style}></Paragraphs>
+      <Paragraphs data={r_paras_data} styleName={r_paras_style}></Paragraphs>
+      <DetailedButtons data={detailed_buttons_data} styleName={detailed_buttons_style}></DetailedButtons>
     </div>
   );
 }

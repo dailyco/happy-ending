@@ -141,6 +141,12 @@
     width: 72.7px;
     height: 72.7px;
     border-radius: 50%;
+
+    &.lastPage {
+      width : 75px;
+      height : 75px;
+      background : #bbbbb7;
+    }
   }
 
   // item
