@@ -41,7 +41,6 @@ function P17({ history }) {
     },
     flowers: [
       {
-        id: 1,
         image: F1,
         shadow: SD1,
         glow: GW1,
@@ -49,7 +48,6 @@ function P17({ history }) {
         alt: "rose",
       },
       {
-        id: 2,
         image: F2,
         shadow: SD2,
         glow: GW2,
@@ -57,7 +55,6 @@ function P17({ history }) {
         alt: "freesia",
       },
       {
-        id: 3,
         image: F3,
         shadow: SD3,
         glow: GW3,
@@ -65,7 +62,6 @@ function P17({ history }) {
         alt: "babyBreath",
       },
       {
-        id: 4,
         image: F4,
         shadow: SD4,
         glow: GW4,
@@ -73,7 +69,6 @@ function P17({ history }) {
         alt: "tulip",
       },
       {
-        id: 5,
         image: F5,
         shadow: SD5,
         glow: GW5,
