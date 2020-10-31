@@ -31,8 +31,30 @@
             position : absolute;
 
             &.flower {
-                top : 505px;
-                left : 0px;
+                &[alt="rose"] {
+                    top : 570px;
+                    left : 0px;
+                }
+
+                &[alt="tulip"] {
+                    top : 570px;
+                    left : -20px;
+                }
+
+                &[alt="freesia"] {
+                    top : 540px;
+                    left : -20px;
+                }
+
+                &[alt="babyBreath"] {
+                    top : 505px;
+                    left : 0px;
+                }
+
+                &[alt="mum"] {
+                    top : 560px;
+                    left : -30px;
+                }
             }
 
             &.rain {
