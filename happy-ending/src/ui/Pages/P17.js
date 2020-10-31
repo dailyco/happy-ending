@@ -1,17 +1,21 @@
 import React from "react";
 import classNames from "classnames";
 import SeparatedTemplate17 from "../Templates/SeparatedTemplate17";
-// import Window from "../../assets/images/bg_images/17-Window.png";
 import F1 from "../../assets/images/17p_images/1F.png";
 import SD1 from "../../assets/images/17p_images/1SD.png";
+import GW1 from "../../assets/images/17p_images/1GW.png";
 import F2 from "../../assets/images/17p_images/2F.png";
 import SD2 from "../../assets/images/17p_images/2SD.png";
+import GW2 from "../../assets/images/17p_images/2GW.png";
 import F3 from "../../assets/images/17p_images/3F.png";
 import SD3 from "../../assets/images/17p_images/3SD.png";
+import GW3 from "../../assets/images/17p_images/3GW.png";
 import F4 from "../../assets/images/17p_images/4F.png";
 import SD4 from "../../assets/images/17p_images/4SD.png";
+import GW4 from "../../assets/images/17p_images/4GW.png";
 import F5 from "../../assets/images/17p_images/5F.png";
 import SD5 from "../../assets/images/17p_images/5SD.png";
+import GW5 from "../../assets/images/17p_images/5GW.png";
 
 import "../../scss/pages.scss";
 
@@ -19,11 +23,8 @@ function P17({ history }) {
   const goBack = () => {
     history.goBack();
   };
+
   const data = {
-    // bg_data: {
-    //   image: Window,
-    //   alt: "window",
-    // },
     dq_data: {
       h3_data: {
         day: 3,
@@ -38,30 +39,40 @@ function P17({ history }) {
         ),
       },
     },
-    imgs: [
+    flowers: [
       {
         image: F1,
-        shadow : SD1,
+        shadow: SD1,
+        glow: GW1,
+        active: false,
         alt: "rose",
       },
       {
         image: F2,
-        shadow : SD2,
+        shadow: SD2,
+        glow: GW2,
+        active: false,
         alt: "freesia",
       },
       {
         image: F3,
-        shadow : SD3,
+        shadow: SD3,
+        glow: GW3,
+        active: false,
         alt: "babyBreath",
       },
       {
         image: F4,
-        shadow : SD4,
+        shadow: SD4,
+        glow: GW4,
+        active: false,
         alt: "tulip",
       },
       {
         image: F5,
-        shadow : SD5,
+        shadow: SD5,
+        glow: GW5,
+        active: false,
         alt: "mum",
       },
     ],
@@ -76,7 +87,7 @@ function P17({ history }) {
 
   return (
     <div className={classNames("Page", "P17", "fade-in")}>
-      <SeparatedTemplate17 data={data} styleName={styleName}></SeparatedTemplate17>
+      <SeparatedTemplate17 data={data} styleName={styleName} history={history}></SeparatedTemplate17>
       <button className={classNames("back", "back-gray")} onClick={goBack}></button>
     </div>
   );
