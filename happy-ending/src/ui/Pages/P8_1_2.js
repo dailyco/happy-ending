@@ -11,8 +11,8 @@ function P8_1_2({ history }) {
   const loopVideo = useRef(null);
   const [video, setVideo] = useState(P8_1_2_Video);
   const [inputs, onChange] = useInputs({	
-    travelWith: localStorage.getItem("travelWith") ?? "",	
-    travelTo: localStorage.getItem("travelTo") ?? "",	
+    travelWithWho: localStorage.getItem("travelWithWho") ?? "",	
+    travelToWith: localStorage.getItem("travelToWith") ?? "",	
   });
 
   const goBack = () => {
@@ -53,13 +53,13 @@ function P8_1_2({ history }) {
         ph2: "어디",
         r_text: ")(으)로 떠난다.",
         tf1_data: {
-          input1: inputs.travelWith,
-          name1: "travelWith",
+          input1: inputs.travelWithWho,
+          name1: "travelWithWho",
           onChange1: onChange,
         },
         tf2_data: {
-          input2: inputs.travelTo,
-          name2: "travelTo",
+          input2: inputs.travelToWith,
+          name2: "travelToWith",
           onChange2: onChange,
         },
       },

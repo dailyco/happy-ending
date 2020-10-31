@@ -11,8 +11,8 @@ function P8_2_2({ history }) {
   };
 
   const [inputs, onChange] = useInputs({	
+    homeWithWho: localStorage.getItem("homeWithWho") ?? "",	
     homeDoWith: localStorage.getItem("homeDoWith") ?? "",	
-    homeDoWhat: localStorage.getItem("homeDoWhat") ?? "",	
   });
 
   const data = {
@@ -33,13 +33,13 @@ function P8_2_2({ history }) {
         ph2: "무엇을 한",
         r_text: ")다.",
         tf1_data: {	
-          input1: inputs.homeDoWith,	
-          name1: "homeDoWith",	
+          input1: inputs.homeWithWho,	
+          name1: "homeWithWho",	
           onChange1: onChange,	
         },	
         tf2_data: {	
-          input2: inputs.homeDoWhat,	
-          name2: "homeDoWhat",	
+          input2: inputs.homeDoWith,	
+          name2: "homeDoWith",	
           onChange2: onChange,	
         },
       },
