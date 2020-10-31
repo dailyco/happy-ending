@@ -30,31 +30,76 @@
 
   & .Img[alt="rose"] {
     position: absolute;
-    top: 501.9px;
-    left: 196px;
+    top: 441.9px;
+    left: 86px;
+
+    & + a {
+      position : absolute;
+      width : 284px;
+      height : 628px;
+      top : 452px;
+      left : 174px;
+      z-index: 1;
+    }
   }
 
   & .Img[alt="freesia"] {
     position: absolute;
-    top: 305.7px;
-    left: 410.9px;
+    top: 235.7px;
+    left: 290.9px;
+
+    & + a {
+      position : absolute;
+      width: 332px;
+      height: 488px;
+      top : 313px;
+      left : 458px;
+      z-index: 1;
+    }
   }
 
   & .Img[alt="babyBreath"] {
     position: absolute;
-    top: 446.4px;
-    left: 776.1px;
+    top: 386.4px;
+    left: 666.1px;
+
+    & + a {
+      position : absolute;
+      width: 376px;
+      height: 586px;
+      top : 454px;
+      left : 794px;
+      z-index: 1;
+    }
   }
 
   & .Img[alt="tulip"] {
     position: absolute;
-    top: 346.3px;
-    left: 1184.6px;
+    top: 296.3px;
+    left: 1004.6px;
+
+    & + a {
+      position : absolute;
+      width: 324px;
+      height: 589px;
+      top : 326px;
+      left : 1146px;
+      z-index: 1;
+    }
   }
 
   & .Img[alt="mum"] {
     position: absolute;
-    top: 500.7px;
-    left: 1525.3px;
+    top: 360.7px;
+    left: 1325.3px;
+
+    & + a {
+      position : absolute;
+      width: 324px;
+      height: 589px;
+      top : 452px;
+      left : 1504px;
+      z-index: 1;
+    }
   }
 }
