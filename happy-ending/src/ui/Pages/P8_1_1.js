@@ -11,7 +11,7 @@ function P8_1_1({ history }) {
   const loopVideo = useRef(null);
   const [video, setVideo] = useState(P8_1_1_Video);
   const [input, onChange] = useInputs({	
-    travelTo: localStorage.getItem("travelTo") ?? "",	
+    travelToAlone: localStorage.getItem("travelToAlone") ?? "",	
   });
 
   const goBack = () => {
@@ -50,8 +50,8 @@ function P8_1_1({ history }) {
         placeHolder: "어디",
         r_text: ")(으)로 떠난다.",
         tf_data: {
-          input: input.travelTo,
-          name: "travelTo",
+          input: input.travelToAlone,
+          name: "travelToAlone",
           onChange: onChange,
         },
       },

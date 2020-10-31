@@ -9,7 +9,7 @@ import "../../scss/pages.scss";
 function P8_2_1({ history }) {
   const loopVideo = useRef(null);
   const [input, onChange] = useInputs({	
-    homeDoWhat: localStorage.getItem("homeDoWhat") ?? "",	
+    homeDoAlone: localStorage.getItem("homeDoAlone") ?? "",	
   });
   
   const goBack = () => {
@@ -37,8 +37,8 @@ function P8_2_1({ history }) {
         placeHolder: "무엇을 한",
         r_text: ")다.",
         tf_data: {	
-          input: input.homeDoWhat,	
-          name: "homeDoWhat",	
+          input: input.homeDoAlone,	
+          name: "homeDoAlone",	
           onChange,	
         },
       },

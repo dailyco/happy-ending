@@ -11,7 +11,7 @@ function P12_2({ history }) {
   };
 
   const [input, onChange] = useInputs({
-    happyMoment: localStorage.getItem("happyMoment") ?? "",
+    homeHappyMoment: localStorage.getItem("homeHappyMoment") ?? "",
   });
 
   const data = {
@@ -33,8 +33,8 @@ function P12_2({ history }) {
       to: "/p13",
       ftf_data: {
         tf_data: {
-          input: input.happyMoment,
-          name: "happyMoment",
+          input: input.homeHappyMoment,
+          name: "homeHappyMoment",
           onChange: onChange,
         },
       },
