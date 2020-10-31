@@ -1,0 +1,103 @@
+.SeparatedTemplate29 {
+    position : relative;
+    box-sizing : border-box;
+    padding-top : 177px;
+    padding-right : 173px;
+    padding-bottom : 300px;
+    padding-left : 414px;
+    text-align : left;
+
+    & .Decorations {
+        & .Selfie {
+            & img:nth-child(1) {
+                position : absolute;
+                top : 299px;
+                left : 78px;
+            }
+            & img:nth-child(2) {
+                position : absolute;
+                top : 330px;
+                left : 106px;
+            }
+            & img:nth-child(3) {
+                position : absolute;
+                top : 345px;
+                left : 123px;
+                transform : rotate(3.25deg);
+            }
+        }
+
+        & img {
+            position : absolute;
+
+            &.flower {
+                top : 505px;
+                left : 0px;
+            }
+
+            &.rain {
+                top : -25px;
+                left : 1413px;
+            }
+
+            &.travel,
+            &.home {
+                top : 87px;
+                left : 1618px;
+
+            }
+
+            &.letter {
+                top : 707px;
+                left : 1393px;
+            }   
+        }
+    }
+
+    & .contents {
+        display : flex;
+        margin-top : 57px;
+        
+        & .Paragraphs {
+            display : flex;
+            align-items: flex-start;
+
+            &:nth-of-type(1) {
+                margin-right : 136px;
+            }
+
+            &:nth-of-type(2) {
+                margin-right : 187px;
+            }
+
+            & img {
+                margin-right : 39px;
+            }
+        }
+    }
+    
+    & .DetailedButtons {
+        display : flex;
+        flex-direction: column;
+
+        & .DetailedButton {
+            &:nth-of-type(1) {
+                margin-top: 140px;
+            }
+
+            &:nth-of-type(2) {
+                margin-top: 27px;
+            }
+
+            & .Icon {
+                margin-top : 5px;
+            }
+
+            & span {
+                display : block;
+                text-align : center;
+                margin-top : 9px;
+            }
+        }
+    }
+}

@@ -9,7 +9,7 @@ function Selfie({ data, styleName }) {
     <div className={classNames("Selfie")}>
       <Img image={cover_outside} alt="cover-outside"></Img>
       <Img image={cover_inside} alt="cover-inside"></Img>
-      <Img image={data} alt="selfie"></Img>
+      <Img image={data} alt="selfie" styleName="selfie"></Img>
     </div>
   );
 }

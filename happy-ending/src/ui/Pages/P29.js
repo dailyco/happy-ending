@@ -151,6 +151,7 @@ function P29() {
       lastPage_style: ["title", "lastPage"],
     },
     l_paras_style: {
+      img_style: "end",
       para1_style: {
         head_style: ["para", "head"],
         body_style: ["para", "body", "h3"],
@@ -165,6 +166,7 @@ function P29() {
       },
     },
     r_paras_style: {
+      img_style: "and",
       para1_style: {
         head_style: ["para", "head"],
         body_style: ["para", "body", "h3"],

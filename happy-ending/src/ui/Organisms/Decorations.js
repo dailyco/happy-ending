@@ -19,18 +19,18 @@ function Decorations({ data, styleName }) {
     <div className={classNames("Decorations")}>
       <Selfie data={selfie}></Selfie>
 
-      {flower === "rose" && <Img image={Rose} alt="rose"></Img>}
-      {flower === "tulip" && <Img image={Tulip} alt="tulip"></Img>}
-      {flower === "freesia" && <Img image={Freesia} alt="freesia"></Img>}
-      {flower === "babyBreath" && <Img image={BabyBreath} alt="babyBreath"></Img>}
-      {flower === "mum" && <Img image={Mum} alt="mum"></Img>}
+      {flower === "rose" && <Img image={Rose} alt="rose" styleName="flower"></Img>}
+      {flower === "tulip" && <Img image={Tulip} alt="tulip" styleName="flower"></Img>}
+      {flower === "freesia" && <Img image={Freesia} alt="freesia" styleName="flower"></Img>}
+      {flower === "babyBreath" && <Img image={BabyBreath} alt="babyBreath" styleName="flower"></Img>}
+      {flower === "mum" && <Img image={Mum} alt="mum" styleName="flower"></Img>}
 
-      <Img image={Rain} alt="rain"></Img>
+      <Img image={Rain} alt="rain" styleName="rain"></Img>
 
-      {travelOrHome === "travel" && <Img image={Travel} alt="travel"></Img>}
-      {travelOrHome === "home" && <Img image={Home} alt="home"></Img>}
+      {travelOrHome === "travel" && <Img image={Travel} alt="travel" styleName="travel"></Img>}
+      {travelOrHome === "home" && <Img image={Home} alt="home" styleName="home"></Img>}
 
-      <Img image={Letter} alt="letter"></Img>
+      <Img image={Letter} alt="letter" styleName="letter"></Img>
     </div>
   );
 }
