@@ -8,17 +8,17 @@ import P17Video from "../../assets/videos/17_front.mp4";
 import "../../scss/Templates/SeparatedTemplate17.scss";
 
 function SeparatedTemplate17({ data, styleName, history }) {
-  const { dq_data, constrasts, flowers } = data;
+  const { dq_data, flowers } = data;
   const { tp_style, dq_style } = styleName;
 
-  const [cstras, setCstras] = useState(constrasts);
+  const [constrasts, setConstrasts] = useState(flowers);
 
   const onClick = (e) => {
     e.preventDefault();
 
     const flowerName = e.target.id;
 
-    setCstras(cstras.map((constrast) => (constrast.alt === flowerName ? { ...constrast, active: !constrast.active } : constrast)));
+    setConstrasts(constrasts.map((constrast) => (constrast.alt === flowerName ? { ...constrast, active: !constrast.active } : constrast)));
 
     localStorage.setItem("flower", flowerName);
     console.log(localStorage);
@@ -33,15 +33,12 @@ function SeparatedTemplate17({ data, styleName, history }) {
       <video autoPlay muted>
         <source src={P17Video} type="video/mp4" />
       </video>
-      {cstras.map((contrast, idx) => (
-        <Img image={contrast.active ? contrast.glow : contrast.shadow} alt={contrast.alt} key={contrast.id}></Img>
-      ))}
-
       {flowers.map((flower, idx) => (
-        <>
-          <Img image={flower.image} alt={flower.alt} key={flower.id}></Img>
+        <div key={idx}>
+          <Img image={flower.active ? flower.glow : flower.shadow} alt={flower.alt}></Img>
+          <Img image={flower.image} alt={flower.alt}></Img>
           <Link to={"/p18"} id={flower.alt} onClick={onClick}></Link>
-        </>
+        </div>
       ))}
 
       <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
