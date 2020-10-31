@@ -51,7 +51,7 @@ function P19({ history }) {
     ftfr_style: {
       ftf_style: {
         ftf_style: ["gray", "strong", "round"],
-        tf_style: ["xl", "normal", "music"],
+        tf_style: ["xxl", "normal", "music"],
       },
       button_style: ["xs", "orange", "music"],
     },
