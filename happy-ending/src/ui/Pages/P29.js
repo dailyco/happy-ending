@@ -21,33 +21,35 @@ function P29() {
 
   const makeRestText = (choice) => {
     let restText = "";
-    const travelTo = localStorage.getItem("travelTo") ?? "";
-    const travelWith = localStorage.getItem("travelWith") ?? "";
-    const homeDoWhat = localStorage.getItem("homeDoWhat") ?? "";
-    const homeDoWith = localStorage.getItem("homeDoWith") ?? "";
+    const travelToAlone = localStorage.getItem("travelToAlone") ?? "";
+    const travelWithTo = localStorage.getItem("travelWithTo") ?? "";
+    const travelWithWho = localStorage.getItem("travelWithWho") ?? "";
+    const homeDoAlone = localStorage.getItem("homeDoAlone") ?? "";
+    const homeWithWho = localStorage.getItem("homeWithWho") ?? "";
+    const homeWithDo = localStorage.getItem("homeWithDo") ?? "";
 
     if (choice === "travel_alone")
       restText =
-        travelTo + "(으)로 혼자 여행을 떠나고 싶어했던 당신, 잠시 모든걸 내려놓고 혼자 여행을 떠나보는건 어떤가요? 새로운 곳에서의 신선한 경험들은 길었던 당신의 일상에 쉼표가 되어줄 것입니다.";
+        travelToAlone + "(으)로 혼자 여행을 떠나고 싶어했던 당신, 잠시 모든걸 내려놓고 혼자 여행을 떠나보는건 어떤가요? 새로운 곳에서의 신선한 경험들은 길었던 당신의 일상에 쉼표가 되어줄 것입니다.";
 
     if (choice === "travel_together")
       restText =
-        travelTo +
+        travelWithTo +
         "(으)로 " +
-        travelWith +
+        travelWithWho +
         "와(과) 함께 여행을 떠나고 싶어했던 당신, 소중한 사람들과 함께 잠시 여행을 떠나보는건 어떤가요? 사랑하는 사람들과 쌓는 추억은 앞으로의 시간들을 살아갈 원동력이 될 것입니다.";
 
     if (choice === "home_alone")
       restText =
         "혼자 집에 남아 " +
-        homeDoWhat +
+        homeDoAlone +
         "하고 싶어했던 당신, 잠시 모든 짐을 내려놓고 아늑한 집에서 휴식을 취해보는 건 어떤가요? 혼자만의 시간을 통해 다시한번 삶의 이유와 내가 진정으로 추구해야할 것들을 정리할 수 있을 것입니다.";
 
     if (choice === "home_together")
       restText =
-        homeDoWith +
+        homeWithWho +
         "와(과) 함께 집에 남아 " +
-        homeDoWhat +
+        homeWithDo +
         "하고 싶어했던 당신, 오늘은 소중한 사람들과 함께 저녁을 먹으며 시간을 보내는 것은 어떤가요? 진정한 행복과 힐링은 특별한 곳이 아닌 일상 속에서 찾을 수 있습니다.";
 
     return restText;
@@ -61,7 +63,7 @@ function P29() {
   const alias = localStorage.getItem("alias") ?? "나보다 남을 더 사랑했던";
   const lastWord = localStorage.getItem("lastWord") ?? "서비스를 마지막으로 나는 떠난다";
   const flowerInKorean = translateFlower(flower);
-  const happyMoment = localStorage.getItem("happyMoment") ?? "주님을 만났던 순간";
+  const happyMoment = localStorage.getItem("travelHappyMoment") ?? localStorage.getItem("homeHappyMoment") ?? "주님을 만났던 순간";
   const sadMan = localStorage.getItem("sadMan") ?? "김철수";
   const restText = makeRestText(localStorage.getItem("choice_p8"));
   const to = JSON.parse(localStorage.getItem("messages"))
