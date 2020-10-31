@@ -68,7 +68,7 @@ function App() {
         addr1 = bgm.current.src.split(".");
         addr2 = game.split(".");
         console.log(addr1, addr2);
-        if (addr1[1] !== addr2[1]) {
+        if (addr1[3] !== addr2[1]) {
           bgm.current.src = game;
           bgm.current.loop = true;
         }
@@ -77,7 +77,7 @@ function App() {
         addr1 = bgm.current.src.split(".");
         addr2 = hearbeat.split(".");
         console.log(addr1, addr2);
-        if (addr1[1] !== addr2[1]) {
+        if (addr1[3] !== addr2[1]) {
           bgm.current.src = hearbeat;
           bgm.current.loop = false;
         }
@@ -86,7 +86,7 @@ function App() {
         addr1 = bgm.current.src.split(".");
         addr2 = nature.split(".");
         console.log(addr1, addr2);
-        if (addr1[1] !== addr2[1]) {
+        if (addr1[3] !== addr2[1]) {
           bgm.current.src = nature;
           bgm.current.loop = true;
         }
