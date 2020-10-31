@@ -142,7 +142,8 @@
     height: 72.7px;
     border-radius: 50%;
 
-    &.lastPage {
+    &.print, 
+    &.home {
       width : 75px;
       height : 75px;
       background : #bbbbb7;

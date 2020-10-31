@@ -180,14 +180,14 @@ function P29() {
     },
     detailed_buttons_style: {
       print_button_style: {
-        button_style: ["circle", "lastPage"],
+        button_style: ["circle", "print"],
         icon_style: ["print"],
-        span_style: [],
+        span_style: ["nanum", "extra-bold", "print"],
       },
       home_button_style: {
-        button_style: ["circle", "lastPage"],
+        button_style: ["circle", "home"],
         icon_style: ["home"],
-        span_style: [],
+        span_style: ["nanum", "extra-bold", "home"],
       },
     },
   };
