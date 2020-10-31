@@ -1,22 +1,6 @@
 @import "../colors.scss";
 
 @mixin placeholder($color) {
-  &:focus::-webkit-input-placeholder {
-    color: transparent;
-  }
-
-  &:focus::-moz-placeholder {
-    color: transparent;
-  }
-
-  &:focus::-ms-placeholder {
-    color: transparent;
-  }
-
-  &:focus::placeholder {
-    color: transparent;
-  }
-
   &::-webkit-input-placeholder {
     color: $color;
     text-align: center;
@@ -38,18 +22,33 @@
   }
 }
 
+@mixin init-placeholder($color) {
+  @include placeholder($color);
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus::-ms-placeholder {
+    color: transparent;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
+
 .TextArea {
-  @include placeholder($dark-gray);
+  @include init-placeholder($dark-gray);
   resize: none;
   border: none;
   font-stretch: normal;
   font-style: normal;
   outline: none;
-
-  // validate-color
-  &.validate-text {
-    @include placeholder($red);
-  }
 
   &.item {
     font-family: "Noto Sans KR";
