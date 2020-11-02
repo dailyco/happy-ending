@@ -13,6 +13,9 @@
   0% {
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.09);
   }
+  66% {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.09), 0 0 15px 4px rgb(240, 240, 240);
+  }
   100% {
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.09), 0 0 15px 4px rgb(240, 240, 240);
   }
@@ -21,6 +24,9 @@
 @keyframes button-unselected {
   0% {
     opacity: 100%;
+  }
+  66% {
+    opacity: 40%;
   }
   100% {
     opacity: 40%;
@@ -142,11 +148,11 @@
     height: 72.7px;
     border-radius: 50%;
 
-    &.print, 
+    &.print,
     &.home {
-      width : 75px;
-      height : 75px;
-      background : #bbbbb7;
+      width: 75px;
+      height: 75px;
+      background: #bbbbb7;
     }
   }
 
@@ -164,9 +170,11 @@
 
   //animation
   &.selected {
-    animation: button-selected 1s linear forwards;
+    animation: button-selected 3s linear;
+    // animation: button-selected 2s linear forwards;
   }
   &.unselected {
-    animation: button-unselected 1s linear forwards;
+    animation: button-unselected 3s linear;
+    // animation: button-unselected 2s linear forwards;
   }
 }
