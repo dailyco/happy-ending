@@ -1,21 +1,27 @@
-import React from "react";
-import SeparatedTemplate29 from "../Templates/SeparatedTemplate29";
 import classNames from "classnames";
-import END from "../../assets/images/29p_images/29 The end.png";
+import React, { useRef, useEffect } from "react";
+import { useReactToPrint } from 'react-to-print';
+import SeparatedTemplate29 from "../Templates/SeparatedTemplate29";
+import HomeIcon from "../../assets/icons/29-home7575.svg";
 import AND from "../../assets/images/29p_images/29 And.png";
 import PrintIcon from "../../assets/icons/29-printer-7575.svg";
-import HomeIcon from "../../assets/icons/29-home7575.svg";
+import END from "../../assets/images/29p_images/29 The end.png";
 
 import "../../scss/pages.scss";
 
-function P29() {
+function P29({ history }) {
+  const page = useRef(null);
+
   const translateFlower = (f) => {
     let fInKorean = "";
+
     if (f === "rose") fInKorean = "장미";
-    if (f === "freesia") fInKorean = "프리지아";
-    if (f === "babyBreath") fInKorean = "안개꽃";
-    if (f === "tulip") fInKorean = "튤립";
-    if (f === "mum") fInKorean = "안개꽃";
+    else if (f === "freesia") fInKorean = "프리지아";
+    else if (f === "babyBreath") fInKorean = "안개꽃";
+    else if (f === "tulip") fInKorean = "튤립";
+    else if (f === "mum") fInKorean = "안개꽃";
+    else fInKorean = "장미";
+
     return fInKorean;
   };
 
@@ -31,44 +37,44 @@ function P29() {
     if (choice === "travel_alone")
       restText =
         travelToAlone + "(으)로 혼자 여행을 떠나고 싶어했던 당신, 잠시 모든걸 내려놓고 혼자 여행을 떠나보는건 어떤가요? 새로운 곳에서의 신선한 경험들은 길었던 당신의 일상에 쉼표가 되어줄 것입니다.";
-
-    if (choice === "travel_together")
+    else if (choice === "travel_together")
       restText =
         travelWithTo +
         "(으)로 " +
         travelWithWho +
         "와(과) 함께 여행을 떠나고 싶어했던 당신, 소중한 사람들과 함께 잠시 여행을 떠나보는건 어떤가요? 사랑하는 사람들과 쌓는 추억은 앞으로의 시간들을 살아갈 원동력이 될 것입니다.";
-
-    if (choice === "home_alone")
+    else if (choice === "home_alone")
       restText =
         "혼자 집에 남아 " +
         homeDoAlone +
         "하고 싶어했던 당신, 잠시 모든 짐을 내려놓고 아늑한 집에서 휴식을 취해보는 건 어떤가요? 혼자만의 시간을 통해 다시한번 삶의 이유와 내가 진정으로 추구해야할 것들을 정리할 수 있을 것입니다.";
-
-    if (choice === "home_together")
+    else if (choice === "home_together")
       restText =
         homeWithWho +
         "와(과) 함께 집에 남아 " +
         homeWithDo +
         "하고 싶어했던 당신, 오늘은 소중한 사람들과 함께 저녁을 먹으며 시간을 보내는 것은 어떤가요? 진정한 행복과 힐링은 특별한 곳이 아닌 일상 속에서 찾을 수 있습니다.";
-
+    else
+      restText =
+        "한국(으)로 혼자 여행을 떠나고 싶어했던 당신, 잠시 모든걸 내려놓고 혼자 여행을 떠나보는건 어떤가요? 새로운 곳에서의 신선한 경험들은 길었던 당신의 일상에 쉼표가 되어줄 것입니다.";
+    
     return restText;
   };
 
   const name = localStorage.getItem("name") ?? "홍길동";
-  const selfie = JSON.parse(localStorage.getItem("photo"));
+  const selfie = JSON.parse(localStorage.getItem("photo")) ?? "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT_yrd8qyMAeTKfxPH00Az2BqE561qnoB5Ulw&usqp=CAU";
   const flower = localStorage.getItem("flower") ?? "rose";
-  const travelOrHome = localStorage.getItem("choice_p8").startsWith("travel") ? "travel" : "home";
-  const deathMonthNDay = localStorage.getItem("deathMonth") + "월 " + localStorage.getItem("deathday") + "일";
+  const travelOrHome = localStorage.getItem("choice_p8") ? localStorage.getItem("choice_p8").startsWith("travel") ? "travel" : "home" : "home";
+  const deathMonthDay = (localStorage.getItem("deathMonth") ?? "11") + "월 " + (localStorage.getItem("deathDay") ?? "11") + "일";
   const alias = localStorage.getItem("alias") ?? "나보다 남을 더 사랑했던";
   const lastWord = localStorage.getItem("lastWord") ?? "서비스를 마지막으로 나는 떠난다";
   const flowerInKorean = translateFlower(flower);
   const happyMoment = localStorage.getItem("travelHappyMoment") ?? localStorage.getItem("homeHappyMoment") ?? "주님을 만났던 순간";
-  const sadMan = localStorage.getItem("sadMan") ?? "김철수";
+  const sadMan = localStorage.getItem("sadMan") ?? "홍길동";
   const restText = makeRestText(localStorage.getItem("choice_p8"));
-  const to = JSON.parse(localStorage.getItem("messages"))
-    .map((e) => e.to)
-    .join(", ");
+  const to = JSON.parse(localStorage.getItem("messages")) 
+    ? JSON.parse(localStorage.getItem("messages")).map((e) => e.to).join(", ")
+    : "홍길동 ";
 
   const data = {
     deco_data: {
@@ -86,7 +92,7 @@ function P29() {
         header: name + "의 묘",
         body: (
           <>
-            {name}은 {deathMonthNDay} 세상을 떠났습니다.
+            {name}은 {deathMonthDay} 세상을 떠났습니다.
             <br />
             {name}의 죽음을 추모하는 사람들이 그의 묘비 앞에서 {name}을 추억합니다. {alias} 사람 {name}은 {lastWord} 라는 한마디를 남겼습니다.
           </>
@@ -135,6 +141,9 @@ function P29() {
           src: PrintIcon,
         },
         span_data: "인쇄하기",
+        onClick: useReactToPrint({
+          content: () => page.current,
+        }),
       },
       home_button_data: {
         icon: {
@@ -142,6 +151,9 @@ function P29() {
           src: HomeIcon,
         },
         span_data: "홈으로",
+        onClick: () => {
+          history.push('/');
+        },
       },
     },
   };
@@ -184,20 +196,28 @@ function P29() {
     },
     detailed_buttons_style: {
       print_button_style: {
-        button_style: ["circle", "print"],
+        button_style: ["circle", "print", "page-break"],
         icon_style: ["print"],
-        span_style: ["nanum", "extra-bold", "print"],
+        span_style: ["nanum", "extra-bold", "print", "page-break"],
       },
       home_button_style: {
-        button_style: ["circle", "home"],
+        button_style: ["circle", "home", "page-break"],
         icon_style: ["home"],
-        span_style: ["nanum", "extra-bold", "home"],
+        span_style: ["nanum", "extra-bold", "home", "page-break"],
       },
     },
   };
 
+  useEffect(() => {
+    console.log(history);
+    const unblock = history.block("정말 홈으로 돌아가실건가요?");
+    return () => {
+      unblock();
+    };
+  }, [history]);
+
   return (
-    <div className={classNames("Page", "P29")}>
+    <div className={classNames("Page", "P29", "page-background-break")} ref={page}>
       <SeparatedTemplate29 data={data} styleName={styleName}></SeparatedTemplate29>
     </div>
   );

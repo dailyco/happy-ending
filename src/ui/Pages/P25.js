@@ -9,7 +9,7 @@ import "../../scss/pages.scss";
 function P25({ history }) {
   const year = localStorage.getItem("deathYear");
   const month = localStorage.getItem("deathMonth");
-  const day = localStorage.getItem("deathday");
+  const day = localStorage.getItem("deathDay");
   const name = localStorage.getItem("name") ?? "홍길동";
   
   const goBack = () => {
