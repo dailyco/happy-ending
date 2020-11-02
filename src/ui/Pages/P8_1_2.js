@@ -12,8 +12,8 @@ function P8_1_2({ history }) {
   const [video, setVideo] = useState(P8_1_2_Video);
   const [inputs, onChange] = useInputs({	
     travelWithWho: localStorage.getItem("travelWithWho") ?? "",	
-    travelToWith: localStorage.getItem("travelToWith") ?? "",	
-    isValidate: localStorage.getItem("travelWithWho")&&localStorage.getItem("travelToWith")? true : false,
+    travelWithTo: localStorage.getItem("travelWithTo") ?? "",	
+    isValidate: localStorage.getItem("travelWithWho")&&localStorage.getItem("travelWithTo")? true : false,
   });
 
   const goBack = () => {
@@ -60,8 +60,8 @@ function P8_1_2({ history }) {
           onChange1: onChange,
         },
         tf2_data: {
-          input2: inputs.travelToWith,
-          name2: "travelToWith",
+          input2: inputs.travelWithTo,
+          name2: "travelWithTo",
           onChange2: onChange,
         },
       },

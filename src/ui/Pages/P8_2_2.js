@@ -8,8 +8,8 @@ import "../../scss/pages.scss";
 function P8_2_2({ history }) {
   const [inputs, onChange] = useInputs({	
     homeWithWho: localStorage.getItem("homeWithWho") ?? "",	
-    homeDoWith: localStorage.getItem("homeDoWith") ?? "",	
-    isValidate: localStorage.getItem("homeWithWho")&&localStorage.getItem("homeDoWith")? true : false,
+    homeWithDo: localStorage.getItem("homeWithDo") ?? "",	
+    isValidate: localStorage.getItem("homeWithWho")&&localStorage.getItem("homeWithDo")? true : false,
   });
   
   const goBack = () => {
@@ -40,8 +40,8 @@ function P8_2_2({ history }) {
           onChange1: onChange,	
         },	
         tf2_data: {	
-          input2: inputs.homeDoWith,	
-          name2: "homeDoWith",	
+          input2: inputs.homeWithDo,	
+          name2: "homeWithDo",	
           onChange2: onChange,	
         },
       },

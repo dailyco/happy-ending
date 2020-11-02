@@ -25,7 +25,6 @@ function P8_1({ history }) {
           text: "A. 3일간의 여행을 혼자 떠난다",
           onClick: () => {
             localStorage.setItem("choice_p8", "travel_alone");
-            console.log(localStorage);
           },
         },
         {
@@ -33,7 +32,6 @@ function P8_1({ history }) {
           text: "B. 3일간의 여행을 함께 떠난다",
           onClick: () => {
             localStorage.setItem("choice_p8", "travel_together");
-            console.log(localStorage);
           },
         },
       ],
