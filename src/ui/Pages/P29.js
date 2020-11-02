@@ -1,14 +1,16 @@
-import React from "react";
-import SeparatedTemplate29 from "../Templates/SeparatedTemplate29";
 import classNames from "classnames";
-import END from "../../assets/images/29p_images/29 The end.png";
+import React, { useRef, useEffect } from "react";
+import { useReactToPrint } from 'react-to-print';
+import SeparatedTemplate29 from "../Templates/SeparatedTemplate29";
+import HomeIcon from "../../assets/icons/29-home7575.svg";
 import AND from "../../assets/images/29p_images/29 And.png";
 import PrintIcon from "../../assets/icons/29-printer-7575.svg";
-import HomeIcon from "../../assets/icons/29-home7575.svg";
+import END from "../../assets/images/29p_images/29 The end.png";
 
 import "../../scss/pages.scss";
 
-function P29() {
+function P29({ history }) {
+  const page = useRef(null);
   const translateFlower = (f) => {
     let fInKorean = "";
     if (f === "rose") fInKorean = "장미";
@@ -135,6 +137,9 @@ function P29() {
           src: PrintIcon,
         },
         span_data: "인쇄하기",
+        onClick: useReactToPrint({
+          content: () => page.current,
+        }),
       },
       home_button_data: {
         icon: {
@@ -142,6 +147,9 @@ function P29() {
           src: HomeIcon,
         },
         span_data: "홈으로",
+        onClick: () => {
+          history.push('/');
+        },
       },
     },
   };
@@ -196,8 +204,16 @@ function P29() {
     },
   };
 
+  useEffect(() => {
+    console.log(history);
+    const unblock = history.block("정말 홈으로 돌아가실건가요?");
+    return () => {
+      unblock();
+    };
+  }, [history]);
+
   return (
-    <div className={classNames("Page", "P29")}>
+    <div className={classNames("Page", "P29", "page-break")} ref={page}>
       <SeparatedTemplate29 data={data} styleName={styleName}></SeparatedTemplate29>
     </div>
   );
