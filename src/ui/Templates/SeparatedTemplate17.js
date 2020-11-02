@@ -25,7 +25,7 @@ function SeparatedTemplate17({ data, styleName, history }) {
 
     setTimeout(() => {
       history.push("/p18");
-    }, 2000);
+    }, 3000);
   };
 
   return (
@@ -33,9 +33,9 @@ function SeparatedTemplate17({ data, styleName, history }) {
       <video autoPlay muted>
         <source src={P17Video} type="video/mp4" />
       </video>
-      {flowers.map((flower, idx) => (
+      {constrasts.map((flower, idx) => (
         <div key={idx}>
-          <Img image={flower.active ? flower.glow : flower.shadow} alt={flower.alt}></Img>
+          <Img styleName={flower.active ? "fade-in-ease-in" : ""} image={flower.active ? flower.glow : flower.shadow} alt={flower.alt}></Img>
           <Img image={flower.image} alt={flower.alt}></Img>
           <Link to={"/p18"} id={flower.alt} onClick={onClick}></Link>
         </div>

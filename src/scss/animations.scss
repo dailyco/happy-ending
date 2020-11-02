@@ -47,6 +47,10 @@
   animation: fade-in 2s linear;
 }
 
+.fade-in-ease-in {
+  animation : fade-in 2s ease-in;
+}
+
 .fade-in-2s {
   @include fade-in-delay(2s);
 }
