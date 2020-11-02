@@ -37,27 +37,27 @@ function P29({ history }) {
     if (choice === "travel_alone")
       restText =
         travelToAlone + "(으)로 혼자 여행을 떠나고 싶어했던 당신, 잠시 모든걸 내려놓고 혼자 여행을 떠나보는건 어떤가요? 새로운 곳에서의 신선한 경험들은 길었던 당신의 일상에 쉼표가 되어줄 것입니다.";
-
-    if (choice === "travel_together")
+    else if (choice === "travel_together")
       restText =
         travelWithTo +
         "(으)로 " +
         travelWithWho +
         "와(과) 함께 여행을 떠나고 싶어했던 당신, 소중한 사람들과 함께 잠시 여행을 떠나보는건 어떤가요? 사랑하는 사람들과 쌓는 추억은 앞으로의 시간들을 살아갈 원동력이 될 것입니다.";
-
-    if (choice === "home_alone")
+    else if (choice === "home_alone")
       restText =
         "혼자 집에 남아 " +
         homeDoAlone +
         "하고 싶어했던 당신, 잠시 모든 짐을 내려놓고 아늑한 집에서 휴식을 취해보는 건 어떤가요? 혼자만의 시간을 통해 다시한번 삶의 이유와 내가 진정으로 추구해야할 것들을 정리할 수 있을 것입니다.";
-
-    if (choice === "home_together")
+    else if (choice === "home_together")
       restText =
         homeWithWho +
         "와(과) 함께 집에 남아 " +
         homeWithDo +
         "하고 싶어했던 당신, 오늘은 소중한 사람들과 함께 저녁을 먹으며 시간을 보내는 것은 어떤가요? 진정한 행복과 힐링은 특별한 곳이 아닌 일상 속에서 찾을 수 있습니다.";
-
+    else
+      restText =
+        "한국(으)로 혼자 여행을 떠나고 싶어했던 당신, 잠시 모든걸 내려놓고 혼자 여행을 떠나보는건 어떤가요? 새로운 곳에서의 신선한 경험들은 길었던 당신의 일상에 쉼표가 되어줄 것입니다.";
+    
     return restText;
   };
 
@@ -196,14 +196,14 @@ function P29({ history }) {
     },
     detailed_buttons_style: {
       print_button_style: {
-        button_style: ["circle", "print"],
+        button_style: ["circle", "print", "page-break"],
         icon_style: ["print"],
-        span_style: ["nanum", "extra-bold", "print"],
+        span_style: ["nanum", "extra-bold", "print", "page-break"],
       },
       home_button_style: {
-        button_style: ["circle", "home"],
+        button_style: ["circle", "home", "page-break"],
         icon_style: ["home"],
-        span_style: ["nanum", "extra-bold", "home"],
+        span_style: ["nanum", "extra-bold", "home", "page-break"],
       },
     },
   };
@@ -217,7 +217,7 @@ function P29({ history }) {
   }, [history]);
 
   return (
-    <div className={classNames("Page", "P29", "page-break")} ref={page}>
+    <div className={classNames("Page", "P29", "page-background-break")} ref={page}>
       <SeparatedTemplate29 data={data} styleName={styleName}></SeparatedTemplate29>
     </div>
   );

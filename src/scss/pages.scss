@@ -1,3 +1,13 @@
+@media print {
+  .page-break {
+    visibility: hidden;
+  }
+
+  .page-background-break {
+    background: none !important;
+  }
+}
+
 @mixin bg-image($f_name) {
   background: url("../assets/images/bg_images/" + $f_name) no-repeat center;
   background-size: cover;
@@ -107,7 +117,7 @@
   }
 
   &.P29 {
-    @include bg-image("29 ebook.png")
+    @include bg-image("29 ebook.png");
   }
 
   &.P404 {
