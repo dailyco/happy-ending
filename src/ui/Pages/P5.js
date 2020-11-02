@@ -16,7 +16,7 @@ function P5({ history }) {
   }; 
   localStorage.setItem("deathYear", year);
   localStorage.setItem("deathMonth", month);
-  localStorage.setItem("deathday", day);
+  localStorage.setItem("deathDay", day);
 
   const goBack = () => {
     history.goBack();
