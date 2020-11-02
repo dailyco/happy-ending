@@ -2,9 +2,11 @@ import { useCallback, useReducer, useRef } from 'react';
 
 function reducer (state, action) {
   let messages;
+  let isValidate;
   switch (action.type) {
     case "CREATE_MESSAGE":
       messages = state.messages.concat(action.message);
+      isValidate = action.isValidate;
       break;
     case "CHANGE_MESSAGE":
       messages = state.messages.map(message => message.id === +action.id ? { ...message, [action.name]: action.value} : message);
@@ -16,13 +18,27 @@ function reducer (state, action) {
       messages = state.messages;
   }
   localStorage.setItem("messages", JSON.stringify(messages));
-  return { messages };
+
+  if (action.type === "CHANGE_MESSAGE" || action.type ===  "REMOVE_MESSAGE") {
+    console.log(messages);
+    for (let message of messages) {
+      if (!message.to || message.to === "" || message.to.length < 1 ||
+          !message.message || message.message === "" || message.message.length < 1) {
+        isValidate = false;
+        break;
+      } else {
+        isValidate = true;
+      }
+    }
+    console.log(isValidate);
+  }
+
+  return { messages, isValidate };
 }
 
 function useInputs(initialState) {
   const [ state, dispatch ] = useReducer(reducer, initialState);
   const { messages } = state;
-
   const nextId = useRef(messages.length);
 
   const onCreate = useCallback(() => {
@@ -33,7 +49,8 @@ function useInputs(initialState) {
         id: nextId.current,
         to: "",
         message: "",
-      }
+      },
+      isValidate: false,
     });
   }, []);
   

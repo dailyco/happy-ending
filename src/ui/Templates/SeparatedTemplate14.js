@@ -9,18 +9,18 @@ import "../../scss/validate.scss";
 import "../../scss/Templates/SeparatedTemplate14.scss";
 
 function SeparatedTemplate14({ data, styleName }) {
-  const { dq_data, ib_data } = data;
+  const { validate, dq_data, ib_data } = data;
   const { tp_style, dq_style, ib_style, button_style } = styleName;
-  // const v_component = useRef(null);
+  const v_component = useRef(null);
 
-  // const onClick = (e) => {
-  //   if (!validate) {
-  //     v_component.current.classList.add("validate");
-  //     e.preventDefault();
-  //   } else {
-  //     v_component.current.classList.remove("validate");
-  //   }
-  // }
+  const onClick = (e) => {
+    if (!validate) {
+      v_component.current.classList.add("validate");
+      e.preventDefault();
+    } else {
+      v_component.current.classList.remove("validate");
+    }
+  }
 
   return (
     <div className={classNames("SeparatedTemplate14", "clearfix", tp_style)}>
@@ -28,11 +28,11 @@ function SeparatedTemplate14({ data, styleName }) {
         <Dquestion data={dq_data} styleName={dq_style}></Dquestion>
       </div>
       <div className={classNames("ItemBoxContainer", "float--right")}>
-        {/* <div className={classNames("check-validate")} ref={v_component}> */}
+        <div className={classNames("check-validate")} ref={v_component}>
           <ItemBox data={ib_data} styleName={ib_style}></ItemBox>
-        {/* </div> */}
+        </div>
         <Link to={"/p15"}>
-          <Button styleName={button_style}>확인</Button>
+          <Button styleName={button_style} onClick={onClick}>확인</Button>
         </Link>
       </div>
     </div>
