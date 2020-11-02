@@ -1,0 +1,75 @@
+@import "../colors.scss";
+
+.P {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.82;
+  letter-spacing: -0.22px;
+  font-stretch: normal;
+  font-style: normal;
+
+  // translucent
+  &.translucent {
+    opacity: 0.87;
+  }
+
+  // color
+  &.white {
+    color: $white;
+  }
+
+  &.eclipse {
+    color: $eclipse;
+  }
+
+  &.davy-gray {
+    color: $davy-gray;
+  }
+
+  // counter
+  &.counter {
+    font-family: "NaNum Myeongjo", serif;
+    font-weight: normal;
+    font-size: 120px;
+    width: 498px;
+    height: 717px;
+    background: rgba(black, 0.1);
+  }
+
+  // paragraph
+  &.para {
+    &.head {
+      width: 175px;
+      height: 24px;
+      font-family: "NaNum Myeongjo", serif;
+      font-size: 13px;
+      font-weight: 800;
+      // line-height: 4.54;
+      letter-spacing: normal;
+      color: #7d7d7d;
+    }
+
+    &.body {
+      width: 354px;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 12.8px;
+      font-weight: normal;
+      line-height: 1.64;
+      color: #3c3c3c;
+
+      // height
+      &.h1 {
+        height : 103px;
+      }
+
+      &.h2 {
+        height: 115px;
+      }
+
+      &.h3 {
+        height: 131px;
+      }
+    }
+  }
+}

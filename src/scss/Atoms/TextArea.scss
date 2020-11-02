@@ -1,0 +1,96 @@
+@import "../colors.scss";
+
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+  }
+
+  &::-ms-placeholder {
+    color: $color;
+  }
+
+  &::placeholder {
+    color: $color;
+  }
+}
+
+@mixin placeholder-align($alignment) {
+  &::-webkit-input-placeholder {
+    text-align: $alignment;
+  }
+
+  &::-moz-placeholder {
+    text-align: $alignment;
+  }
+
+  &::-ms-placeholder {
+    text-align: $alignment;
+  }
+
+  &::placeholder {
+    text-align: $alignment;
+  }
+}
+
+@mixin init-placeholder($color) {
+  @include placeholder-color($color);
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus::-ms-placeholder {
+    color: transparent;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
+
+.TextArea {
+  @include init-placeholder($dark-gray);
+  resize: none;
+  border: none;
+  font-stretch: normal;
+  font-style: normal;
+  outline: none;
+
+  &.item {
+    font-family: "Noto Sans KR";
+    font-weight: normal;
+    background-color: $gain-gray;
+    width: 509px;
+    height: 119px;
+    font-size: 20px;
+    color: $eclipse;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    margin: 14.5px 0 20.6px;
+    padding: 11.4px 15px 18.6px 13px;
+    border-radius: 10px;
+    letter-spacing: -0.2px;
+  }
+
+  &.grave {
+    @include placeholder-align(center);
+    font-family: "Nanum Myeongjo";
+    background-color: transparent;
+    text-align: center;
+    width: 368px;
+    height: 94.1px;
+    font-size: 22px;
+    color: $eclipse;
+    font-weight: 800;
+    line-height: 1.64;
+    letter-spacing: -0.22px;
+  }
+}

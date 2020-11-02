@@ -1,0 +1,54 @@
+.SeparatedTemplate24 {
+    box-sizing: border-box;
+    padding: 140px;
+    text-align: center;
+
+    & .H3 {
+        margin-bottom: 37px;
+        height: 33px;
+    }
+
+    & .P {
+        margin-bottom: 41px;
+        height: 73px;
+    }
+
+    & .GraveStoneResponse {
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 49px 32px;
+
+        & .GraveStone {
+            display: flex;
+            flex-direction: column;
+
+            & section.which-people {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+
+                & .TextField {
+                    text-align: right;
+                    justify-self: end;
+                }
+
+                & .Span {
+                    justify-self: start;
+                }
+            }
+
+            &>.Span {
+                display: block;
+                margin-top: 40px;
+            }
+
+            & .TextArea {
+                margin-top: 95.9px;
+            }
+        }
+
+        & .Button {
+            margin-top: 200px;
+        }
+    }
+}

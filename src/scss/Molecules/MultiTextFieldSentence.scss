@@ -1,0 +1,42 @@
+@import "../colors.scss";
+
+@mixin background-color($bg_color) {
+    background-color: $bg_color;
+
+    &.weak {
+        background-color: rgba($bg_color, 75%);
+    }
+
+    &.strong {
+        background-color: rgba($bg_color, 32%);
+    }
+}
+
+.MultiTextFieldSentence {
+    border-radius: 24.2px;
+
+    // size
+    &.s {
+        width: 557px;
+        height: 78px;
+    }
+
+    &.m {
+        width: 637px;
+        height: 78px;
+    }
+
+    &.l {
+        width: 698.2px;
+        height: 78px;
+    }
+
+    // color
+    &.dark-greenish-blue {
+        @include background-color($dark-greenish-blue);
+    }
+
+    &.charcoal-gray {
+        @include background-color($charcoal-gray);
+    }
+}

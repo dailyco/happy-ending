@@ -1,0 +1,56 @@
+@import "../colors.scss";
+
+@mixin background-color($bg_color) {
+  background: $bg_color;
+  &.weak {
+    background-color: rgba($bg_color, 35%);
+  }
+  &.normal {
+    background-color: rgba($bg_color, 32%);
+  }
+  &.strong {
+    background-color: rgba($bg_color, 30%);
+  }
+}
+
+.FullTextField {
+  width: 637px;
+  height: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // roundness
+  &.little-round {
+    border-radius: 20px;
+  }
+
+  &.round {
+    border-radius: 24.2px;
+  }
+
+  // color
+  &.gray {
+    @include background-color($gray);
+  }
+
+  &.charcoal-gray {
+    @include background-color($charcoal-gray);
+  }
+
+  &.cocoa {
+    @include background-color($cocoa);
+  }
+
+  &.khaki-brown {
+    @include background-color($khaki-brown);
+  }
+
+  &.charcoal-black {
+    @include background-color($charcoal-black);
+  }
+
+  &.white {
+    @include background-color($white);
+  }
+}

@@ -1,0 +1,58 @@
+@import "../colors.scss";
+
+.H3 {
+  font-family: "Subway Black";
+  letter-spacing: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 2.22;
+
+  // font-weight
+  &.normal {
+    font-weight: 400;
+  }
+  &.heavy {
+    font-weight: 900;
+  }
+
+  // color
+  &.black {
+    color: $black;
+  }
+  &.white {
+    color: $white;
+  }
+  &.eclipse {
+    color: $eclipse;
+  }
+  &.davy-gray {
+    color: $davy-gray;
+  }
+  &.neon-green {
+    color: $neon-green;
+  }
+  &.white-smoke {
+    color: $white-smoke;
+  }
+
+  // title
+  &.title {
+    font-family: "NaNum Myeongjo", serif;
+    font-weight : 800;
+    color : #7d7d7d;
+    
+    &.writer {
+      width: 234px;
+      height: 53px;
+      font-size: 50px;
+      line-height: 1.18;
+    }
+    &.lastPage {
+      width: 297px;
+      height: 53px;
+      font-size: 42px;
+      line-height: 1.41;
+    }
+  }
+}
