@@ -1,0 +1,172 @@
+@import "../colors.scss";
+
+@mixin button-color($bg_color, $txt_color) {
+  background: $bg_color;
+  color: $txt_color;
+
+  &.translucent {
+    background: rgba($bg_color, 35%);
+  }
+}
+
+@keyframes button-selected {
+  0% {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.09);
+  }
+  100% {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.09), 0 0 15px 4px rgb(240, 240, 240);
+  }
+}
+
+@keyframes button-unselected {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 40%;
+  }
+}
+
+.Button {
+  font-family: "Noto Sans KR";
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.09);
+  letter-spacing: -0.22px;
+  line-height: 1.95;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  // size
+  &.xxs {
+    width: 115px;
+    height: 47.3px;
+    border-radius: 12px;
+  }
+
+  &.xs {
+    width: 141px;
+    height: 61.3px;
+    border-radius: 15px;
+  }
+
+  &.s {
+    width: 162.6px;
+    height: 67.3px;
+    border-radius: 16.3px;
+  }
+
+  &.m {
+    width: 341.5px;
+    height: 67.3px;
+    border-radius: 15px;
+  }
+
+  &.l {
+    width: 376.6px;
+    height: 67.3px;
+    border-radius: 16.3px;
+  }
+
+  &.xl {
+    width: 397.8px;
+    height: 67.3px;
+    border-radius: 16.3px;
+  }
+
+  &.xxl {
+    width: 507.1px;
+    height: 85.2px;
+    border-radius: 16.3px;
+  }
+
+  // color
+  &.white {
+    @include button-color($white, $eclipse);
+  }
+
+  &.grayish-navy {
+    @include button-color($grayish-navy, $white);
+  }
+
+  &.beige {
+    @include button-color($beige, $brown);
+  }
+
+  &.light-brown {
+    @include button-color($light-brown, $ivory);
+  }
+
+  &.nero {
+    @include button-color($nero, $white);
+  }
+
+  &.light-gray {
+    @include button-color($light-gray, $eclipse);
+  }
+
+  &.orange {
+    @include button-color($orange, $black);
+  }
+
+  &.greenish-blue {
+    @include button-color($greenish-blue, $white);
+  }
+
+  &.wood {
+    @include button-color($wood, $white);
+  }
+
+  &.cocoa {
+    @include button-color($cocoa, $white);
+  }
+
+  &.blue {
+    @include button-color($blue, $white);
+  }
+
+  &.dark-brown {
+    @include button-color($dark-brown, $white);
+  }
+
+  &.lynx-white {
+    @include button-color($lynx-white, $dark-gray);
+  }
+
+  // circle
+  &.circle {
+    width: 72.7px;
+    height: 72.7px;
+    border-radius: 50%;
+
+    &.print, 
+    &.home {
+      width : 75px;
+      height : 75px;
+      background : #bbbbb7;
+    }
+  }
+
+  // item
+  &.item {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 142px;
+    height: 35.3px;
+    font-size: 20px;
+    line-height: 2.15;
+    border-radius: 10px;
+  }
+
+  //animation
+  &.selected {
+    animation: button-selected 1s linear forwards;
+  }
+  &.unselected {
+    animation: button-unselected 1s linear forwards;
+  }
+}

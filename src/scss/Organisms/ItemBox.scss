@@ -1,0 +1,18 @@
+@import "../colors.scss";
+
+.ItemBox {
+  box-sizing: border-box;
+  padding: 19px 33px 19px 17px;
+  width: 587px;
+  height: 692px;
+  background-color: rgba($white, 17%);
+  overflow: scroll;
+
+  & .Button {
+    margin: 0 auto;
+  }
+
+  & .Item:nth-child(1) .delete {
+    display: none;
+  }
+}

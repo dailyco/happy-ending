@@ -1,0 +1,137 @@
+@import "../colors.scss";
+
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+  }
+
+  &::-ms-placeholder {
+    color: $color;
+  }
+
+  &::placeholder {
+    color: $color;
+  }
+}
+
+@mixin placeholder-color($ph-color, $txt-color) {
+  color: $txt-color;
+  @include placeholder($ph-color);
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent !important;
+  }
+
+  &:focus::-moz-placeholder {
+    color: transparent !important;
+  }
+
+  &:focus::-ms-placeholder {
+    color: transparent !important;
+  }
+
+  &:focus::placeholder {
+    color: transparent !important;
+  }
+}
+
+.TextField {
+  font-size: 22px;
+  line-height: 1.95;
+  letter-spacing: -0.22px;
+  outline: none;
+  border: none;
+  background: transparent;
+  font-family: "Noto Sans KR";
+  text-align: center;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+
+  // font
+  &.nanum {
+    font-family: "NaNum Myeongjo", serif;
+  }
+
+  // size
+  &.xs {
+    width: 46px;
+    height: 18px;
+  }
+
+  &.s {
+    width: 104px;
+    height: 24px;
+  }
+
+  &.m {
+    width: 186px;
+    height: 18px;
+  }
+
+  &.l {
+    width: 194px;
+    height: 24px;
+  }
+
+  &.xl {
+    width: 265px;
+    height: 24px;
+  }
+
+  &.xxl {
+    width: 576px;
+    height: 24px;
+  }
+
+  // font-weight
+  &.normal {
+    font-weight: 400;
+  }
+
+  &.extra-bold {
+    font-weight: 800;
+  }
+
+  // placeholder-color
+  &.book {
+    @include placeholder-color($davy-gray, $davy-gray);
+  }
+
+  &.piggy-bank,
+  &.music,
+  &.sad-man {
+    @include placeholder-color($eclipse, $eclipse);
+  }
+
+  &.travel {
+    @include placeholder-color($dark-white, $white);
+  }
+
+  &.house {
+    @include placeholder-color($davy-gray, $eclipse);
+  }
+
+  &.moment {
+    @include placeholder-color($white, $white);
+  }
+
+  &.message,
+  &.grave-stone {
+    @include placeholder-color($dark-gray, $eclipse);
+  }
+
+  &.item {
+    padding: 9.1px 8.5px;
+    text-align: left;
+    border-bottom: 1.5px solid $dim-gray;
+  }
+
+  &.info {
+    font-size: 18px;
+  }
+}

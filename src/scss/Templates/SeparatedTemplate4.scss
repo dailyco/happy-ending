@@ -1,0 +1,28 @@
+.SeparatedTemplate4 {
+  box-sizing: border-box;
+  padding-top: 390.4px;
+
+  & .script {
+    margin-left: 1136px;
+  }
+  & .script .P {
+    text-align: center;
+    width: 380px;
+    height: 310px;
+  }
+
+  & .InfoResponse {
+    width: 205px;
+    margin-top: 41.7px;
+    margin-left: 633.1px;
+    text-align: center;
+
+    & .name {
+      margin-bottom: 33px;
+    }
+
+    & .birthday {
+      margin-bottom: 175.5px;
+    }
+  }
+}
