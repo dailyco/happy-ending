@@ -10,11 +10,15 @@ function SelectionBox({ data, styleName }) {
 
   useEffect(() => {
     selectionBoxRef.current.addEventListener("click", clickHandler);
-    return () => selectionBoxRef.current.removeEventListener("click", clickHandler);
+    return () => {
+      if (selectionBoxRef.current)
+        selectionBoxRef.current.removeEventListener("click", clickHandler);
+    }
   }, []);
 
   function clickHandler(e) {
     e.preventDefault();
+    
     if (e.target.classList.contains("Button")) {
       e.target.classList.add("selected");
       Array.from(e.currentTarget.querySelectorAll(".Button"))
@@ -24,6 +28,7 @@ function SelectionBox({ data, styleName }) {
       if (!e.target.classList.contains("wait-until-video-end")) {
         e.target.addEventListener("animationend", () => {
           history.push(e.target.attributes.to.value);
+          // setTimeout(() => history.push(e.target.attributes.to.value), 1000);
         });
       }
     }
