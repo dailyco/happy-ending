@@ -62,10 +62,11 @@ function App() {
       case "/p2": case "/p3": case "/p4": case "/p5": 
       case "/p6": case "/p7": case "/p7_1": case "/p7_2": case "/p8": 
       case "/p8_1": case "/p8_1_1": case "/p8_1_2": case "/p8_2": 
-      case "/p8_2_1": case "/p8_2_2": case "/p9_1": case "/p9_2": case "/p10": 
-      case "/p12_1": case "/12_2": case "/p13": case "/p14": case "/p15": 
-      case "/p16": case "/p16_1": case "/p17": case "/p18": case "/p19": 
-      case "/p20": case "/p21": case "/p22": case "/p23": case "/p24": 
+      case "/p8_2_1": case "/p8_2_2": case "/p9_1": case "/p9_2": 
+      case "/p10": case "/p11": case "/p12_1": case "/p12_2": 
+      case "/p13": case "/p14": case "/p15": case "/p16": case "/p16_1": 
+      case "/p17": case "/p18": case "/p19": case "/p20": case "/p21": 
+      case "/p22": case "/p23": case "/p24": 
         addr1 = bgm.current.src.split(".");
         addr2 = game.split(".");
         if (addr1[1] !== addr2[1]) {
