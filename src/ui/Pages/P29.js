@@ -11,13 +11,17 @@ import "../../scss/pages.scss";
 
 function P29({ history }) {
   const page = useRef(null);
+
   const translateFlower = (f) => {
     let fInKorean = "";
+
     if (f === "rose") fInKorean = "장미";
-    if (f === "freesia") fInKorean = "프리지아";
-    if (f === "babyBreath") fInKorean = "안개꽃";
-    if (f === "tulip") fInKorean = "튤립";
-    if (f === "mum") fInKorean = "안개꽃";
+    else if (f === "freesia") fInKorean = "프리지아";
+    else if (f === "babyBreath") fInKorean = "안개꽃";
+    else if (f === "tulip") fInKorean = "튤립";
+    else if (f === "mum") fInKorean = "안개꽃";
+    else fInKorean = "장미";
+
     return fInKorean;
   };
 
@@ -58,19 +62,19 @@ function P29({ history }) {
   };
 
   const name = localStorage.getItem("name") ?? "홍길동";
-  const selfie = JSON.parse(localStorage.getItem("photo"));
+  const selfie = JSON.parse(localStorage.getItem("photo")) ?? "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT_yrd8qyMAeTKfxPH00Az2BqE561qnoB5Ulw&usqp=CAU";
   const flower = localStorage.getItem("flower") ?? "rose";
-  const travelOrHome = localStorage.getItem("choice_p8").startsWith("travel") ? "travel" : "home";
-  const deathMonthNDay = localStorage.getItem("deathMonth") + "월 " + localStorage.getItem("deathday") + "일";
+  const travelOrHome = localStorage.getItem("choice_p8") ? localStorage.getItem("choice_p8").startsWith("travel") ? "travel" : "home" : "home";
+  const deathMonthDay = (localStorage.getItem("deathMonth") ?? "11") + "월 " + (localStorage.getItem("deathDay") ?? "11") + "일";
   const alias = localStorage.getItem("alias") ?? "나보다 남을 더 사랑했던";
   const lastWord = localStorage.getItem("lastWord") ?? "서비스를 마지막으로 나는 떠난다";
   const flowerInKorean = translateFlower(flower);
   const happyMoment = localStorage.getItem("travelHappyMoment") ?? localStorage.getItem("homeHappyMoment") ?? "주님을 만났던 순간";
-  const sadMan = localStorage.getItem("sadMan") ?? "김철수";
+  const sadMan = localStorage.getItem("sadMan") ?? "홍길동";
   const restText = makeRestText(localStorage.getItem("choice_p8"));
-  const to = JSON.parse(localStorage.getItem("messages"))
-    .map((e) => e.to)
-    .join(", ");
+  const to = JSON.parse(localStorage.getItem("messages")) 
+    ? JSON.parse(localStorage.getItem("messages")).map((e) => e.to).join(", ")
+    : "홍길동 ";
 
   const data = {
     deco_data: {
@@ -88,7 +92,7 @@ function P29({ history }) {
         header: name + "의 묘",
         body: (
           <>
-            {name}은 {deathMonthNDay} 세상을 떠났습니다.
+            {name}은 {deathMonthDay} 세상을 떠났습니다.
             <br />
             {name}의 죽음을 추모하는 사람들이 그의 묘비 앞에서 {name}을 추억합니다. {alias} 사람 {name}은 {lastWord} 라는 한마디를 남겼습니다.
           </>
