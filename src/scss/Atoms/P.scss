@@ -39,7 +39,7 @@
 
   // paragraph
   &.para {
-    overflow : auto;
+    overflow: auto;
 
     &.head {
       width: 175px;
@@ -47,9 +47,8 @@
       font-family: "NaNum Myeongjo", serif;
       font-size: 13px;
       font-weight: 800;
-      // line-height: 4.54;
       letter-spacing: normal;
-      color: #7d7d7d;
+      color: $mid-gray;
     }
 
     &.body {
@@ -58,11 +57,11 @@
       font-size: 12.8px;
       font-weight: normal;
       line-height: 1.64;
-      color: #3c3c3c;
+      color: $eclipse;
 
       // height
       &.h1 {
-        height : 103px;
+        height: 103px;
       }
 
       &.h2 {
