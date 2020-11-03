@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React, { useRef, useEffect } from "react";
-import { useReactToPrint } from 'react-to-print';
+import { useReactToPrint } from "react-to-print";
 import SeparatedTemplate29 from "../Templates/SeparatedTemplate29";
 import HomeIcon from "../../assets/icons/29-home7575.svg";
 import AND from "../../assets/images/29p_images/29 And.png";
@@ -54,17 +54,15 @@ function P29({ history }) {
         "와(과) 함께 집에 남아 " +
         homeWithDo +
         "하고 싶어했던 당신, 오늘은 소중한 사람들과 함께 저녁을 먹으며 시간을 보내는 것은 어떤가요? 진정한 행복과 힐링은 특별한 곳이 아닌 일상 속에서 찾을 수 있습니다.";
-    else
-      restText =
-        "한국(으)로 혼자 여행을 떠나고 싶어했던 당신, 잠시 모든걸 내려놓고 혼자 여행을 떠나보는건 어떤가요? 새로운 곳에서의 신선한 경험들은 길었던 당신의 일상에 쉼표가 되어줄 것입니다.";
-    
+    else restText = "한국(으)로 혼자 여행을 떠나고 싶어했던 당신, 잠시 모든걸 내려놓고 혼자 여행을 떠나보는건 어떤가요? 새로운 곳에서의 신선한 경험들은 길었던 당신의 일상에 쉼표가 되어줄 것입니다.";
+
     return restText;
   };
 
   const name = localStorage.getItem("name") ?? "홍길동";
   const selfie = JSON.parse(localStorage.getItem("photo")) ?? "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT_yrd8qyMAeTKfxPH00Az2BqE561qnoB5Ulw&usqp=CAU";
   const flower = localStorage.getItem("flower") ?? "rose";
-  const travelOrHome = localStorage.getItem("choice_p8") ? localStorage.getItem("choice_p8").startsWith("travel") ? "travel" : "home" : "home";
+  const travelOrHome = localStorage.getItem("choice_p8") ? (localStorage.getItem("choice_p8").startsWith("travel") ? "travel" : "home") : "home";
   const deathMonthDay = (localStorage.getItem("deathMonth") ?? "11") + "월 " + (localStorage.getItem("deathDay") ?? "11") + "일";
   const alias = localStorage.getItem("alias") ?? "나보다 남을 더 사랑했던";
   const lastWord = localStorage.getItem("lastWord") ?? "서비스를 마지막으로 나는 떠난다";
@@ -72,8 +70,10 @@ function P29({ history }) {
   const happyMoment = localStorage.getItem("travelHappyMoment") ?? localStorage.getItem("homeHappyMoment") ?? "주님을 만났던 순간";
   const sadMan = localStorage.getItem("sadMan") ?? "홍길동";
   const restText = makeRestText(localStorage.getItem("choice_p8"));
-  const to = JSON.parse(localStorage.getItem("messages")) 
-    ? JSON.parse(localStorage.getItem("messages")).map((e) => e.to).join(", ")
+  const to = JSON.parse(localStorage.getItem("messages"))
+    ? JSON.parse(localStorage.getItem("messages"))
+        .map((e) => e.to)
+        .join(", ")
     : "홍길동 ";
 
   const data = {
@@ -118,7 +118,7 @@ function P29({ history }) {
         header: "가장 소중한 사람",
         body:
           sadMan +
-          "은 당신의 죽음에 가장 슬퍼했습니다. 아마도 당신을 가장 소중하게 여기는 사람일 것입니다. 이런 사람이 당신에게 있다는 것은 정말 큰 행운입니다. 오늘 하루 " +
+          "은(는) 당신의 죽음에 가장 슬퍼했습니다. 아마도 당신을 가장 소중하게 여기는 사람일 것입니다. 이런 사람이 당신에게 있다는 것은 정말 큰 행운입니다. 오늘 하루 " +
           sadMan +
           "에게 마음을 담은 따뜻한 한 마디를 전하는 건 어떤가요?",
       },
@@ -152,7 +152,7 @@ function P29({ history }) {
         },
         span_data: "홈으로",
         onClick: () => {
-          history.push('/');
+          history.push("/");
         },
       },
     },
