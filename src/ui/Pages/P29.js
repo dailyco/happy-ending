@@ -8,6 +8,7 @@ import PrintIcon from "../../assets/icons/29-printer-7575.svg";
 import END from "../../assets/images/29p_images/29 The end.png";
 
 import "../../scss/pages.scss";
+import "../../scss/print.scss";
 
 function P29({ history }) {
   const page = useRef(null);
@@ -167,7 +168,7 @@ function P29({ history }) {
   };
 
   const styleName = {
-    deco_style: ["hidden"],
+    deco_style: ["hidden", "page-break"],
     title_style: {
       title_style: ["hidden"],
       writer_style: ["title", "writer"],
@@ -235,23 +236,23 @@ function P29({ history }) {
 
     // Flower + Rain
     setTimeout(() => {
-      decoRef.current.querySelector("img.flower").classList.add("visible");
-      decoRef.current.querySelector("img.flower").classList.add("moveFlower");
+      decoRef.current.querySelector(".Img.flower").classList.add("visible");
+      decoRef.current.querySelector(".Img.flower").classList.add("moveFlower");
 
-      decoRef.current.querySelector("img.rain").classList.add("visible");
-      decoRef.current.querySelector("img.rain").classList.add("moveRain");
+      decoRef.current.querySelector(".Img.rain").classList.add("visible");
+      decoRef.current.querySelector(".Img.rain").classList.add("moveRain");
     }, 666);
 
     // travelOrNot
     setTimeout(() => {
-      decoRef.current.querySelectorAll(".Decorations > img")[2].classList.add("visible");
-      decoRef.current.querySelectorAll(".Decorations > img")[2].classList.add("moveTravelOrHome");
+      decoRef.current.querySelectorAll(".Decorations .Img")[2].classList.add("visible");
+      decoRef.current.querySelectorAll(".Decorations .Img")[2].classList.add("moveTravelOrHome");
     }, 1000);
 
     // letter
     setTimeout(() => {
-      decoRef.current.querySelector("img.letter").classList.add("visible");
-      decoRef.current.querySelector("img.letter").classList.add("moveLetter");
+      decoRef.current.querySelector(".Img.letter").classList.add("visible");
+      decoRef.current.querySelector(".Img.letter").classList.add("moveLetter");
     }, 1666);
 
     // Title
@@ -262,8 +263,8 @@ function P29({ history }) {
 
     // The End
     setTimeout(() => {
-      lParaRef.current.querySelector("img").classList.remove("hidden");
-      lParaRef.current.querySelector("img").classList.add("fade-in-quickly");
+      lParaRef.current.querySelector(".Img").classList.remove("hidden");
+      lParaRef.current.querySelector(".Img").classList.add("fade-in-quickly");
     }, 2666);
 
     // Grave
@@ -286,8 +287,8 @@ function P29({ history }) {
 
     // And
     setTimeout(() => {
-      rParaRef.current.querySelector("img").classList.remove("hidden");
-      rParaRef.current.querySelector("img").classList.add("fade-in-quickly");
+      rParaRef.current.querySelector(".Img").classList.remove("hidden");
+      rParaRef.current.querySelector(".Img").classList.add("fade-in-quickly");
     }, 5333);
 
     // ImportantMan
