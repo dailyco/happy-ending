@@ -7,6 +7,14 @@
     padding-left : 414px;
     text-align : left;
 
+    .hidden {
+        visibility: hidden;
+    }
+
+    .visible {
+        visibility : visible;
+    }
+
     & .Decorations {
         & .Selfie {
             & img:nth-child(1) {

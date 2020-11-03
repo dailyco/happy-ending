@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React, { useRef, useEffect } from "react";
-import { useReactToPrint } from 'react-to-print';
+import { useReactToPrint } from "react-to-print";
 import SeparatedTemplate29 from "../Templates/SeparatedTemplate29";
 import HomeIcon from "../../assets/icons/29-home7575.svg";
 import AND from "../../assets/images/29p_images/29 And.png";
@@ -11,6 +11,10 @@ import "../../scss/pages.scss";
 
 function P29({ history }) {
   const page = useRef(null);
+  const titleRef = useRef(null);
+  const lParaRef = useRef(null);
+  const rParaRef = useRef(null);
+  const decoRef = useRef(null);
 
   const translateFlower = (f) => {
     let fInKorean = "";
@@ -54,17 +58,15 @@ function P29({ history }) {
         "와(과) 함께 집에 남아 " +
         homeWithDo +
         "하고 싶어했던 당신, 오늘은 소중한 사람들과 함께 저녁을 먹으며 시간을 보내는 것은 어떤가요? 진정한 행복과 힐링은 특별한 곳이 아닌 일상 속에서 찾을 수 있습니다.";
-    else
-      restText =
-        "한국(으)로 혼자 여행을 떠나고 싶어했던 당신, 잠시 모든걸 내려놓고 혼자 여행을 떠나보는건 어떤가요? 새로운 곳에서의 신선한 경험들은 길었던 당신의 일상에 쉼표가 되어줄 것입니다.";
-    
+    else restText = "한국(으)로 혼자 여행을 떠나고 싶어했던 당신, 잠시 모든걸 내려놓고 혼자 여행을 떠나보는건 어떤가요? 새로운 곳에서의 신선한 경험들은 길었던 당신의 일상에 쉼표가 되어줄 것입니다.";
+
     return restText;
   };
 
   const name = localStorage.getItem("name") ?? "홍길동";
   const selfie = JSON.parse(localStorage.getItem("photo")) ?? "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT_yrd8qyMAeTKfxPH00Az2BqE561qnoB5Ulw&usqp=CAU";
   const flower = localStorage.getItem("flower") ?? "rose";
-  const travelOrHome = localStorage.getItem("choice_p8") ? localStorage.getItem("choice_p8").startsWith("travel") ? "travel" : "home" : "home";
+  const travelOrHome = localStorage.getItem("choice_p8") ? (localStorage.getItem("choice_p8").startsWith("travel") ? "travel" : "home") : "home";
   const deathMonthDay = (localStorage.getItem("deathMonth") ?? "11") + "월 " + (localStorage.getItem("deathDay") ?? "11") + "일";
   const alias = localStorage.getItem("alias") ?? "나보다 남을 더 사랑했던";
   const lastWord = localStorage.getItem("lastWord") ?? "서비스를 마지막으로 나는 떠난다";
@@ -72,21 +74,26 @@ function P29({ history }) {
   const happyMoment = localStorage.getItem("travelHappyMoment") ?? localStorage.getItem("homeHappyMoment") ?? "주님을 만났던 순간";
   const sadMan = localStorage.getItem("sadMan") ?? "홍길동";
   const restText = makeRestText(localStorage.getItem("choice_p8"));
-  const to = JSON.parse(localStorage.getItem("messages")) 
-    ? JSON.parse(localStorage.getItem("messages")).map((e) => e.to).join(", ")
+  const to = JSON.parse(localStorage.getItem("messages"))
+    ? JSON.parse(localStorage.getItem("messages"))
+        .map((e) => e.to)
+        .join(", ")
     : "홍길동 ";
 
   const data = {
     deco_data: {
+      decoRef: decoRef,
       selfie: selfie,
       flower: flower,
       travelOrHome: travelOrHome,
     },
     title_data: {
+      titleRef: titleRef,
       writer: name + "의",
       lastPage: "마지막페이지",
     },
     l_paras_data: {
+      paraRef: lParaRef,
       img: END,
       paragraph1: {
         header: name + "의 묘",
@@ -113,6 +120,7 @@ function P29({ history }) {
       },
     },
     r_paras_data: {
+      paraRef: rParaRef,
       img: AND,
       paragraph1: {
         header: "가장 소중한 사람",
@@ -152,44 +160,51 @@ function P29({ history }) {
         },
         span_data: "홈으로",
         onClick: () => {
-          history.push('/');
+          history.push("/");
         },
       },
     },
   };
 
   const styleName = {
-    tp_style: [],
+    deco_style: ["hidden"],
     title_style: {
+      title_style: ["hidden"],
       writer_style: ["title", "writer"],
       lastPage_style: ["title", "lastPage"],
     },
     l_paras_style: {
-      img_style: "end",
+      img_style: ["end", "hidden"],
       para1_style: {
+        para_style: ["hidden"],
         head_style: ["para", "head"],
         body_style: ["para", "body", "h3"],
       },
       para2_style: {
+        para_style: ["hidden"],
         head_style: ["para", "head"],
         body_style: ["para", "body", "h1"],
       },
       para3_style: {
+        para_style: ["hidden"],
         head_style: ["para", "head"],
         body_style: ["para", "body", "h1"],
       },
     },
     r_paras_style: {
-      img_style: "and",
+      img_style: ["and", "hidden"],
       para1_style: {
+        para_style: ["hidden"],
         head_style: ["para", "head"],
         body_style: ["para", "body", "h3"],
       },
       para2_style: {
+        para_style: ["hidden"],
         head_style: ["para", "head"],
         body_style: ["para", "body", "h2"],
       },
       para3_style: {
+        para_style: ["hidden"],
         head_style: ["para", "head"],
         body_style: ["para", "body", "h2"],
       },
@@ -207,6 +222,92 @@ function P29({ history }) {
       },
     },
   };
+
+  // set animation
+  useEffect(() => {
+    // Selfie
+    setTimeout(() => {
+      decoRef.current.querySelectorAll(".Selfie img").forEach((e) => {
+        e.classList.add("visible");
+        e.classList.add("moveSelfie");
+      });
+    }, 833);
+
+    // Flower + Rain
+    setTimeout(() => {
+      decoRef.current.querySelector("img.flower").classList.add("visible");
+      decoRef.current.querySelector("img.flower").classList.add("moveFlower");
+
+      decoRef.current.querySelector("img.rain").classList.add("visible");
+      decoRef.current.querySelector("img.rain").classList.add("moveRain");
+    }, 666);
+
+    // travelOrNot
+    setTimeout(() => {
+      decoRef.current.querySelectorAll(".Decorations > img")[2].classList.add("visible");
+      decoRef.current.querySelectorAll(".Decorations > img")[2].classList.add("moveTravelOrHome");
+    }, 1000);
+
+    // letter
+    setTimeout(() => {
+      decoRef.current.querySelector("img.letter").classList.add("visible");
+      decoRef.current.querySelector("img.letter").classList.add("moveLetter");
+    }, 1666);
+
+    // Title
+    setTimeout(() => {
+      titleRef.current.classList.remove("hidden");
+      titleRef.current.classList.add("fade-in-quickly");
+    }, 2000);
+
+    // The End
+    setTimeout(() => {
+      lParaRef.current.querySelector("img").classList.remove("hidden");
+      lParaRef.current.querySelector("img").classList.add("fade-in-quickly");
+    }, 2666);
+
+    // Grave
+    setTimeout(() => {
+      lParaRef.current.querySelectorAll(".Paragraph")[0].classList.remove("hidden");
+      lParaRef.current.querySelectorAll(".Paragraph")[0].classList.add("fade-in-quickly");
+    }, 3333);
+
+    // Funeral
+    setTimeout(() => {
+      lParaRef.current.querySelectorAll(".Paragraph")[1].classList.remove("hidden");
+      lParaRef.current.querySelectorAll(".Paragraph")[1].classList.add("fade-in-quickly");
+    }, 4000);
+
+    // HappyMoment
+    setTimeout(() => {
+      lParaRef.current.querySelectorAll(".Paragraph")[2].classList.remove("hidden");
+      lParaRef.current.querySelectorAll(".Paragraph")[2].classList.add("fade-in-quickly");
+    }, 4666);
+
+    // And
+    setTimeout(() => {
+      rParaRef.current.querySelector("img").classList.remove("hidden");
+      rParaRef.current.querySelector("img").classList.add("fade-in-quickly");
+    }, 5333);
+
+    // ImportantMan
+    setTimeout(() => {
+      rParaRef.current.querySelectorAll(".Paragraph")[0].classList.remove("hidden");
+      rParaRef.current.querySelectorAll(".Paragraph")[0].classList.add("fade-in-quickly");
+    }, 6000);
+
+    // Rest
+    setTimeout(() => {
+      rParaRef.current.querySelectorAll(".Paragraph")[1].classList.remove("hidden");
+      rParaRef.current.querySelectorAll(".Paragraph")[1].classList.add("fade-in-quickly");
+    }, 6666);
+
+    // LastWord
+    setTimeout(() => {
+      rParaRef.current.querySelectorAll(".Paragraph")[2].classList.remove("hidden");
+      rParaRef.current.querySelectorAll(".Paragraph")[2].classList.add("fade-in-quickly");
+    }, 7333);
+  }, []);
 
   useEffect(() => {
     console.log(history);
