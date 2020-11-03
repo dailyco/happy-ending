@@ -11,6 +11,7 @@ function SeparatedTemplate17({ data, styleName, history }) {
   const { dq_data, flowers } = data;
   const { tp_style, dq_style } = styleName;
 
+  const [selectable, setSelectable] = useState(true);
   const [constrasts, setConstrasts] = useState(flowers);
 
   const onClick = (e) => {
@@ -18,7 +19,8 @@ function SeparatedTemplate17({ data, styleName, history }) {
 
     const flowerName = e.target.id;
 
-    setConstrasts(constrasts.map((constrast) => (constrast.alt === flowerName ? { ...constrast, active: !constrast.active } : constrast)));
+    setConstrasts(constrasts.map((constrast) => (constrast.alt === flowerName ? { ...constrast, active: true } : constrast)));
+    setSelectable(false);
 
     localStorage.setItem("flower", flowerName);
     console.log(localStorage);
@@ -37,7 +39,7 @@ function SeparatedTemplate17({ data, styleName, history }) {
         <div key={idx}>
           <Img styleName={flower.active ? "fade-in-ease-in" : ""} image={flower.active ? flower.glow : flower.shadow} alt={flower.alt}></Img>
           <Img image={flower.image} alt={flower.alt}></Img>
-          <Link to={"/p18"} id={flower.alt} onClick={onClick}></Link>
+          {selectable && <Link to={"/p18"} id={flower.alt} onClick={onClick}></Link>}
         </div>
       ))}
 
