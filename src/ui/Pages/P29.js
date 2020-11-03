@@ -23,7 +23,7 @@ function P29({ history }) {
     else if (f === "freesia") fInKorean = "프리지아";
     else if (f === "babyBreath") fInKorean = "안개꽃";
     else if (f === "tulip") fInKorean = "튤립";
-    else if (f === "mum") fInKorean = "안개꽃";
+    else if (f === "mum") fInKorean = "국화";
     else fInKorean = "장미";
 
     return fInKorean;
