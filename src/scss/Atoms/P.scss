@@ -39,6 +39,8 @@
 
   // paragraph
   &.para {
+    overflow : auto;
+
     &.head {
       width: 175px;
       height: 24px;
