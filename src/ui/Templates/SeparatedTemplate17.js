@@ -8,7 +8,7 @@ import P17Video from "../../assets/videos/17_front.mp4";
 import "../../scss/Templates/SeparatedTemplate17.scss";
 
 function SeparatedTemplate17({ data, styleName, history }) {
-  const { dq_data, flowers } = data;
+  const { prevent_click, dq_data, flowers } = data;
   const { tp_style, dq_style } = styleName;
 
   const [constrasts, setConstrasts] = useState(flowers);
@@ -16,16 +16,17 @@ function SeparatedTemplate17({ data, styleName, history }) {
   const onClick = (e) => {
     e.preventDefault();
 
-    const flowerName = e.target.id;
-
-    setConstrasts(constrasts.map((constrast) => (constrast.alt === flowerName ? { ...constrast, active: !constrast.active } : constrast)));
-
-    localStorage.setItem("flower", flowerName);
-    console.log(localStorage);
-
-    setTimeout(() => {
-      history.push("/p18");
-    }, 3000);
+    if (prevent_click.current) {
+      const flowerName = e.target.id;
+      setConstrasts(constrasts.map((constrast) => (constrast.alt === flowerName ? { ...constrast, active: !constrast.active } : constrast)));
+  
+      localStorage.setItem("flower", flowerName);
+      console.log(localStorage);
+  
+      setTimeout(() => {
+        history.push("/p18");
+      }, 3000);
+    }
   };
 
   return (
