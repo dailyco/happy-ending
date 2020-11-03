@@ -7,6 +7,14 @@
     padding-left : 414px;
     text-align : left;
 
+    .hidden {
+        visibility: hidden;
+    }
+
+    .visible {
+        visibility : visible;
+    }
+
     & .Decorations {
         & .Selfie {
             & img:nth-child(1) {
@@ -34,26 +42,31 @@
                 &[alt="rose"] {
                     top : 570px;
                     left : 0px;
+                    clip: rect(0, 730px, 510px, 0); 
                 }
 
                 &[alt="tulip"] {
                     top : 570px;
                     left : -20px;
+                    clip: rect(0, 730px, 510px, 0); 
                 }
 
                 &[alt="freesia"] {
                     top : 540px;
                     left : -20px;
+                    clip: rect(0, 730px, 540px, 0); 
                 }
 
                 &[alt="babyBreath"] {
                     top : 505px;
                     left : 0px;
+                    clip: rect(0, 730px, 575px, 0); 
                 }
 
                 &[alt="mum"] {
                     top : 560px;
                     left : -30px;
+                    clip: rect(0, 730px, 520px, 0); 
                 }
             }
 
@@ -72,6 +85,7 @@
             &.letter {
                 top : 707px;
                 left : 1393px;
+                clip: rect(0, 526px, 372px, 0); 
             }   
         }
     }

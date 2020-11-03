@@ -9,11 +9,11 @@ import "../../scss/Templates/SeparatedTemplate29.scss";
 
 function SeparatedTemplate29({ data, styleName }) {
   const { deco_data, title_data, l_paras_data, r_paras_data, detailed_buttons_data } = data;
-  const { tp_style, title_style, l_paras_style, r_paras_style, detailed_buttons_style } = styleName;
+  const { deco_style, title_style, l_paras_style, r_paras_style, detailed_buttons_style } = styleName;
 
   return (
-    <div className={classNames("SeparatedTemplate29", tp_style)}>
-      <Decorations data={deco_data}></Decorations>
+    <div className={classNames("SeparatedTemplate29")}>
+      <Decorations data={deco_data} styleName={deco_style}></Decorations>
       <Title data={title_data} styleName={title_style}></Title>
       <section className="contents">
         <Paragraphs data={l_paras_data} styleName={l_paras_style}></Paragraphs>
