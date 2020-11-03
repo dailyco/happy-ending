@@ -4,9 +4,9 @@ import classNames from "classnames";
 
 function Paragraph({ data, styleName }) {
   const { header, body } = data;
-  const { head_style, body_style } = styleName;
+  const { para_style, head_style, body_style } = styleName;
   return (
-    <div className={classNames("Paragraph")}>
+    <div className={classNames("Paragraph", para_style)}>
       <P styleName={head_style}>{header}</P>
       <P styleName={body_style}>{body}</P>
     </div>

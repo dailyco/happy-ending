@@ -13,10 +13,10 @@ import Home from "../../assets/images/29p_images/29 ebook-p3 Home.png";
 import Letter from "../../assets/images/29p_images/29 ebook-letter.png";
 
 function Decorations({ data, styleName }) {
-  const { selfie, flower, travelOrHome } = data;
+  const { decoRef, selfie, flower, travelOrHome } = data;
 
   return (
-    <div className={classNames("Decorations")}>
+    <div className={classNames("Decorations", styleName)} ref={decoRef}>
       <Selfie data={selfie}></Selfie>
 
       {flower === "rose" && <Img image={Rose} alt="rose" styleName="flower"></Img>}

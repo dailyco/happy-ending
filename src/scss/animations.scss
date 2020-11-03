@@ -27,6 +27,56 @@
   }
 }
 
+@keyframes moveFlower {
+  0% {
+    transform : translate(-531px, 288px);
+  }
+}
+
+@keyframes moveRain {
+  0% {
+    transform : translate(-200px, -450px);
+  }
+}
+
+@keyframes moveTravelOrHome {
+  0% {
+    transform : translate(400px, -500px);
+  }
+}
+
+@keyframes moveLetter {
+  0% {
+    transform : translate(400px, 300px);
+  }
+}
+
+@keyframes moveSelfie {
+  0% {
+    transform : translate(-300px, -100px);
+  }
+}
+
+.moveFlower {
+  animation : moveFlower  1s linear forwards;
+}
+
+.moveRain {
+  animation : moveRain  1s linear forwards;
+}
+
+.moveTravelOrHome {
+  animation : moveTravelOrHome 1s linear forwards;
+}
+
+.moveLetter {
+  animation : moveLetter 1s linear forwards;
+}
+
+.moveSelfie {
+  animation : moveSelfie 1s linear forwards;
+}
+
 .fade-in-out {
   animation: fade-in 1s ease-in-out alternate infinite;
 }
@@ -49,6 +99,10 @@
 
 .fade-in-ease-in {
   animation : fade-in 2s ease-in;
+}
+
+.fade-in-quickly {
+  animation : fade-in 1s linear;
 }
 
 .fade-in-2s {
