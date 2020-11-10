@@ -1,4 +1,4 @@
-# 🥀 HAPPY ENDING ㅤㅤㅤ![version](https://img.shields.io/badge/version-v1.0.0-blue)
+# 🥀 HAPPY ENDING ㅤ![version](https://img.shields.io/badge/version-v1.0.0-blue)
 스토리텔링 게임으로 죽음을 인식하여 삶을 고찰하는 서비스
 <br/><br/>
 
