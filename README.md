@@ -1,19 +1,19 @@
 # HAPPY ENDING
 ![version](https://img.shields.io/badge/version-v1.0.0-blue)
 
-## 소개
+### 소개
 HAPPY ENDING 프로젝트는 죽음을 인식하여 삶을 고찰하는 서비스를 제공하는 스토리텔링 게임입니다.
 
-## 배포
+### 배포
 []()
 
-## 프로젝트 구조
+### 프로젝트 구조
 
-## 설치 가이드
+### 설치 가이드
 
 
 
-## 팀원
+### 팀원
 - 김유진 [@0pencoding](https://github.com/0pencoding)
 - 김석진 [@Alinew](https://github.com/SukJinKim)
 
