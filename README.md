@@ -43,9 +43,14 @@ L happy-ending
 ## 설치 가이드
 ### 프로젝트 가져오기
 ```
-git clone 
+git clone https://github.com/dailyco/happy-ending.git
 ```
-
+### 코드 실행하기
+```
+yarn install
+yarn start
+```
+<br/><br/>
 
 ## 팀원
 - 김유진 [@dailyco](https://github.com/dailyco)
