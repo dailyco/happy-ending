@@ -1,4 +1,4 @@
-# 🥀 HAPPY ENDING ![version](https://img.shields.io/badge/version-v1.0.0-blue)
+# 🥀 HAPPY ENDING    ![version](https://img.shields.io/badge/version-v1.0.0-blue)
 스토리텔링 게임으로 죽음을 인식하여 삶을 고찰하는 서비스
 <br/><br/>
 
@@ -40,6 +40,9 @@ L happy-ending
 ```
 <br/>
 
+## Atomic Design을 활용한 구조 설계
+
+
 ## 설치 가이드
 ### 프로젝트 가져오기
 ```
@@ -51,7 +54,15 @@ yarn install
 yarn start
 ```
 코드 실행후 http://localhost:3000에서 확인 가능합니다!
-<br/>
+<br/><br/>
+
+## 협업 내용
+* Dev Rule
+* Code Style
+* Dev Log
+* [Design]()
+
+## 
 
 ## 팀원
 - 김유진 [@dailyco](https://github.com/dailyco)
