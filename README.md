@@ -1,5 +1,5 @@
-# 🥀 HAPPY ENDING
-![version](https://img.shields.io/badge/version-v1.0.0-blue)
+# 🥀 HAPPY ENDING ![version](https://img.shields.io/badge/version-v1.0.0-blue)
+
 
 ## 소개
 HAPPY ENDING 프로젝트는 죽음을 인식하여 삶을 고찰하는 서비스를 제공하는 스토리텔링 게임입니다.
