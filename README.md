@@ -53,7 +53,7 @@ git clone https://github.com/dailyco/happy-ending.git
 yarn install
 yarn start
 ```
-코드 실행후 http://localhost:3000에서 확인 가능합니다!
+코드 실행후 http://localhost:3000 에서 확인 가능합니다!
 <br/><br/>
 
 ## 협업 내용
