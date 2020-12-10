@@ -75,7 +75,7 @@ yarn start
 <br/>
 
 ## Writing
-- [Atomic Design 이란?](https://github.com/dailyco/happy-ending/wiki/%F0%9F%8F%97-Atomic-Design) by [@dailyco](https://github.com/dailyco)
+- [Atomic Design](https://github.com/dailyco/happy-ending/wiki/%F0%9F%8F%97-Atomic-Design) by [@dailyco](https://github.com/dailyco)
 
 <br/>
 
