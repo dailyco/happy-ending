@@ -58,7 +58,7 @@ yarn start
 
 ## 협업 내용
 * [Dev Rule](https://github.com/dailyco/happy-ending/wiki/🤙🏻-Dev-Rule)
-* [Code Style]()
+* [Convention](https://github.com/dailyco/happy-ending/wiki/✨-Convention)
 * [Dev Log]()
 * [Design]()
 
