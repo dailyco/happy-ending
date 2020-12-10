@@ -41,7 +41,7 @@ L happy-ending
 <br/>
 
 ## Atomic Design을 활용한 구조 설계
-
+[Atomic Design 이란?](https://github.com/dailyco/happy-ending/wiki/%F0%9F%8F%97-Atomic-Design)
 
 ## 설치 가이드
 ### 프로젝트 가져오기
@@ -57,9 +57,9 @@ yarn start
 <br/><br/>
 
 ## 협업 내용
-* Dev Rule
-* Code Style
-* Dev Log
+* [Dev Rule](https://github.com/dailyco/happy-ending/wiki/🤙🏻-Dev-Rule)
+* [Code Style]()
+* [Dev Log]()
 * [Design]()
 
 ## 
