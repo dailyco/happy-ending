@@ -9,7 +9,7 @@ HAPPY ENDING 프로젝트는 죽음을 인식할 수 있는 경험을 제공하�
 <br/>
 
 ## 배포
-[https://dailyco.github.io/happy-ending/](https://dailyco.github.io/happy-ending/)
+[https://dailyco.github.io/happy-ending/](https://dailyco.github.io/happy-ending/) (size: 1920\*1080)
 
 <br/>
 
@@ -18,26 +18,34 @@ HAPPY ENDING 프로젝트는 죽음을 인식할 수 있는 경험을 제공하�
 L happy-ending
   L public
     - favicon-happyending.ico
-    - indext.html
+    - index.html
   L src
-    L assets
+    L assets // multimedia
       L fonts
       L icons
       L images
       L videos
       L audios
-    L scss
+    L scss // components' styles & common styles
       L Atoms
       L Molecules
       L Organisms
       L Templates
       L Pages
-    L ui
+      - animations.scss
+      - colors.scss
+      - pages.scss
+      - print.scss
+      - validate.scss
+    L ui // UI components
       L Atoms
       L Molecules
       L Organisms
       L Templates
       L Pages
+      - reducerInputs.js
+      - useInputs.js
+    - App.css
     - App.js
     - index.js
 ```
@@ -45,7 +53,7 @@ L happy-ending
 <br/>
 
 ## Atomic Design을 활용한 구조 설계
-[Atomic Design 이란?](https://github.com/dailyco/happy-ending/wiki/%F0%9F%8F%97-Atomic-Design)
+
 
 <br/>
 
@@ -68,6 +76,11 @@ yarn start
 - [Convention](https://github.com/dailyco/happy-ending/wiki/✨-Convention)
 - [Dev Log](https://www.notion.so/d8beacec1f1e40f0833200cbe2bcec1c?v=eeda10c157db493780445c1a078eb156)
 - [Design](https://app.zeplin.io/project/5f54e4ef65e81f48a04d1968/dashboard?sid=5f5c6d981106877aba5e5d90)
+
+<br/>
+
+## Writing
+- [Atomic Design 이란?](https://github.com/dailyco/happy-ending/wiki/%F0%9F%8F%97-Atomic-Design) by [@dailyco](https://github.com/dailyco)
 
 <br/>
 
