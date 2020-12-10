@@ -52,11 +52,6 @@ L happy-ending
 
 <br/>
 
-## Atomic Design을 활용한 구조 설계
-
-
-<br/>
-
 ## 설치 가이드
 ### 프로젝트 가져오기
 ```
