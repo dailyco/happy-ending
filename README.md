@@ -58,6 +58,11 @@ L happy-ending
 
 <br/>
 
+## Writing
+- [Atomic Design](https://github.com/dailyco/happy-ending/wiki/%F0%9F%8F%97-Atomic-Design) by [@dailyco](https://github.com/dailyco)
+
+<br/>
+
 ## 설치 가이드
 ### 프로젝트 가져오기
 ```
@@ -69,12 +74,6 @@ yarn install
 yarn start
 ```
 코드 실행후 http://localhost:3000 에서 확인 가능합니다!
-
-<br/>
-
-
-## Writing
-- [Atomic Design](https://github.com/dailyco/happy-ending/wiki/%F0%9F%8F%97-Atomic-Design) by [@dailyco](https://github.com/dailyco)
 
 <br/>
 
