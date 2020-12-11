@@ -52,6 +52,12 @@ L happy-ending
 
 <br/>
 
+## Atomic Design을 활용한 구조 설계
+- [Atomic Design 구조](https://github.com/dailyco/happy-ending/wiki/🏗-Atomic-Design) by [@dailyco](https://github.com/dailyco)
+- [재사용성 높은 컴포넌트](https://github.com/dailyco/happy-ending/wiki/🧩-재사용성이-높은-컴포넌트) by [@dailyco](https://github.com/dailyco)
+
+<br/>
+
 ## 설치 가이드
 ### 프로젝트 가져오기
 ```
@@ -66,16 +72,17 @@ yarn start
 
 <br/>
 
+
+## Writing
+- [Atomic Design](https://github.com/dailyco/happy-ending/wiki/%F0%9F%8F%97-Atomic-Design) by [@dailyco](https://github.com/dailyco)
+
+<br/>
+
 ## 협업 내용
 - [Dev Rule](https://github.com/dailyco/happy-ending/wiki/🤙🏻-Dev-Rule)
 - [Convention](https://github.com/dailyco/happy-ending/wiki/✨-Convention)
 - [Dev Log](https://www.notion.so/d8beacec1f1e40f0833200cbe2bcec1c?v=eeda10c157db493780445c1a078eb156)
 - [Design](https://app.zeplin.io/project/5f54e4ef65e81f48a04d1968/dashboard?sid=5f5c6d981106877aba5e5d90)
-
-<br/>
-
-## Writing
-- [Atomic Design](https://github.com/dailyco/happy-ending/wiki/%F0%9F%8F%97-Atomic-Design) by [@dailyco](https://github.com/dailyco)
 
 <br/>
 
