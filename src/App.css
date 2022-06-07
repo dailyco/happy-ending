@@ -144,12 +144,9 @@ table {
 }
 
 a {
-  /* display: block; */
   text-decoration: none;
   width: min-content;
 }
-
-/*# sourceMappingURL=/sm/04f4d35563f7cf9516264fcbb6e11a85def2ae5616df66563711867fe05befec.map */
 
 .App {
   font-family: "Nanum Myeongjo", serif;
