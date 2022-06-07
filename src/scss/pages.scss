@@ -4,10 +4,9 @@
 }
 
 .Page {
-  // cursor: none;
   position: relative;
-  width: 1920px;
-  height: 1080px;
+  width: 100%;
+  min-height: 100vh;
 
   &.bg-video {
     & video {
