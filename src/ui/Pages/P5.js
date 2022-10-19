@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 import SeparatedTemplate5 from "../Templates/SeparatedTemplate5";
@@ -6,8 +7,10 @@ import P5Vedio from "../../assets/videos/5-calender.mp4";
 
 import "../../scss/pages.scss";
 
-function P5({ history }) {
+function P5() {
+  const navigate = useNavigate();
   let date = new Date();
+
   date.setDate(date.getDate() + 7);
   const { year = 2020, month = 11,day = 10 } = {
     year: date.getFullYear(),
@@ -29,7 +32,7 @@ function P5({ history }) {
   };
 
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
 
   const data = {

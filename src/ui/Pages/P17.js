@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import SeparatedTemplate17 from "../Templates/SeparatedTemplate17";
 import F1 from "../../assets/images/17p_images/1F.png";
@@ -19,15 +20,16 @@ import GW5 from "../../assets/images/17p_images/5GW.png";
 
 import "../../scss/pages.scss";
 
-function P17({ history }) {
+function P17() {
   const click = useRef(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => click.current = true, 3000);
   }, []);
 
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
 
   const data = {
@@ -94,7 +96,7 @@ function P17({ history }) {
 
   return (
     <div className={classNames("Page", "P17", "fade-in")}>
-      <SeparatedTemplate17 data={data} styleName={styleName} history={history}></SeparatedTemplate17>
+      <SeparatedTemplate17 data={data} styleName={styleName}></SeparatedTemplate17>
       <button className={classNames("back", "back-gray")} onClick={goBack}></button>
     </div>
   );

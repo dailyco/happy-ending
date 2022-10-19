@@ -1,19 +1,21 @@
 import React, { useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
 import P8_1_Video from "../../assets/videos/8-1-travel alone_together.mp4";
 
 import "../../scss/pages.scss";
 
-function P8_1({ history }) {
+function P8_1() {
   const click = useRef(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => click.current = true, 5000);
   }, []);
 
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
   const data = {
     dq_data: {

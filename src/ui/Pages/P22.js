@@ -1,13 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import VideoTemplate from "../Templates/VideoTemplate";
 import P22Video from "../../assets/videos/22-D-1.mp4";
 
 import "../../scss/pages.scss";
 
-function P22({ history }) {
+function P22() {
+  const navigate = useNavigate();
+  
   const goTo = () => {
-    history.push("/p23");
+    navigate("/p23");
   };
   return (
     <div className={classNames("Page", "P22", "bg-video")}>

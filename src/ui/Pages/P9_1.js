@@ -1,13 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import VideoTemplate from "../Templates/VideoTemplate";
 import P9Video from "../../assets/videos/9 D-4.mp4";
 
 import "../../scss/pages.scss";
 
-function P9_1({ history }) {
+function P9_1() {
+  const navigate = useNavigate();
+
   const goTo = () => {
-    history.push("/p10");
+    navigate("/p10");
   };
 
   return (

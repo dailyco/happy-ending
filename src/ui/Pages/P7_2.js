@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import useInputs from "../useInputs";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
 
 import "../../scss/pages.scss";
 
-function P7_2({ history }) {
+function P7_2() {
   const click = useRef(false);
+  const navigate = useNavigate();
   const [input, onChange] = useInputs({
     keepBank: localStorage.getItem("keepBank") ?? "",
     isValidate: localStorage.getItem("keepBank")? true : false,
@@ -17,7 +19,7 @@ function P7_2({ history }) {
   }, []);
   
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
 
   const data = {

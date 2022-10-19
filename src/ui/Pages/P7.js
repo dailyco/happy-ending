@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import SeparatedTemplate7 from "../Templates/SeparatedTemplate7";
 import P7Video from "../../assets/videos/7-break or not.mp4";
@@ -6,8 +7,9 @@ import P7Video_break from "../../assets/videos/7-break.mp4";
 
 import "../../scss/pages.scss";
 
-function P7({ history }) {
+function P7() {
   const click = useRef(false);
+  const navigate = useNavigate();
   const [video, setVideo] = useState(P7Video);
 
   useEffect(() => {
@@ -15,11 +17,11 @@ function P7({ history }) {
   }, []);
   
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
 
   const goNext = () => {
-    history.push("/p7_1");
+    navigate("/p7_1");
   };
 
   const onClickA = (e) => {

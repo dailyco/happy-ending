@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import InsertyPaperTemplate from "../Templates/InsertyPaperTemplate";
@@ -6,8 +7,9 @@ import P10Video from "../../assets/videos/10-after travel.mp4";
 
 import "../../scss/pages.scss";
 
-function P10({ history }) {
+function P10() {
   const click = useRef(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => click.current = true, 3000);
@@ -18,10 +20,8 @@ function P10({ history }) {
       e.preventDefault();
   };
 
-  const goBack = () => {
-    console.log(history);
-    history.goBack();
-    history.goBack();
+  const goBack = (e) => {
+    navigate(-2);
   };
 
   const data = {

@@ -1,18 +1,20 @@
 import React, { useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
 
 import "../../scss/pages.scss";
 
-function P8_2({ history }) {
+function P8_2() {
   const click = useRef(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => click.current = true, 3000);
   }, []);
   
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
   const data = {
     dq_data: {

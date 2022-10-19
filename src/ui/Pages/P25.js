@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import SeparatedTemplate25 from "../Templates/SeparatedTemplate25";
@@ -6,7 +7,8 @@ import P25_Video from "../../assets/videos/25-death.mp4";
 
 import "../../scss/pages.scss";
 
-function P25({ history }) {
+function P25() {
+  const navigate = useNavigate();
   const year = localStorage.getItem("deathYear");
   const month = localStorage.getItem("deathMonth");
   const day = localStorage.getItem("deathDay");
@@ -23,7 +25,7 @@ function P25({ history }) {
   };
   
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
 
   const data = {

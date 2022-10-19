@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import useInputs from "../useInputs";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
@@ -6,8 +7,9 @@ import P19Vedio from "../../assets/videos/19-music.mp4";
 
 import "../../scss/pages.scss";
 
-function P19({ history }) {
+function P19() {
   const click = useRef(false);
+  const navigate = useNavigate();
   const loopVideo = useRef(null);
   const [input, onChange] = useInputs({
     song: localStorage.getItem("song") ?? "",
@@ -19,8 +21,7 @@ function P19({ history }) {
   }, []);
 
   const goBack = () => {
-    history.goBack();
-    history.goBack();
+    navigate(-2);
   };
 
   const onEnded = () => {

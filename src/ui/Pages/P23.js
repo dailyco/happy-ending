@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import InsertyPaperTemplate from "../Templates/InsertyPaperTemplate";
@@ -6,8 +7,9 @@ import P23Vedio from "../../assets/videos/23-after D-1.mp4";
 
 import "../../scss/pages.scss";
 
-function P23({ history }) {
+function P23() {
   const click = useRef(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => click.current = true, 3000);
@@ -19,8 +21,7 @@ function P23({ history }) {
   };
 
   const goBack = () => {
-    history.goBack();
-    history.goBack();
+    navigate(-2);
   };
 
   const data = {

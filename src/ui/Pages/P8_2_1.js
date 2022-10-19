@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import useInputs from "../useInputs";
 import SingleTextFieldTemplate from "../Templates/SingleTextFieldTemplate";
@@ -6,8 +7,9 @@ import P8_2_1_Video from "../../assets/videos/8-2-1-stay home alone.mp4";
 
 import "../../scss/pages.scss";
 
-function P8_2_1({ history }) {
+function P8_2_1() {
   const click = useRef(false);
+  const navigate = useNavigate();
   const loopVideo = useRef(null);
   const [input, onChange] = useInputs({	
     homeDoAlone: localStorage.getItem("homeDoAlone") ?? "",	
@@ -19,7 +21,7 @@ function P8_2_1({ history }) {
   }, []);
 
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
 
   const onEnded = () => {

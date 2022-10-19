@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import useInputs from "../useInputs";
 import SingleTextFieldTemplate from "../Templates/SingleTextFieldTemplate";
@@ -7,8 +8,9 @@ import P8_1_1_Video_tran from "../../assets/videos/8-1-1-travel_tran.mp4";
 
 import "../../scss/pages.scss";
 
-function P8_1_1({ history }) {
+function P8_1_1() {
   const click = useRef(false);
+  const navigate = useNavigate();
   const loopVideo = useRef(null);
   const [video, setVideo] = useState(P8_1_1_Video);
   const [input, onChange] = useInputs({	
@@ -21,12 +23,12 @@ function P8_1_1({ history }) {
   }, []);
 
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
 
   const goNext = () => {
     if (video !== P8_1_1_Video) {
-      history.push("/p9_1");
+      navigate("/p9_1");
     }
   };
 

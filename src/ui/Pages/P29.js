@@ -1,5 +1,6 @@
 import classNames from "classnames";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext, useCallback } from "react";
+import { useNavigate, UNSAFE_NavigationContext as NavigationContext } from "react-router-dom";
 import { useReactToPrint } from "react-to-print";
 import SeparatedTemplate29 from "../Templates/SeparatedTemplate29";
 import HomeIcon from "../../assets/icons/29-home7575.svg";
@@ -10,7 +11,9 @@ import END from "../../assets/images/29p_images/29 The end.png";
 import "../../scss/pages.scss";
 import "../../scss/print.scss";
 
-function P29({ history }) {
+function P29() {
+  const { navigator } = useContext(NavigationContext);
+  const navigate = useNavigate();
   const page = useRef(null);
   const titleRef = useRef(null);
   const lParaRef = useRef(null);
@@ -161,7 +164,7 @@ function P29({ history }) {
         },
         span_data: "홈으로",
         onClick: () => {
-          history.push("/");
+          navigate("/");
         },
       },
     },
@@ -310,13 +313,25 @@ function P29({ history }) {
     }, 7333);
   }, []);
 
+  const blocker = useCallback((tx) => {
+    if (window.confirm("정말 홈으로 돌아가실건가요?"))
+      tx.retry();
+  }, [])
+
   useEffect(() => {
-    console.log(history);
-    const unblock = history.block("정말 홈으로 돌아가실건가요?");
-    return () => {
-      unblock();
-    };
-  }, [history]);
+    const unblock = navigator.block((tx) => {
+      const autoUnblockingTx = {
+        ...tx,
+        retry() {
+          unblock();
+          tx.retry();
+        },
+      };
+      blocker(autoUnblockingTx);
+    });
+
+    return unblock;
+  }, [navigator, blocker]);
 
   return (
     <div className={classNames("Page", "P29", "page-background-break")} ref={page}>

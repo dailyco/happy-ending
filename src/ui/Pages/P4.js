@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import useInputs from "../useInputs";
 import SeparatedTemplate4 from "../Templates/SeparatedTemplate4";
@@ -6,8 +7,9 @@ import P4Vedio from "../../assets/videos/4-book.mp4";
 
 import "../../scss/pages.scss";
 
-function P4({ history }) {
+function P4() {
   const click = useRef(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => click.current = true, 6000);
@@ -28,7 +30,7 @@ function P4({ history }) {
   });
   
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
 
   const data = {

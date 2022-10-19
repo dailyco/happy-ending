@@ -1,12 +1,14 @@
 import React, { useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import useInputs from "../useInputs";
 import MultiTextFieldTemplate from "../Templates/MultiTextFieldTemplate";
 
 import "../../scss/pages.scss";
 
-function P8_2_2({ history }) {
+function P8_2_2() {
   const click = useRef(false);
+  const navigate = useNavigate();
   const [inputs, onChange] = useInputs({	
     homeWithWho: localStorage.getItem("homeWithWho") ?? "",	
     homeWithDo: localStorage.getItem("homeWithDo") ?? "",	
@@ -18,7 +20,7 @@ function P8_2_2({ history }) {
   }, []);
   
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
   
   const data = {

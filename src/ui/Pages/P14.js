@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import useInputs from "../reducerInputs";
 import SeparatedTemplate14 from "../Templates/SeparatedTemplate14";
@@ -6,8 +7,9 @@ import delIcon from "../../assets/icons/will-del.svg";
 
 import "../../scss/pages.scss";
 
-function P14({ history }) {
+function P14() {
   const click = useRef(false);
+  const navigate = useNavigate();
   const [ state, onCreate, onChange, onRemove ] = useInputs({
     messages: JSON.parse(localStorage.getItem("messages")) ?? [{ id: 1 }],
     isValidate: JSON.parse(localStorage.getItem("messages")) ? true : false,
@@ -18,7 +20,7 @@ function P14({ history }) {
   }, []);
 
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
   
   const data = {

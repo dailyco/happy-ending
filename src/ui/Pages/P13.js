@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import useInputs from "../useInputs";
 import FullTextFieldTemplate from "../Templates/FullTextFieldTemplate";
@@ -6,8 +7,9 @@ import P13Vedio from "../../assets/videos/13-erase.mp4";
 
 import "../../scss/pages.scss";
 
-function P13({ history }) {
+function P13() {
   const click = useRef(false);
+  const navigate = useNavigate();
   const [input, onChange] = useInputs({
     eraseMoment: localStorage.getItem("eraseMoment") ?? "",
     isValidate: localStorage.getItem("eraseMoment")? true : false,
@@ -18,7 +20,7 @@ function P13({ history }) {
   }, []);
 
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
 
   const data = {

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import MultipleChoiceTemplate from "../Templates/MultipleChoiceTemplate";
 import P6_Video from "../../assets/videos/6-tell or not.mp4";
@@ -7,8 +8,9 @@ import P6_Video_B from "../../assets/videos/6-tell or not-tran b.mp4";
 
 import "../../scss/pages.scss";
 
-function P6({ history }) {
+function P6() {
   const click = useRef(false);
+  const navigate = useNavigate();
   const [video, setVideo] = useState(P6_Video);
   
   useEffect(() => {
@@ -16,7 +18,7 @@ function P6({ history }) {
   }, []);
 
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
 
   const onClickA = () => {
@@ -31,7 +33,7 @@ function P6({ history }) {
 
   const goNext = () => {
     if (video !== P6_Video) {
-      history.push("/p7");
+      navigate("/p7");
     }
   };
 

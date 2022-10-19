@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import useInputs from "../useInputs";
 import SeparatedTemplate24 from "../Templates/SeparatedTemplate24";
 
 import "../../scss/pages.scss";
 
-function P24({ history }) {
+function P24() {
   const click = useRef(false);
+  const navigate = useNavigate();
   const name = localStorage.getItem("name") ?? "홍길동";
   const [inputs, onChange] = useInputs({	
     alias: localStorage.getItem("alias") ?? "",	
@@ -19,7 +21,7 @@ function P24({ history }) {
   }, []);
   
   const goBack = () => {
-    history.goBack();
+    navigate(-1);
   };
 
   const data = {

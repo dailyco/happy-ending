@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Img from "../Atoms/Img";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
@@ -7,9 +8,10 @@ import P17Video from "../../assets/videos/17_front.mp4";
 
 import "../../scss/Templates/SeparatedTemplate17.scss";
 
-function SeparatedTemplate17({ data, styleName, history }) {
+function SeparatedTemplate17({ data, styleName }) {
   const { prevent_click, dq_data, flowers } = data;
   const { tp_style, dq_style } = styleName;
+  const navigate = useNavigate();
 
   const [selectable, setSelectable] = useState(true);
   const [constrasts, setConstrasts] = useState(flowers);
@@ -26,7 +28,7 @@ function SeparatedTemplate17({ data, styleName, history }) {
       console.log(localStorage);
 
       setTimeout(() => {
-        history.push("/p18");
+        navigate("/p18");
       }, 3000);
     }
   };

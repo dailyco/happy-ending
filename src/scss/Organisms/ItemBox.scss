@@ -7,6 +7,10 @@
   height: 692px;
   background-color: rgba($white, 17%);
   overflow: scroll;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   & .Button {
     margin: 0 auto;

@@ -1,11 +1,13 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import SeparatedTemplate16 from "../Templates/SeparatedTemplate16";
 
 import "../../scss/pages.scss";
 
-function P16({ history }) {
+function P16() {
   const click = useRef(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => click.current = true, 3000);
@@ -17,8 +19,7 @@ function P16({ history }) {
   };
 
   const goBack = () => {
-    history.goBack();
-    history.goBack();
+    navigate(-2);
   };
 
   const data = {
