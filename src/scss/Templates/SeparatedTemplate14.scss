@@ -1,0 +1,40 @@
+.SeparatedTemplate14 {
+  box-sizing: border-box;
+  padding-top: 215.6px;
+  padding-left: 356.9px;
+  padding-right: 329px;
+
+  &.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+  & .float--left {
+    float: left;
+  }
+  & .float--right {
+    float: right;
+  }
+
+  & .H3 {
+    height: 33px;
+    margin-bottom: 25.8px;
+  }
+
+  & .P {
+    height: 73px;
+  }
+
+  & .ItemBoxContainer {
+    margin-top: 45px;
+    text-align: center;
+    & .Item {
+      text-align: left;
+    }
+  }
+
+  & .ItemBox {
+    margin-bottom: 26.6px;
+  }
+}

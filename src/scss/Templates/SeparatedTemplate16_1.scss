@@ -1,0 +1,40 @@
+.SeparatedTemplate16_1 {
+  text-align: center;
+
+  & video,
+  .Img {
+    position: absolute;
+    top: 140px;
+    left: 700px;
+  }
+
+  & .P {
+    &.description {
+      position: relative;
+      top: 354px;
+    }
+    &.counter {
+      position: relative;
+      top: 141px;
+      left: 699px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  & .Button {
+    position: relative;
+    top: 964px;
+
+    &.capture {
+      & .Icon {
+        margin-top: 12.3px;
+      }
+    }
+
+    & + a {
+      margin-left: 62px;
+    }
+  }
+}

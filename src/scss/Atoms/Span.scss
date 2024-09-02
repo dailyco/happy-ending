@@ -1,0 +1,89 @@
+@import "../colors.scss";
+
+.Span {
+  font-stretch: normal;
+  font-style: normal;
+
+  // font-family
+  &.noto {
+    font-family: "Noto Sans KR", sans-serif;
+  }
+
+  &.nanum {
+    font-family: "NaNum Myeongjo", serif;
+  }
+
+  // font-size
+  &.xs {
+    font-size: 20px;
+  }
+
+  &.s {
+    font-size: 22px;
+  }
+
+  &.m {
+    font-size: 24px;
+  }
+
+  &.l {
+    font-size: 74px;
+  }
+
+  &.xl {
+    font-size: 110px;
+  }
+
+  // font-weight
+  &.light {
+    font-weight: 300;
+  }
+
+  &.normal {
+    font-weight: 400;
+  }
+
+  &.medium {
+    font-weight: 500;
+  }
+
+  &.bold {
+    font-weight: 700;
+  }
+
+  &.extra-bold {
+    font-weight: 800;
+  }
+
+  // color
+  &.white {
+    color: $white;
+  }
+
+  &.charcoal {
+    color: $charcoal;
+  }
+
+  &.eclipse {
+    color: $eclipse;
+  }
+
+  &.davy-gray {
+    color: $davy-gray;
+  }
+
+  &.dark-gray {
+    color: $dark-gray;
+  }
+
+  &.neon-green {
+    color: $neon-green;
+  }
+
+  &.print,
+  &.home {
+    font-size: 13px;
+    letter-spacing: normal;
+    color: $mid-gray;
+  }
+}

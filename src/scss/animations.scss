@@ -1,0 +1,122 @@
+@import "./colors.scss";
+
+@mixin fade-in-delay($delay) {
+  animation: fade-in 2s linear $delay, non-visibility $delay;
+}
+
+@mixin fade-in-out-delay($delay) {
+  animation: fade-in 1s ease-in-out alternate infinite $delay, non-visibility $delay;
+}
+
+@keyframes fade-in {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes non-visibility {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes moveFlower {
+  0% {
+    transform : translate(-531px, 288px);
+  }
+}
+
+@keyframes moveRain {
+  0% {
+    transform : translate(-200px, -450px);
+  }
+}
+
+@keyframes moveTravelOrHome {
+  0% {
+    transform : translate(400px, -500px);
+  }
+}
+
+@keyframes moveLetter {
+  0% {
+    transform : translate(400px, 300px);
+  }
+}
+
+@keyframes moveSelfie {
+  0% {
+    transform : translate(-300px, -100px);
+  }
+}
+
+.moveFlower {
+  animation : moveFlower  1s linear forwards;
+}
+
+.moveRain {
+  animation : moveRain  1s linear forwards;
+}
+
+.moveTravelOrHome {
+  animation : moveTravelOrHome 1s linear forwards;
+}
+
+.moveLetter {
+  animation : moveLetter 1s linear forwards;
+}
+
+.moveSelfie {
+  animation : moveSelfie 1s linear forwards;
+}
+
+.fade-in-out {
+  animation: fade-in 1s ease-in-out alternate infinite;
+}
+
+.fade-in-out-2s {
+  @include fade-in-out-delay(2s);
+}
+
+.fade-in-out-3s {
+  @include fade-in-out-delay(3s);
+}
+
+.fade-in-out-4s {
+  @include fade-in-out-delay(4s);
+}
+
+.fade-in {
+  animation: fade-in 2s linear;
+}
+
+.fade-in-ease-in {
+  animation : fade-in 2s ease-in;
+}
+
+.fade-in-quickly {
+  animation : fade-in 1s linear;
+}
+
+.fade-in-2s {
+  @include fade-in-delay(2s);
+}
+
+.fade-in-3s {
+  @include fade-in-delay(3s);
+}
+
+.fade-in-4s {
+  @include fade-in-delay(4s);
+}
+
+.fade-in-5s {
+  @include fade-in-delay(5s);
+}

@@ -1,0 +1,133 @@
+@mixin bg-image($f_name) {
+  background: url("../assets/images/bg_images/" + $f_name) no-repeat center;
+  background-size: cover;
+}
+
+.Page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  &.bg-video {
+    & video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: auto;
+      z-index: -1;
+    }
+  }
+
+  &.P1 {
+    @include bg-image("first\ page.png");
+  }
+
+  &.P2 {
+    @include bg-image("2-description.png");
+  }
+
+  &.P3 {
+    @include bg-image("3-prologue.png");
+  }
+
+  &.P7-1 {
+    @include bg-image("7-1-coins.png");
+  }
+
+  &.P7-2 {
+    @include bg-image("7-2-piggy\ bank.png");
+  }
+
+  &.P8-2 {
+    @include bg-image("8-2-stay\ home\ choose.png");
+  }
+
+  &.P8-2-2 {
+    @include bg-image("8-2-2_stay with at home.png");
+  }
+
+  &.P8 {
+    @include bg-image("8_travel\ or\ not.jpg");
+  }
+
+  &.P12-1 {
+    @include bg-image("12-happiest\ moment_home.png");
+  }
+
+  &.P12-2 {
+    @include bg-image("12-happiest\ moment_travel.png");
+  }
+
+  &.P14 {
+    @include bg-image("14-will.png");
+  }
+
+  &.P14 {
+    @include bg-image("14-will.png");
+  }
+
+  &.P16-1 {
+    @include bg-image("16-1-photo\ frame.png");
+  }
+
+  &.P16 {
+    @include bg-image("16-photo\ booth.png");
+  }
+
+  &.P17 {
+    @include bg-image("17-BG.png");
+  }
+
+  &.P20 {
+    @include bg-image("20-funeral\ mood.png");
+  }
+
+  &.P21 {
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      opacity: 0.65;
+      background: url("../assets/images/bg_images/21-most\ crying\ person.png") no-repeat center;
+    }
+  }
+
+  &.P24 {
+    @include bg-image("24-grave.png");
+  }
+
+  &.P26 {
+    @include bg-image("26-last\ words.png");
+  }
+
+  &.P29 {
+    @include bg-image("29 ebook.png");
+  }
+
+  &.P404 {
+    @include bg-image("404notfound.png");
+  }
+
+  & .back {
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    outline: none;
+    width: 90px;
+    height: 60px;
+    top: 34px;
+    left: 42px;
+
+    &.back-white {
+      background: url("../assets/images/Back-white.png") no-repeat center;
+    }
+    &.back-gray {
+      background: url("../assets/images/Back-gray.png") no-repeat center;
+    }
+  }
+}
