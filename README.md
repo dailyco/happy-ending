@@ -4,12 +4,15 @@
 <br/>
 
 ## 소개
-HAPPY ENDING 프로젝트는 죽음을 인식할 수 있는 경험을 제공하여 죽음불안을 낮춤으로써 스스로의 삶에 대해 생각하고 앞으로의 삶을 유의미하게 모낼 수 있게 삶의 마무리 과정을 체험하는 스토리텔링 게임 서비스를 제공합니다.
+HAPPY ENDING 프로젝트는 죽음을 인식할 수 있는 경험을 제공하여 죽음불안을 낮춤으로써 스스로의 삶에 대해 생각하고 앞으로의 삶을 유의미하게 보낼 수 있게 삶의 마무리 과정을 체험하는 스토리텔링 게임 서비스를 제공합니다.
 
 <br/>
 
 ## 배포
-[https://dailyco.github.io/happy-ending/](https://dailyco.github.io/happy-ending/) (size: 1920\*1080)
+[https://happy-ending.yutopia.dev](https://happy-ending.yutopia.dev)
+
+1920\*1080 화면을 기준으로 디자인했고, 화면 크기에 맞춰 비율을 유지한 채 키우고 줄여서 보여 줘요.
+세로로 긴 휴대폰에서는 화면 폭에 맞춰 다시 배치하고, 그림 위 정해진 자리에 글과 버튼이 놓이는 장면은 가로 그림 그대로 보여 줘요.
 
 <br/>
 
@@ -46,8 +49,9 @@ L happy-ending
       - reducerInputs.js
       - useInputs.js
     - App.css
-    - App.js
+    - App.js // 화면 크기 맞춤(ui/Stage.js, scss/stage.scss)으로 모든 페이지를 감싼다
     - index.js
+  - wrangler.jsonc // Cloudflare 배포 설정
 ```
 
 <br/>
@@ -74,6 +78,12 @@ yarn install
 yarn start
 ```
 코드 실행후 http://localhost:3000 에서 확인 가능합니다!
+
+### 배포하기
+```
+yarn deploy
+```
+`yarn build` 로 만든 `build/` 를 Cloudflare Workers 정적 파일로 올려 https://happy-ending.yutopia.dev 에 반영합니다. 처음 한 번은 `npx wrangler login` 으로 Cloudflare 계정에 로그인해야 합니다.
 
 <br/>
 
