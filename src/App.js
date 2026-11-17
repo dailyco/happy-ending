@@ -2,11 +2,14 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import { pages } from "./ui/Pages";
+import Stage from "./ui/Stage";
 
 import "./App.css";
+import "./scss/stage.scss";
 
 function App() {
   return (
+    <Stage>
     <Routes>
       <Route path="/" element={<pages.P1 />} exact />
       <Route path="/p0" element={<pages.P0 />} />
@@ -50,6 +53,7 @@ function App() {
       <Route path="/p29" element={<pages.P29 />} />
       <Route element={<pages.P404 />} />
     </Routes>
+    </Stage>
   );
 }
 

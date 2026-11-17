@@ -1,0 +1,242 @@
+// 화면 크기 맞춤 (ui/Stage.js 가 html 에 mode-stage / mode-flow 와 --s, --flow-h 를 걸어 준다)
+// 모든 디자인 값은 1920×1080 기준 px 그대로 두고, 페이지를 zoom 으로 화면에 맞춘다.
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #1b1b1b;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+// 페이지 바깥 남는 자리: 같은 배경을 흐리게
+.Backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(28px) brightness(0.8);
+  transform: scale(1.15);
+  pointer-events: none;
+
+  & video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.Page {
+  overflow: hidden;
+  zoom: var(--s, 1);
+
+  // 배경 영상은 페이지를 꽉 채운다
+  &.bg-video > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+html.mode-stage .Page {
+  width: 1920px;
+  height: auto;
+  min-height: 1080px;
+}
+
+// 세로 휴대폰: 폭 640 기준으로 다시 배치
+html.mode-flow {
+  .Page {
+    width: 640px;
+    min-height: var(--flow-h, 100vh);
+  }
+
+  // 템플릿은 1920 폭 기준의 큰 여백·고정 위치를 풀고 가운데 정렬
+  .Page > div[class*="Template"] {
+    width: 100%;
+    margin-left: 0 !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    text-align: center;
+  }
+
+  // 한글이 단어 중간에서 줄바꿈되지 않게
+  .Page {
+    word-break: keep-all;
+  }
+
+  // 글이 여러 줄로 늘어나도 겹치지 않게(원래는 줄 수에 맞춘 고정 높이)
+  .Page .H3,
+  .Page .P,
+  .Page .Span {
+    height: auto !important;
+  }
+
+  // 21. 배경 사진이 위아래로 비지 않게
+  .Page.P21::after {
+    background-size: cover;
+  }
+
+  // 넓은 입력 칸은 화면 폭 안으로
+  .FullTextField,
+  .SingleTextFieldSentence,
+  .MultiTextFieldSentence,
+  .ItemBox,
+  .TextArea,
+  .TextField.xxl {
+    max-width: 100%;
+  }
+
+  .SingleTextFieldSentence,
+  .MultiTextFieldSentence,
+  .FullTextField {
+    box-sizing: border-box;
+    height: auto !important;
+    min-height: 78px;
+    padding: 12px 20px;
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+
+  // 1. 첫 화면
+  .SeparatedTemplate1 {
+    padding-top: calc((var(--flow-h, 1300px) - 420px) / 2);
+
+    & Img,
+    & .Img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 120px;
+    }
+  }
+
+  // 2·3. 긴 설명
+  .SeparatedTemplate2 {
+    padding-top: 120px;
+    & .P {
+      margin-bottom: 120px;
+    }
+  }
+  .SeparatedTemplate3 {
+    & .H3 {
+      margin-bottom: 120px;
+    }
+    & .P {
+      margin-bottom: 140px;
+    }
+  }
+
+  // 5. 달력: 글을 가운데로
+  .SeparatedTemplate5 {
+    & .H3 {
+      margin-bottom: 72px;
+    }
+    & .Span:nth-of-type(2) {
+      margin-bottom: 160px;
+      white-space: nowrap;
+      font-size: 80px;
+    }
+  }
+
+  // 선택지: 버튼을 한 줄에 하나씩, 가운데
+  .MultipleChoiceTemplate {
+    & .H3 {
+      margin-bottom: 72px;
+    }
+    & .P {
+      margin-bottom: 64px !important;
+    }
+    & .Button {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      max-width: 100%;
+      text-align: center !important;
+      padding-left: 0 !important;
+    }
+    &.four-btn .SelectionBox {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 24px;
+
+      & .Button:nth-child(2n) {
+        justify-self: center;
+      }
+    }
+  }
+
+  // 14. 버킷리스트·물건 정리: 두 칸을 위아래로
+  .SeparatedTemplate14 {
+    padding-top: 120px;
+
+    & .float--left,
+    & .float--right {
+      float: none;
+      margin-bottom: 64px;
+    }
+    & .ItemBox {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  // 24. 묘비
+  .SeparatedTemplate24 {
+    padding-top: 120px;
+  }
+
+  // 25. 마지막 날
+  .SeparatedTemplate25 {
+    padding-top: 160px;
+    padding-bottom: 160px;
+    min-height: var(--flow-h, 100vh);
+  }
+
+  .Button.m,
+  .Button.l,
+  .Button.xl,
+  .Button.xxl {
+    max-width: 100%;
+  }
+}
+
+// 세로 휴대폰에서 장면 화면을 볼 때
+.RotateHint {
+  position: fixed;
+  left: 50%;
+  bottom: calc(24px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@media print {
+  .RotateHint {
+    display: none;
+  }
+
+  .Page {
+    zoom: 1 !important;
+  }
+  .Backdrop {
+    display: none;
+  }
+}
