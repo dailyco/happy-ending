@@ -1,0 +1,14 @@
+// HAPPY ENDING: happy-ending.yutopia.dev
+// `yarn build` 로 만든 build/ 를 Cloudflare Workers 정적 파일로 올린다(`yarn deploy`).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "happy-ending",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./build",
+    // /p2 같은 화면 주소로 바로 들어오거나 새로고침해도 앱이 열리게
+    "not_found_handling": "single-page-application"
+  },
+  "routes": [{ "pattern": "happy-ending.yutopia.dev", "custom_domain": true }],
+  "workers_dev": false
+}
